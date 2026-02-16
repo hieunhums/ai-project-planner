@@ -10,6 +10,8 @@ import type {
   PlanUploadResponse,
   HealthCheckResponse,
   ErrorResponse,
+  PlanComparison,
+  RecommendationDecisionResponse,
 } from './types';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api';
@@ -75,16 +77,28 @@ class APIClient {
     return response.data;
   }
 
-  async comparePlans(planId1: number, planId2: number): Promise<any> {
-    const response = await this.client.post(`/plans/compare`, {
+  async getPlanDetails(planId: number): Promise<Plan> {
+    const response = await this.client.get<Plan>(`/plans/${planId}/details`);
+    return response.data;
+  }
+
+  async comparePlans(planId1: number, planId2: number): Promise<PlanComparison> {
+    const response = await this.client.post<PlanComparison>(`/plans/compare`, {
       plan_id_1: planId1,
       plan_id_2: planId2,
     });
     return response.data;
   }
 
-  async updateConstraints(planId: number, constraints: any): Promise<Plan> {
-    const response = await this.client.post<Plan>(`/plans/${planId}/constraints`, constraints);
+  async updateConstraints(
+    planId: number,
+    constraints: Record<string, any>,
+    regenerate = true
+  ): Promise<Plan> {
+    const response = await this.client.post<Plan>(`/plans/${planId}/constraints`, {
+      constraints,
+      regenerate,
+    });
     return response.data;
   }
 
@@ -92,7 +106,7 @@ class APIClient {
     planId: number,
     recommendationId: number,
     accept: boolean
-  ): Promise<any> {
+  ): Promise<RecommendationDecisionResponse> {
     const response = await this.client.post(
       `/plans/${planId}/recommendations/${recommendationId}`,
       { accept }
@@ -118,9 +132,10 @@ export const api = {
   uploadPlan: (file: File, name: string) => apiClient.uploadPlan(file, name),
   generatePlan: (planId: number) => apiClient.generatePlan(planId),
   getPlan: (planId: number) => apiClient.getPlan(planId),
+  getPlanDetails: (planId: number) => apiClient.getPlanDetails(planId),
   comparePlans: (planId1: number, planId2: number) => apiClient.comparePlans(planId1, planId2),
-  updateConstraints: (planId: number, constraints: any) =>
-    apiClient.updateConstraints(planId, constraints),
+  updateConstraints: (planId: number, constraints: Record<string, any>, regenerate?: boolean) =>
+    apiClient.updateConstraints(planId, constraints, regenerate),
   acceptRecommendation: (planId: number, recommendationId: number, accept: boolean) =>
     apiClient.acceptRecommendation(planId, recommendationId, accept),
   exportPlan: (planId: number, format: 'csv' | 'gantt' | 'json') =>

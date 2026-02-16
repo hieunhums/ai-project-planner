@@ -1,0 +1,41 @@
+.iterate-page {
+  display: grid;
+  gap: 2rem;
+}
+
+.iterate-page header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.iterate-page header p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.plan-id-card {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: 18px;
+  box-shadow: var(--shadow-elevated);
+}
+
+.plan-id-card label {
+  display: grid;
+  gap: 0.4rem;
+  color: var(--text-muted);
+}
+
+.plan-id-card input {
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+  padding: 0.65rem 0.75rem;
+  font-family: inherit;
+}
+
+.notice.error {
+  border: 1px solid rgba(200, 70, 60, 0.4);
+  color: #b24a46;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.8);
+}

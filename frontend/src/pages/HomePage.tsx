@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FileUpload } from '../components/FileUpload';
 import { usePlanGeneration } from '../hooks/usePlanGeneration';
 import './HomePage.css';
@@ -14,6 +15,8 @@ export const HomePage: React.FC = () => {
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(
     null
   );
+
+  const navigate = useNavigate();
 
   const { generatePlan, isGenerating, progress, error: generationError } = usePlanGeneration();
 
@@ -173,8 +176,9 @@ export const HomePage: React.FC = () => {
               </button>
               <button
                 onClick={() => {
-                  /* Future: Navigate to comparison page */
-                  alert('Comparison view coming in Phase 4!');
+                  if (uploadedPlanId) {
+                    navigate(`/compare?human=${uploadedPlanId}&ai=${aiPlanId}`);
+                  }
                 }}
                 className="compare-btn"
               >

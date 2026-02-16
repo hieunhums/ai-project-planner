@@ -2,6 +2,10 @@ node_modules/
 dist/
 .env
 .env.local
-*.log
+.env*
+.git/
+.dockerignore
+Dockerfile*
+*.log*
 coverage/
 .cache/

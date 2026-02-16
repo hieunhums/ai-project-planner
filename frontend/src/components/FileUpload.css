@@ -10,29 +10,29 @@
 }
 
 .drop-zone {
-  border: 2px dashed #cbd5e0;
-  border-radius: 8px;
+  border: 2px dashed var(--border-strong);
+  border-radius: 16px;
   padding: 3rem 2rem;
   text-align: center;
-  background-color: #f7fafc;
+  background-color: var(--surface-strong);
   transition: all 0.2s ease;
   cursor: pointer;
 }
 
 .drop-zone:hover {
-  border-color: #4299e1;
-  background-color: #ebf8ff;
+  border-color: var(--accent);
+  background-color: #fff4ec;
 }
 
 .drop-zone.drag-active {
-  border-color: #4299e1;
-  background-color: #ebf8ff;
+  border-color: var(--accent);
+  background-color: #fff4ec;
   transform: scale(1.02);
 }
 
 .drop-zone.has-file {
-  border-color: #48bb78;
-  background-color: #f0fff4;
+  border-color: rgba(201, 78, 52, 0.6);
+  background-color: #fff7f1;
   cursor: default;
 }
 
@@ -43,23 +43,23 @@
 
 .drop-zone-text {
   font-size: 1rem;
-  color: #4a5568;
+  color: var(--text-muted);
   margin-bottom: 0.5rem;
 }
 
 .file-input-label {
-  color: #4299e1;
+  color: var(--accent);
   text-decoration: underline;
   cursor: pointer;
 }
 
 .file-input-label:hover {
-  color: #3182ce;
+  color: #b0422b;
 }
 
 .drop-zone-hint {
   font-size: 0.875rem;
-  color: #718096;
+  color: var(--text-muted);
 }
 
 .file-info {
@@ -68,7 +68,7 @@
   gap: 1rem;
   padding: 1rem;
   background-color: white;
-  border-radius: 6px;
+  border-radius: 12px;
 }
 
 .file-icon {
@@ -82,13 +82,13 @@
 
 .file-name {
   font-weight: 600;
-  color: #2d3748;
+  color: var(--text-primary);
   margin: 0 0 0.25rem 0;
 }
 
 .file-size {
   font-size: 0.875rem;
-  color: #718096;
+  color: var(--text-muted);
   margin: 0;
 }
 
@@ -96,7 +96,7 @@
   background: none;
   border: none;
   font-size: 1.5rem;
-  color: #e53e3e;
+  color: #b24a46;
   cursor: pointer;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
@@ -104,7 +104,7 @@
 }
 
 .remove-file-btn:hover {
-  background-color: #fff5f5;
+  background-color: rgba(200, 70, 60, 0.12);
 }
 
 .form-fields {
@@ -121,15 +121,15 @@
 
 .form-group label {
   font-weight: 600;
-  color: #2d3748;
+  color: var(--text-primary);
   font-size: 0.875rem;
 }
 
 .form-group input,
 .form-group textarea {
   padding: 0.75rem;
-  border: 1px solid #cbd5e0;
-  border-radius: 6px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
   font-size: 1rem;
   transition: border-color 0.2s;
 }
@@ -137,8 +137,8 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #4299e1;
-  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(201, 78, 52, 0.15);
 }
 
 .form-group textarea {
@@ -149,10 +149,10 @@
 
 .submit-btn {
   padding: 0.875rem 1.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #c94e34 0%, #e07a5f 100%);
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 12px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -165,7 +165,7 @@
 
 .submit-btn:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 8px 18px rgba(201, 78, 52, 0.3);
 }
 
 .submit-btn:disabled {

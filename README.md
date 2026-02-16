@@ -79,6 +79,12 @@ Sample planning CSV files are available in `backend/tests/fixtures/sample_plans/
 - `constraints.csv` - Project constraints
 - `port_operations_human_plan.csv` - Port operations baseline
 
+## Local-First Data Handling
+
+- Uploads are stored locally in `backend/uploads/` and never sent to external storage.
+- The SQLite database file is created locally (see `backend/src/config.py` for the path).
+- To reset demo data, stop the backend, delete the SQLite file, and clear `backend/uploads/`.
+
 ## Docker (Optional)
 
 ```bash
@@ -120,12 +126,12 @@ Phase implementation is tracked in `specs/001-ai-planning-assistant/tasks.md`:
 
 - ✅ **Phase 0**: Research & Technical Decisions
 - ✅ **Phase 1**: Setup (Shared Infrastructure)
-- 🔄 **Phase 2**: Foundational (Blocking Prerequisites)
-- ⏳ **Phase 3**: User Story 1 - Upload & Generate Plan
-- ⏳ **Phase 4**: User Story 2 - Side-by-Side Comparison
-- ⏳ **Phase 5**: User Story 3 - AI Reasoning & Assumptions
-- ⏳ **Phase 6**: User Story 4 - Constraint Iteration
-- ⏳ **Phase 7**: User Story 5 - Recommendation Control & Export
+- ✅ **Phase 2**: Foundational (Blocking Prerequisites)
+- ✅ **Phase 3**: User Story 1 - Upload & Generate Plan
+- ✅ **Phase 4**: User Story 2 - Side-by-Side Comparison
+- ✅ **Phase 5**: User Story 3 - AI Reasoning & Assumptions
+- ✅ **Phase 6**: User Story 4 - Constraint Iteration
+- ✅ **Phase 7**: User Story 5 - Recommendation Control & Export
 
 ## API Documentation
 

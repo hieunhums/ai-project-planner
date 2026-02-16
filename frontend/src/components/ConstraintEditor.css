@@ -1,0 +1,60 @@
+.constraint-editor {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: var(--shadow-elevated);
+  display: grid;
+  gap: 1.5rem;
+}
+
+.constraint-editor h2 {
+  margin: 0;
+}
+
+.constraint-editor .subtitle {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.constraint-editor label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.constraint-editor input,
+.constraint-editor textarea {
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+  padding: 0.65rem 0.75rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.constraint-editor .notes {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.constraint-editor button {
+  justify-self: start;
+  border-radius: 999px;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+}
+
+.constraint-editor button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

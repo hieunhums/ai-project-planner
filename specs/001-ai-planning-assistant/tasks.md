@@ -94,11 +94,11 @@ description: "Task list for AI-Augmented Planning Assistant for Shipyard & Port 
 
 ### Implementation for User Story 2
 
-- [ ] T032 [P] [US2] Implement plan comparison logic in backend/src/services/comparison_service.py
-- [ ] T033 [US2] Add comparison endpoint in backend/src/api/routes.py
-- [ ] T034 [P] [US2] Build comparison view component in frontend/src/components/PlanComparison.tsx
-- [ ] T035 [US2] Build comparison page in frontend/src/pages/ComparePage.tsx
-- [ ] T036 [US2] Add comparison hook in frontend/src/hooks/usePlanComparison.ts
+- [X] T032 [P] [US2] Implement plan comparison logic in backend/src/services/comparison_service.py
+- [X] T033 [US2] Add comparison endpoint in backend/src/api/routes.py
+- [X] T034 [P] [US2] Build comparison view component in frontend/src/components/PlanComparison.tsx
+- [X] T035 [US2] Build comparison page in frontend/src/pages/ComparePage.tsx
+- [X] T036 [US2] Add comparison hook in frontend/src/hooks/usePlanComparison.ts
 
 **Checkpoint**: User Story 2 independently demonstrates side-by-side differences and trade-offs
 
@@ -112,11 +112,11 @@ description: "Task list for AI-Augmented Planning Assistant for Shipyard & Port 
 
 ### Implementation for User Story 3
 
-- [ ] T037 [P] [US3] Add explanation and assumption fields to schemas in backend/src/models/schemas.py
-- [ ] T038 [US3] Persist explanations in plan generation flow in backend/src/services/planning_service.py
-- [ ] T039 [US3] Add plan details endpoint for explanations in backend/src/api/routes.py
-- [ ] T040 [P] [US3] Enhance plan details UI in frontend/src/components/PlanDetails.tsx
-- [ ] T041 [US3] Add plan detail fetcher to frontend/src/services/api.ts
+- [X] T037 [P] [US3] Add explanation and assumption fields to schemas in backend/src/models/schemas.py
+- [X] T038 [US3] Persist explanations in plan generation flow in backend/src/services/planning_service.py
+- [X] T039 [US3] Add plan details endpoint for explanations in backend/src/api/routes.py
+- [X] T040 [P] [US3] Enhance plan details UI in frontend/src/components/PlanDetails.tsx
+- [X] T041 [US3] Add plan detail fetcher to frontend/src/services/api.ts
 
 **Checkpoint**: User Story 3 independently shows AI reasoning and assumptions
 
@@ -130,11 +130,11 @@ description: "Task list for AI-Augmented Planning Assistant for Shipyard & Port 
 
 ### Implementation for User Story 4
 
-- [ ] T042 [P] [US4] Add constraint update schemas in backend/src/models/schemas.py
-- [ ] T043 [US4] Implement constraint update and plan versioning in backend/src/services/planning_service.py
-- [ ] T044 [US4] Add constraints endpoint in backend/src/api/routes.py
-- [ ] T045 [P] [US4] Build constraint editor component in frontend/src/components/ConstraintEditor.tsx
-- [ ] T046 [US4] Build iteration page in frontend/src/pages/IteratePage.tsx
+- [X] T042 [P] [US4] Add constraint update schemas in backend/src/models/schemas.py
+- [X] T043 [US4] Implement constraint update and plan versioning in backend/src/services/planning_service.py
+- [X] T044 [US4] Add constraints endpoint in backend/src/api/routes.py
+- [X] T045 [P] [US4] Build constraint editor component in frontend/src/components/ConstraintEditor.tsx
+- [X] T046 [US4] Build iteration page in frontend/src/pages/IteratePage.tsx
 
 **Checkpoint**: User Story 4 independently supports what-if iteration
 
@@ -148,12 +148,12 @@ description: "Task list for AI-Augmented Planning Assistant for Shipyard & Port 
 
 ### Implementation for User Story 5
 
-- [ ] T047 [P] [US5] Add recommendation decision schemas in backend/src/models/schemas.py
-- [ ] T048 [US5] Implement recommendation update logic in backend/src/services/planning_service.py
-- [ ] T049 [US5] Add recommendation endpoints in backend/src/api/routes.py
-- [ ] T050 [P] [US5] Build recommendation panel component in frontend/src/components/RecommendationPanel.tsx
-- [ ] T051 [P] [US5] Build export panel component in frontend/src/components/ExportPanel.tsx
-- [ ] T052 [US5] Implement export endpoint and file generation in backend/src/api/routes.py
+- [X] T047 [P] [US5] Add recommendation decision schemas in backend/src/models/schemas.py
+- [X] T048 [US5] Implement recommendation update logic in backend/src/services/planning_service.py
+- [X] T049 [US5] Add recommendation endpoints in backend/src/api/routes.py
+- [X] T050 [P] [US5] Build recommendation panel component in frontend/src/components/RecommendationPanel.tsx
+- [X] T051 [P] [US5] Build export panel component in frontend/src/components/ExportPanel.tsx
+- [X] T052 [US5] Implement export endpoint and file generation in backend/src/api/routes.py
 
 **Checkpoint**: User Story 5 independently supports recommendation control and export
 
@@ -163,11 +163,11 @@ description: "Task list for AI-Augmented Planning Assistant for Shipyard & Port 
 
 **Purpose**: Improvements that affect multiple user stories and deployment readiness
 
-- [ ] T053 [P] Add local demo guide in specs/001-ai-planning-assistant/quickstart.md
-- [ ] T054 [P] Add Azure container deployment templates in infra/bicep/main.bicep, infra/bicep/container-instances.bicep
-- [ ] T055 [P] Add Azure deployment helper script in infra/azure-deployment.sh
-- [ ] T056 [P] Add local-first setup guidance in README.md
-- [ ] T057 Performance pass on plan comparison rendering in frontend/src/components/PlanComparison.tsx
+- [X] T053 [P] Add local demo guide in specs/001-ai-planning-assistant/quickstart.md
+- [X] T054 [P] Add Azure container deployment templates in infra/bicep/main.bicep, infra/bicep/container-instances.bicep
+- [X] T055 [P] Add Azure deployment helper script in infra/azure-deployment.sh
+- [X] T056 [P] Add local-first setup guidance in README.md
+- [X] T057 Performance pass on plan comparison rendering in frontend/src/components/PlanComparison.tsx
 
 ---
 

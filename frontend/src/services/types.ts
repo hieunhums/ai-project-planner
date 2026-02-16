@@ -19,6 +19,9 @@ export interface Task {
   priority?: string;
   cost?: number;
   lineage: PlanLineageType;
+  explanation?: string;
+  assumptions?: string[];
+  trade_offs?: string[];
 }
 
 export interface Resource {
@@ -39,6 +42,7 @@ export interface Assumption {
 }
 
 export interface Recommendation {
+  id?: number;
   recommendation_type: string;
   affected_entities: Record<string, any>;
   rationale: string;
@@ -61,6 +65,8 @@ export interface Plan {
   resources: Resource[];
   assumptions: Assumption[];
   recommendations: Recommendation[];
+  source_file_path?: string;
+  plan_data_json?: Record<string, any>;
 }
 
 export interface PlanCreateRequest {
@@ -94,4 +100,43 @@ export interface HealthCheckResponse {
   database: string;
   ai_service: string;
   timestamp: string;
+}
+
+export interface PlanComparisonChange {
+  field: string;
+  plan_1?: any;
+  plan_2?: any;
+}
+
+export interface TaskDifference {
+  task_id: string;
+  name: string;
+  status: 'added' | 'removed' | 'modified' | 'unchanged';
+  changes: PlanComparisonChange[];
+}
+
+export interface PlanComparisonSummary {
+  duration_delta_days: number;
+  cost_delta: number;
+  capacity_delta: number;
+  task_count_delta: number;
+  resource_count_delta: number;
+  plan_a_metrics: Record<string, any>;
+  plan_b_metrics: Record<string, any>;
+}
+
+export interface PlanComparison {
+  plan_id_1?: number;
+  plan_id_2?: number;
+  summary: PlanComparisonSummary;
+  task_differences: TaskDifference[];
+  tradeoffs: string[];
+  generated_at?: string;
+}
+
+export interface RecommendationDecisionResponse {
+  plan_id: number;
+  recommendation_id: number;
+  status: RecommendationStatus;
+  updated_task_ids: string[];
 }
