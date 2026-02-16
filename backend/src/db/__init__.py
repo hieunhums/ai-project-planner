@@ -8,7 +8,7 @@ from contextlib import contextmanager
 from typing import Generator
 
 from ..config import get_settings
-from .database import Base
+from ..models.database import Base
 
 settings = get_settings()
 

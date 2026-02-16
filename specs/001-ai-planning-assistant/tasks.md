@@ -70,17 +70,17 @@ description: "Task list for AI-Augmented Planning Assistant for Shipyard & Port 
 
 ### Implementation for User Story 1
 
-- [ ] T021 [P] [US1] Add spreadsheet parsing dependencies (pandas, openpyxl) in backend/requirements.txt
-- [ ] T022 [P] [US1] Implement spreadsheet parser with unsupported format error handling (Edge Case A1) in backend/src/services/planning_service.py
-- [ ] T023 [P] [US1] Implement Azure OpenAI client wrapper via Azure AI Foundry SDK in backend/src/services/ai_service.py
-- [ ] T024 [P] [US1] Define agent tools (parse, validate, optimize) in backend/src/agents/tools.py
-- [ ] T025 [US1] Implement Microsoft Agent Framework orchestration calling Azure OpenAI reasoning models in backend/src/agents/planning_agent.py
-- [ ] T026 [US1] Implement plan generation flow orchestrating agent framework (calls T025 for AI reasoning) with infeasibility fallback handling (Edge Case A2) in backend/src/services/planning_service.py
-- [ ] T027 [US1] Implement constraint relaxation suggestion logic for infeasible plans (FR-014) in backend/src/services/planning_service.py
-- [ ] T028 [US1] Add upload and generate endpoints in backend/src/api/routes.py
-- [ ] T029 [P] [US1] Build upload form component in frontend/src/components/FileUpload.tsx
-- [ ] T030 [P] [US1] Add plan generation hook in frontend/src/hooks/usePlanGeneration.ts
-- [ ] T031 [US1] Build initial plan view in frontend/src/pages/HomePage.tsx, frontend/src/components/PlanDetails.tsx
+- [X] T021 [P] [US1] Add spreadsheet parsing dependencies (pandas, openpyxl) in backend/requirements.txt
+- [X] T022 [P] [US1] Implement spreadsheet parser with unsupported format error handling (Edge Case A1) in backend/src/services/planning_service.py
+- [X] T023 [P] [US1] Implement Azure OpenAI client wrapper via Azure AI Foundry SDK in backend/src/services/ai_service.py
+- [X] T024 [P] [US1] Define agent tools (parse, validate, optimize) in backend/src/agents/tools.py
+- [X] T025 [US1] Implement Microsoft Agent Framework orchestration calling Azure OpenAI reasoning models in backend/src/agents/planning_agent.py
+- [X] T026 [US1] Implement plan generation flow orchestrating agent framework (calls T025 for AI reasoning) with infeasibility fallback handling (Edge Case A2) in backend/src/services/planning_service.py
+- [X] T027 [US1] Implement constraint relaxation suggestion logic for infeasible plans (FR-014) in backend/src/services/planning_service.py
+- [X] T028 [US1] Add upload and generate endpoints in backend/src/api/routes.py
+- [X] T029 [P] [US1] Build upload form component in frontend/src/components/FileUpload.tsx
+- [X] T030 [P] [US1] Add plan generation hook in frontend/src/hooks/usePlanGeneration.ts
+- [X] T031 [US1] Build initial plan view in frontend/src/pages/HomePage.tsx, frontend/src/components/PlanDetails.tsx
 
 **Checkpoint**: User Story 1 fully functional and independently demoable
 

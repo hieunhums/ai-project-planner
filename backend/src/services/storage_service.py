@@ -27,11 +27,11 @@ class StorageService:
     def save_uploaded_file(self, file_content: bytes, filename: str) -> str:
         """
         Save uploaded file to local storage
-        
+
         Args:
             file_content: File content as bytes
             filename: Original filename
-            
+
         Returns:
             Full path to saved file
         """
@@ -48,10 +48,10 @@ class StorageService:
         """
         Save plan and related entities to database
         Tracks lineage metadata for AI/human/hybrid elements
-        
+
         Args:
             plan_schema: Plan data schema
-            
+
         Returns:
             Plan ID
         """
@@ -130,10 +130,10 @@ class StorageService:
     def get_plan_by_id(self, plan_id: int) -> Optional[PlanSchema]:
         """
         Retrieve plan with all related entities from database
-        
+
         Args:
             plan_id: Plan ID
-            
+
         Returns:
             PlanSchema or None if not found
         """
