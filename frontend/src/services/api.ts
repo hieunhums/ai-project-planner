@@ -12,6 +12,9 @@ import type {
   ErrorResponse,
   PlanComparison,
   RecommendationDecisionResponse,
+  ProjectSummary,
+  ProjectDetail,
+  ProjectCreateRequest,
 } from './types';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api';
@@ -90,6 +93,25 @@ class APIClient {
     return response.data;
   }
 
+  async getProjects(): Promise<ProjectSummary[]> {
+    const response = await this.client.get<ProjectSummary[]>(`/projects`);
+    return response.data;
+  }
+
+  async createProject(request: ProjectCreateRequest): Promise<ProjectSummary> {
+    const response = await this.client.post<ProjectSummary>(`/projects`, request);
+    return response.data;
+  }
+
+  async getProjectDetail(projectId: number): Promise<ProjectDetail> {
+    const response = await this.client.get<ProjectDetail>(`/projects/${projectId}`);
+    return response.data;
+  }
+
+  async deleteProject(projectId: number): Promise<void> {
+    await this.client.delete(`/projects/${projectId}`);
+  }
+
   async updateConstraints(
     planId: number,
     constraints: Record<string, any>,
@@ -134,6 +156,10 @@ export const api = {
   getPlan: (planId: number) => apiClient.getPlan(planId),
   getPlanDetails: (planId: number) => apiClient.getPlanDetails(planId),
   comparePlans: (planId1: number, planId2: number) => apiClient.comparePlans(planId1, planId2),
+  getProjects: () => apiClient.getProjects(),
+  createProject: (request: ProjectCreateRequest) => apiClient.createProject(request),
+  getProjectDetail: (projectId: number) => apiClient.getProjectDetail(projectId),
+  deleteProject: (projectId: number) => apiClient.deleteProject(projectId),
   updateConstraints: (planId: number, constraints: Record<string, any>, regenerate?: boolean) =>
     apiClient.updateConstraints(planId, constraints, regenerate),
   acceptRecommendation: (planId: number, recommendationId: number, accept: boolean) =>

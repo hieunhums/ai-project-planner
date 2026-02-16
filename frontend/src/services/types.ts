@@ -52,6 +52,8 @@ export interface Recommendation {
 
 export interface Plan {
   id?: number;
+  project_id?: number;
+  base_plan_id?: number;
   name: string;
   description?: string;
   status: PlanStatus;
@@ -61,12 +63,44 @@ export interface Plan {
   total_cost?: number;
   created_at?: string;
   updated_at?: string;
+  source_file_name?: string;
   tasks: Task[];
   resources: Resource[];
   assumptions: Assumption[];
   recommendations: Recommendation[];
   source_file_path?: string;
   plan_data_json?: Record<string, any>;
+}
+
+export interface ProjectSummary {
+  id: number;
+  name: string;
+  created_at?: string;
+}
+
+export interface UploadSummary {
+  plan_id: number;
+  file_name: string;
+  uploaded_at?: string;
+  status_label: string;
+}
+
+export interface GeneratedPlanSummary {
+  plan_id: number;
+  name: string;
+  generated_at?: string;
+  status_label: string;
+}
+
+export interface ProjectDetail {
+  id: number;
+  name: string;
+  uploads: UploadSummary[];
+  generated_plans: GeneratedPlanSummary[];
+}
+
+export interface ProjectCreateRequest {
+  name: string;
 }
 
 export interface PlanCreateRequest {

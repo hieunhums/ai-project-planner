@@ -1,0 +1,76 @@
+.confirm-dialog {
+  width: min(420px, 100%);
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+  display: grid;
+  gap: 1rem;
+}
+
+.confirm-dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.confirm-dialog-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+}
+
+.confirm-dialog-message {
+  margin: 0.5rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.confirm-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.confirm-dialog-actions button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+
+.confirm-dialog-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.confirm-dialog-actions .ghost {
+  background: rgba(31, 31, 31, 0.08);
+  color: var(--text-primary);
+}
+
+.confirm-dialog-actions .ghost:hover:not(:disabled) {
+  background: rgba(31, 31, 31, 0.12);
+}
+
+.confirm-dialog-actions button:not(.ghost) {
+  background: var(--accent);
+  color: white;
+}
+
+.confirm-dialog-actions button:not(.ghost):hover:not(:disabled) {
+  background: #b3391a;
+}
+
+.confirm-dialog-actions button.danger {
+  background: #dc2626;
+}
+
+.confirm-dialog-actions button.danger:hover:not(:disabled) {
+  background: #b91c1c;
+}

@@ -1,0 +1,227 @@
+.project-landing {
+  display: grid;
+  gap: 2rem;
+}
+
+.project-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.project-label {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.project-heading h1 {
+  margin: 0.4rem 0 0 0;
+  font-size: 2.4rem;
+}
+
+.project-meta {
+  display: flex;
+  gap: 1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.project-actions {
+  display: grid;
+  gap: 2rem;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: var(--shadow-elevated);
+}
+
+.card h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.card-description {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.plan-info {
+  background-color: var(--surface-strong);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.info-item .label {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.info-item .value {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.generate-btn {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #c94e34 0%, #e07a5f 100%);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.generate-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(201, 78, 52, 0.35);
+}
+
+.generate-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.progress-info {
+  margin-top: 1.5rem;
+}
+
+.progress-info p {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: rgba(31, 31, 31, 0.08);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #c94e34 0%, #e07a5f 100%);
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+.success-card {
+  border: 2px solid rgba(201, 78, 52, 0.4);
+  background: linear-gradient(to bottom, #fff7f1 0%, white 100%);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.metric-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.metric-label {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.metric-value {
+  font-size: 1.75rem;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.message-banner {
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.message-banner.success {
+  background-color: rgba(201, 78, 52, 0.1);
+  border: 1px solid rgba(201, 78, 52, 0.4);
+  color: #5c2d23;
+}
+
+.message-banner.error {
+  background-color: rgba(200, 70, 60, 0.12);
+  border: 1px solid rgba(200, 70, 60, 0.4);
+  color: #7a2d2d;
+}
+
+.message-banner .close-btn {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.message-banner .close-btn:hover {
+  opacity: 1;
+}
+
+.project-status {
+  color: var(--text-muted);
+}
+
+.project-error {
+  background: rgba(200, 70, 60, 0.12);
+  border: 1px solid rgba(200, 70, 60, 0.4);
+  color: #7a2d2d;
+  padding: 1rem 1.25rem;
+  border-radius: 16px;
+}
+
+.project-artifacts {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -2,11 +2,16 @@ import React, { useState } from 'react';
 import './FileUpload.css';
 
 export interface FileUploadProps {
+  projectId: number;
   onUploadSuccess: (planId: number, taskCount: number, resourceCount: number) => void;
   onUploadError: (error: string) => void;
 }
 
-export const FileUpload: React.FC<FileUploadProps> = ({ onUploadSuccess, onUploadError }) => {
+export const FileUpload: React.FC<FileUploadProps> = ({
+  projectId,
+  onUploadSuccess,
+  onUploadError,
+}) => {
   const [file, setFile] = useState<File | null>(null);
   const [planName, setPlanName] = useState('');
   const [description, setDescription] = useState('');
@@ -80,6 +85,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({ onUploadSuccess, onUploa
       const formData = new FormData();
       formData.append('file', file);
       formData.append('name', planName.trim());
+      formData.append('project_id', String(projectId));
       if (description.trim()) {
         formData.append('description', description.trim());
       }
