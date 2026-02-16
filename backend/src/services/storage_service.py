@@ -65,6 +65,8 @@ class StorageService:
                 total_duration_days=plan_schema.total_duration_days,
                 capacity_utilization=plan_schema.capacity_utilization,
                 total_cost=plan_schema.total_cost,
+                source_file_path=plan_schema.source_file_path,
+                plan_data_json=plan_schema.plan_data_json,
             )
             db.add(plan)
             db.flush()  # Get plan ID
@@ -84,6 +86,9 @@ class StorageService:
                     priority=task_schema.priority,
                     cost=task_schema.cost,
                     lineage=task_schema.lineage,
+                    explanation=task_schema.explanation,
+                    assumptions={"assumptions": task_schema.assumptions or []},
+                    trade_offs={"trade_offs": task_schema.trade_offs or []},
                 )
                 db.add(task)
 
@@ -127,7 +132,7 @@ class StorageService:
             db.commit()
             return plan.id
 
-    def get_plan_by_id(self, plan_id: int) -> Optional[PlanSchema]:
+    def get_plan_by_id(self, plan_id: int, db: Optional[Any] = None) -> Optional[PlanSchema]:
         """
         Retrieve plan with all related entities from database
 
@@ -137,29 +142,41 @@ class StorageService:
         Returns:
             PlanSchema or None if not found
         """
-        with get_db_context() as db:
-            plan = db.query(Plan).filter(Plan.id == plan_id).first()
-            if not plan:
-                return None
+        if db is None:
+            with get_db_context() as context_db:
+                return self._get_plan_with_relations(plan_id, context_db)
 
-            # Load related entities
-            tasks = db.query(Task).filter(Task.plan_id == plan_id).all()
-            resources = db.query(Resource).filter(Resource.plan_id == plan_id).all()
-            assumptions = db.query(Assumption).filter(Assumption.plan_id == plan_id).all()
-            recommendations = (
-                db.query(Recommendation).filter(Recommendation.plan_id == plan_id).all()
-            )
+        return self._get_plan_with_relations(plan_id, db)
 
-            # Convert to schema
-            return PlanSchema.model_validate(
-                {
-                    **plan.__dict__,
-                    "tasks": [t.__dict__ for t in tasks],
-                    "resources": [r.__dict__ for r in resources],
-                    "assumptions": [a.__dict__ for a in assumptions],
-                    "recommendations": [rec.__dict__ for rec in recommendations],
-                }
-            )
+    def _get_plan_with_relations(self, plan_id: int, db: Any) -> Optional[PlanSchema]:
+        plan = db.query(Plan).filter(Plan.id == plan_id).first()
+        if not plan:
+            return None
+
+        # Load related entities
+        tasks = db.query(Task).filter(Task.plan_id == plan_id).all()
+        resources = db.query(Resource).filter(Resource.plan_id == plan_id).all()
+        assumptions = db.query(Assumption).filter(Assumption.plan_id == plan_id).all()
+        recommendations = db.query(Recommendation).filter(Recommendation.plan_id == plan_id).all()
+
+        # Convert to schema
+        task_payloads = []
+        for task in tasks:
+            task_data = {**task.__dict__}
+            task_data["dependencies"] = (task.dependencies or {}).get("deps", [])
+            task_data["assumptions"] = (task.assumptions or {}).get("assumptions", [])
+            task_data["trade_offs"] = (task.trade_offs or {}).get("trade_offs", [])
+            task_payloads.append(task_data)
+
+        return PlanSchema.model_validate(
+            {
+                **plan.__dict__,
+                "tasks": task_payloads,
+                "resources": [r.__dict__ for r in resources],
+                "assumptions": [a.__dict__ for a in assumptions],
+                "recommendations": [rec.__dict__ for rec in recommendations],
+            }
+        )
 
     def delete_uploaded_file(self, file_path: str):
         """Delete uploaded file from storage"""

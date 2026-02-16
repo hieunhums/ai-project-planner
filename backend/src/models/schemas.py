@@ -22,6 +22,9 @@ class TaskSchema(BaseModel):
     priority: Optional[str] = None
     cost: Optional[float] = None
     lineage: str = "human_created"  # ai_generated, human_created, hybrid
+    explanation: Optional[str] = None
+    assumptions: Optional[List[str]] = None
+    trade_offs: Optional[List[str]] = None
 
     class Config:
         from_attributes = True
@@ -57,6 +60,7 @@ class AssumptionSchema(BaseModel):
 class RecommendationSchema(BaseModel):
     """Recommendation data schema"""
 
+    id: Optional[int] = None
     recommendation_type: str
     affected_entities: Dict[str, Any]
     rationale: str
@@ -80,6 +84,8 @@ class PlanSchema(BaseModel):
     total_cost: Optional[float] = None
     created_at: Optional[datetime] = None
     updated_at: Optional[datetime] = None
+    source_file_path: Optional[str] = None
+    plan_data_json: Optional[Dict[str, Any]] = None
 
     # Related entities
     tasks: List[TaskSchema] = []
@@ -107,3 +113,72 @@ class PlanUploadResponse(BaseModel):
     tasks_count: int
     resources_count: int
     message: str
+
+
+class ConstraintUpdateRequest(BaseModel):
+    """Request schema for updating constraints"""
+
+    constraints: Dict[str, Any] = Field(default_factory=dict)
+    regenerate: bool = True
+
+
+class PlanComparisonRequest(BaseModel):
+    """Request schema for plan comparison"""
+
+    plan_id_1: int
+    plan_id_2: int
+
+
+class PlanComparisonChange(BaseModel):
+    """Single field difference between two tasks"""
+
+    field: str
+    plan_1: Optional[Any] = None
+    plan_2: Optional[Any] = None
+
+
+class TaskDifference(BaseModel):
+    """Task-level comparison result"""
+
+    task_id: str
+    name: str
+    status: str
+    changes: List[PlanComparisonChange] = []
+
+
+class PlanComparisonSummary(BaseModel):
+    """Summary metrics for plan comparison"""
+
+    duration_delta_days: float
+    cost_delta: float
+    capacity_delta: float
+    task_count_delta: int
+    resource_count_delta: int
+    plan_a_metrics: Dict[str, Any]
+    plan_b_metrics: Dict[str, Any]
+
+
+class PlanComparisonSchema(BaseModel):
+    """Plan comparison response schema"""
+
+    plan_id_1: Optional[int] = None
+    plan_id_2: Optional[int] = None
+    summary: PlanComparisonSummary
+    task_differences: List[TaskDifference]
+    tradeoffs: List[str]
+    generated_at: Optional[str] = None
+
+
+class RecommendationDecisionRequest(BaseModel):
+    """Request schema for accepting or rejecting a recommendation"""
+
+    accept: bool = Field(..., description="Whether the recommendation is accepted")
+
+
+class RecommendationDecisionResponse(BaseModel):
+    """Response schema after recommendation decision"""
+
+    plan_id: int
+    recommendation_id: int
+    status: str
+    updated_task_ids: List[str] = []

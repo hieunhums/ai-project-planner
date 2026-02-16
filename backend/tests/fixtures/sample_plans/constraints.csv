@@ -1,4 +1,4 @@
-Constraint ID,Constraint Type,Scope,Description,Priority,Value
+constraint_id,constraint_type,scope,description,priority,value
 C001,Deadline,T020,Project must complete by 2026-05-05,Critical,2026-05-05
 C002,Resource Capacity,R001,Crane A limited to 1 concurrent task,High,1
 C003,Resource Capacity,R002,Crane B limited to 1 concurrent task,High,1

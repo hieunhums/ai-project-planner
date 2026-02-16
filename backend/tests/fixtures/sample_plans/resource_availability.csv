@@ -1,4 +1,4 @@
-Resource ID,Resource Name,Type,Capacity,Availability Start,Availability End,Hourly Cost,Skills
+resource_id,resource_name,type,capacity,availability_start,availability_end,hourly_cost,skills
 R001,Crane A,Equipment,1,2026-03-01,2026-06-30,150,Heavy Lifting
 R002,Crane B,Equipment,1,2026-03-01,2026-06-30,150,Heavy Lifting
 R003,Welding Team A,Personnel,5,2026-03-01,2026-06-30,75,Welding;Fabrication

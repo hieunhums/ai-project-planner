@@ -8,9 +8,10 @@ import re
 from pathlib import Path
 from typing import Dict, List, Any, Optional, Tuple
 from datetime import datetime, timedelta
+from sqlalchemy.orm import Session
 
 from ..models.schemas import TaskSchema, ResourceSchema, PlanSchema
-from ..models.database import PlanLineageType, PlanStatus
+from ..models.database import PlanLineageType, PlanStatus, Recommendation, Task, Plan
 
 
 class SpreadsheetParser:
@@ -75,6 +76,17 @@ class SpreadsheetParser:
                 schema_mapping[matched_field] = column
         return schema_mapping
 
+    def _coerce_datetime(self, value: Any) -> Optional[datetime]:
+        """Parse values to datetime while ignoring invalid tokens."""
+        if pd.isna(value):
+            return None
+
+        parsed = pd.to_datetime(value, errors="coerce")
+        if pd.isna(parsed):
+            return None
+
+        return parsed.to_pydatetime() if hasattr(parsed, "to_pydatetime") else parsed
+
     def parse_file(self, file_path: str) -> Dict[str, Any]:
         """
         Parse planning file (CSV or Excel) and extract structured data
@@ -132,10 +144,14 @@ class SpreadsheetParser:
             }
 
             # Optional fields
-            if "start_date" in schema and pd.notna(row.get(schema["start_date"])):
-                task_data["start_date"] = pd.to_datetime(row[schema["start_date"]])
-            if "end_date" in schema and pd.notna(row.get(schema["end_date"])):
-                task_data["end_date"] = pd.to_datetime(row[schema["end_date"]])
+            if "start_date" in schema:
+                start = self._coerce_datetime(row.get(schema["start_date"]))
+                if start:
+                    task_data["start_date"] = start
+            if "end_date" in schema:
+                end = self._coerce_datetime(row.get(schema["end_date"]))
+                if end:
+                    task_data["end_date"] = end
             if "dependencies" in schema and pd.notna(row.get(schema["dependencies"])):
                 deps = str(row[schema["dependencies"]]).split(",")
                 task_data["dependencies"] = [d.strip() for d in deps if d.strip()]
@@ -312,3 +328,112 @@ class PlanGenerator:
                 )
 
         return suggestions
+
+
+def add_explanations_to_plan(
+    plan_data: Dict[str, Any], reasoning_trace: str, assumptions: List[Dict[str, Any]]
+) -> Dict[str, Any]:
+    """
+    Enrich plan tasks with explanation, assumptions, and trade-off summaries.
+    Uses rule-based fallbacks when AI reasoning trace is limited.
+    """
+    task_list = plan_data.get("tasks", [])
+    assumption_summaries = [a.get("description", "") for a in assumptions if a.get("description")]
+    summary_text = " ".join(assumption_summaries[:3]) if assumption_summaries else ""
+    reasoning_excerpt = reasoning_trace.strip()[:280] if reasoning_trace else ""
+
+    for task in task_list:
+        deps = task.get("dependencies", []) or []
+        deps_text = f"Dependencies respected: {', '.join(deps)}." if deps else "No dependencies."
+        explanation_parts = [
+            deps_text,
+            "Scheduled to balance duration and capacity.",
+        ]
+        if reasoning_excerpt:
+            explanation_parts.append(f"Reasoning excerpt: {reasoning_excerpt}")
+        if summary_text:
+            explanation_parts.append(f"Assumptions: {summary_text}")
+
+        task.setdefault("explanation", " ".join(explanation_parts))
+        task.setdefault("assumptions", assumption_summaries)
+        task.setdefault("trade_offs", ["Duration vs. utilization balanced for feasibility"])
+
+    return plan_data
+
+
+def apply_constraints_to_plan_data(
+    plan_data: Dict[str, Any], constraints: Optional[Dict[str, Any]]
+) -> Dict[str, Any]:
+    """Attach constraint overrides to plan data for iteration tracking."""
+    if not constraints:
+        return plan_data
+
+    updated = {**plan_data}
+    updated_constraints = {**updated.get("constraints", {})}
+    updated_constraints.update(constraints)
+    updated["constraints"] = updated_constraints
+    return updated
+
+
+def build_plan_version_metadata(
+    base_plan_id: int, constraints: Dict[str, Any], reasoning_trace: str
+) -> Dict[str, Any]:
+    """Build version metadata payload for plan iteration history."""
+    return {
+        "base_plan_id": base_plan_id,
+        "constraints": constraints,
+        "generation_reasoning": reasoning_trace,
+    }
+
+
+def apply_recommendation_decision(
+    db: Session, plan_id: int, recommendation_id: int, accept: bool
+) -> Dict[str, Any]:
+    """Apply accept/reject decision and update lineage for affected tasks."""
+    recommendation = (
+        db.query(Recommendation)
+        .filter(Recommendation.id == recommendation_id, Recommendation.plan_id == plan_id)
+        .first()
+    )
+    if not recommendation:
+        raise ValueError("Recommendation not found")
+
+    recommendation.status = "accepted" if accept else "rejected"
+    recommendation.decided_at = datetime.utcnow()
+
+    affected = recommendation.affected_entities or {}
+    task_ids = _extract_task_ids(affected)
+
+    if accept and task_ids:
+        (
+            db.query(Task)
+            .filter(Task.plan_id == plan_id, Task.task_id.in_(task_ids))
+            .update({"lineage": PlanLineageType.HYBRID.value}, synchronize_session=False)
+        )
+
+    if accept:
+        plan = db.query(Plan).filter(Plan.id == plan_id).first()
+        if plan:
+            plan.lineage = PlanLineageType.HYBRID.value
+
+    db.commit()
+    db.refresh(recommendation)
+
+    return {
+        "recommendation": recommendation,
+        "updated_task_ids": task_ids,
+    }
+
+
+def _extract_task_ids(affected_entities: Dict[str, Any]) -> List[str]:
+    task_ids: List[str] = []
+    if not affected_entities:
+        return task_ids
+
+    if "task_id" in affected_entities:
+        task_ids.append(str(affected_entities["task_id"]))
+
+    if "task_ids" in affected_entities:
+        task_ids.extend([str(task_id) for task_id in affected_entities["task_ids"]])
+
+    return task_ids

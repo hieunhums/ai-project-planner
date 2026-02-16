@@ -86,6 +86,11 @@ class Task(Base):
     priority: Mapped[Optional[str]] = mapped_column(String(50), nullable=True)
     cost: Mapped[Optional[float]] = mapped_column(Float, nullable=True)
 
+    # Explainability fields
+    explanation: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    assumptions: Mapped[Optional[dict]] = mapped_column(JSON, nullable=True)
+    trade_offs: Mapped[Optional[dict]] = mapped_column(JSON, nullable=True)
+
     # Lineage tracking
     lineage: Mapped[str] = mapped_column(
         SQLEnum(PlanLineageType), default=PlanLineageType.HUMAN_CREATED
