@@ -28,7 +28,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div className="header-content">
             <div>
               <h1>AI Planning Assistant</h1>
-              <p className="subtitle">Shipyard & Port Logistics Planning for Seatrium</p>
+              <p className="subtitle">Shipyard & Port Logistics Planning for Contoso</p>
             </div>
             {persona && (
               <div className="persona-actions">
@@ -55,7 +55,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
       <main className="layout-main">{children}</main>
       {showNav && (
         <footer className="layout-footer">
-          <p>&copy; 2026 Seatrium - AI-Augmented Planning Demo</p>
+          <p>&copy; 2026 Contoso - AI-Augmented Planning Demo</p>
         </footer>
       )}
     </div>

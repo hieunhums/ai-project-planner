@@ -2,7 +2,7 @@
 name = "ai-planning-assistant-backend"
 version = "0.1.0"
 description = "Backend API for AI-Augmented Planning Assistant"
-authors = [{name = "Seatrium", email = "dev@seatrium.com"}]
+authors = [{name = "Contoso", email = "dev@contoso.com"}]
 requires-python = ">=3.11"
 dependencies = [
     "fastapi>=0.109.0",

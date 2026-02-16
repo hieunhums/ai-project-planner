@@ -1,6 +1,6 @@
 # AI-Augmented Planning Assistant for Shipyard & Port Logistics
 
-Demo web application designed for Seatrium planners to explore how AI can augment human planning decisions for construction and port logistics.
+Demo web application designed for Shipyard planners to explore how AI can augment human planning decisions for construction and port logistics.
 
 ## Features
 
@@ -144,11 +144,3 @@ Once the backend is running, visit:
 - **Plan generation**: 3-5 minutes for 10-50 task plans (Azure OpenAI reasoning models)
 - **UI responsiveness**: < 200ms for plan comparison rendering
 - **Data upload**: < 30 seconds for typical spreadsheets (< 1MB)
-
-## Contributing
-
-This is a demo project for Seatrium. For questions or contributions, contact the development team.
-
-## License
-
-Proprietary - Seatrium © 2026
