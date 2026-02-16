@@ -46,17 +46,17 @@ description: "Task list for AI-Augmented Planning Assistant for Shipyard & Port 
 
 **Purpose**: Core infrastructure that MUST be complete before ANY user story can be implemented
 
-- [ ] T010 Add backend configuration loader and settings in backend/src/config.py
-- [ ] T011 Create FastAPI app bootstrap and router wiring in backend/src/main.py, backend/src/api/routes.py
-- [ ] T012 Implement base API request/response models in backend/src/api/models.py
-- [ ] T013 Define SQLAlchemy base and DB session handling in backend/src/models/database.py, backend/src/db/__init__.py
-- [ ] T014 Create core Pydantic schemas with plan_lineage field (AI/human/hybrid tracking) in backend/src/models/schemas.py
-- [ ] T015 Implement local file and DB storage utilities with lineage metadata persistence in backend/src/services/storage_service.py
-- [ ] T016 [P] Wire logging and error handling middleware in backend/src/main.py
-- [ ] T017 [P] Add frontend API client and shared types in frontend/src/services/api.ts, frontend/src/services/types.ts
-- [ ] T018 [P] Add React Query provider and basic route layout in frontend/src/main.tsx, frontend/src/Layout.tsx
-- [ ] T019 [P] Generate data model documentation in specs/001-ai-planning-assistant/data-model.md with entity schemas
-- [ ] T020 [P] Generate API contracts (OpenAPI spec) in specs/001-ai-planning-assistant/contracts/planning-api.openapi.json
+- [X] T010 Add backend configuration loader and settings in backend/src/config.py
+- [X] T011 Create FastAPI app bootstrap and router wiring in backend/src/main.py, backend/src/api/routes.py
+- [X] T012 Implement base API request/response models in backend/src/api/models.py
+- [X] T013 Define SQLAlchemy base and DB session handling in backend/src/models/database.py, backend/src/db/__init__.py
+- [X] T014 Create core Pydantic schemas with plan_lineage field (AI/human/hybrid tracking) in backend/src/models/schemas.py
+- [X] T015 Implement local file and DB storage utilities with lineage metadata persistence in backend/src/services/storage_service.py
+- [X] T016 [P] Wire logging and error handling middleware in backend/src/main.py
+- [X] T017 [P] Add frontend API client and shared types in frontend/src/services/api.ts, frontend/src/services/types.ts
+- [X] T018 [P] Add React Query provider and basic route layout in frontend/src/main.tsx, frontend/src/Layout.tsx
+- [X] T019 [P] Generate data model documentation in specs/001-ai-planning-assistant/data-model.md with entity schemas
+- [X] T020 [P] Generate API contracts (OpenAPI spec) in specs/001-ai-planning-assistant/contracts/planning-api.openapi.json
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
