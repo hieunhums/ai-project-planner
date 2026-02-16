@@ -168,6 +168,10 @@ description: "Task list for AI-Augmented Planning Assistant for Shipyard & Port 
 - [X] T055 [P] Add Azure deployment helper script in infra/azure-deployment.sh
 - [X] T056 [P] Add local-first setup guidance in README.md
 - [X] T057 Performance pass on plan comparison rendering in frontend/src/components/PlanComparison.tsx
+- [X] T058 [P] Implement DELETE endpoint for projects in backend/src/api/routes.py to handle project deletion with cascade cleanup
+- [X] T059 [P] Add deleteProject() API client method in frontend/src/services/api.ts
+- [X] T060 Update ProjectCard component with delete (trash) icon button in frontend/src/components/ProjectCard.tsx
+- [X] T061 Implement delete handler with confirmation dialog and error handling in frontend/src/components/ProjectCard.tsx
 
 ---
 

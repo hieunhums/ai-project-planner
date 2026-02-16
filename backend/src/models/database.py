@@ -4,7 +4,7 @@ Database models using SQLAlchemy ORM
 
 from datetime import datetime
 from typing import Optional
-from sqlalchemy import String, Integer, Float, DateTime, Text, JSON, Enum as SQLEnum
+from sqlalchemy import String, Integer, Float, DateTime, Text, JSON, Enum as SQLEnum, ForeignKey
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 import enum
 
@@ -33,12 +33,28 @@ class PlanStatus(str, enum.Enum):
     FAILED = "failed"
 
 
+class Project(Base):
+    """Project entity - groups uploaded and generated plans"""
+
+    __tablename__ = "projects"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    name: Mapped[str] = mapped_column(String(255), nullable=False)
+
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime, default=datetime.utcnow, onupdate=datetime.utcnow
+    )
+
+
 class Plan(Base):
     """Plan entity - represents a complete planning solution"""
 
     __tablename__ = "plans"
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    project_id: Mapped[int] = mapped_column(Integer, ForeignKey("projects.id"), nullable=False)
+    base_plan_id: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
     name: Mapped[str] = mapped_column(String(255), nullable=False)
     description: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     status: Mapped[str] = mapped_column(SQLEnum(PlanStatus), default=PlanStatus.UPLOADED)
@@ -59,6 +75,7 @@ class Plan(Base):
 
     # Storage references
     source_file_path: Mapped[Optional[str]] = mapped_column(String(512), nullable=True)
+    source_file_name: Mapped[Optional[str]] = mapped_column(String(255), nullable=True)
     plan_data_json: Mapped[Optional[dict]] = mapped_column(JSON, nullable=True)
 
 

@@ -25,13 +25,14 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 def init_db():
     """Initialize database (create all tables)"""
+    # Base metadata includes Project and updated Plan schema for project scoping.
     Base.metadata.create_all(bind=engine)
 
 
 def get_db() -> Generator[Session, None, None]:
     """
     Dependency for FastAPI routes to get database session
-    
+
     Usage:
         @app.get("/items")
         def read_items(db: Session = Depends(get_db)):
@@ -48,7 +49,7 @@ def get_db() -> Generator[Session, None, None]:
 def get_db_context() -> Generator[Session, None, None]:
     """
     Context manager for database sessions outside of FastAPI
-    
+
     Usage:
         with get_db_context() as db:
             db.query(Item).all()

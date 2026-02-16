@@ -1,0 +1,166 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "AI Planning Assistant - Project API",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/projects": {
+      "get": {
+        "summary": "List projects",
+        "responses": {
+          "200": {
+            "description": "Project list",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "$ref": "#/components/schemas/ProjectSummary" }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create project",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/ProjectCreateRequest" }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Project created",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ProjectSummary" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/projects/{projectId}": {
+      "get": {
+        "summary": "Get project details with uploads and plans",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Project detail",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ProjectDetail" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/plans/upload": {
+      "post": {
+        "summary": "Upload plan file",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": ["file", "name", "project_id"],
+                "properties": {
+                  "file": { "type": "string", "format": "binary" },
+                  "name": { "type": "string" },
+                  "description": { "type": "string" },
+                  "project_id": { "type": "integer" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Upload response",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/PlanUploadResponse" }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ProjectCreateRequest": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string" }
+        }
+      },
+      "ProjectSummary": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "name": { "type": "string" },
+          "created_at": { "type": "string", "format": "date-time" }
+        }
+      },
+      "ProjectDetail": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "name": { "type": "string" },
+          "uploads": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/UploadSummary" }
+          },
+          "generated_plans": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/GeneratedPlanSummary" }
+          }
+        }
+      },
+      "UploadSummary": {
+        "type": "object",
+        "properties": {
+          "plan_id": { "type": "integer" },
+          "file_name": { "type": "string" },
+          "uploaded_at": { "type": "string", "format": "date-time" },
+          "status_label": { "type": "string" }
+        }
+      },
+      "GeneratedPlanSummary": {
+        "type": "object",
+        "properties": {
+          "plan_id": { "type": "integer" },
+          "name": { "type": "string" },
+          "generated_at": { "type": "string", "format": "date-time" },
+          "status_label": { "type": "string" }
+        }
+      },
+      "PlanUploadResponse": {
+        "type": "object",
+        "properties": {
+          "plan_id": { "type": "integer" },
+          "name": { "type": "string" },
+          "status": { "type": "string" },
+          "tasks_count": { "type": "integer" },
+          "resources_count": { "type": "integer" },
+          "message": { "type": "string" }
+        }
+      }
+    }
+  }
+}

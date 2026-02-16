@@ -16,6 +16,12 @@ from .models import SuccessResponse, ErrorResponse
 from ..db import get_db
 from ..config import get_settings
 from ..services.storage_service import StorageService
+from ..services.project_service import (
+    list_projects,
+    create_project,
+    get_project_detail,
+    delete_project,
+)
 from ..services.planning_service import (
     SpreadsheetParser,
     PlanGenerator,
@@ -27,13 +33,16 @@ from ..services.planning_service import (
 from ..services.comparison_service import PlanComparisonService
 from ..services.ai_service import MockAIService, AzureOpenAIService
 from ..agents.planning_agent import create_planning_agent
-from ..models.database import Plan, PlanStatus, PlanLineageType
+from ..models.database import Plan, PlanStatus, PlanLineageType, Project
 from ..models.schemas import (
     PlanSchema,
     TaskSchema,
     ResourceSchema,
     AssumptionSchema,
     RecommendationSchema,
+    ProjectCreateRequest,
+    ProjectSummary,
+    ProjectDetail,
     ConstraintUpdateRequest,
     PlanComparisonRequest,
     RecommendationDecisionRequest,
@@ -74,11 +83,50 @@ async def health_check(db: Session = Depends(get_db)):
 # Planning endpoints
 planning_router = APIRouter(prefix="/plans", tags=["planning"])
 
+# Project endpoints
+project_router = APIRouter(prefix="/projects", tags=["projects"])
+
+
+@project_router.get("")
+async def get_projects(db: Session = Depends(get_db)) -> list[ProjectSummary]:
+    """List all projects"""
+    return list_projects(db)
+
+
+@project_router.post("", status_code=201)
+async def create_new_project(
+    request: ProjectCreateRequest, db: Session = Depends(get_db)
+) -> ProjectSummary:
+    """Create a new project"""
+    try:
+        return create_project(db, request.name)
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc))
+
+
+@project_router.get("/{project_id}")
+async def get_project(project_id: int, db: Session = Depends(get_db)) -> ProjectDetail:
+    """Get project details with uploads and generated plans"""
+    try:
+        return get_project_detail(db, project_id)
+    except ValueError as exc:
+        raise HTTPException(status_code=404, detail=str(exc))
+
+
+@project_router.delete("/{project_id}", status_code=204)
+async def delete_project_endpoint(project_id: int, db: Session = Depends(get_db)) -> None:
+    """Delete a project and all associated plans"""
+    try:
+        delete_project(db, project_id)
+    except ValueError as exc:
+        raise HTTPException(status_code=404, detail=str(exc))
+
 
 @planning_router.post("/upload")
 async def upload_plan(
     file: UploadFile = File(...),
     name: str = Form(...),
+    project_id: int = Form(...),
     description: Optional[str] = Form(None),
     db: Session = Depends(get_db),
 ):
@@ -98,6 +146,13 @@ async def upload_plan(
         )
 
     try:
+        if not name.strip():
+            raise HTTPException(status_code=400, detail="Plan name is required")
+
+        project = db.query(Project).filter(Project.id == project_id).first()
+        if not project:
+            raise HTTPException(status_code=404, detail="Project not found")
+
         # Save uploaded file
         storage_service = StorageService()
         file_content = await file.read()
@@ -112,6 +167,7 @@ async def upload_plan(
         resources = [ResourceSchema(**res) for res in plan_data.get("resources", [])]
 
         plan_schema = PlanSchema(
+            project_id=project_id,
             name=name,
             description=description or "Uploaded human plan",
             status=PlanStatus.UPLOADED.value,
@@ -122,8 +178,10 @@ async def upload_plan(
             assumptions=[],
             recommendations=[],
             source_file_path=file_path,
+            source_file_name=file.filename,
             plan_data_json={
                 "source_file_path": file_path,
+                "source_file_name": file.filename,
                 "uploaded_at": str(datetime.datetime.now(datetime.timezone.utc)),
             },
         )
@@ -226,6 +284,8 @@ async def generate_plan(
         ]
 
         ai_plan_schema = PlanSchema(
+            project_id=plan.project_id,
+            base_plan_id=plan_id,
             name=result["plan_name"],
             description=f"AI-optimized version of {plan.name}",
             status=PlanStatus.COMPLETED.value,
@@ -382,6 +442,8 @@ async def update_constraints(
     metrics = result.get("metrics", {})
 
     ai_plan_schema = PlanSchema(
+        project_id=plan.project_id,
+        base_plan_id=plan_id,
         name=result["plan_name"],
         description=f"Constraint iteration based on {plan.name}",
         status=PlanStatus.COMPLETED.value,
@@ -507,3 +569,4 @@ async def export_plan(plan_id: int, format: str, db: Session = Depends(get_db)):
 # Include routers in main API router
 api_router.include_router(health_router)
 api_router.include_router(planning_router)
+api_router.include_router(project_router)

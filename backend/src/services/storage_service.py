@@ -58,6 +58,8 @@ class StorageService:
         with get_db_context() as db:
             # Create plan
             plan = Plan(
+                project_id=plan_schema.project_id,
+                base_plan_id=plan_schema.base_plan_id,
                 name=plan_schema.name,
                 description=plan_schema.description,
                 status=plan_schema.status,
@@ -66,6 +68,7 @@ class StorageService:
                 capacity_utilization=plan_schema.capacity_utilization,
                 total_cost=plan_schema.total_cost,
                 source_file_path=plan_schema.source_file_path,
+                source_file_name=plan_schema.source_file_name,
                 plan_data_json=plan_schema.plan_data_json,
             )
             db.add(plan)

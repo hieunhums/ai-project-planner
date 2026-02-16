@@ -75,6 +75,8 @@ class PlanSchema(BaseModel):
     """Complete plan data schema"""
 
     id: Optional[int] = None
+    project_id: Optional[int] = None
+    base_plan_id: Optional[int] = None
     name: str
     description: Optional[str] = None
     status: str = "uploaded"  # uploaded, parsing, generating, completed, failed
@@ -85,6 +87,7 @@ class PlanSchema(BaseModel):
     created_at: Optional[datetime] = None
     updated_at: Optional[datetime] = None
     source_file_path: Optional[str] = None
+    source_file_name: Optional[str] = None
     plan_data_json: Optional[Dict[str, Any]] = None
 
     # Related entities
@@ -113,6 +116,47 @@ class PlanUploadResponse(BaseModel):
     tasks_count: int
     resources_count: int
     message: str
+
+
+class ProjectCreateRequest(BaseModel):
+    """Request schema for creating a project"""
+
+    name: str = Field(..., description="Project name")
+
+
+class ProjectSummary(BaseModel):
+    """Summary schema for project list"""
+
+    id: int
+    name: str
+    created_at: Optional[datetime] = None
+
+
+class UploadSummary(BaseModel):
+    """Summary schema for uploaded file entries"""
+
+    plan_id: int
+    file_name: str
+    uploaded_at: Optional[datetime] = None
+    status_label: str
+
+
+class GeneratedPlanSummary(BaseModel):
+    """Summary schema for generated plans"""
+
+    plan_id: int
+    name: str
+    generated_at: Optional[datetime] = None
+    status_label: str
+
+
+class ProjectDetail(BaseModel):
+    """Project details with uploads and generated plans"""
+
+    id: int
+    name: str
+    uploads: List[UploadSummary]
+    generated_plans: List[GeneratedPlanSummary]
 
 
 class ConstraintUpdateRequest(BaseModel):
