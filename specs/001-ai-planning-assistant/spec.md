@@ -146,7 +146,7 @@ Planners must retain full control to selectively adopt AI recommendations or cre
 
 ### Measurable Outcomes
 
-- **SC-001**: Planners can upload planning data and generate an initial AI plan within 2 minutes total
+- **SC-001**: Planners can upload planning data and generate an initial AI plan within 5 minutes total (including upload, parsing, and AI inference)
 - **SC-002**: The AI-proposed plan respects all uploaded constraints (100% constraint compliance in initial generation)
 - **SC-003**: Side-by-side comparison clearly highlights at least 95% of plan differences (as objectively determinable—task date changes, resource reassignments, sequence modifications)
 - **SC-004**: AI provides explicit explanations for at least 80% of significant differences between the original plan and AI plan (where significance is determined by impact on schedule, resource utilization, or risk)
@@ -155,7 +155,7 @@ Planners must retain full control to selectively adopt AI recommendations or cre
 - **SC-007**: At least 80% of planners (in demo testing) report increased confidence in planning decisions after using the comparison feature
 - **SC-008**: Planners can export a finalized plan ready for execution teams (in proper Gantt/task list format) in under 1 minute
 - **SC-009**: The AI plan, on average, identifies potential improvements (capacity utilization, schedule acceleration, or risk reduction) in at least 70% of test scenarios
-- **SC-010**: For plans with up to 50 tasks (target demo scale), plan generation completes within 1 minute without degradation in explanation quality or recommendation accuracy
+- **SC-010**: For plans with up to 50 tasks (target demo scale), plan generation completes within 3-5 minutes without degradation in explanation quality or recommendation accuracy (accounting for reasoning model latency)
 - **SC-011**: System successfully identifies and recommends constraint relaxations in 100% of infeasible scenarios; relaxations reduce task count or deadline pressure by measurable amount
 - **SC-012**: Planners accept constraint relaxation recommendations in at least 70% of cases where they are presented
 
