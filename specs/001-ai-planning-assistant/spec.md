@@ -2,7 +2,7 @@
 
 **Feature Branch**: `001-ai-planning-assistant`  
 **Created**: February 16, 2026  
-**Status**: In Clarification (5 clarifications resolved)  
+**Status**: Clarified (5 critical clarifications resolved + AI reasoning model refinement)  
 **Input**: User description: "This demo web application is designed for shipyard and port planners at Seatrium to explore how AI can augment, not replace, human planning decisions for construction and port logistics..."
 
 ## Clarifications
@@ -13,7 +13,7 @@
 - Q: What plan scale/complexity is expected for demo? → A: Small demo scale (10-50 tasks)
 - Q: Which planning constraints should be prioritized? → A: Extended constraints (cost limits, facility capacity, multi-shift availability, resource skill matching)
 - Q: Should the system support multi-project planning? → A: Single-project focus (one plan per upload session)
-- Q: What optimization approach should the AI use? → A: Standard heuristic search (fast, good-enough solutions, simpler to explain)
+- Q: What optimization approach should the AI use? → A: AI-based reasoning model (e.g., GPT-5.2-reasoning, Claude-Opus-4.5) leveraging built-in reasoning capabilities to approximate human-centric heuristics with superior explainability over traditional OR/LP approaches
 
 ## User Scenarios & Testing *(mandatory)*
 
@@ -131,7 +131,7 @@ Planners must retain full control to selectively adopt AI recommendations or cre
 - **FR-015**: System MUST process plans with up to 50 tasks for the MVP demo phase
 - **FR-016**: System MUST support the following constraint types: task dependencies, resource availability, task deadlines, cost limits, facility capacity, multi-shift resource availability, and resource skill matching
 - **FR-017**: System MUST focus on single-project planning scenarios; multi-project support is deferred to post-MVP enhancement
-- **FR-018**: System MUST use a standard heuristic search approach for plan optimization balancing speed and explanation clarity
+- **FR-018**: System MUST use an AI-based reasoning model (e.g., GPT-5.2-reasoning or Claude-Opus-4.5) leveraging the model's built-in reasoning and thinking capabilities to generate plans; the model's reasoning process enables more human-centric, explainable optimization than traditional linear programming or operations research approaches
 
 ### Key Entities *(include if feature involves data)*
 
@@ -170,7 +170,8 @@ Planners must retain full control to selectively adopt AI recommendations or cre
 - **Explanation granularity**: AI explanations will focus on major decisions (task rescheduling, high-impact resource allocations, constraint relaxations) rather than minute-by-minute reasoning
 - **Constraint types in scope**: Task dependencies, resource availability, task deadlines, cost limits, facility capacity, multi-shift resource availability, and resource skill matching
 - **Project scope**: Single-project planning per session; multi-project optimization is a future enhancement
-- **Optimization strategy**: Heuristic search approach prioritizing feasibility and speed with clear explainability over mathematical optimality
+- **Optimization strategy**: AI-based reasoning model (GPT-5.2-reasoning or Claude-Opus-4.5) that leverages advanced reasoning capabilities to simulate human planning logic; this approach prioritizes human-centric decision-making and transparent reasoning over mathematical optimality, aligning with the demo's core goal of demonstrating AI as an explainable decision-support partner
+- **Model reasoning capability**: The selected model's built-in reasoning/thinking process generates detailed explanations of planning decisions, constraint trade-offs, and recommendations; these explanations emerge naturally from the reasoning process rather than being post-hoc rationalizations
 - **Human-in-the-loop governance**: The system supports decision-support only; no automated plan execution occurs without explicit planner approval
 
 ## Remaining Open Questions
