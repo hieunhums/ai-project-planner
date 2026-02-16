@@ -1,0 +1,11 @@
+Constraint ID,Constraint Type,Scope,Description,Priority,Value
+C001,Deadline,T020,Project must complete by 2026-05-05,Critical,2026-05-05
+C002,Resource Capacity,R001,Crane A limited to 1 concurrent task,High,1
+C003,Resource Capacity,R002,Crane B limited to 1 concurrent task,High,1
+C004,Cost Limit,All,Total project budget not to exceed $800000,High,800000
+C005,Facility Capacity,Dock 1,Maximum 3 concurrent welding operations,Medium,3
+C006,Multi-Shift,Electrical Teams,Electrical work requires 2-shift operation for safety,High,2
+C007,Skill Matching,T005,Main Engine Installation requires certified crew,Critical,Certification Required
+C008,Skill Matching,T011,Navigation Systems require electronics certification,High,Certification Required
+C009,Weather Window,T020,Sea Trials must occur during calm weather (April 26-May 10),Medium,2026-04-26 to 2026-05-10
+C010,Regulatory,T019;T020,Pre-Sea and Sea Trials require regulatory inspector presence,Critical,Inspector Required

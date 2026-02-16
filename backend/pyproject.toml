@@ -1,0 +1,37 @@
+[project]
+name = "ai-planning-assistant-backend"
+version = "0.1.0"
+description = "Backend API for AI-Augmented Planning Assistant"
+authors = [{name = "Seatrium", email = "dev@seatrium.com"}]
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.109.0",
+    "uvicorn[standard]>=0.27.0",
+    "sqlalchemy>=2.0.25",
+    "pydantic>=2.5.0",
+    "pydantic-settings>=2.1.0",
+    "pandas>=2.1.4",
+    "openpyxl>=3.1.2",
+    "python-multipart>=0.0.6",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.4",
+    "pytest-asyncio>=0.23.3",
+    "httpx>=0.26.0",
+    "black>=23.12.1",
+    "ruff>=0.1.11",
+]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"

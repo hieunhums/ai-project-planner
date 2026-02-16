@@ -22,9 +22,9 @@ description: "Task list for AI-Augmented Planning Assistant for Shipyard & Port 
 
 **Purpose**: Resolve technical unknowns identified in plan.md Phase 0
 
-- [ ] T000 [P] Research Azure OpenAI integration patterns via Azure AI Foundry (SDK, latency, best practices) and document in specs/001-ai-planning-assistant/research.md
-- [ ] T001 [P] Research Microsoft Agent Framework orchestration patterns for multi-step planning workflows in specs/001-ai-planning-assistant/research.md
-- [ ] T002 [P] Research schema inference strategies for flexible spreadsheet parsing in specs/001-ai-planning-assistant/research.md
+- [X] T000 [P] Research Azure OpenAI integration patterns via Azure AI Foundry (SDK, latency, best practices) and document in specs/001-ai-planning-assistant/research.md
+- [X] T001 [P] Research Microsoft Agent Framework orchestration patterns for multi-step planning workflows in specs/001-ai-planning-assistant/research.md
+- [X] T002 [P] Research schema inference strategies for flexible spreadsheet parsing in specs/001-ai-planning-assistant/research.md
 
 ---
 
@@ -32,13 +32,13 @@ description: "Task list for AI-Augmented Planning Assistant for Shipyard & Port 
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T003 Create project structure per implementation plan in backend/, frontend/, docker/, infra/
-- [ ] T004 Initialize backend project scaffold in backend/pyproject.toml, backend/requirements.txt, backend/src/main.py
-- [ ] T005 Initialize frontend Vite React TS scaffold in frontend/package.json, frontend/src/main.tsx, frontend/src/App.tsx
-- [ ] T006 [P] Add backend environment template in backend/.env.example
-- [ ] T007 [P] Add frontend environment template in frontend/.env.example
-- [ ] T008 [P] Add local container assets in docker/Dockerfile.backend, docker/Dockerfile.frontend, docker/docker-compose.yml
-- [ ] T009 [P] Generate sample planning data CSV files in backend/tests/fixtures/sample_plans/ mimicking user-generated Excel format per data model requirements
+- [X] T003 Create project structure per implementation plan in backend/, frontend/, docker/, infra/
+- [X] T004 Initialize backend project scaffold in backend/pyproject.toml, backend/requirements.txt, backend/src/main.py
+- [X] T005 Initialize frontend Vite React TS scaffold in frontend/package.json, frontend/src/main.tsx, frontend/src/App.tsx
+- [X] T006 [P] Add backend environment template in backend/.env.example
+- [X] T007 [P] Add frontend environment template in frontend/.env.example
+- [X] T008 [P] Add local container assets in docker/Dockerfile.backend, docker/Dockerfile.frontend, docker/docker-compose.yml
+- [X] T009 [P] Generate sample planning data CSV files in backend/tests/fixtures/sample_plans/ mimicking user-generated Excel format per data model requirements
 
 ---
 

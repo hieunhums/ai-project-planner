@@ -1,0 +1,20 @@
+Resource ID,Resource Name,Type,Capacity,Availability Start,Availability End,Hourly Cost,Skills
+R001,Crane A,Equipment,1,2026-03-01,2026-06-30,150,Heavy Lifting
+R002,Crane B,Equipment,1,2026-03-01,2026-06-30,150,Heavy Lifting
+R003,Welding Team A,Personnel,5,2026-03-01,2026-06-30,75,Welding;Fabrication
+R004,Crew A,Personnel,8,2026-03-01,2026-06-30,50,General Construction
+R005,Crew B,Personnel,8,2026-03-01,2026-06-30,50,Engine Installation
+R006,Crew C,Personnel,6,2026-03-01,2026-06-30,55,Auxiliary Systems
+R007,Electrical Team A,Personnel,4,2026-03-01,2026-06-30,70,Electrical;Installation
+R008,Electrical Team B,Personnel,4,2026-03-01,2026-06-30,70,Electrical;Engine Systems
+R009,HVAC Crew,Personnel,3,2026-03-01,2026-06-30,65,HVAC;Climate Control
+R010,Piping Team,Personnel,6,2026-03-01,2026-06-30,60,Piping;Fluid Systems
+R011,Electronics Team,Personnel,3,2026-03-01,2026-06-30,85,Navigation;Communication
+R012,Safety Crew,Personnel,4,2026-03-01,2026-06-30,75,Safety Systems;Compliance
+R013,Interior Team A,Personnel,5,2026-03-01,2026-06-30,55,Interior Fitting;Carpentry
+R014,Interior Team B,Personnel,5,2026-03-01,2026-06-30,55,Interior Fitting;Finishing
+R015,Deck Crew,Personnel,6,2026-03-01,2026-06-30,60,Deck Equipment
+R016,Paint Team A,Personnel,4,2026-03-01,2026-06-30,45,Painting;Surface Prep
+R017,Paint Team B,Personnel,4,2026-03-01,2026-06-30,45,Painting;Interior Finishing
+R018,QA Team,Personnel,3,2026-03-01,2026-06-30,90,Quality Assurance;Testing
+R019,Full Crew,Personnel,25,2026-03-01,2026-06-30,50,Operations;Sea Trials

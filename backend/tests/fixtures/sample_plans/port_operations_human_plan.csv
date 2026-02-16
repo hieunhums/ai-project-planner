@@ -1,0 +1,11 @@
+Task ID,Task Name,Duration,Start,End,Assigned Resource,Status,Notes
+T001,Berth Preparation,3,2026-02-01,2026-02-04,Terminal Crew,Complete,Dock 5 ready
+T002,Crane Positioning,2,2026-02-04,2026-02-06,Crane Ops,Complete,Cranes 1 & 2 operational
+T003,Container Offload - Vessel A,6,2026-02-06,2026-02-12,Crane 1 + Crew A,Complete,450 containers
+T004,Container Offload - Vessel B,5,2026-02-09,2026-02-14,Crane 2 + Crew B,Complete,380 containers
+T005,Storage Allocation - Import,4,2026-02-12,2026-02-16,Yard Planning,Complete,Zone 3A allocated
+T006,Reefer Container Inspection,3,2026-02-13,2026-02-16,Inspection Team,Complete,28 reefer units
+T007,Customs Clearance Processing,5,2026-02-14,2026-02-19,Customs Liaison,In Progress,620 containers pending
+T008,Container Sorting - Export Queue,4,2026-02-16,2026-02-20,Yard Crew,Planned,Zone 5B
+T009,Vessel C Arrival & Berth,2,2026-02-19,2026-02-21,Terminal Ops,Planned,Berth 7
+T010,Container Loading - Vessel C,7,2026-02-21,2026-02-28,Crane 1 + Crew C,Planned,520 containers
