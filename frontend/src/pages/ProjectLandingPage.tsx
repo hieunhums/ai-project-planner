@@ -1,22 +1,30 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import { FileUpload } from '../components/FileUpload';
 import { ProjectUploadsList } from '../components/ProjectUploadsList';
 import { ProjectGeneratedPlansList } from '../components/ProjectGeneratedPlansList';
 import { usePlanGeneration } from '../hooks/usePlanGeneration';
 import { useProjectDetail } from '../hooks/useProjectDetail';
+import { buildGanttPath } from '../routes';
 import './ProjectLandingPage.css';
 
 export const ProjectLandingPage: React.FC = () => {
   const { projectId } = useParams();
+  const navigate = useNavigate();
   const numericProjectId = projectId ? Number(projectId) : null;
+
+  // Step 1 — upload current plan
   const [uploadedPlanId, setUploadedPlanId] = useState<number | null>(null);
   const [uploadInfo, setUploadInfo] = useState<{
     taskCount: number;
     resourceCount: number;
   } | null>(null);
-  const [aiPlanId, setAiPlanId] = useState<number | null>(null);
-  const [aiMetrics, setAiMetrics] = useState<any>(null);
+
+  // Step 2 — upload new project details (mocked: no backend call)
+  const [projectDetailsFile, setProjectDetailsFile] = useState<File | null>(null);
+  const [projectDetailsUploaded, setProjectDetailsUploaded] = useState(false);
+  const detailsInputRef = useRef<HTMLInputElement>(null);
+
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(
     null
   );
@@ -26,21 +34,20 @@ export const ProjectLandingPage: React.FC = () => {
 
   useEffect(() => {
     if (message) {
-      const timer = setTimeout(() => setMessage(null), 5000);
+      const timer = setTimeout(() => setMessage(null), 6000);
       return () => clearTimeout(timer);
     }
     return undefined;
   }, [message]);
 
+  // Step 1 handlers
   const handleUploadSuccess = (planId: number, taskCount: number, resourceCount: number) => {
     setUploadedPlanId(planId);
     setUploadInfo({ taskCount, resourceCount });
     setMessage({
       type: 'success',
-      text: `Plan uploaded successfully. ${taskCount} tasks and ${resourceCount} resources found.`,
+      text: `Current plan uploaded. ${taskCount} tasks and ${resourceCount} resources found.`,
     });
-    setAiPlanId(null);
-    setAiMetrics(null);
     refresh();
   };
 
@@ -48,21 +55,28 @@ export const ProjectLandingPage: React.FC = () => {
     setMessage({ type: 'error', text: errorMessage });
   };
 
+  // Step 2 — mock project details upload (no backend)
+  const handleDetailsFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0] ?? null;
+    if (!file) return;
+    setProjectDetailsFile(file);
+    // Simulate a short processing delay for demo effect
+    setTimeout(() => {
+      setProjectDetailsUploaded(true);
+      setMessage({ type: 'success', text: `Project details "${file.name}" loaded successfully.` });
+    }, 600);
+  };
+
+  // Step 3 — generate optimized plan then redirect to Gantt page
   const handleGeneratePlan = async () => {
-    if (!uploadedPlanId) return;
+    if (!uploadedPlanId || !numericProjectId) return;
     setMessage(null);
     const result = await generatePlan({ planId: uploadedPlanId });
 
     if (result) {
-      setAiPlanId(result.aiPlanId);
-      setAiMetrics(result.metrics);
-      setMessage({
-        type: 'success',
-        text: `AI plan generated successfully. Duration: ${result.metrics.total_duration_days.toFixed(
-          1
-        )} days`,
-      });
       refresh();
+      // Navigate to Gantt visualisation
+      navigate(buildGanttPath(numericProjectId));
     } else if (generationError) {
       setMessage({ type: 'error', text: generationError });
     }
@@ -71,6 +85,11 @@ export const ProjectLandingPage: React.FC = () => {
   if (!numericProjectId || Number.isNaN(numericProjectId)) {
     return <div className="project-error">Invalid project selection.</div>;
   }
+
+  // Workflow step indicators
+  const step1Done = !!uploadedPlanId;
+  const step2Done = projectDetailsUploaded;
+  const readyToGenerate = step1Done && step2Done;
 
   return (
     <div className="project-landing">
@@ -89,90 +108,134 @@ export const ProjectLandingPage: React.FC = () => {
         <div className={`message-banner ${message.type}`}>
           <span>{message.text}</span>
           <button onClick={() => setMessage(null)} className="close-btn">
-            Close
+            ✕
           </button>
         </div>
       )}
 
-      <div className="project-actions">
-        <div className="card">
-          <h2>Upload planning data</h2>
-          <p className="card-description">
-            Add a planning spreadsheet to this project. Existing uploads stay available.
-          </p>
-          <FileUpload
-            projectId={numericProjectId}
-            onUploadSuccess={handleUploadSuccess}
-            onUploadError={handleUploadError}
-          />
-        </div>
-
-        {uploadedPlanId && uploadInfo && (
-          <div className="card">
-            <h2>Generate AI plan</h2>
-            <p className="card-description">
-              Generate an optimized plan from the latest upload.
+      {/* ── Workflow steps ──────────────────────────────────────────────── */}
+      <div className="workflow-steps">
+        {/* Step 1 — Upload current plan */}
+        <div className={`workflow-step ${step1Done ? 'step-done' : 'step-active'}`}>
+          <div className="step-indicator">
+            {step1Done ? (
+              <span className="step-check">✓</span>
+            ) : (
+              <span className="step-number">1</span>
+            )}
+          </div>
+          <div className="step-body">
+            <h3 className="step-title">Upload current project plan</h3>
+            <p className="step-desc">
+              Upload your existing schedule as a CSV file (columns: project_id, resource,
+              start_date, end_date).
             </p>
 
-            <div className="plan-info">
-              <div className="info-item">
-                <span className="label">Plan ID:</span>
-                <span className="value">{uploadedPlanId}</span>
-              </div>
-              <div className="info-item">
-                <span className="label">Tasks:</span>
-                <span className="value">{uploadInfo.taskCount}</span>
-              </div>
-              <div className="info-item">
-                <span className="label">Resources:</span>
-                <span className="value">{uploadInfo.resourceCount}</span>
-              </div>
-            </div>
-
-            <button
-              onClick={handleGeneratePlan}
-              className="generate-btn"
-              disabled={isGenerating}
-            >
-              {isGenerating ? `Generating... (${progress}%)` : 'Generate AI Plan'}
-            </button>
-
-            {isGenerating && (
-              <div className="progress-info">
-                <p>AI reasoning in progress... This may take a few minutes.</p>
-                <div className="progress-bar">
-                  <div className="progress-fill" style={{ width: `${progress}%` }}></div>
-                </div>
+            {!step1Done ? (
+              <FileUpload
+                projectId={numericProjectId}
+                onUploadSuccess={handleUploadSuccess}
+                onUploadError={handleUploadError}
+              />
+            ) : (
+              <div className="step-done-info">
+                <span>Plan ID {uploadedPlanId}</span>
+                <span>·</span>
+                <span>{uploadInfo?.taskCount} tasks</span>
+                <span>·</span>
+                <span>{uploadInfo?.resourceCount} resources</span>
               </div>
             )}
           </div>
-        )}
+        </div>
 
-        {aiPlanId && aiMetrics && (
-          <div className="card success-card">
-            <h2>AI plan generated</h2>
-            <p className="card-description">
-              Your optimized plan is ready. Review key metrics below.
-            </p>
-            <div className="metrics-grid">
-              <div className="metric-card">
-                <div className="metric-label">Total Duration</div>
-                <div className="metric-value">{aiMetrics.total_duration_days.toFixed(1)} days</div>
-              </div>
-              <div className="metric-card">
-                <div className="metric-label">Capacity Utilization</div>
-                <div className="metric-value">{aiMetrics.capacity_utilization.toFixed(1)}%</div>
-              </div>
-              <div className="metric-card">
-                <div className="metric-label">Total Cost</div>
-                <div className="metric-value">${aiMetrics.total_cost.toLocaleString()}</div>
-              </div>
-            </div>
+        {/* Step 2 — Upload new project details */}
+        <div
+          className={`workflow-step ${
+            !step1Done ? 'step-locked' : step2Done ? 'step-done' : 'step-active'
+          }`}
+        >
+          <div className="step-indicator">
+            {step2Done ? (
+              <span className="step-check">✓</span>
+            ) : (
+              <span className="step-number">2</span>
+            )}
           </div>
-        )}
+          <div className="step-body">
+            <h3 className="step-title">Upload new project details</h3>
+            <p className="step-desc">
+              Provide the new project requirements CSV. The AI will use this to suggest
+              optimised scheduling additions.
+            </p>
+
+            {step1Done && !step2Done && (
+              <div className="file-drop-zone" onClick={() => detailsInputRef.current?.click()}>
+                <input
+                  ref={detailsInputRef}
+                  type="file"
+                  accept=".csv"
+                  className="hidden-input"
+                  onChange={handleDetailsFileChange}
+                />
+                <span className="drop-icon">📄</span>
+                <span className="drop-label">Click to select details CSV</span>
+              </div>
+            )}
+
+            {step2Done && projectDetailsFile && (
+              <div className="step-done-info">
+                <span>{projectDetailsFile.name}</span>
+                <span>·</span>
+                <span>{(projectDetailsFile.size / 1024).toFixed(1)} KB</span>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Step 3 — Generate optimized plan */}
+        <div
+          className={`workflow-step ${
+            !readyToGenerate ? 'step-locked' : 'step-active'
+          }`}
+        >
+          <div className="step-indicator">
+            <span className="step-number">3</span>
+          </div>
+          <div className="step-body">
+            <h3 className="step-title">Generate new project optimisation plan</h3>
+            <p className="step-desc">
+              The AI analyses your current schedule and new projects to produce an optimised,
+              resource-balanced plan.
+            </p>
+
+            {readyToGenerate && (
+              <>
+                <button
+                  onClick={handleGeneratePlan}
+                  className="generate-btn"
+                  disabled={isGenerating}
+                >
+                  {isGenerating
+                    ? `Generating… (${progress}%)`
+                    : '✦ Generate new project optimisation plan'}
+                </button>
+
+                {isGenerating && (
+                  <div className="progress-info">
+                    <p>AI reasoning in progress… This may take a moment.</p>
+                    <div className="progress-bar">
+                      <div className="progress-fill" style={{ width: `${progress}%` }} />
+                    </div>
+                  </div>
+                )}
+              </>
+            )}
+          </div>
+        </div>
       </div>
 
-      {isLoading && <div className="project-status">Loading project details...</div>}
+      {isLoading && <div className="project-status">Loading project details…</div>}
       {error && <div className="project-error">{error}</div>}
 
       <div className="project-artifacts">

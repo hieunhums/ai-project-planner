@@ -5,6 +5,7 @@ import { IteratePage } from './pages/IteratePage';
 import { LoginPage } from './pages/LoginPage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { ProjectLandingPage } from './pages/ProjectLandingPage';
+import { GanttPage } from './pages/GanttPage';
 import { getPersona } from './services/session';
 import { ROUTES } from './routes';
 import './App.css';
@@ -37,6 +38,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <ProjectLandingPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path={ROUTES.gantt}
+            element={
+              <ProtectedRoute>
+                <GanttPage />
               </ProtectedRoute>
             }
           />

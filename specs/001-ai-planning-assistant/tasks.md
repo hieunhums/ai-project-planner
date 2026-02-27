@@ -172,6 +172,12 @@ description: "Task list for AI-Augmented Planning Assistant for Shipyard & Port 
 - [X] T059 [P] Add deleteProject() API client method in frontend/src/services/api.ts
 - [X] T060 Update ProjectCard component with delete (trash) icon button in frontend/src/components/ProjectCard.tsx
 - [X] T061 Implement delete handler with confirmation dialog and error handling in frontend/src/components/ProjectCard.tsx
+- [X] T062 [P] Add ConfirmDialog reusable component in frontend/src/components/ConfirmDialog.tsx and frontend/src/components/ConfirmDialog.css
+- [X] T063 [P] Add `/projects/:projectId/gantt` route to frontend/src/routes.ts and frontend/src/App.tsx
+- [X] T064 [P] Build Gantt page layout with Human Plan / AI Augmented Plan badges in frontend/src/pages/GanttPage.tsx and frontend/src/pages/GanttPage.css
+- [X] T065 [P] Build static Gantt chart component (resource-lane SVG/DOM chart, hardcoded demo data) in frontend/src/components/GanttChart.tsx and frontend/src/components/GanttChart.css
+- [X] T066 Refine project landing page to implement 3-step workflow with step gating, Step 2 client-side mock, progress bar, and navigate-to-Gantt on completion in frontend/src/pages/ProjectLandingPage.tsx
+- [X] T067 [P] Add plan generation hook with progress tracking in frontend/src/hooks/usePlanGeneration.ts
 
 ---
 

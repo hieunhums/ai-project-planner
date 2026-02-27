@@ -72,15 +72,15 @@
 
 ---
 
-## Phase 5: User Story 3 - Project Landing With Existing Artifacts (Priority: P3)
+## Phase 5: User Story 3 - Project Landing 3-Step Workflow (Priority: P3)
 
-**Goal**: Show project uploads and generated plans on the landing view
+**Goal**: Implement the 3-step workflow (upload current plan → upload new project details → generate AI plan) on the project landing page, with step gating and a redirect to the Gantt visualisation on success. Show existing uploads and generated plans below the workflow steps.
 
-**Independent Test**: Enter a project and see uploads/plans lists with metadata
+**Independent Test**: Complete each step in sequence; verify step states (active/done/locked) update correctly and that plan generation redirects to the Gantt page.
 
 ### Implementation
 
-- [x] T024 [US3] Implement project landing layout in frontend/src/pages/ProjectLandingPage.tsx
+- [x] T024 [US3] Implement project landing layout with 3-step workflow in frontend/src/pages/ProjectLandingPage.tsx
 - [x] T025 [P] [US3] Add project landing styles in frontend/src/pages/ProjectLandingPage.css
 - [x] T026 [P] [US3] Create uploads list component in frontend/src/components/ProjectUploadsList.tsx
 - [x] T027 [P] [US3] Add uploads list styles in frontend/src/components/ProjectUploadsList.css
@@ -91,16 +91,28 @@
 - [x] T032 [US3] Return upload/plan metadata in backend/src/api/routes.py and backend/src/services/project_service.py
 - [x] T033 [US3] Render upload/plan metadata in frontend/src/components/ProjectUploadsList.tsx and frontend/src/components/ProjectGeneratedPlansList.tsx
 - [x] T034 [US3] Ensure landing page retains existing uploads/plans and hides empty sections in frontend/src/pages/ProjectLandingPage.tsx
+- [x] T034a [US3] Implement Step 2 client-side mock (no backend) for new project details CSV upload in frontend/src/pages/ProjectLandingPage.tsx
+- [x] T034b [US3] Implement step gating logic (Steps 2 and 3 locked until prior step completes) in frontend/src/pages/ProjectLandingPage.tsx
+- [x] T034c [US3] Add progress bar and AI reasoning status indicator for Step 3 generation in frontend/src/pages/ProjectLandingPage.tsx
+- [x] T034d [US3] Navigate to Gantt page on successful plan generation in frontend/src/pages/ProjectLandingPage.tsx
+- [x] T034e [US3] Add plan generation hook in frontend/src/hooks/usePlanGeneration.ts
 
 **Checkpoint**: All user stories independently functional
 
 ---
 
-## Phase 6: Polish & Cross-Cutting Concerns
+## Phase 6: Gantt Visualisation & Project Deletion (User Stories 4 & new)
 
-**Purpose**: Final alignment and documentation checks
+**Purpose**: Gantt page after plan generation and project card deletion
 
-- [x] T035 [P] Validate quickstart flow steps in specs/001-ui-login-projects/quickstart.md
+- [x] T035 [P] [US4] Add `/projects/:projectId/gantt` route to frontend/src/routes.ts and frontend/src/App.tsx
+- [x] T036 [P] [US4] Build Gantt page layout with plan badges in frontend/src/pages/GanttPage.tsx and frontend/src/pages/GanttPage.css
+- [x] T037 [P] [US4] Build static Gantt chart component rendering human and AI entries in frontend/src/components/GanttChart.tsx and frontend/src/components/GanttChart.css
+- [x] T038 [P] Add ConfirmDialog reusable component in frontend/src/components/ConfirmDialog.tsx and frontend/src/components/ConfirmDialog.css
+- [x] T039 Add project deletion with trash icon, confirm dialog, and error handling in frontend/src/components/ProjectCard.tsx
+- [x] T040 Add backend DELETE /projects/:id endpoint with cascade cleanup in backend/src/api/routes.py and backend/src/services/project_service.py
+- [x] T041 Add deleteProject() API client method in frontend/src/services/api.ts
+- [x] T042 [P] Validate quickstart flow steps in specs/001-ui-login-projects/quickstart.md
 
 ---
 

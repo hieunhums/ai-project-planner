@@ -225,3 +225,150 @@
     transform: translateY(0);
   }
 }
+
+/* ── Workflow steps ─────────────────────────────────────────────────────── */
+.workflow-steps {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.workflow-step {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.75rem 2rem;
+  background: var(--surface);
+  border-radius: 20px;
+  box-shadow: var(--shadow-elevated);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: border-color 0.2s ease, opacity 0.2s ease;
+  animation: fadeIn 0.25s ease both;
+}
+
+.workflow-step.step-done {
+  border-color: rgba(80, 200, 120, 0.25);
+  background: rgba(80, 200, 120, 0.04);
+}
+
+.workflow-step.step-active {
+  border-color: rgba(58, 134, 255, 0.3);
+}
+
+.workflow-step.step-locked {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+/* Step indicator bubble */
+.step-indicator {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.step-active .step-indicator {
+  background: linear-gradient(135deg, #3a86ff 0%, #a78bfa 100%);
+  color: white;
+}
+
+.step-locked .step-indicator {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+}
+
+.step-done .step-indicator {
+  background: rgba(80, 200, 120, 0.9);
+  color: white;
+}
+
+.step-number {
+  line-height: 1;
+}
+
+.step-check {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+/* Step body */
+.step-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.step-title {
+  margin: 0 0 0.35rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.step-desc {
+  margin: 0 0 1.25rem 0;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.step-done .step-desc {
+  margin-bottom: 0.75rem;
+}
+
+/* Done info row */
+.step-done-info {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(80, 200, 120, 0.9);
+  background: rgba(80, 200, 120, 0.08);
+  border: 1px solid rgba(80, 200, 120, 0.2);
+  border-radius: 10px;
+  padding: 0.55rem 1rem;
+  width: fit-content;
+}
+
+/* File drop zone (for project details mock upload) */
+.file-drop-zone {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 2px dashed rgba(58, 134, 255, 0.3);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  background: rgba(58, 134, 255, 0.04);
+  width: fit-content;
+}
+
+.file-drop-zone:hover {
+  border-color: rgba(58, 134, 255, 0.6);
+  background: rgba(58, 134, 255, 0.08);
+}
+
+.hidden-input {
+  display: none;
+}
+
+.drop-icon {
+  font-size: 1.4rem;
+}
+
+.drop-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Generate button — override to fill step width */
+.workflow-step .generate-btn {
+  width: auto;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+}

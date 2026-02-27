@@ -2,7 +2,7 @@
 
 **Feature Branch**: `001-ai-planning-assistant`  
 **Created**: February 16, 2026  
-**Status**: Clarified (5 critical clarifications resolved + AI reasoning model refinement)  
+**Status**: Implemented  
 **Input**: User description: "This demo web application is designed for shipyard and port planners at Seatrium to explore how AI can augment, not replace, human planning decisions for construction and port logistics..."
 
 ## Clarifications
@@ -23,14 +23,14 @@ Seatrium planners need to import their existing planning spreadsheets and genera
 
 **Why this priority**: This is the critical MVP foundation—without the ability to load data and generate a plan, no other feature has value. It unblocks all downstream comparison and iteration workflows.
 
-**Independent Test**: Can be fully tested by uploading a sample planning spreadsheet, confirming the AI generates a plan output with identified schedule dates, resource allocations, and capacity utilizations, and delivers immediate planning insights.
+**Independent Test**: Can be fully tested by navigating through the 3-step project landing workflow: uploading a sample planning CSV, loading new project details, generating an AI plan, and confirming arrival at the Gantt visualisation page with the generated plan visible.
 
 **Acceptance Scenarios**:
 
-1. **Given** a planner has a spreadsheet with tasks, resources, dates, and constraints, **When** they upload the file, **Then** the system parses the data and confirms successful import with a summary of loaded records
-2. **Given** valid planning data is uploaded, **When** the planner requests AI plan generation, **Then** the AI generates a feasible plan within reasonable time (seconds to ~1 minute)
-3. **Given** planning data contains schedule, capacity, and resource constraint information, **When** the AI plan is generated, **Then** the plan accounts for all uploaded constraints
-4. **Given** the AI generates a plan, **When** displayed, **Then** the plan shows task sequence, dates, assigned resources, and capacity utilization metrics
+1. **Given** a planner has a spreadsheet with tasks, resources, dates, and constraints, **When** they upload the file as Step 1 on the project landing page, **Then** the system parses the data and confirms successful import with a task and resource count summary
+2. **Given** Step 1 is complete, **When** the planner uploads a new project details CSV as Step 2 (accepted client-side), **Then** Step 3 unlocks
+3. **Given** Steps 1 and 2 are complete, **When** the planner clicks Generate, **Then** the AI generates a feasible plan and the app navigates to the Gantt visualisation page
+4. **Given** the AI generates a plan, **When** the Gantt page is displayed, **Then** the plan shows a side-by-side comparison of the human plan and AI-augmented plan with task bars, resources, and date ranges
 
 ---
 
@@ -40,7 +40,7 @@ Planners need to compare the AI-generated plan directly against their original p
 
 **Why this priority**: This is the core decision-support feature. Without comparison, the AI plan is just another artifact. Comparison enables trust-building through transparency and reveals planning insights to the user.
 
-**Independent Test**: Can be fully tested by comparing two plans side-by-side, verifying that differences are highlighted, trade-offs are visible (e.g., resource utilization vs. schedule acceleration), and potential improvements are identified with their impact metrics.
+**Independent Test**: Can be fully tested via the Gantt page (immediate visual comparison post-generation) and the dedicated `/compare` page (manual plan ID entry with `?human=<id>&ai=<id>` URL params), verifying that differences are highlighted and trade-offs are quantified.
 
 **Acceptance Scenarios**:
 
@@ -116,8 +116,12 @@ Planners must retain full control to selectively adopt AI recommendations or cre
 
 - **FR-001**: System MUST accept planning data uploads in common spreadsheet formats (CSV, Excel) containing tasks, resources, dates, durations, dependencies, and constraints
 - **FR-002**: System MUST parse uploaded data and validate structure, identifying missing or anomalous entries with clear user feedback
-- **FR-003**: System MUST generate an AI-proposed plan that respects schedule, capacity, and resource constraints within a configurable time limit
-- **FR-004**: System MUST display the original (human) plan and AI-generated plan in a comparable format side-by-side
+- **FR-003**: System MUST generate an AI-proposed plan that respects schedule, capacity, and resource constraints within a configurable time limit; generation is triggered from Step 3 of the project landing page 3-step workflow
+- **FR-003a**: System MUST display a progress indicator (progress bar with percentage) while plan generation is in progress
+- **FR-003b**: On successful plan generation, the system MUST navigate the user to the Gantt visualisation page (`/projects/:projectId/gantt`)
+- **FR-004**: System MUST display a Gantt visualisation page showing the original (human) plan and AI-augmented plan in a side-by-side comparable format with resource rows, date-range task bars, and priority colouring
+- **FR-004a**: For the MVP demo, the Gantt chart uses static/hardcoded representative data (shipyard quays JY-QA through JY-QG, plan window Jan 2026–Apr 2029); dynamic rendering from live database plan data is a post-MVP enhancement
+- **FR-004b**: The `/compare` page MUST allow planners to manually enter or supply via URL query parameters (`?human=<id>&ai=<id>`) two plan IDs for detailed structured comparison
 - **FR-005**: System MUST highlight differences between plans including task sequence changes, date shifts, and resource re-allocations
 - **FR-006**: System MUST quantify trade-offs (e.g., "reduces schedule by X days" or "increases resource utilization by Y%")
 - **FR-007**: System MUST identify and display potential improvements (e.g., capacity utilization gains, risk hotspot reductions, schedule feasibility improvements)
@@ -125,13 +129,15 @@ Planners must retain full control to selectively adopt AI recommendations or cre
 - **FR-009**: System MUST document and display all assumptions used by the AI in plan generation
 - **FR-010**: System MUST allow planners to modify constraints or assumptions and re-generate plans iteratively
 - **FR-011**: System MUST allow planners to accept, reject, or modify individual AI recommendations
-- **FR-012**: System MUST enable planners to export finalized plans in formats suitable for execution (e.g., Gantt chart, task list, resource schedule)
+- **FR-012**: System MUST enable planners to export finalized plans in CSV, JSON, and Gantt JSON formats suitable for execution teams
 - **FR-013**: System MUST track which plan elements are AI-generated, human-created, or hybrid, and maintain visibility of this lineage
 - **FR-014**: System MUST handle constraint conflicts by automatically suggesting optimal constraint relaxations to achieve feasibility; user reviews and approves/rejects the relaxation proposal
 - **FR-015**: System MUST process plans with up to 50 tasks for the MVP demo phase
 - **FR-016**: System MUST support the following constraint types: task dependencies, resource availability, task deadlines, cost limits, facility capacity, multi-shift resource availability, and resource skill matching
 - **FR-017**: System MUST focus on single-project planning scenarios; multi-project support is deferred to post-MVP enhancement
 - **FR-018**: System MUST use an AI-based reasoning model (e.g., GPT-5.2-reasoning or Claude-Opus-4.5) leveraging the model's built-in reasoning and thinking capabilities to generate plans; the model's reasoning process enables more human-centric, explainable optimization than traditional linear programming or operations research approaches
+- **FR-019**: System MUST provide a project-based navigation model: planners first create or select a project, then follow the 3-step workflow on the project landing page (Step 1: upload current plan CSV, Step 2: upload new project details CSV client-side, Step 3: generate AI plan)
+- **FR-020**: System MUST back-navigate from the Gantt page to the project landing page when the planner uses the back button
 
 ### Key Entities *(include if feature involves data)*
 
@@ -173,6 +179,8 @@ Planners must retain full control to selectively adopt AI recommendations or cre
 - **Optimization strategy**: AI-based reasoning model (GPT-5.2-reasoning or Claude-Opus-4.5) that leverages advanced reasoning capabilities to simulate human planning logic; this approach prioritizes human-centric decision-making and transparent reasoning over mathematical optimality, aligning with the demo's core goal of demonstrating AI as an explainable decision-support partner
 - **Model reasoning capability**: The selected model's built-in reasoning/thinking process generates detailed explanations of planning decisions, constraint trade-offs, and recommendations; these explanations emerge naturally from the reasoning process rather than being post-hoc rationalizations
 - **Human-in-the-loop governance**: The system supports decision-support only; no automated plan execution occurs without explicit planner approval
+- **Gantt visualization data**: The Gantt chart on the Gantt page (`/projects/:projectId/gantt`) renders hardcoded static demo data representing Seatrium quay resources (JY-QA through JY-QG) and a representative schedule from Jan 2026 to Apr 2029; dynamic binding to live database plan records is deferred to a post-MVP release
+- **Step 2 mock**: The "upload new project details" step (Step 2 on the project landing page) is a client-side-only demo step; the file is accepted and marked complete locally without a backend API call
 
 ## Remaining Open Questions
 

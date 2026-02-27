@@ -1,0 +1,77 @@
+.gantt-page {
+  display: grid;
+  gap: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+/* ── Nav bar ──────────────────────────────────────────────────────────────── */
+.gantt-page-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--surface, #1e1e2e);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary, #ccc);
+  padding: 0.55rem 1.1rem;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-primary, #fff);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ── Plan badges ──────────────────────────────────────────────────────────── */
+.gantt-page-badges {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.badge {
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.badge-human {
+  background: rgba(58, 134, 255, 0.15);
+  color: #6fa8ff;
+  border: 1px solid rgba(58, 134, 255, 0.3);
+}
+
+.badge-ai {
+  background: rgba(255, 159, 28, 0.15);
+  color: #ffbf60;
+  border: 1px solid rgba(255, 159, 28, 0.3);
+}
+
+.badge-divider {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* ── Main card ────────────────────────────────────────────────────────────── */
+.gantt-page-card {
+  background: var(--surface, #1e1e2e);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: var(--shadow-elevated, 0 4px 28px rgba(0, 0, 0, 0.35));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
