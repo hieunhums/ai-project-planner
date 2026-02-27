@@ -13,6 +13,31 @@
   flex-wrap: wrap;
 }
 
+.gantt-page-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* For dark Gantt page context, override btn-secondary */
+.gantt-page .btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.gantt-page .btn-secondary:not(:disabled):hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* ── NL edit bar ──────────────────────────────────────────────────────────── */
+.gantt-nl-wrapper {
+  background: var(--surface, #1e1e2e);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
 .back-btn {
   display: inline-flex;
   align-items: center;
@@ -74,4 +99,45 @@
   padding: 2rem;
   box-shadow: var(--shadow-elevated, 0 4px 28px rgba(0, 0, 0, 0.35));
   border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ── No-plan empty state ──────────────────────────────────────────────────── */
+.gantt-no-plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 3rem 1rem;
+  text-align: center;
+  color: var(--text-secondary, #718096);
+  font-size: 1rem;
+}
+
+/* ── Drag error banner ────────────────────────────────────────────────────── */
+.gantt-drag-error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  background: rgba(220, 60, 60, 0.18);
+  border: 1px solid rgba(220, 60, 60, 0.45);
+  border-radius: 6px;
+  color: #f87171;
+  font-size: 0.875rem;
+}
+
+.gantt-drag-error-close {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1;
+  padding: 0 0.2rem;
+  opacity: 0.7;
+}
+
+.gantt-drag-error-close:hover {
+  opacity: 1;
 }

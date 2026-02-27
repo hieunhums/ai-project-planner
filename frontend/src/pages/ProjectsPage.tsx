@@ -57,6 +57,7 @@ export const ProjectsPage: React.FC = () => {
               id={project.id}
               name={project.name}
               createdAt={project.created_at}
+              project_type={project.project_type}
               onOpen={() => navigate(buildProjectPath(project.id))}
               onDelete={handleDelete}
             />

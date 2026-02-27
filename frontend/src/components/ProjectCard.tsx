@@ -7,6 +7,7 @@ interface ProjectCardProps {
   id: number;
   name: string;
   createdAt?: string;
+  project_type?: string;
   onOpen: () => void;
   onDelete: () => void;
 }
@@ -26,6 +27,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   id,
   name,
   createdAt,
+  project_type,
   onOpen,
   onDelete,
 }) => {
@@ -61,7 +63,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     <div className="project-card-container">
       <button type="button" className="project-card" onClick={onOpen}>
         <div className="project-card-header">
-          <h3>{name}</h3>
+          <div className="project-card-name-row">
+            <h3>{name}</h3>
+            {project_type === 'enquiry' && (
+              <span className="badge badge-enquiry">Enquiry</span>
+            )}
+          </div>
           <span className="project-card-open">Open</span>
         </div>
         <p className="project-card-meta">{formatDate(createdAt)}</p>

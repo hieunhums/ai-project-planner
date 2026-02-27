@@ -65,6 +65,14 @@ function App() {
               </ProtectedRoute>
             }
           />
+          <Route
+            path={ROUTES.projectProposal}
+            element={
+              <ProtectedRoute>
+                <ProjectLandingPage />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </Layout>
     </BrowserRouter>

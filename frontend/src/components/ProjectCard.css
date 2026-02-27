@@ -93,3 +93,38 @@
   font-size: 0.85rem;
   text-align: center;
 }
+
+/* ---- Project name row ---- */
+
+.project-card-name-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.project-card-name-row h3 {
+  margin: 0;
+}
+
+/* ---- Enquiry badge (reusable across the app) ---- */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.125rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.5;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.badge-enquiry {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fcd34d;
+}

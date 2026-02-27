@@ -1,7 +1,12 @@
+/* ProjectLandingPage.css — Sprint 002 Proposal Workflow */
+
 .project-landing {
   display: grid;
   gap: 2rem;
+  padding-bottom: 4rem;
 }
+
+/* ── Page header ──────────────────────────────────────────────────────── */
 
 .project-heading {
   display: flex;
@@ -9,6 +14,12 @@
   align-items: flex-end;
   gap: 2rem;
   flex-wrap: wrap;
+}
+
+.project-heading-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .project-label {
@@ -19,356 +30,130 @@
   color: var(--text-muted);
 }
 
-.project-heading h1 {
-  margin: 0.4rem 0 0 0;
-  font-size: 2.4rem;
-}
-
-.project-meta {
+.project-title-row {
   display: flex;
-  gap: 1rem;
-  font-weight: 600;
-  color: var(--text-muted);
-}
-
-.project-actions {
-  display: grid;
-  gap: 2rem;
-}
-
-.card {
-  background: var(--surface);
-  border-radius: 20px;
-  padding: 2rem;
-  box-shadow: var(--shadow-elevated);
-}
-
-.card h2 {
-  margin-bottom: 0.5rem;
-  font-size: 1.5rem;
-}
-
-.card-description {
-  color: var(--text-muted);
-  margin-bottom: 1.5rem;
-}
-
-.plan-info {
-  background-color: var(--surface-strong);
-  border-radius: 16px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-}
-
-.info-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.info-item .label {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  font-weight: 600;
-}
-
-.info-item .value {
-  font-size: 1.25rem;
-  color: var(--text-primary);
-  font-weight: 700;
-}
-
-.generate-btn {
-  width: 100%;
-  padding: 1rem 1.5rem;
-  background: linear-gradient(135deg, #c94e34 0%, #e07a5f 100%);
-  color: white;
-  border: none;
-  border-radius: 14px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.generate-btn:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(201, 78, 52, 0.35);
-}
-
-.generate-btn:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.progress-info {
-  margin-top: 1.5rem;
-}
-
-.progress-info p {
-  color: var(--text-muted);
-  font-size: 0.875rem;
-  margin-bottom: 0.75rem;
-  text-align: center;
-}
-
-.progress-bar {
-  width: 100%;
-  height: 8px;
-  background-color: rgba(31, 31, 31, 0.08);
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.progress-fill {
-  height: 100%;
-  background: linear-gradient(90deg, #c94e34 0%, #e07a5f 100%);
-  transition: width 0.3s ease;
-  border-radius: 4px;
-}
-
-.success-card {
-  border: 2px solid rgba(201, 78, 52, 0.4);
-  background: linear-gradient(to bottom, #fff7f1 0%, white 100%);
-}
-
-.metrics-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.metric-card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 14px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
-  text-align: center;
-}
-
-.metric-label {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.metric-value {
-  font-size: 1.75rem;
-  color: var(--text-primary);
-  font-weight: 700;
-}
-
-.message-banner {
-  padding: 1rem 1.5rem;
-  border-radius: 16px;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  animation: fadeIn 0.3s ease;
+  gap: 0.75rem;
+  flex-wrap: wrap;
 }
 
-.message-banner.success {
-  background-color: rgba(201, 78, 52, 0.1);
-  border: 1px solid rgba(201, 78, 52, 0.4);
-  color: #5c2d23;
+.project-title-row h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  line-height: 1.2;
 }
 
-.message-banner.error {
-  background-color: rgba(200, 70, 60, 0.12);
-  border: 1px solid rgba(200, 70, 60, 0.4);
+/* ── Proposal phases ──────────────────────────────────────────────────── */
+
+.proposal-phase {
+  background: var(--surface, #fff);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--shadow-elevated, 0 4px 16px rgba(0,0,0,0.08));
+  border: 1px solid var(--border-color, #e2e8f0);
+}
+
+.proposal-phase--active {
+  border-color: var(--color-primary, #3b82f6);
+  border-width: 1.5px;
+}
+
+.proposal-phase-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.proposal-phase-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--color-primary, #3b82f6);
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.proposal-phase-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary, #1a202c);
+}
+
+/* ── Loading / error ──────────────────────────────────────────────────── */
+
+.proposal-loading {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.proposal-error {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background: rgba(200, 70, 60, 0.1);
+  border: 1px solid rgba(200, 70, 60, 0.35);
   color: #7a2d2d;
+  font-size: 0.9rem;
 }
 
-.message-banner .close-btn {
+.proposal-warning-banner {
+  position: relative;
+  padding: 0.875rem 3rem 0.875rem 1rem;
+  border-radius: 10px;
+  background: #fefce8;
+  border: 1px solid #fcd34d;
+  color: #78350f;
+  font-size: 0.875rem;
+}
+
+.proposal-warning-banner ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.proposal-warning-banner .close-btn {
+  position: absolute;
+  top: 0.625rem;
+  right: 0.875rem;
   background: none;
   border: none;
-  font-size: 0.9rem;
   cursor: pointer;
-  padding: 0.25rem 0.5rem;
-  opacity: 0.7;
-  transition: opacity 0.2s;
+  font-size: 0.875rem;
+  opacity: 0.6;
+  padding: 0;
 }
 
-.message-banner .close-btn:hover {
+.proposal-warning-banner .close-btn:hover {
   opacity: 1;
 }
 
-.project-status {
-  color: var(--text-muted);
+/* ── Phase 2 placeholder ─────────────────────────────────────────────── */
+
+.proposal-placeholder {
+  color: var(--text-secondary, #718096);
+  font-size: 0.9375rem;
 }
+
+/* ── Shared utilities ────────────────────────────────────────────────── */
 
 .project-error {
   background: rgba(200, 70, 60, 0.12);
   border: 1px solid rgba(200, 70, 60, 0.4);
   color: #7a2d2d;
   padding: 1rem 1.25rem;
-  border-radius: 16px;
-}
-
-.project-artifacts {
-  display: grid;
-  gap: 1.5rem;
+  border-radius: 12px;
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ── Workflow steps ─────────────────────────────────────────────────────── */
-.workflow-steps {
-  display: grid;
-  gap: 1.25rem;
-}
-
-.workflow-step {
-  display: flex;
-  gap: 1.25rem;
-  padding: 1.75rem 2rem;
-  background: var(--surface);
-  border-radius: 20px;
-  box-shadow: var(--shadow-elevated);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: border-color 0.2s ease, opacity 0.2s ease;
-  animation: fadeIn 0.25s ease both;
-}
-
-.workflow-step.step-done {
-  border-color: rgba(80, 200, 120, 0.25);
-  background: rgba(80, 200, 120, 0.04);
-}
-
-.workflow-step.step-active {
-  border-color: rgba(58, 134, 255, 0.3);
-}
-
-.workflow-step.step-locked {
-  opacity: 0.45;
-  pointer-events: none;
-}
-
-/* Step indicator bubble */
-.step-indicator {
-  flex-shrink: 0;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 1rem;
-}
-
-.step-active .step-indicator {
-  background: linear-gradient(135deg, #3a86ff 0%, #a78bfa 100%);
-  color: white;
-}
-
-.step-locked .step-indicator {
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--text-muted);
-}
-
-.step-done .step-indicator {
-  background: rgba(80, 200, 120, 0.9);
-  color: white;
-}
-
-.step-number {
-  line-height: 1;
-}
-
-.step-check {
-  font-size: 1.1rem;
-  line-height: 1;
-}
-
-/* Step body */
-.step-body {
-  flex: 1;
-  min-width: 0;
-}
-
-.step-title {
-  margin: 0 0 0.35rem 0;
-  font-size: 1.1rem;
-  font-weight: 700;
-}
-
-.step-desc {
-  margin: 0 0 1.25rem 0;
-  font-size: 0.875rem;
-  color: var(--text-muted);
-}
-
-.step-done .step-desc {
-  margin-bottom: 0.75rem;
-}
-
-/* Done info row */
-.step-done-info {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: rgba(80, 200, 120, 0.9);
-  background: rgba(80, 200, 120, 0.08);
-  border: 1px solid rgba(80, 200, 120, 0.2);
-  border-radius: 10px;
-  padding: 0.55rem 1rem;
-  width: fit-content;
-}
-
-/* File drop zone (for project details mock upload) */
-.file-drop-zone {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  border: 2px dashed rgba(58, 134, 255, 0.3);
-  border-radius: 14px;
-  padding: 1.25rem 1.5rem;
-  cursor: pointer;
-  transition: all 0.18s ease;
-  background: rgba(58, 134, 255, 0.04);
-  width: fit-content;
-}
-
-.file-drop-zone:hover {
-  border-color: rgba(58, 134, 255, 0.6);
-  background: rgba(58, 134, 255, 0.08);
-}
-
-.hidden-input {
-  display: none;
-}
-
-.drop-icon {
-  font-size: 1.4rem;
-}
-
-.drop-label {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-}
-
-/* Generate button — override to fill step width */
-.workflow-step .generate-btn {
-  width: auto;
-  padding: 0.9rem 2rem;
-  font-size: 1rem;
-  letter-spacing: 0.01em;
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
