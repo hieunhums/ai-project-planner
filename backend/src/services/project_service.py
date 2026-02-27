@@ -21,7 +21,12 @@ STATUS_LABELS = {
 def list_projects(db: Session) -> List[ProjectSummary]:
     projects = db.query(Project).order_by(Project.created_at.desc()).all()
     return [
-        ProjectSummary(id=project.id, name=project.name, created_at=project.created_at)
+        ProjectSummary(
+            id=project.id,
+            name=project.name,
+            created_at=project.created_at,
+            project_type=project.project_type or "confirmed",
+        )
         for project in projects
     ]
 
@@ -35,7 +40,12 @@ def create_project(db: Session, name: str) -> ProjectSummary:
     db.add(project)
     db.commit()
     db.refresh(project)
-    return ProjectSummary(id=project.id, name=project.name, created_at=project.created_at)
+    return ProjectSummary(
+        id=project.id,
+        name=project.name,
+        created_at=project.created_at,
+        project_type=project.project_type or "confirmed",
+    )
 
 
 def get_project_detail(db: Session, project_id: int) -> ProjectDetail:

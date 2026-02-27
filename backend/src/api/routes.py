@@ -31,6 +31,8 @@ from ..services.planning_service import (
     apply_recommendation_decision,
 )
 from ..services.comparison_service import PlanComparisonService
+from ..services.simulation_service import simulate_yard_availability, simulate_capacity_plan
+from ..services.nl_parse_service import parse_nl_command
 from ..services.ai_service import MockAIService, AzureOpenAIService
 from ..agents.planning_agent import create_planning_agent
 from ..models.database import Plan, PlanStatus, PlanLineageType, Project
@@ -47,6 +49,16 @@ from ..models.schemas import (
     PlanComparisonRequest,
     RecommendationDecisionRequest,
     RecommendationDecisionResponse,
+    # Sprint 002
+    ProjectDetailsRequest,
+    YardAvailabilityRow,
+    YardAvailabilityResponse,
+    CapacityPlanRow,
+    CapacityPlanResponse,
+    CapacityPlanRequest,
+    NLEditRequest,
+    NLEditAction,
+    PlanUpdateRequest,
 )
 
 settings = get_settings()
@@ -120,6 +132,201 @@ async def delete_project_endpoint(project_id: int, db: Session = Depends(get_db)
         delete_project(db, project_id)
     except ValueError as exc:
         raise HTTPException(status_code=404, detail=str(exc))
+
+
+# ---------------------------------------------------------------------------
+# Sprint 002: Enquiry-to-Proposal routes
+# ---------------------------------------------------------------------------
+
+
+@project_router.post("/{project_id}/details", status_code=200)
+async def save_project_details(
+    project_id: int,
+    project_type: str = Form(...),
+    project_name: str = Form(...),
+    start_date: str = Form(...),
+    end_date: str = Form(...),
+    hull_length: float = Form(...),
+    hull_width: float = Form(...),
+    hull_height: float = Form(...),
+    topside_weight: float = Form(...),
+    preferred_location: str = Form(...),
+    preferred_yard: str = Form(...),
+    processes: str = Form(...),  # JSON-encoded list of strings
+    block_breakdown: str = Form(...),
+    project_ref: UploadFile = File(...),
+    human_plan: UploadFile = File(...),
+    db: Session = Depends(get_db),
+):
+    """Save project details form data and store both uploaded CSV files.
+
+    Accepts multipart/form-data.
+    Returns the updated project summary with any CSV column warnings.
+    """
+    project = db.query(Project).filter(Project.id == project_id).first()
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+
+    # Validate file extensions
+    for upload in (project_ref, human_plan):
+        if upload.filename and not upload.filename.lower().endswith(".csv"):
+            raise HTTPException(
+                status_code=422,
+                detail=f"Only .csv files are accepted for {upload.filename}",
+            )
+
+    # Save uploaded files to uploads/
+    storage_service = StorageService()
+    ref_content = await project_ref.read()
+    human_content = await human_plan.read()
+    storage_service.save_uploaded_file(ref_content, project_ref.filename or "project_ref.csv")
+    storage_service.save_uploaded_file(human_content, human_plan.filename or "human_plan.csv")
+
+    # Validate CSV columns and collect warnings
+    required_columns = {
+        "project_id",
+        "project_name",
+        "duration_days",
+        "start_date",
+        "end_date",
+        "resource",
+        "dependencies",
+        "cost",
+        "priority",
+    }
+    warnings: list[str] = []
+    for label, content in (("project_ref", ref_content), ("human_plan", human_content)):
+        try:
+            lines = content.decode("utf-8", errors="replace").splitlines()
+            if lines:
+                header_cols = {c.strip().lower() for c in lines[0].split(",")}
+                missing = required_columns - header_cols
+                if missing:
+                    warnings.append(
+                        f"{label}: Missing required columns: {', '.join(sorted(missing))}"
+                    )
+        except Exception:
+            warnings.append(f"{label}: Could not parse CSV headers")
+
+    # Parse and persist project fields
+    import json as _json
+
+    try:
+        processes_list = _json.loads(processes)
+    except Exception:
+        processes_list = [p.strip() for p in processes.split(",") if p.strip()]
+
+    project.project_type = project_type
+    project.name = project_name
+    project.hull_length = hull_length
+    project.hull_width = hull_width
+    project.hull_height = hull_height
+    project.topside_weight = topside_weight
+    project.preferred_location = preferred_location
+    project.preferred_yard = preferred_yard
+    project.processes = processes_list
+    project.block_breakdown = block_breakdown
+    db.commit()
+    db.refresh(project)
+
+    return {
+        "id": project.id,
+        "name": project.name,
+        "project_type": project.project_type,
+        "warnings": warnings,
+    }
+
+
+@project_router.post("/{project_id}/yard-availability")  # STUB
+async def yard_availability_endpoint(
+    project_id: int,
+    db: Session = Depends(get_db),
+):
+    """Return simulated yard availability after a 10–20 s delay. (STUB)"""
+    project = db.query(Project).filter(Project.id == project_id).first()
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+
+    yards = await simulate_yard_availability()
+    return {"yards": yards}
+
+
+@project_router.post("/{project_id}/capacity-plan")  # STUB
+async def capacity_plan_endpoint(
+    project_id: int,
+    request: CapacityPlanRequest,
+    db: Session = Depends(get_db),
+):
+    """Return simulated capacity plan after a 10–20 s delay. (STUB)"""
+    project = db.query(Project).filter(Project.id == project_id).first()
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+
+    result = await simulate_capacity_plan(
+        selected_yards=request.selected_yards,
+        prompt=request.prompt,
+    )
+    return result
+
+
+@project_router.post("/{project_id}/plan-edit/parse")
+async def parse_nl_edit(
+    project_id: int,
+    request: NLEditRequest,
+    db: Session = Depends(get_db),
+) -> NLEditAction:
+    """Parse a natural-language plan-edit command into a structured action.
+
+    Supported format: ``change PRJ-XXX from RESOURCE-A to RESOURCE-B``
+
+    Returns ``NLEditAction`` on success or HTTP 422 on unrecognised pattern.
+    """
+    project = db.query(Project).filter(Project.id == project_id).first()
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+
+    action = parse_nl_command(request.command)
+    if action is None:
+        raise HTTPException(
+            status_code=422,
+            detail=(
+                "Unsupported command. "
+                "Supported format: change PRJ-XXX from RESOURCE-A to RESOURCE-B"
+            ),
+        )
+    return NLEditAction(**action)
+
+
+@project_router.put("/{project_id}/plan")
+async def upsert_plan(
+    project_id: int,
+    request: PlanUpdateRequest,
+    db: Session = Depends(get_db),
+):
+    """Upsert the AI capacity plan for a project.
+
+    If a Plan row already exists for the project, updates ``plan_data_json`` in place.
+    If no Plan row exists, creates a new ``AI_GENERATED`` Plan row first.
+    """
+    project = db.query(Project).filter(Project.id == project_id).first()
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+
+    plan = db.query(Plan).filter(Plan.project_id == project_id).first()
+    if plan is None:
+        plan = Plan(
+            name="AI Capacity Plan",
+            lineage=PlanLineageType.AI_GENERATED,
+            project_id=project_id,
+        )
+        db.add(plan)
+
+    plan.plan_data_json = [row.model_dump() for row in request.rows]
+    plan.status = PlanStatus.COMPLETED
+    db.commit()
+    db.refresh(plan)
+
+    return {"id": plan.id, "project_id": project_id, "rows": len(request.rows)}
 
 
 @planning_router.post("/upload")

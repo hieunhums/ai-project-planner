@@ -130,6 +130,7 @@ class ProjectSummary(BaseModel):
     id: int
     name: str
     created_at: Optional[datetime] = None
+    project_type: str = "confirmed"  # "confirmed" | "enquiry"
 
 
 class UploadSummary(BaseModel):
@@ -226,3 +227,90 @@ class RecommendationDecisionResponse(BaseModel):
     recommendation_id: int
     status: str
     updated_task_ids: List[str] = []
+
+
+# ---------------------------------------------------------------------------
+# Sprint 002: Enquiry-to-Proposal schemas
+# Date strings throughout all schemas use DD-MM-YYYY format to match
+# the existing CSV fixture convention (e.g. "01-02-2026").
+# ---------------------------------------------------------------------------
+
+
+class ProjectDetailsRequest(BaseModel):
+    """Request schema for saving project details form data"""
+
+    project_type: str  # "confirmed" | "enquiry"
+    project_name: str
+    start_date: str  # DD-MM-YYYY
+    end_date: str  # DD-MM-YYYY
+    hull_length: float
+    hull_width: float
+    hull_height: float
+    topside_weight: float
+    preferred_location: str
+    preferred_yard: str
+    processes: List[str]
+    block_breakdown: str
+
+
+class YardAvailabilityRow(BaseModel):
+    """Single row in the yard availability table"""
+
+    yard_name: str
+    location: str
+    availability: str  # "Available" | "Occupied"
+
+
+class YardAvailabilityResponse(BaseModel):
+    """Response from the yard availability stub endpoint"""
+
+    yards: List[YardAvailabilityRow]
+
+
+class CapacityPlanRow(BaseModel):
+    """Single row in the AI-augmented capacity plan"""
+
+    project_id: str
+    project_name: str
+    duration_days: int
+    start_date: str  # DD-MM-YYYY
+    end_date: str  # DD-MM-YYYY
+    resource: str
+    dependencies: str
+    cost: str
+    priority: str
+
+
+class CapacityPlanResponse(BaseModel):
+    """Response from the capacity plan stub endpoint"""
+
+    plan: List[CapacityPlanRow]
+    rationale: str
+
+
+class CapacityPlanRequest(BaseModel):
+    """Request body for POST /capacity-plan"""
+
+    selected_yards: List[str]
+    prompt: str
+
+
+class NLEditRequest(BaseModel):
+    """Request body for POST /plan-edit/parse"""
+
+    command: str
+
+
+class NLEditAction(BaseModel):
+    """Structured edit action returned by the NL parse endpoint"""
+
+    project_id: str
+    field: str  # "resource" (MVP scope)
+    from_value: str
+    to_value: str
+
+
+class PlanUpdateRequest(BaseModel):
+    """Request body for PUT /plan — full plan row replacement"""
+
+    rows: List[CapacityPlanRow]
