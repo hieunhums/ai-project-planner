@@ -9,35 +9,25 @@ import type { SaveProjectDetailsResponse } from '../services/api';
 // ---------------------------------------------------------------------------
 
 const LOCATION_OPTIONS = [
-  'Aberdeen, UK',
-  'Rotterdam, Netherlands',
-  'Stavanger, Norway',
-  'Gothenburg, Sweden',
-  'Ulsan, South Korea',
-  'Nagasaki, Japan',
-  'Shanghai, China',
+  'China',
   'Singapore',
-  'Houston, USA',
-  'Dubai, UAE',
+  'Batam',
+  'USA',
 ];
 
 const YARD_OPTIONS = [
-  'Yard A – Dry Dock 1',
-  'Yard A – Dry Dock 2',
-  'Yard B – Wet Dock 1',
-  'Yard C – Fabrication Bay',
-  'Yard D – Outfitting Basin',
+  'Tuas Boulevard',
+  'Admiralty',
+  'Benoi',
+  'Pioneer',
+  'Tuas',
 ];
 
 const PROCESS_OPTIONS = [
-  { id: 'hull_assembly', label: 'Hull Assembly' },
-  { id: 'steel_cutting', label: 'Steel Cutting' },
-  { id: 'block_assembly', label: 'Block Assembly' },
-  { id: 'outfitting', label: 'Outfitting' },
-  { id: 'painting', label: 'Painting' },
-  { id: 'testing', label: 'Testing & Inspection' },
-  { id: 'commissioning', label: 'Commissioning' },
-  { id: 'delivery', label: 'Delivery' },
+  { id: 'dry_dock', label: 'Drydock' },
+  { id: 'berthing', label: 'Berthing' },
+  { id: 'grand_assembly', label: 'Grand Assembly' },
+  { id: 'loadout', label: 'Loadout' },
 ];
 
 // ---------------------------------------------------------------------------

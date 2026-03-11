@@ -31,27 +31,61 @@ export interface GanttChartProps {
 
 // ── Date parsing (dd-MM-yyyy  OR  YYYY-MM-DD) ─────────────────────────────────
 
-const parseFlexDate = (d: string): Date => {
-  if (!d) return new Date();
-  if (/^\d{4}-\d{2}-\d{2}/.test(d)) {
-    const [y, m, day] = d.split('-').map(Number);
-    return new Date(y, m - 1, day);
+const parseFlexDate = (d: string): Date | null => {
+  if (!d || typeof d !== 'string' || d.trim() === '') return null;
+  
+  try {
+    let year: number, month: number, day: number;
+    
+    if (/^\d{4}-\d{2}-\d{2}/.test(d)) {
+      // ISO format: YYYY-MM-DD
+      [year, month, day] = d.split('-').map(Number);
+    } else if (/^\d{2}-\d{2}-\d{4}/.test(d)) {
+      // DD-MM-YYYY format
+      [day, month, year] = d.split('-').map(Number);
+    } else {
+      return null;
+    }
+
+    // Validate the parsed numbers
+    if (!Number.isFinite(year) || !Number.isFinite(month) || !Number.isFinite(day)) {
+      return null;
+    }
+    
+    const date = new Date(year, month - 1, day);
+    
+    // Verify the date is valid and in a reasonable range
+    if (!Number.isFinite(date.getTime()) || date.getFullYear() < 1900 || date.getFullYear() > 2100) {
+      return null;
+    }
+    
+    return date;
+  } catch {
+    return null;
   }
-  const [day, month, year] = d.split('-').map(Number);
-  return new Date(year, month - 1, day);
 };
 
 // ── Row converter ─────────────────────────────────────────────────────────────
 
-const rowToEntry = (row: CapacityPlanRow, source: 'human' | 'ai'): GanttEntry => ({
-  project_id:   row.project_id   ?? '',
-  project_name: row.project_name ?? '',
-  resource:     row.resource     ?? 'Unknown',
-  start:        parseFlexDate(row.start_date ?? ''),
-  end:          parseFlexDate(row.end_date   ?? ''),
-  priority:     row.priority     ?? 'Med',
-  source,
-});
+const rowToEntry = (row: CapacityPlanRow, source: 'human' | 'ai'): GanttEntry | null => {
+  const start = parseFlexDate(row.start_date ?? '');
+  const end = parseFlexDate(row.end_date ?? '');
+  
+  // Filter out rows with invalid dates
+  if (!start || !end) {
+    return null;
+  }
+  
+  return {
+    project_id:   row.project_id   ?? '',
+    project_name: row.project_name ?? '',
+    resource:     row.resource     ?? 'Unknown',
+    start,
+    end,
+    priority:     row.priority     ?? 'Med',
+    source,
+  };
+};
 
 // ── Static fallback data ────────────────────────────────────────────────────
 
@@ -85,10 +119,21 @@ const RAW_DATES_HUMAN: string[][] = [
   ['01-12-2028', '31-03-2029'], ['01-10-2028', '31-12-2028'],
 ];
 
+// Helper function to parse dates for default entries (guaranteed to be valid)
+const parseDefaultDate = (d: string): Date => {
+  const parsed = parseFlexDate(d);
+  if (!parsed) {
+    // This should never happen with hardcoded valid dates, but provide a fallback
+    console.warn(`Failed to parse default date: ${d}`);
+    return new Date(2026, 0, 1);
+  }
+  return parsed;
+};
+
 const DEFAULT_HUMAN_ENTRIES: GanttEntry[] = RAW_HUMAN_META.map((r, i) => ({
   ...r,
-  start:  parseFlexDate(RAW_DATES_HUMAN[i][0]),
-  end:    parseFlexDate(RAW_DATES_HUMAN[i][1]),
+  start:  parseDefaultDate(RAW_DATES_HUMAN[i][0]),
+  end:    parseDefaultDate(RAW_DATES_HUMAN[i][1]),
   source: 'human' as const,
 }));
 
@@ -96,11 +141,11 @@ const DEFAULT_AI_ENTRIES: GanttEntry[] = [
   ...DEFAULT_HUMAN_ENTRIES.map((e) => ({ ...e, source: 'ai' as const })),
   {
     project_id: 'PRJ-F23', project_name: 'S1', resource: 'JY-QE', priority: 'High',
-    start: parseFlexDate('01-03-2027'), end: parseFlexDate('30-04-2027'), source: 'ai' as const,
+    start: parseDefaultDate('01-03-2027'), end: parseDefaultDate('30-04-2027'), source: 'ai' as const,
   },
   {
     project_id: 'PRJ-F23', project_name: 'S2', resource: 'JY-QC', priority: 'High',
-    start: parseFlexDate('01-05-2027'), end: parseFlexDate('01-10-2027'), source: 'ai' as const,
+    start: parseDefaultDate('01-05-2027'), end: parseDefaultDate('01-10-2027'), source: 'ai' as const,
   },
 ];
 
@@ -115,7 +160,8 @@ const ROW_PAD_TOP =  6;
 
 /** Vertical offset for AI bars so they sit below human bars in the same row */
 const AI_Y_OFFSET = BAR_HEIGHT + 4;
-const M_LEFT      = 90;
+// Layout constants
+const M_LEFT      = 20;  // Reduced since Y-axis is now external
 const M_TOP       = 54;
 const M_RIGHT     = 20;
 const M_BOTTOM    = 24;
@@ -129,7 +175,26 @@ const fmt = (d: Date): string =>
 // ── Geometry factories (accept runtime values) ────────────────────────────────
 
 function makeDateToX(chartStart: Date): (d: Date) => number {
-  return (d) => M_LEFT + ((d.getTime() - chartStart.getTime()) / 86_400_000) * PX_PER_DAY;
+  const startTime = chartStart.getTime();
+  
+  // Guard against invalid chart start
+  if (!Number.isFinite(startTime)) {
+    return () => M_LEFT;
+  }
+  
+  return (d) => {
+    const dTime = d.getTime();
+    
+    // Guard against invalid date
+    if (!Number.isFinite(dTime)) {
+      return M_LEFT;
+    }
+    
+    const xValue = M_LEFT + ((dTime - startTime) / 86_400_000) * PX_PER_DAY;
+    
+    // Ensure we never return NaN
+    return Number.isFinite(xValue) ? xValue : M_LEFT;
+  };
 }
 
 function makeResourceBaseY(resources: string[]): (res: string) => number {
@@ -187,12 +252,18 @@ interface BarProps {
 
 const Bar: React.FC<BarProps> = ({ entry, subRow, yOffset = 0, colorOverride, onHover, dateToX, resourceBaseY, onBarDragStart = undefined }) => {
   const x      = dateToX(entry.start);
-  const width  = Math.max(dateToX(entry.end) - x, 4);
+  const endX   = dateToX(entry.end);
+  const width  = Math.max(endX - x, 4);
   const baseY  = resourceBaseY(entry.resource);
   const y      = baseY + ROW_PAD_TOP + subRow * (BAR_HEIGHT + BAR_GAP) + yOffset;
   const fill   = colorOverride ?? (entry.source === 'human' ? HUMAN_COLOR : AI_COLOR);
   const stroke = entry.source === 'ai' ? '#c97000' : '#1a56c4';
   const opacity = entry.source === 'human' ? 0.78 : 0.9;
+
+  // Guard against invalid calculations
+  if (!Number.isFinite(x) || !Number.isFinite(width) || !Number.isFinite(y)) {
+    return null;
+  }
 
   return (
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -238,14 +309,18 @@ const GanttChart: React.FC<GanttChartProps> = ({
   // ── Resolve entries (props vs static fallback) ──────────────────────────
   const humanEntries = useMemo<GanttEntry[]>(() => {
     if (humanPlanData && humanPlanData.length > 0) {
-      return humanPlanData.map((r) => rowToEntry(r, 'human'));
+      return humanPlanData
+        .map((r) => rowToEntry(r, 'human'))
+        .filter((entry): entry is GanttEntry => entry !== null);
     }
     return DEFAULT_HUMAN_ENTRIES;
   }, [humanPlanData]);
 
   const aiEntries = useMemo<GanttEntry[]>(() => {
     if (planData && planData.length > 0) {
-      return planData.map((r) => rowToEntry(r, 'ai'));
+      return planData
+        .map((r) => rowToEntry(r, 'ai'))
+        .filter((entry): entry is GanttEntry => entry !== null);
     }
     return DEFAULT_AI_ENTRIES;
   }, [planData]);
@@ -267,9 +342,14 @@ const GanttChart: React.FC<GanttChartProps> = ({
       if (resources.length === 0) resources.push('JY-QA');
 
       // Date extent with padding
-      const allMs = allEntries.flatMap((e) => [e.start.getTime(), e.end.getTime()]);
+      // Filter out any invalid timestamps to prevent NaN propagation
+      const allMs = allEntries
+        .flatMap((e) => [e.start.getTime(), e.end.getTime()])
+        .filter((ms) => Number.isFinite(ms));
+      
       const minMs = allMs.length ? Math.min(...allMs) : new Date(2026, 0, 1).getTime();
       const maxMs = allMs.length ? Math.max(...allMs) : new Date(2029, 3, 30).getTime();
+      
       const chartStart = new Date(minMs);
       chartStart.setDate(1);
       chartStart.setMonth(chartStart.getMonth() - 1);
@@ -277,7 +357,7 @@ const GanttChart: React.FC<GanttChartProps> = ({
       chartEnd.setMonth(chartEnd.getMonth() + 2);
 
       const totalDays = Math.ceil((chartEnd.getTime() - chartStart.getTime()) / 86_400_000);
-      const chartW = totalDays * PX_PER_DAY;
+      const chartW = Math.max(totalDays * PX_PER_DAY, 1000); // Expanded minimum width to 1000px
       const chartH = resources.length * ROW_HEIGHT;
       const svgW = M_LEFT + chartW + M_RIGHT;
       const svgH = M_TOP + chartH + M_BOTTOM;
@@ -413,16 +493,28 @@ const GanttChart: React.FC<GanttChartProps> = ({
         </span>
       </div>
 
-      {/* Chart */}
-      <div className="gantt-scroll">
-        <svg
-          ref={svgRef}
-          width={svgW} height={svgH}
-          className="gantt-svg"
-          style={{ display: 'block' }}
-          onDragOver={handleDragOver}
-          onDrop={handleDrop}
-        >
+      {/* Chart with frozen Y-axis */}
+      <div className="gantt-chart-container">
+        {/* Frozen Y-axis sidebar */}
+        <div className="gantt-axis-sidebar">
+          <div className="gantt-axis-header">Resources</div>
+          {resources.map((res) => (
+            <div key={res} className="gantt-axis-label" title={res}>
+              {res}
+            </div>
+          ))}
+        </div>
+
+        {/* Scrollable chart */}
+        <div className="gantt-scroll">
+          <svg
+            ref={svgRef}
+            width={svgW} height={svgH}
+            className="gantt-svg"
+            style={{ display: 'block' }}
+            onDragOver={handleDragOver}
+            onDrop={handleDrop}
+          >
 
           {/* Background */}
           <rect x={0} y={0} width={svgW} height={svgH} fill="var(--gantt-bg,#0f1117)" />
@@ -454,19 +546,6 @@ const GanttChart: React.FC<GanttChartProps> = ({
               x2={M_LEFT + chartW} y2={M_TOP + i * ROW_HEIGHT}
               stroke="rgba(255,255,255,0.08)" strokeWidth={1}
             />
-          ))}
-
-          {/* Resource labels (Y-axis) */}
-          {resources.map((res, i) => (
-            <text key={res}
-              x={M_LEFT - 10} y={M_TOP + i * ROW_HEIGHT + ROW_HEIGHT / 2}
-              textAnchor="end" dominantBaseline="middle"
-              fontSize={12} fontWeight="700"
-              fill="rgba(255,255,255,0.78)"
-              fontFamily="var(--font-sans,sans-serif)"
-            >
-              {res}
-            </text>
           ))}
 
           {/* Month labels (X-axis) */}
@@ -530,6 +609,7 @@ const GanttChart: React.FC<GanttChartProps> = ({
             );
           })}
         </svg>
+        </div>
       </div>
 
       {/* Tooltip */}

@@ -176,6 +176,34 @@ class TestParseNLEdit:
         body = resp.json()
         assert body["project_id"] == "PRJ-A01"
 
+    def test_multi_word_resources_and_hyphenated_project_id(self, client: TestClient):
+        pid = _create_project(client)
+        resp = client.post(
+            f"/api/projects/{pid}/plan-edit/parse",
+            json={
+                "command": "change PRJ-FPU-1 from Tuas Boulevard - YST D2 to Tuas Boulevard - YST D1"
+            },
+        )
+        assert resp.status_code == 200
+        body = resp.json()
+        assert body["project_id"] == "PRJ-FPU-1"
+        assert body["from_value"] == "Tuas Boulevard - YST D2"
+        assert body["to_value"] == "Tuas Boulevard - YST D1"
+
+    def test_quoted_resources_are_supported(self, client: TestClient):
+        pid = _create_project(client)
+        resp = client.post(
+            f"/api/projects/{pid}/plan-edit/parse",
+            json={
+                "command": 'change PRJ-FPU-1 from "Tuas Boulevard - YST D2" to "Tuas Boulevard - YST D1"'
+            },
+        )
+        assert resp.status_code == 200
+        body = resp.json()
+        assert body["project_id"] == "PRJ-FPU-1"
+        assert body["from_value"] == "Tuas Boulevard - YST D2"
+        assert body["to_value"] == "Tuas Boulevard - YST D1"
+
     def test_unsupported_pattern_returns_422(self, client: TestClient):
         pid = _create_project(client)
         resp = client.post(

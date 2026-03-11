@@ -1,0 +1,1251 @@
+project_id,project_name,duration_days,start_date,end_date,resource,dependencies,cost,priority
+Build project 4,Lay-up,1515,06-10-2023,29-11-2027,Tuas - Raffles Pier West (RPW),Berthing,,Confirmed
+Build project 4,Lay-up,1515,06-10-2023,29-11-2027,Tuas - Raffles Pier West (RPW),Berthing,,Confirmed
+Build project 25,Drill Ship,728,23-04-2024,21-04-2026,Tuas Boulevard - YST 19,Berthing,,Confirmed
+Build project 60,Hull,656,02-06-2024,20-03-2026,Tuas Boulevard - YST D2,Drydock,,Confirmed
+AHHIII,Asian Lift,1128,27-10-2024,29-11-2027,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 6,Hull,487,26-11-2024,28-03-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+Build project 34,Topside Module Integration,557,27-11-2024,07-06-2026,Benoi - Q2E,Berthing,,Confirmed
+Build project 33,Berthing,412,28-11-2024,14-01-2026,Pioneer - South Quay 2,Berthing,,Confirmed
+Build project 4,Drill Ship,490,18-12-2024,22-04-2026,Tuas Boulevard - YST 19,Berthing,,Confirmed
+# Repair project 4,Upgrade,412,26-01-2025,14-03-2026,Admiralty - B9 (Berthing),Berthing,,Confirmed
+# Repair project 4,Upgrade,458,26-01-2025,29-04-2026,Admiralty - B8,Berthing,,Confirmed
+# Repair project 144,Upgrade,346,26-01-2025,07-01-2026,Admiralty - Finger Pier,Berthing,,Confirmed
+# Repair project 2,Upgrade,469,28-01-2025,12-05-2026,Admiralty - Finger Pier,Berthing,,Confirmed
+# Repair project 144,Upgrade,466,02-02-2025,14-05-2026,Admiralty - B23,Berthing,,Confirmed
+# Repair project 159,Vessel Berthing (Under Sanction),637,19-02-2025,18-11-2026,Tuas - Raffles Pier East (RPE),Berthing,,Confirmed
+Build project 13,Upgrade,1492,28-03-2025,28-04-2029,Admiralty - B18,Berthing,,Confirmed
+# Repair project 175, Fabrication,331,15-04-2025,12-03-2026,Pioneer - Admiral Dock,Drydock,,Confirmed
+Build project 54,Semi,254,25-05-2025,03-02-2026,Tuas Boulevard - YST 01,Berthing,,Confirmed
+Build project 53,Semi,274,05-06-2025,06-03-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 74,Berthing,186,02-07-2025,04-01-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 48,Quay Bollard Upgrading,208,06-07-2025,30-01-2026,Tuas Boulevard - YST 15,Berthing,,Confirmed
+Build project 48,Quay Bollard Upgrading,195,07-07-2025,18-01-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 21,Hull,367,13-08-2025,15-08-2026,Tuas Boulevard - YST 07,Berthing,,Confirmed
+Build project 4,Berthing,832,18-08-2025,28-11-2027,Pioneer - South Pier 2,Berthing,,Confirmed
+# Repair project 155,Repair,183,26-08-2025,25-02-2026,Tuas Boulevard - YST 08,Berthing,,Confirmed
+Build project 9,Berthing,234,03-09-2025,25-04-2026,Tuas Boulevard - YST 10,Berthing,,Confirmed
+# Repair project 87,Docking,118,18-09-2025,14-01-2026,Pioneer - Admiral Dock,Drydock,,Confirmed
+Build project 19,Hull,170,05-10-2025,24-03-2026,Tuas Boulevard - YST 12,Berthing,,Confirmed
+Build project 28,Berthing,187,09-10-2025,14-04-2026,Tuas Boulevard - YST 03,Berthing,,Confirmed
+# Repair project 201,Upgrade,101,12-10-2025,21-01-2026,Admiralty - B14 (Berthing),Berthing,,Confirmed
+AH3,Asian Lift,111,26-10-2025,14-02-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 85,Repair and Upgrade,76,26-10-2025,10-01-2026,Tuas Boulevard - YST D3,Drydock,,Confirmed
+# Repair project 196,REPAIR,92,28-10-2025,28-01-2026,Benoi - Q1,Berthing,,Confirmed
+Build project 48,Quay Bollard Upgrading,169,28-10-2025,15-04-2026,Tuas Boulevard - YST 06,Berthing,,Confirmed
+# Repair project 39,Upgrade,76,29-10-2025,13-01-2026,Admiralty - B12 (Berthing),Berthing,,Confirmed
+# Repair project 180,Repairs,64,29-10-2025,01-01-2026,Admiralty - Republic (RFD),Drydock,,Confirmed
+# Repair project 39,Upgrade,72,31-10-2025,11-01-2026,Admiralty - B12A,Berthing,,Confirmed
+# Repair project 121,REPAIR,101,04-11-2025,13-02-2026,Benoi - DK1,Drydock,,Confirmed
+# Repair project 110,Pipe Layer,67,04-11-2025,10-01-2026,Tuas Boulevard - YST D7,Drydock,,Confirmed
+# Repair project 191,REPAIR,62,04-11-2025,05-01-2026,Tuas - Temasek Pier East (TPE),Berthing,,Confirmed
+# Repair project 93,Repair and Upgrade,75,05-11-2025,19-01-2026,Tuas Boulevard - YST D6,Drydock,,Confirmed
+Build project 42,M13B-P132A&M14-P142B&M12-122A-MEZZ&M13-P132A-MEZZ&M13-P133A,356,07-11-2025,29-10-2026,Nantong - Slipway - #1,2,Drydock,,Confirmed
+# Repair project 17,Upgrade,63,08-11-2025,10-01-2026,Admiralty - King George 6 (KG6),Drydock,,Confirmed
+# Repair project 105,Repair and Upgrade,131,10-11-2025,21-03-2026,Tuas Boulevard - YST D5,Drydock,,Confirmed
+Build project 77,Berthing,466,15-11-2025,24-02-2027,Pioneer - South Pier 2,Berthing,,Confirmed
+Build project 7,Berthing - Empty,49,16-11-2025,04-01-2026,Pioneer - North Pier,Berthing,,Confirmed
+# Repair project 219,REPAIR,45,18-11-2025,02-01-2026,Benoi - Q4,Berthing,,Confirmed
+# Repair project 131,REPAIR,59,19-11-2025,17-01-2026,Benoi - DK2,Drydock,,Confirmed
+# Repair project 218,Upgrade,52,19-11-2025,10-01-2026,Admiralty - President (PFD),Drydock,,Confirmed
+Build project 10,Load out Carrier Transshelf,51,20-11-2025,10-01-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,29-11-2025,01-01-2026,Tuas - Raffles Dock,Drydock,,Confirmed
+# Repair project 13,REPAIR,51,30-11-2025,20-01-2026,Tuas - Raffles Dock,Drydock,,Confirmed
+# Repair project 219,REPAIR,51,30-11-2025,20-01-2026,Tuas - Raffles Dock,Drydock,,Confirmed
+# Repair project 180,Repairs,38,30-11-2025,07-01-2026,Admiralty - B11 (Berthing),Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,01-12-2025,03-01-2026,Admiralty - Republic (RFD),Drydock,,Confirmed
+Build project 37,P80 Barge CO2 Compressor ,34,01-12-2025,04-01-2026,Pioneer - South Pier 1,Berthing,,Confirmed
+# Repair project 113,Upgrade,40,01-12-2025,10-01-2026,Admiralty - B16,Berthing,,Confirmed
+Build project 7,Berthing  with FELS 13,69,02-12-2025,09-02-2026,Pioneer - North Pier,Berthing,,Confirmed
+Build project 74,Docking,66,02-12-2025,06-02-2026,Floating Dock - Can Do Barge,Drydock,,Confirmed
+# Repair project 10,Upgrade,40,02-12-2025,11-01-2026,Admiralty - Republic (RFD),Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,35,04-12-2025,08-01-2026,Tuas Boulevard - YST D4,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,33,06-12-2025,08-01-2026,Tuas - Temasek Dock,Drydock,,Confirmed
+# Repair project 210,Repair and Upgrade,40,06-12-2025,15-01-2026,Tuas Boulevard - YST D1,Drydock,,Confirmed
+# Repair project 163,REPAIR,46,07-12-2025,22-01-2026,Tuas - Temasek Dock,Drydock,,Confirmed
+# Repair project 108,Repair and Upgrade,48,07-12-2025,24-01-2026,Tuas Boulevard - YST D4,Drydock,,Confirmed
+# Repair project 141,Repair and Upgrade,41,07-12-2025,17-01-2026,Tuas Boulevard - YST 14,Berthing,,Confirmed
+# Repair project 156,Upgrade,34,08-12-2025,11-01-2026,Admiralty - B10 (Berthing),Berthing,,Confirmed
+# Repair project 85,Repair and Upgrade,80,08-12-2025,26-02-2026,Tuas Boulevard - YST D7,Drydock,,Confirmed
+# Repair project 17,Upgrade,74,09-12-2025,21-02-2026,Admiralty - B22,Berthing,,Confirmed
+# Repair project 113,Upgrade,72,09-12-2025,19-02-2026,Admiralty - President (PFD),Drydock,,Confirmed
+# Repair project 218,Upgrade,46,09-12-2025,24-01-2026,Admiralty - B16,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,10-12-2025,12-01-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 156,Upgrade,70,10-12-2025,18-02-2026,Admiralty - King George 6 (KG6),Drydock,,Confirmed
+# Repair project 25,REPAIR,43,11-12-2025,23-01-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 62,REPAIR,43,11-12-2025,23-01-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,35,12-12-2025,16-01-2026,Tuas Boulevard - YST D3,Drydock,,Confirmed
+# Repair project 87,Berthing- 2,93,12-12-2025,15-03-2026,Pioneer - South Quay 2,Berthing,,Confirmed
+Build project 33,Hull,35,12-12-2025,16-01-2026,Tuas Boulevard - YST 16,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,14-12-2025,16-01-2026,Tuas Boulevard - YST D1,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,34,15-12-2025,18-01-2026,Benoi - DK2,Drydock,,Confirmed
+# Repair project 131,REPAIR,37,15-12-2025,21-01-2026,Benoi - Q1,Berthing,,Confirmed
+# Repair project 141,Repair and Upgrade,46,15-12-2025,30-01-2026,Tuas Boulevard - YST D1,Drydock,,Confirmed
+# Repair project 150,Repair and Upgrade,57,15-12-2025,10-02-2026,Tuas Boulevard - YST D3,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,33,16-12-2025,18-01-2026,Admiralty - Republic (RFD),Drydock,,Confirmed
+Build project 73,Berthing,435,16-12-2025,24-02-2027,Pioneer - North Pier,Berthing,,Confirmed
+# Repair project 51,REPAIR,56,16-12-2025,10-02-2026,Tuas - West Quay (WQ),Berthing,,Confirmed
+# Repair project 196,REPAIR,41,16-12-2025,26-01-2026,Benoi - DK2,Drydock,,Confirmed
+# Repair project 20,Repairs,33,16-12-2025,18-01-2026,Admiralty - B10 (Berthing),Berthing,,Confirmed
+# Repair project 20,Repairs,54,17-12-2025,09-02-2026,Admiralty - Republic (RFD),Drydock,,Confirmed
+Build project 60,Unloading - (CPI Equipment) Transportation Vessel (Sophia),37,17-12-2025,23-01-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 93,Repair and Upgrade,59,17-12-2025,14-02-2026,Tuas Boulevard - YST 14,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,18-12-2025,20-01-2026,Tuas Boulevard - YST D6,Drydock,,Confirmed
+# Repair project 219,REPAIR,34,18-12-2025,21-01-2026,Tuas - Temasek Pier East (TPE),Berthing,,Confirmed
+# Repair project 86,Berthing-1,43,19-12-2025,31-01-2026,Pioneer - South Quay 2,Berthing,,Confirmed
+Build project 15,Yard Asset,41,19-12-2025,29-01-2026,Tuas Boulevard - YST D6,Drydock,,Confirmed
+Build project 17,Yard Asset,41,19-12-2025,29-01-2026,Tuas Boulevard - YST D6,Drydock,,Confirmed
+# Repair project 25,REPAIR,38,21-12-2025,28-01-2026,Tuas - South Quay (SQ),Berthing,,Confirmed
+# Repair project 62,REPAIR,35,21-12-2025,25-01-2026,Tuas - West Quay (WQ),Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,22-12-2025,24-01-2026,Admiralty - Premier (SPD),Drydock,,Confirmed
+Build project 76,Assets,175,22-12-2025,15-06-2026,Tuas - Raffles Pier East (RPE),Berthing,,Confirmed
+# Repair project 108,Repair and Upgrade,35,22-12-2025,26-01-2026,Tuas Boulevard - YST 09,Berthing,,Confirmed
+Build project 22,Hull,39,23-12-2025,31-01-2026,Tuas Boulevard - YST D4,Drydock,,Confirmed
+# Repair project 161,Upgrade,46,23-12-2025,07-02-2026,Admiralty - Premier (SPD),Drydock,,Confirmed
+# Repair project 218,Upgrade,38,23-12-2025,30-01-2026,Admiralty - B10 (Berthing),Berthing,,Confirmed
+Build project 60,Unloading - (CPI Equipment) Transportation Vessel (BBC Texas),34,23-12-2025,26-01-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,25-12-2025,27-01-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 65,REPAIR,45,26-12-2025,09-02-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,33,27-12-2025,29-01-2026,Tuas - Temasek Dock,Drydock,,Confirmed
+# Repair project 63,REPAIR,46,28-12-2025,12-02-2026,Tuas - Temasek Dock,Drydock,,Confirmed
+# Repair project 141,Repair and Upgrade,37,28-12-2025,03-02-2026,Tuas Boulevard - YST 09,Berthing,,Confirmed
+# Repair project 199,Repair and Upgrade,51,28-12-2025,17-02-2026,Tuas Boulevard - YST D6,Drydock,,Confirmed
+# Repair project 86,Docking,57,29-12-2025,24-02-2026,Pioneer - Admiral Dock,Drydock,,Confirmed
+# Repair project 182,Repairs,40,31-12-2025,09-02-2026,Admiralty - B10 (Berthing),Berthing,,Confirmed
+# Repair project 164,Repairs,42,04-01-2026,15-02-2026,Admiralty - B14 (Berthing),Berthing,,Confirmed
+Build project 22,Sparta - Lifting Upper Deck to Piperack,33,05-01-2026,07-02-2026,Tuas Boulevard - YST 01,Berthing,,Confirmed
+Build project 22,Sparta - Lifting Topside Upper Deck,33,05-01-2026,07-02-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+# Repair project 194,REPAIR,35,05-01-2026,09-02-2026,Benoi - Q3,Berthing,,Confirmed
+# Repair project 161,Upgrade,34,05-01-2026,08-02-2026,Admiralty - B12 (Berthing),Berthing,,Confirmed
+Build project 60,Unloading - (CPI Equipment) Transportation Vessel (AAL Bangkok),34,05-01-2026,08-02-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 206,Repair and Upgrade,45,05-01-2026,19-02-2026,Tuas Boulevard - YST D4,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,33,06-01-2026,08-02-2026,Benoi - DK2,Drydock,,Confirmed
+Build project 40,P83 Co2 Compressor lift -Barge /L501,33,06-01-2026,08-02-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 12,Upgrade,35,06-01-2026,10-02-2026,Admiralty - B12 (Berthing),Berthing,,Confirmed
+AHHIII,Lift of FELS 13,33,07-01-2026,09-02-2026,Pioneer - North Pier,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,07-01-2026,09-02-2026,Admiralty - Premier (SPD),Drydock,,Confirmed
+# Repair project 173,Berthing-1,65,07-01-2026,13-03-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 65,REPAIR,38,07-01-2026,14-02-2026,Tuas - Temasek Pier East (TPE),Berthing,,Confirmed
+# Repair project 194,REPAIR,47,07-01-2026,23-02-2026,Benoi - DK2,Drydock,,Confirmed
+# Repair project 143,Upgrade,45,07-01-2026,21-02-2026,Admiralty - B12 (Berthing),Berthing,,Confirmed
+Build project 7,Berthing Empty,35,08-01-2026,12-02-2026,Pioneer - North Pier,Berthing,,Confirmed
+# Repair project 12,Upgrade,54,08-01-2026,03-03-2026,Admiralty - Premier (SPD),Drydock,,Confirmed
+# Repair project 20,Repairs,48,08-01-2026,25-02-2026,Admiralty - B10 (Berthing),Berthing,,Confirmed
+# Repair project 34,Repair and Upgrade,40,08-01-2026,17-02-2026,Tuas Boulevard - YST 12,Berthing,,Confirmed
+# Repair project 182,Repairs,65,08-01-2026,14-03-2026,Admiralty - Republic (RFD),Drydock,,Confirmed
+# Repair project 150,Repair and Upgrade,44,08-01-2026,21-02-2026,Tuas Boulevard - YST 09,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,10-01-2026,12-02-2026,Tuas - Raffles Dock,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,35,10-01-2026,14-02-2026,Tuas Boulevard - YST D1,Drydock,,Confirmed
+Build project 23,Berthing,33,10-01-2026,12-02-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 121,REPAIR,35,11-01-2026,15-02-2026,Benoi - Q1,Berthing,,Confirmed
+# Repair project 172,REPAIR,68,11-01-2026,20-03-2026,Tuas - Raffles Dock,Drydock,,Confirmed
+# Repair project 205,Docking,75,12-01-2026,28-03-2026,Floating Dock - Can Do Barge,Drydock,,Confirmed
+# Repair project 51,REPAIR,54,12-01-2026,07-03-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+Build project 7,Berthing with Valaris 106,73,13-01-2026,27-03-2026,Pioneer - North Pier,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,35,13-01-2026,17-02-2026,Tuas Boulevard - YST D3,Drydock,,Confirmed
+# Repair project 164,Repairs,56,13-01-2026,10-03-2026,Admiralty - B16,Berthing,,Confirmed
+# Repair project 203,Repairs,182,13-01-2026,14-07-2026,Admiralty - B14 (Berthing),Berthing,,Confirmed
+# Repair project 24,Repair and Upgrade,48,13-01-2026,02-03-2026,Tuas Boulevard - YST D1,Drydock,,Confirmed
+# Repair project 34,Repair and Upgrade,50,15-01-2026,06-03-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,16-01-2026,18-02-2026,Tuas - Temasek Dock,Drydock,,Confirmed
+# Repair project 156,Upgrade,42,16-01-2026,27-02-2026,Admiralty - B10 (Berthing),Berthing,,Confirmed
+# Repair project 4,Repair and Upgrade,54,16-01-2026,11-03-2026,Tuas Boulevard - YST D3,Drydock,,Confirmed
+# Repair project 114,REPAIR,64,17-01-2026,22-03-2026,Tuas - Temasek Dock,Drydock,,Confirmed
+# Repair project 181,Repairs,53,17-01-2026,11-03-2026,Admiralty - B11 (Berthing),Berthing,,Confirmed
+Build project 53,Barge,33,18-01-2026,20-02-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 113,Upgrade,38,18-01-2026,25-02-2026,Admiralty - B12 (Berthing),Berthing,,Confirmed
+# Repair project 140,Repair and Upgrade,48,18-01-2026,07-03-2026,Tuas Boulevard - YST D6,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,33,19-01-2026,21-02-2026,Benoi - DK1,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,33,19-01-2026,21-02-2026,Admiralty - King George 6 (KG6),Drydock,,Confirmed
+# Repair project 17,Upgrade,47,19-01-2026,07-03-2026,Admiralty - King George 6 (KG6),Drydock,,Confirmed
+# Repair project 65,Repair,49,20-01-2026,10-03-2026,Benoi - DK1,Drydock,,Confirmed
+# Repair project 143,Upgrade,46,20-01-2026,07-03-2026,Admiralty - King George 6 (KG6),Drydock,,Confirmed
+# Repair project 173,Barge,34,21-01-2026,24-02-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 174,Barge Leg / Crane,35,21-01-2026,25-02-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 194,Repair,48,21-01-2026,10-03-2026,Benoi - Q4,Berthing,,Confirmed
+Build project 23,Lifting Sea Challenger Legs,34,22-01-2026,25-02-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 86,Berthing-2,76,22-01-2026,08-04-2026,Pioneer - South Pier 1,Berthing,,Confirmed
+Build project 22,Lifting Sea Challenger crane boom,33,23-01-2026,25-02-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+AH3,Asian Lift,79,24-01-2026,13-04-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,24-01-2026,26-02-2026,Admiralty - President (PFD),Drydock,,Confirmed
+# Repair project 85,Repair and Upgrade,131,24-01-2026,04-06-2026,Tuas Boulevard - YST 08,Berthing,,Confirmed
+# Repair project 163,Upgrade,35,25-01-2026,01-03-2026,Admiralty - President (PFD),Drydock,,Confirmed
+Build project 22, Sea Challanger Crane A frame lift,33,26-01-2026,28-02-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 23,Hakuryu 5 Anchor chain lift,38,26-01-2026,05-03-2026,Pioneer - South Pier 1,Berthing,,Confirmed
+Build project 25,Anchor Chain,38,26-01-2026,05-03-2026,Pioneer - South Pier 1,Berthing,,Confirmed
+Build project 37,Others,36,26-01-2026,03-03-2026,Tuas - West Quay (WQ),Berthing,,Confirmed
+# Repair project 174,Barge for Crane removal,34,26-01-2026,01-03-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 22,Berthing,34,27-01-2026,02-03-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 25,Upgrade,35,27-01-2026,03-03-2026,Admiralty - B10 (Berthing),Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,28-01-2026,02-03-2026,Admiralty - President (PFD),Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,34,28-01-2026,03-03-2026,Tuas Boulevard - YST D1,Drydock,,Confirmed
+# Repair project 24,Repair and Upgrade,36,28-01-2026,05-03-2026,Tuas Boulevard - YST 15,Berthing,,Confirmed
+Build project 16,Yard Asset,60,28-01-2026,29-03-2026,Tuas Boulevard - YST D7,Drydock,,Confirmed
+Build project 16,Yard Asset,60,28-01-2026,29-03-2026,Tuas Boulevard - YST D7,Drydock,,Confirmed
+Build project 70,6 Triloader Load Testing,60,28-01-2026,29-03-2026,Tuas Boulevard - YST D7,Drydock,,Confirmed
+Build project 22,Sea Challanger Leg lift,33,29-01-2026,03-03-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 12,Upgrade,57,29-01-2026,27-03-2026,Admiralty - B12 (Berthing),Berthing,,Confirmed
+# Repair project 25,Upgrade,39,29-01-2026,09-03-2026,Admiralty - President (PFD),Drydock,,Confirmed
+Build project 22,Berthing,33,30-01-2026,04-03-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 23,Hakuryu 5 Anchor chain lift,34,01-02-2026,07-03-2026,Pioneer - South Quay 2,Berthing,,Confirmed
+Build project 25,Anchor Chain,34,01-02-2026,07-03-2026,Pioneer - South Quay 2,Berthing,,Confirmed
+# Repair project 34,Repair and Upgrade,47,01-02-2026,20-03-2026,Tuas Boulevard - YST 12,Berthing,,Confirmed
+Build project 60,Unloading - (Helideck) Transportation Vessel (from Baker Engineering),33,01-02-2026,06-03-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 17,Upgrade,120,02-02-2026,02-06-2026,Admiralty - B22,Berthing,,Confirmed
+# Repair project 143,Upgrade,37,02-02-2026,11-03-2026,Admiralty - B10 (Berthing),Berthing,,Confirmed
+# Repair project 140,Repair and Upgrade,44,02-02-2026,18-03-2026,Tuas Boulevard - YST 15,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,35,03-02-2026,10-03-2026,Tuas Boulevard - YST D4,Drydock,,Confirmed
+Build project 47,P80 Equipment,33,03-02-2026,08-03-2026,Tuas Boulevard - YST 16,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,04-02-2026,09-03-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+Build project 22, Sea Challanger Crane Plft & Hse ,33,04-02-2026,09-03-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 25,Upgrade,37,04-02-2026,13-03-2026,Admiralty - B22,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,05-02-2026,10-03-2026,Admiralty - King George 6 (KG6),Drydock,,Confirmed
+# Repair project 65,Repair,50,05-02-2026,27-03-2026,Benoi - Q4,Berthing,,Confirmed
+# Repair project 126,Repair,34,05-02-2026,11-03-2026,Tuas - Temasek Pier East (TPE),Berthing,,Confirmed
+# Repair project 96,Upgrade,35,05-02-2026,12-03-2026,Admiralty - B12 (Berthing),Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,06-02-2026,11-03-2026,Admiralty - President (PFD),Drydock,,Confirmed
+# Repair project 126,Repair,43,06-02-2026,21-03-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 143,Upgrade,43,06-02-2026,21-03-2026,Admiralty - B16,Berthing,,Confirmed
+# Repair project 181,Repairs,59,06-02-2026,06-04-2026,Admiralty - King George 6 (KG6),Drydock,,Confirmed
+Build project 47,P80 Equipment,35,06-02-2026,13-03-2026,Tuas Boulevard - YST 16,Berthing,,Confirmed
+# Repair project 70,Repair and Upgrade,34,06-02-2026,12-03-2026,Tuas Boulevard - YST 14,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,37,07-02-2026,16-03-2026,Tuas Boulevard - YST D3,Drydock,,Confirmed
+# Repair project 96,Upgrade,50,07-02-2026,29-03-2026,Admiralty - President (PFD),Drydock,,Confirmed
+# Repair project 185,Repair and Upgrade,38,07-02-2026,17-03-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 70,Repair and Upgrade,54,07-02-2026,02-04-2026,Tuas Boulevard - YST D4,Drydock,,Confirmed
+# Repair project 173,Docking,99,08-02-2026,18-05-2026,Pioneer - Admiral Dock,Drydock,,Confirmed
+Build project 47,P80 Equipment,36,08-02-2026,16-03-2026,Tuas Boulevard - YST 16,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,09-02-2026,14-03-2026,Admiralty - Premier (SPD),Drydock,,Confirmed
+# Repair project 95,Upgrade,35,09-02-2026,16-03-2026,Admiralty - B11 (Berthing),Berthing,,Confirmed
+# Repair project 182,Repairs,40,09-02-2026,21-03-2026,Admiralty - B9 (Berthing),Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,10-02-2026,15-03-2026,Admiralty - Republic (RFD),Drydock,,Confirmed
+# Repair project 86,External Barge for H14 BOP,33,10-02-2026,15-03-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 4,Upgrade,51,10-02-2026,02-04-2026,Admiralty - Premier (SPD),Drydock,,Confirmed
+Build project 60,Elite Progress 1,33,10-02-2026,15-03-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+# Repair project 87,Repair and Upgrade,53,10-02-2026,04-04-2026,Tuas Boulevard - YST D6,Drydock,,Confirmed
+# Repair project 95,Upgrade,48,11-02-2026,31-03-2026,Admiralty - Republic (RFD),Drydock,,Confirmed
+Build project 61,Transportation Vessel (Main Crane Slewing Platform & Main Crane A-Frame),42,11-02-2026,25-03-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+# Repair project 87,Berthing- 3,48,12-02-2026,01-04-2026,Pioneer - South Quay 2,Berthing,,Confirmed
+# Repair project 185,Repair and Upgrade,142,12-02-2026,04-07-2026,Tuas Boulevard - YST D3,Drydock,,Confirmed
+Build project 60,Elite Progress 1,33,13-02-2026,18-03-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+# Repair project 3,Repair,41,15-02-2026,28-03-2026,Benoi - DK2,Drydock,,Confirmed
+Build project 22,Sparta - Lifting LSE,33,15-02-2026,20-03-2026,Tuas Boulevard - YST 05,Berthing,,Confirmed
+# Repair project 172,REPAIR,77,15-02-2026,03-05-2026,Tuas - West Quay (WQ),Berthing,,Confirmed
+Build project 60,Hull,361,15-02-2026,11-02-2027,Tuas Boulevard - YST 16,Berthing,,Confirmed
+# Repair project 105,Repair and Upgrade,77,16-02-2026,04-05-2026,Tuas Boulevard - YST 09,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,34,17-02-2026,23-03-2026,Tuas Boulevard - YST D1,Drydock,,Confirmed
+# Repair project 114,REPAIR,36,17-02-2026,25-03-2026,Tuas - West Quay (WQ),Berthing,,Confirmed
+# Repair project 109,Upgrade - Phase 1,408,19-02-2026,03-04-2027,Tuas - Temasek Pier East (TPE),Berthing,,Confirmed
+Build project 19,hull,59,19-02-2026,19-04-2026,Tuas Boulevard - YST 14,Berthing,,Confirmed
+# Repair project 124,Repair and Upgrade,52,19-02-2026,12-04-2026,Tuas Boulevard - YST D1,Drydock,,Confirmed
+# Repair project 126,Repair,45,21-02-2026,07-04-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 5,Upgrade,47,21-02-2026,09-04-2026,Admiralty - B10 (Berthing),Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,22-02-2026,27-03-2026,Benoi - DK1,Drydock,,Confirmed
+Build project 36,Topside Module Integration,150,22-02-2026,22-07-2026,Tuas Boulevard - YST 15,Berthing,,Confirmed
+AH3,Shell Sparta Topside Upper Deck,33,23-02-2026,28-03-2026,Tuas Boulevard - YST 01,Berthing,,Confirmed
+AH3,Shell Sparta Topside Upper Deck,36,23-02-2026,31-03-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+Build project 6,Hull,62,23-02-2026,26-04-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 14,Transport Barge,39,23-02-2026,03-04-2026,Benoi - Q1,Berthing,,Confirmed
+# Repair project 78,Repair,42,23-02-2026,06-04-2026,Benoi - DK1,Drydock,,Confirmed
+# Repair project 205,Berthing,66,24-02-2026,01-05-2026,Pioneer - North Pier,Berthing,,Confirmed
+Build project 48,Quay Bollard Upgrading,171,24-02-2026,14-08-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+Build project 7,Berthing - Empty,45,25-02-2026,11-04-2026,Pioneer - South Quay 2,Berthing,,Confirmed
+# Repair project 11,Upgrade,39,25-02-2026,05-04-2026,Admiralty - B12 (Berthing),Berthing,,Confirmed
+Build project 48,Quay Bollard Upgrading,60,25-02-2026,26-04-2026,Tuas Boulevard - YST D7,Drydock,,Confirmed
+# Repair project 130,Repair and Upgrade,52,25-02-2026,18-04-2026,Tuas Boulevard - YST 12,Berthing,,Confirmed
+Build project 61,Transportation Vessel (Main Crane Boom),35,25-02-2026,01-04-2026,Tuas Boulevard - YST 01,Berthing,,Confirmed
+Build project 50,Asset - Q3 Repair Work,122,27-02-2026,29-06-2026,Benoi - Q3,Berthing,,Confirmed
+Build project 50,Asset - Q3 Repair Work,61,27-02-2026,29-04-2026,Benoi - Q3,Berthing,,Confirmed
+# Repair project 4,Upgrade,72,28-02-2026,11-05-2026,Admiralty - B9 (Berthing),Berthing,,Confirmed
+# Repair project 70,Repair and Upgrade,39,28-02-2026,08-04-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,34,01-03-2026,04-04-2026,Tuas Boulevard - YST D4,Drydock,,Confirmed
+Build project 60,Sparta - Infiniti 9,34,01-03-2026,04-04-2026,Tuas Boulevard - YST 01,Berthing,,Confirmed
+Build project 22, Sea Challanger Crane Lift Leg,33,02-03-2026,04-04-2026,Pioneer - North Pier,Berthing,,Confirmed
+Build project 22,Berthing,34,02-03-2026,05-04-2026,Pioneer - South Quay 2,Berthing,,Confirmed
+# Repair project 151,Upgrade,60,02-03-2026,01-05-2026,Admiralty - President (PFD),Drydock,,Confirmed
+# Repair project 11,Upgrade,54,03-03-2026,26-04-2026,Admiralty - Premier (SPD),Drydock,,Confirmed
+# Repair project 90,Repair and Upgrade,47,03-03-2026,19-04-2026,Tuas Boulevard - YST D4,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,34,04-03-2026,07-04-2026,Benoi - DK1,Drydock,,Confirmed
+# Repair project 78,Repair,41,04-03-2026,14-04-2026,Benoi - Q4,Berthing,,Confirmed
+# Repair project 181,Repairs,44,04-03-2026,17-04-2026,Admiralty - B12 (Berthing),Berthing,,Confirmed
+# Repair project 54,REPAIR,54,05-03-2026,28-04-2026,Benoi - DK1,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,33,06-03-2026,08-04-2026,Benoi - DK2,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,33,06-03-2026,08-04-2026,Admiralty - King George 6 (KG6),Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,40,06-03-2026,15-04-2026,Tuas Boulevard - YST D2,Drydock,,Confirmed
+Build project 22,Sparta - Lifting LSW,33,06-03-2026,08-04-2026,Tuas Boulevard - YST 05,Berthing,,Confirmed
+# Repair project 197,Repair,45,07-03-2026,21-04-2026,Benoi - DK2,Drydock,,Confirmed
+# Repair project 5,Upgrade,67,07-03-2026,13-05-2026,Admiralty - King George 6 (KG6),Drydock,,Confirmed
+Build project 60,Sparta - BS28,34,07-03-2026,10-04-2026,Tuas Boulevard - YST 09,Berthing,,Confirmed
+AHHIII,Asian Lift,50,09-03-2026,28-04-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 7,Floating Barge,144,09-03-2026,31-07-2026,Tuas Boulevard - YST 05,Berthing,,Confirmed
+# Repair project 111,Repairs,36,09-03-2026,14-04-2026,Admiralty - Republic (RFD),Drydock,,Confirmed
+AH3,M17 Lifting at YST02,34,10-03-2026,13-04-2026,Tuas Boulevard - YST 06,Berthing,,Confirmed
+Build project 47,BS27 - P80 - M17 Module,35,10-03-2026,14-04-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+AH2,Asian Lift,48,11-03-2026,28-04-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+AH3,P80 - M17 lifting at YST15,34,11-03-2026,14-04-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,35,11-03-2026,15-04-2026,Tuas Boulevard - YST D1,Drydock,,Confirmed
+Build project 48,Quay Bollard Upgrading,89,11-03-2026,08-06-2026,Tuas Boulevard - YST 07,Berthing,,Confirmed
+Build project 28,Berthing-1,79,12-03-2026,30-05-2026,Pioneer - South Quay 2,Berthing,,Confirmed
+Build project 51,Assets - Temasek Dock Repair,148,12-03-2026,07-08-2026,Tuas - Temasek Dock,Drydock,,Confirmed
+# Repair project 175,Carrier BBC Coral,35,13-03-2026,17-04-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 23,Sea Challanger  Crane Pedestal lift,34,14-03-2026,17-04-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 125,Repair and Upgrade,52,14-03-2026,05-05-2026,Tuas Boulevard - YST D1,Drydock,,Confirmed
+Build project 47,Han Hang Da Jian - P80 - M16, M15 & M14 (Nantong),42,16-03-2026,27-04-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+# Repair project 130,Repair and Upgrade,55,16-03-2026,10-05-2026,Tuas Boulevard - YST D2,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,34,18-03-2026,21-04-2026,Tuas Boulevard - YST D4,Drydock,,Confirmed
+# Repair project 83,Repair,40,18-03-2026,27-04-2026,Benoi - Q4,Berthing,,Confirmed
+Build project 25,Drill Ship,43,19-03-2026,01-05-2026,Tuas Boulevard - YST 12,Berthing,,Confirmed
+Build project 4,Drill Ship,50,20-03-2026,09-05-2026,Tuas Boulevard - YST 12,Berthing,,Confirmed
+Build project 22,P80 - M16 lifting at YST15,33,20-03-2026,22-04-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+Build project 22,P80 - M16 lifting at YST02,33,20-03-2026,22-04-2026,Tuas Boulevard - YST 06,Berthing,,Confirmed
+Build project 2,Tennet Beta - 205 Panels,41,20-03-2026,30-04-2026,Tuas Boulevard - YST 01,Berthing,,Confirmed
+# Repair project 140,Repair and Upgrade,84,20-03-2026,12-06-2026,Tuas Boulevard - YST D4,Drydock,,Confirmed
+AH3,P80 - M15 lifting at YST02,33,22-03-2026,24-04-2026,Tuas Boulevard - YST 06,Berthing,,Confirmed
+AH3,P80 - M15 Lifting at YST15,33,22-03-2026,24-04-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+Build project 14,Repair,33,22-03-2026,24-04-2026,Benoi - DK2,Drydock,,Confirmed
+Build project 22,P82 - M13 Room,33,22-03-2026,24-04-2026,Tuas Boulevard - YST 19,Berthing,,Confirmed
+# Repair project 220,Repair,60,23-03-2026,22-05-2026,Benoi - DK2,Drydock,,Confirmed
+# Repair project 19,Upgrade,36,23-03-2026,28-04-2026,Admiralty - Republic (RFD),Drydock,,Confirmed
+AH3,P80 - M14 lifting at YST02,33,24-03-2026,26-04-2026,Tuas Boulevard - YST 06,Berthing,,Confirmed
+AH3,P80 - M14 lifting at YST15,33,24-03-2026,26-04-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+Build project 9,Repairs,1072,24-03-2026,28-02-2029,Admiralty - B19,Berthing,,Confirmed
+# Repair project 11,Upgrade,54,24-03-2026,17-05-2026,Admiralty - B12 (Berthing),Berthing,,Confirmed
+Build project 22,Tennet Beta - 205 Panels,34,25-03-2026,28-04-2026,Tuas Boulevard - YST 14,Berthing,,Confirmed
+# Repair project 54,REPAIR,39,26-03-2026,04-05-2026,Benoi - Q4,Berthing,,Confirmed
+# Repair project 114,Upgrade,49,27-03-2026,15-05-2026,Admiralty - Republic (RFD),Drydock,,Confirmed
+# Repair project 142,New RU,58,27-03-2026,24-05-2026,Admiralty - B10 (Berthing),Berthing,,Confirmed
+AH3,Asian Lift,47,28-03-2026,14-05-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 23,Berthing,33,28-03-2026,30-04-2026,Pioneer - South Pier 1,Berthing,,Confirmed
+Build project 23,Crane Foundation Lifting,33,29-03-2026,01-05-2026,Pioneer - North Pier,Berthing,,Confirmed
+Build project 25,Drill Ship,37,29-03-2026,05-05-2026,Tuas Boulevard - YST 14,Berthing,,Confirmed
+# Repair project 151,Upgrade,36,29-03-2026,04-05-2026,Admiralty - B9 (Berthing),Berthing,,Confirmed
+# Repair project 46,Repairs,38,30-03-2026,07-05-2026,Admiralty - Republic (RFD),Drydock,,Confirmed
+# Repair project 98,Repairs,41,30-03-2026,10-05-2026,Admiralty - B16,Berthing,,Confirmed
+Build project 14,Repair,33,31-03-2026,03-05-2026,Benoi - DK1,Drydock,,Confirmed
+# Repair project 187,REPAIR,51,01-04-2026,22-05-2026,Benoi - DK1,Drydock,,Confirmed
+Build project 47,P80 - Cranes,36,01-04-2026,07-05-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+AHHIII,Asian Lift,155,02-04-2026,04-09-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 25,Drill Ship,65,02-04-2026,06-06-2026,Tuas Boulevard - YST 06,Berthing,,Confirmed
+# Repair project 207,Repair,35,03-04-2026,08-05-2026,Tuas - South Quay (SQ),Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,04-04-2026,07-05-2026,Tuas - Raffles Dock,Drydock,,Confirmed
+# Repair project 46,Repairs,40,04-04-2026,14-05-2026,Admiralty - B11 (Berthing),Berthing,,Confirmed
+# Repair project 207,Repair,133,05-04-2026,16-08-2026,Tuas - Raffles Dock,Drydock,,Confirmed
+# Repair project 157,Repairs,54,05-04-2026,29-05-2026,Admiralty - President (PFD),Drydock,,Confirmed
+Build project 46,Repairs,54,05-04-2026,29-05-2026,Admiralty - Premier (SPD),Drydock,,Confirmed
+Build project 4,Drill Ship,61,06-04-2026,06-06-2026,Tuas Boulevard - YST 06,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,07-04-2026,10-05-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 98,Repairs,40,07-04-2026,17-05-2026,Admiralty - B11 (Berthing),Berthing,,Confirmed
+# Repair project 130,Repair and Upgrade,54,07-04-2026,31-05-2026,Tuas Boulevard - YST 12,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,35,08-04-2026,13-05-2026,Tuas Boulevard - YST D2,Drydock,,Confirmed
+# Repair project 88,Repair,45,08-04-2026,23-05-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 2,Upgrade,56,09-04-2026,04-06-2026,Admiralty - B8,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,34,10-04-2026,14-05-2026,Tuas Boulevard - YST D6,Drydock,,Confirmed
+Build project 22,Tennet Beta - 204,34,10-04-2026,14-05-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 5,Upgrade,38,10-04-2026,18-05-2026,Admiralty - B16,Berthing,,Confirmed
+# Repair project 144,Upgrade,98,11-04-2026,18-07-2026,Admiralty - Finger Pier,Berthing,,Confirmed
+AH3,P80 - M13 From TY to YST15,33,12-04-2026,15-05-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,34,12-04-2026,16-05-2026,Tuas Boulevard - YST D1,Drydock,,Confirmed
+# Repair project 166,Repair and Upgrade,91,12-04-2026,12-07-2026,Tuas Boulevard - YST D6,Drydock,,Confirmed
+# Repair project 167,Repair and Upgrade,84,12-04-2026,05-07-2026,Tuas Boulevard - YST D5,Drydock,,Confirmed
+AH3,Asian Lift,56,14-04-2026,09-06-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 22,P80 - M12 from TY to YST15,33,14-04-2026,17-05-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+# Repair project 208,KMT 9 (Panel Transfer),33,14-04-2026,17-05-2026,Pioneer - North Pier,Berthing,,Confirmed
+# Repair project 75,Repair and Upgrade,47,14-04-2026,31-05-2026,Tuas Boulevard - YST D1,Drydock,,Confirmed
+# Repair project 173,Berthing-2,63,15-04-2026,17-06-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 5,Upgrade,76,15-04-2026,30-06-2026,Admiralty - B12 (Berthing),Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,43,16-04-2026,29-05-2026,Pioneer - Admiral Dock,Drydock,,Confirmed
+# Repair project 30,Repair and Upgrade,84,16-04-2026,09-07-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 220,Repair,35,19-04-2026,24-05-2026,Benoi - Q4,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,34,20-04-2026,24-05-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 88,Repair,96,20-04-2026,25-07-2026,Tuas - West Quay (WQ),Berthing,,Confirmed
+# Repair project 176,Repair and Upgrade,40,20-04-2026,30-05-2026,Tuas Boulevard - YST D2,Drydock,,Confirmed
+# Repair project 50,Repair,42,21-04-2026,02-06-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+Build project 72,Topside Module Integration,42,21-04-2026,02-06-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 14,Repair,33,23-04-2026,26-05-2026,Benoi - DK1,Drydock,,Confirmed
+# Repair project 160,Repairs,37,23-04-2026,30-05-2026,Admiralty - B16,Berthing,,Confirmed
+# Repair project 38,Repair,50,24-04-2026,13-06-2026,Benoi - DK1,Drydock,,Confirmed
+Build project 71,Ya Qing Hui Zong,37,25-04-2026,01-06-2026,Tuas Boulevard - YST D7,Drydock,,Confirmed
+Build project 47,P82 - Trans. Vess. - VRU Compressor,34,26-04-2026,30-05-2026,Tuas Boulevard - YST 19,Berthing,,Confirmed
+Build project 14,Repair,33,27-04-2026,30-05-2026,Benoi - DK2,Drydock,,Confirmed
+Build project 22,Uaru - 1SA (Dynamac),33,27-04-2026,30-05-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 28,Docking,251,27-04-2026,03-01-2027,Pioneer - Admiral Dock,Drydock,,Confirmed
+Build project 67,Module transfer vessel for Uaru,47,27-04-2026,13-06-2026,Benoi - Q1,Berthing,,Confirmed
+# Repair project 160,Repairs,35,27-04-2026,01-06-2026,Admiralty - Republic (RFD),Drydock,,Confirmed
+Build project 48,Quay Bollard Upgrading,124,27-04-2026,29-08-2026,Tuas Boulevard - YST 10,Berthing,,Confirmed
+# Repair project 223,Repair,39,28-04-2026,06-06-2026,Benoi - DK2,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,33,29-04-2026,01-06-2026,Tuas Boulevard - YST D1,Drydock,,Confirmed
+Build project 71,Ya Qing Hui Zong,42,29-04-2026,10-06-2026,Tuas Boulevard - YST 03,Berthing,,Confirmed
+# Repair project 160,Repairs,42,29-04-2026,10-06-2026,Admiralty - King George 6 (KG6),Drydock,,Confirmed
+# Repair project 50,Repair,39,30-04-2026,08-06-2026,Tuas - South Quay (SQ),Berthing,,Confirmed
+Build project 72,Module Lifting,36,30-04-2026,05-06-2026,Tuas Boulevard - YST D7,Drydock,,Confirmed
+# Repair project 17,Repairs,157,30-04-2026,04-10-2026,Admiralty - B11 (Berthing),Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,01-05-2026,03-06-2026,Admiralty - Premier (SPD),Drydock,,Confirmed
+# Repair project 2,Upgrade,47,02-05-2026,18-06-2026,Admiralty - Premier (SPD),Drydock,,Confirmed
+# Repair project 85,Repair and Upgrade,45,02-05-2026,16-06-2026,Tuas Boulevard - YST D1,Drydock,,Confirmed
+Build project 72,Module Lifting,36,03-05-2026,08-06-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 64,Demi Water,47,03-05-2026,19-06-2026,Benoi - Q2,Berthing,,Confirmed
+Build project 4,Drill Ship,121,04-05-2026,02-09-2026,Tuas Boulevard - YST 12,Berthing,,Confirmed
+# Repair project 223,UARU Spacer Fabrication,40,04-05-2026,13-06-2026,Benoi - Q4,Berthing,,Confirmed
+Build project 25,Drill Ship,115,04-05-2026,27-08-2026,Tuas Boulevard - YST 12,Berthing,,Confirmed
+# Repair project 221,Repairs,37,04-05-2026,10-06-2026,Admiralty - B8,Berthing,,Confirmed
+Build project 14,UARU Flare Tower Grand Assembly,33,05-05-2026,07-06-2026,Benoi - DK2,Drydock,,Confirmed
+Build project 34,Hull,37,05-05-2026,11-06-2026,Tuas Boulevard - YST 06,Berthing,,Confirmed
+# Repair project 64,Repair,60,06-05-2026,05-07-2026,Benoi - DK2,Drydock,,Confirmed
+Build project 72,Topside Module Integration,327,06-05-2026,29-03-2027,Benoi - Q2E,Berthing,,Confirmed
+# Repair project 128,Repair and Upgrade,37,06-05-2026,12-06-2026,Tuas Boulevard - YST 08,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,07-05-2026,09-06-2026,Admiralty - Republic (RFD),Drydock,,Confirmed
+AH2,Asian Lift,60,08-05-2026,07-07-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 160,Repairs,44,08-05-2026,21-06-2026,Admiralty - B16,Berthing,,Confirmed
+# Repair project 221,Repairs,51,08-05-2026,28-06-2026,Admiralty - Republic (RFD),Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,33,09-05-2026,11-06-2026,Admiralty - King George 6 (KG6),Drydock,,Confirmed
+Build project 71,Berthing (JIN XI XIANG 88),36,09-05-2026,14-06-2026,Pioneer - South Quay 2,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,10-05-2026,12-06-2026,Admiralty - President (PFD),Drydock,,Confirmed
+# Repair project 128,Repair and Upgrade,47,10-05-2026,26-06-2026,Tuas Boulevard - YST D4,Drydock,,Confirmed
+# Repair project 162,Repairs,43,10-05-2026,22-06-2026,Admiralty - B10 (Berthing),Berthing,,Confirmed
+# Repair project 188,Repairs,47,10-05-2026,26-06-2026,Admiralty - King George 6 (KG6),Drydock,,Confirmed
+# Repair project 140,Repair and Upgrade,41,10-05-2026,20-06-2026,Tuas Boulevard - YST 09,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,34,11-05-2026,14-06-2026,Benoi - DK1,Drydock,,Confirmed
+# Repair project 102,Repairs,46,11-05-2026,26-06-2026,Admiralty - President (PFD),Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,33,12-05-2026,14-06-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,33,12-05-2026,14-06-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 43,Repair,34,12-05-2026,15-06-2026,Tuas - South Quay (SQ),Berthing,,Confirmed
+# Repair project 82,Repair,65,12-05-2026,16-07-2026,Benoi - DK1,Drydock,,Confirmed
+Build project 68,Module transfer vessel for Uaru,60,12-05-2026,11-07-2026,Benoi - Q1,Berthing,,Confirmed
+# Repair project 43,Repair,50,13-05-2026,02-07-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+Build project 76,Assets,50,13-05-2026,02-07-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 85,Repair and Upgrade,39,14-05-2026,22-06-2026,Tuas Boulevard - YST 06,Berthing,,Confirmed
+# Repair project 173,Berthing-3,103,15-05-2026,26-08-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 78,Berthing,168,15-05-2026,30-10-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+AH3,Beta - 103 (BS 27),43,16-05-2026,28-06-2026,Tuas Boulevard - YST 19,Berthing,,Confirmed
+Build project 22,Berthing,33,16-05-2026,18-06-2026,Pioneer - South Quay 2,Berthing,,Confirmed
+# Repair project 2,Upgrade,61,16-05-2026,16-07-2026,Admiralty - B8,Berthing,,Confirmed
+Build project 2,Tennet Beta - BS 27 - Mega Deck Panels 103,41,16-05-2026,26-06-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 16,Yard Asset,51,16-05-2026,06-07-2026,Tuas Boulevard - YST D1,Drydock,,Confirmed
+Build project 18,Yard Asset,51,16-05-2026,06-07-2026,Tuas Boulevard - YST D1,Drydock,,Confirmed
+Build project 19,Yard Asset,51,16-05-2026,06-07-2026,Tuas Boulevard - YST D1,Drydock,,Confirmed
+# Repair project 171,Repair and Upgrade,54,16-05-2026,09-07-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 22,Lifting Sea Challenger crane pedestal,33,17-05-2026,19-06-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 64,Demi Water,42,17-05-2026,28-06-2026,Benoi - Q4,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,19-05-2026,21-06-2026,Admiralty - Premier (SPD),Drydock,,Confirmed
+# Repair project 162,Repairs,45,20-05-2026,04-07-2026,Admiralty - Premier (SPD),Drydock,,Confirmed
+Build project 60,Sparta - Happy Dinamic,34,21-05-2026,24-06-2026,Tuas Boulevard - YST 09,Berthing,,Confirmed
+Build project 22,Sparta - Lifting E-Building,33,22-05-2026,24-06-2026,Tuas Boulevard - YST 09,Berthing,,Confirmed
+Build project 22,Sparta - Lifting E-Building,33,22-05-2026,24-06-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+Build project 69,Module transfer vessel for Uaru,50,22-05-2026,11-07-2026,Benoi - DK1E,Berthing,,Confirmed
+Build project 47,P78 - PSV Eastern Ursinia,35,22-05-2026,26-06-2026,Tuas Boulevard - YST 05,Berthing,,Confirmed
+# Repair project 92,Repair and Upgrade,45,22-05-2026,06-07-2026,Tuas Boulevard - YST 10,Berthing,,Confirmed
+Build project 22,Tennet Beta - Mega Panel 203,40,23-05-2026,02-07-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 128,Repair and Upgrade,49,24-05-2026,12-07-2026,Tuas Boulevard - YST 08,Berthing,,Confirmed
+# Repair project 85,Repair and Upgrade,50,24-05-2026,13-07-2026,Tuas Boulevard - YST 06,Berthing,,Confirmed
+Build project 22,WTIV - Port Fwd Leg Section 8~10,33,25-05-2026,27-06-2026,Tuas Boulevard - YST D2,Drydock,,Confirmed
+Build project 22,Tennet Beta - 102,35,25-05-2026,29-06-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+# Repair project 102,Repairs,35,25-05-2026,29-06-2026,Admiralty - B16,Berthing,,Confirmed
+# Repair project 221,Repairs,35,26-05-2026,30-06-2026,Admiralty - B10 (Berthing),Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,27-05-2026,29-06-2026,Admiralty - King George 6 (KG6),Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,33,27-05-2026,29-06-2026,Admiralty - Republic (RFD),Drydock,,Confirmed
+Build project 22,Tennet Beta - 101,42,27-05-2026,08-07-2026,Tuas Boulevard - YST 19,Berthing,,Confirmed
+Build project 64,Demi Water,76,27-05-2026,11-08-2026,Benoi - Q2,Berthing,,Confirmed
+Build project 22,WTIV - Stbd Fwd Leg Section 8~10,33,28-05-2026,30-06-2026,Tuas Boulevard - YST 04,Berthing,,Confirmed
+Build project 23,Berthing,38,28-05-2026,05-07-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 50,Asset - Q3 Repair Work,63,28-05-2026,30-07-2026,Benoi - Q3,Berthing,,Confirmed
+# Repair project 5,Upgrade,66,28-05-2026,02-08-2026,Admiralty - King George 6 (KG6),Drydock,,Confirmed
+# Repair project 100,Repairs,73,28-05-2026,09-08-2026,Admiralty - Republic (RFD),Drydock,,Confirmed
+# Repair project 101,Repairs,73,28-05-2026,09-08-2026,Admiralty - Republic (RFD),Drydock,,Confirmed
+# Repair project 16,Repair and Upgrade,43,28-05-2026,10-07-2026,Tuas Boulevard - YST D4,Drydock,,Confirmed
+# Repair project 43,Repair,35,30-05-2026,04-07-2026,Tuas - South Quay (SQ),Berthing,,Confirmed
+Build project 76,Assets,155,30-05-2026,01-11-2026,Tuas - Raffles Pier East (RPE),Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,31-05-2026,03-07-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,33,31-05-2026,03-07-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+Build project 30,Others,45,01-06-2026,16-07-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 198,Repair,45,01-06-2026,16-07-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 162,Repairs,43,01-06-2026,14-07-2026,Admiralty - B12 (Berthing),Berthing,,Confirmed
+# Repair project 185,Repair and Upgrade,51,01-06-2026,22-07-2026,Tuas Boulevard - YST 09,Berthing,,Confirmed
+Build project 14,Repair,34,02-06-2026,06-07-2026,Benoi - DK2,Drydock,,Confirmed
+Build project 22,WTIV - Stbd Aft Leg Section 8~10,33,02-06-2026,05-07-2026,Tuas Boulevard - YST D2,Drydock,,Confirmed
+Build project 71,Berthing HLV MV Annegret,41,02-06-2026,13-07-2026,Pioneer - South Quay 2,Berthing,,Confirmed
+# Repair project 64,Repair,37,02-06-2026,09-07-2026,Benoi - Q4,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,03-06-2026,06-07-2026,Admiralty - Premier (SPD),Drydock,,Confirmed
+Build project 22,WTIV - Port Aft Leg Section 8~10,33,03-06-2026,06-07-2026,Tuas Boulevard - YST 04,Berthing,,Confirmed
+# Repair project 119,Repair,56,03-06-2026,29-07-2026,Benoi - DK2,Drydock,,Confirmed
+# Repair project 92,Repair and Upgrade,95,03-06-2026,06-09-2026,Tuas Boulevard - YST D5,Drydock,,Confirmed
+# Repair project 45,Repairs,67,04-06-2026,10-08-2026,Admiralty - Premier (SPD),Drydock,,Confirmed
+Build project 70,Module transfer vessel for Uaru,38,05-06-2026,13-07-2026,Benoi - Q5,Berthing,,Confirmed
+# Repair project 179,Repair and Upgrade,51,05-06-2026,26-07-2026,Tuas Boulevard - YST 10,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,34,08-06-2026,12-07-2026,Tuas Boulevard - YST D4,Drydock,,Confirmed
+Build project 23,Lifting Uaru Winches,34,08-06-2026,12-07-2026,Pioneer - South Quay 2,Berthing,,Confirmed
+Build project 68,Module transfer vessel for Uaru,35,08-06-2026,13-07-2026,Benoi - Q4,Berthing,,Confirmed
+Build project 69,Module transfer vessel for Uaru,38,08-06-2026,16-07-2026,Benoi - Q1,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,35,09-06-2026,14-07-2026,Tuas Boulevard - YST D3,Drydock,,Confirmed
+# Repair project 128,Repair and Upgrade,39,09-06-2026,18-07-2026,Tuas Boulevard - YST 05,Berthing,,Confirmed
+# Repair project 166,Repair and Upgrade,50,09-06-2026,29-07-2026,Tuas Boulevard - YST 08,Berthing,,Confirmed
+Build project 70,Module transfer vessel for Uaru,40,10-06-2026,20-07-2026,Benoi - Q4,Berthing,,Confirmed
+# Repair project 8,Repair and Upgrade,48,10-06-2026,28-07-2026,Tuas Boulevard - YST D4,Drydock,,Confirmed
+Build project 47,P80 - Aft Crane Housing,33,11-06-2026,14-07-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+Build project 47,P80 - Aft Crane Housing,33,11-06-2026,14-07-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 225,Repairs,54,12-06-2026,05-08-2026,Admiralty - B12 (Berthing),Berthing,,Confirmed
+Build project 47,P80 - M07 (Nantong),36,12-06-2026,18-07-2026,Tuas Boulevard - YST 01,Berthing,,Confirmed
+Build project 30,Others,50,13-06-2026,02-08-2026,Tuas - South Quay (SQ),Berthing,,Confirmed
+# Repair project 72,Repair and Upgrade,47,13-06-2026,30-07-2026,Tuas Boulevard - YST D3,Drydock,,Confirmed
+# Repair project 144,Upgrade,189,15-06-2026,21-12-2026,Admiralty - B9 (Berthing),Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,16-06-2026,19-07-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 177,Repair,38,17-06-2026,25-07-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+Build project 36,M07,36,19-06-2026,25-07-2026,Tuas Boulevard - YST D7,Drydock,,Confirmed
+AH2,Asian Lift,35,21-06-2026,26-07-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 88,Repair,38,22-06-2026,30-07-2026,Benoi - Q4,Berthing,,Confirmed
+Build project 36,Topside Module Integration,81,22-06-2026,11-09-2026,Tuas Boulevard - YST 15,Berthing,,Confirmed
+Build project 2,Tennet Beta - Sub Panels 203,39,22-06-2026,31-07-2026,Tuas Boulevard - YST 06,Berthing,,Confirmed
+# Repair project 164,Repairs,68,23-06-2026,30-08-2026,Admiralty - B12 (Berthing),Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,34,24-06-2026,28-07-2026,Tuas Boulevard - YST D1,Drydock,,Confirmed
+Build project 3,Eng Tou -218 Berthing(Gamma Panel),36,25-06-2026,31-07-2026,Pioneer - South Quay 2,Berthing,,Confirmed
+AH3,Asian Lift,35,25-06-2026,30-07-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 166,Repair and Upgrade,41,26-06-2026,06-08-2026,Tuas Boulevard - YST D6,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,33,27-06-2026,30-07-2026,Benoi - DK1,Drydock,,Confirmed
+# Repair project 72,Repair and Upgrade,35,27-06-2026,01-08-2026,Tuas Boulevard - YST 09,Berthing,,Confirmed
+# Repair project 73,Repair and Upgrade,48,27-06-2026,14-08-2026,Tuas Boulevard - YST D1,Drydock,,Confirmed
+Build project 61,WTIV - STPC,38,27-06-2026,04-08-2026,Tuas Boulevard - YST D2,Drydock,,Confirmed
+AH2,Asian Lift,34,28-06-2026,01-08-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 7,Floating Barge,47,28-06-2026,14-08-2026,Tuas Boulevard - YST 01,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,28-06-2026,31-07-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,35,28-06-2026,02-08-2026,Tuas Boulevard - YST D3,Drydock,,Confirmed
+Build project 22,P80 - Aft Crane Boom lifting at YST15,33,28-06-2026,31-07-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+Build project 22,P80 - Aft Crane Boom lifting from YST17,33,28-06-2026,31-07-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 23,Repair,48,28-06-2026,15-08-2026,Benoi - DK1,Drydock,,Confirmed
+Build project 50,Asset - Q3 Repair Work,77,28-06-2026,13-09-2026,Benoi - Q3,Berthing,,Confirmed
+Build project 50,Asset - Q3 Repair Work,72,28-06-2026,08-09-2026,Benoi - Q3,Berthing,,Confirmed
+# Repair project 7,Repair,48,29-06-2026,16-08-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 5,Upgrade,37,30-06-2026,06-08-2026,Admiralty - Finger Pier,Berthing,,Confirmed
+Build project 47,P80 - M05B & M11 (Angra) - Tian Yi 156,43,30-06-2026,12-08-2026,Tuas Boulevard - YST 03,Berthing,,Confirmed
+# Repair project 124,Repair and Upgrade,47,01-07-2026,17-08-2026,Tuas Boulevard - YST D3,Drydock,,Confirmed
+Build project 14,Repair,33,02-07-2026,04-08-2026,Benoi - DK2,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,33,02-07-2026,04-08-2026,Admiralty - King George 6 (KG6),Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,35,02-07-2026,06-08-2026,Tuas Boulevard - YST D4,Drydock,,Confirmed
+Build project 22,P82 - M13 Lifting,34,02-07-2026,05-08-2026,Tuas Boulevard - YST 19,Berthing,,Confirmed
+Build project 23,Unloading Jaguar LUB,34,03-07-2026,06-08-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 190,Repair,43,03-07-2026,15-08-2026,Benoi - DK2,Drydock,,Confirmed
+# Repair project 225,Repairs,64,03-07-2026,05-09-2026,Admiralty - King George 6 (KG6),Drydock,,Confirmed
+AH3,P80 - M05B lifting at YST15,33,04-07-2026,06-08-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+# Repair project 166,Repair and Upgrade,42,04-07-2026,15-08-2026,Tuas Boulevard - YST 08,Berthing,,Confirmed
+# Repair project 71,REPAIR,39,05-07-2026,13-08-2026,Benoi - Q1,Berthing,,Confirmed
+Build project 39,Topside Module Integration,53,05-07-2026,27-08-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 59,Repair and Upgrade,47,05-07-2026,21-08-2026,Tuas Boulevard - YST D4,Drydock,,Confirmed
+AH2,Asian Lift,38,06-07-2026,13-08-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,35,06-07-2026,10-08-2026,Tuas Boulevard - YST D6,Drydock,,Confirmed
+AH3,P80 - M11 lifting at YST15,33,09-07-2026,11-08-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+Build project 64,Demi Water,36,09-07-2026,14-08-2026,Benoi - DK1E,Berthing,,Confirmed
+# Repair project 99,Repair and Upgrade,52,09-07-2026,30-08-2026,Tuas Boulevard - YST D6,Drydock,,Confirmed
+Build project 35,P78 Cargo Offloading Operations,34,10-07-2026,13-08-2026,Benoi - Q5,Berthing,,Confirmed
+AH3,Asian Lift,34,11-07-2026,14-08-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 2,Tennet Beta - 104,39,11-07-2026,19-08-2026,Tuas Boulevard - YST 05,Berthing,,Confirmed
+Build project 7,Floating Barge,39,12-07-2026,20-08-2026,Tuas Boulevard - YST 10,Berthing,,Confirmed
+# Repair project 71,Repairs,143,12-07-2026,02-12-2026,Admiralty - B14 (Berthing),Berthing,,Confirmed
+Build project 64,Demi Water,155,12-07-2026,14-12-2026,Benoi - Q2,Berthing,,Confirmed
+# Repair project 192,Repairs,35,12-07-2026,16-08-2026,Admiralty - B12 (Berthing),Berthing,,Confirmed
+# Repair project 193,Repairs,35,12-07-2026,16-08-2026,Admiralty - B12 (Berthing),Berthing,,Confirmed
+Build project 47,P83 - M17 (Batam),35,12-07-2026,16-08-2026,Tuas Boulevard - YST 05,Berthing,,Confirmed
+AH2,Asian Lift,35,13-07-2026,17-08-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+AH3,P83 - M17 lifting at YST06,33,13-07-2026,15-08-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,13-07-2026,15-08-2026,Admiralty - Premier (SPD),Drydock,,Confirmed
+# Repair project 23,Repair,40,13-07-2026,22-08-2026,Benoi - Q4,Berthing,,Confirmed
+Build project 3,Eng Tou -281 Berthing(Gamma Panel),35,14-07-2026,18-08-2026,Pioneer - South Pier 1,Berthing,,Confirmed
+AH3,Beta - 104 lifting,36,14-07-2026,19-08-2026,Tuas Boulevard - YST 03,Berthing,,Confirmed
+# Repair project 119,Repair,42,14-07-2026,25-08-2026,Tuas - South Quay (SQ),Berthing,,Confirmed
+# Repair project 192,Repairs,54,14-07-2026,06-09-2026,Admiralty - Premier (SPD),Drydock,,Confirmed
+# Repair project 193,Repairs,54,14-07-2026,06-09-2026,Admiralty - Premier (SPD),Drydock,,Confirmed
+# Repair project 200,Upgrade,64,14-07-2026,16-09-2026,Admiralty - B22,Berthing,,Confirmed
+Build project 47,P82 - SPMT Barge,34,14-07-2026,17-08-2026,Tuas Boulevard - YST 01,Berthing,,Confirmed
+Build project 21,Hull,69,14-07-2026,21-09-2026,Tuas Boulevard - YST 07,Berthing,,Confirmed
+Build project 38,Hull,44,14-07-2026,27-08-2026,Tuas Boulevard - YST 06,Berthing,,Confirmed
+Build project 22,Lifting Jaguar Hose Reel,34,15-07-2026,18-08-2026,Pioneer - South Quay 2,Berthing,,Confirmed
+AH3,Asian Lift,35,17-07-2026,21-08-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,17-07-2026,19-08-2026,Benoi - DK1,Drydock,,Confirmed
+Build project 2,Tennet Beta - 105,41,17-07-2026,27-08-2026,Tuas Boulevard - YST 05,Berthing,,Confirmed
+AH3,P82 - M13 Lifting,33,18-07-2026,20-08-2026,Tuas Boulevard - YST 19,Berthing,,Confirmed
+AH3,P82 - M13 Lifting at YST17,33,18-07-2026,20-08-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+Build project 7,P82 - M07/M05,43,18-07-2026,30-08-2026,Tuas Boulevard - YST 01,Berthing,,Confirmed
+Build project 22,P82 - M13 Lifting at YST17,33,18-07-2026,20-08-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 68,Repair,49,18-07-2026,05-09-2026,Benoi - DK1,Drydock,,Confirmed
+Build project 22,P82 - M12 Lifting,33,19-07-2026,21-08-2026,Tuas Boulevard - YST 19,Berthing,,Confirmed
+# Repair project 32,Repair and Upgrade,89,19-07-2026,16-10-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 59,Repair and Upgrade,36,19-07-2026,24-08-2026,Tuas Boulevard - YST 09,Berthing,,Confirmed
+Build project 77,Berthing,119,20-07-2026,16-11-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+AH3,P82 - M12 Lifting at YST17,33,21-07-2026,23-08-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 22,P82 - M12 Lifting at YST17,33,21-07-2026,23-08-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+Build project 47,P83 - Dismantle Off-Loading Hose,42,21-07-2026,01-09-2026,Tuas Boulevard - YST D1,Drydock,,Confirmed
+Build project 38,P82 M05, M07 Load on to CDB,52,21-07-2026,11-09-2026,Floating Dock - Can Do Barge,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,33,22-07-2026,24-08-2026,Tuas - Temasek Dock,Drydock,,Confirmed
+Build project 22,Beta - 105,33,22-07-2026,24-08-2026,Tuas Boulevard - YST D2,Drydock,,Confirmed
+# Repair project 175,Berthing 1 (Crane carrier),49,22-07-2026,09-09-2026,Pioneer - South Pier 1,Berthing,,Confirmed
+# Repair project 189,,36,23-07-2026,28-08-2026,Tuas - Temasek Dock,Drydock,,Confirmed
+Build project 47,P80 - M10A/C & P83 - M16 (Nantong),42,23-07-2026,03-09-2026,Tuas Boulevard - YST 08,Berthing,,Confirmed
+Build project 39,Topside Module Integration,44,25-07-2026,07-09-2026,Tuas Boulevard - YST 06,Berthing,,Confirmed
+Build project 38,Hull,40,25-07-2026,03-09-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 65,Load Bank,59,26-07-2026,23-09-2026,Benoi - Q1,Berthing,,Confirmed
+Build project 25,Berthing,948,26-07-2026,28-02-2029,Admiralty - B17,Berthing,,Confirmed
+Build project 22,Sparta - Lifting UNE,33,27-07-2026,29-08-2026,Tuas Boulevard - YST 03,Berthing,,Confirmed
+Build project 22,Sparta - Lifting UNE,33,27-07-2026,29-08-2026,Tuas Boulevard - YST 05,Berthing,,Confirmed
+AH3,P80 - M10A lifting at YST15,33,28-07-2026,30-08-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+Build project 44,Berthing(MV ROYAL Carrier Transporter),34,28-07-2026,31-08-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 7,P82 - M07/M05,35,29-07-2026,02-09-2026,Tuas Boulevard - YST D7,Drydock,,Confirmed
+Build project 22,P80 - M10C lifting at YST15,33,29-07-2026,31-08-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+Build project 47,P83 - MV KIFUNE,38,29-07-2026,05-09-2026,Tuas Boulevard - YST 10,Berthing,,Confirmed
+# Repair project 99,Repair and Upgrade,34,29-07-2026,01-09-2026,Tuas Boulevard - YST 09,Berthing,,Confirmed
+AH3,P82 - M05B Lifting,33,30-07-2026,01-09-2026,Tuas Boulevard - YST 19,Berthing,,Confirmed
+AH3,P82 - M05B Lifting at YST 17,33,30-07-2026,01-09-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,30-07-2026,01-09-2026,Tuas - Temasek Dock,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,33,30-07-2026,01-09-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+Build project 22,P83 - M16 lifting at YST06,33,30-07-2026,01-09-2026,Tuas Boulevard - YST 10,Berthing,,Confirmed
+Build project 7,Floating Barge,109,31-07-2026,17-11-2026,Tuas Boulevard - YST 14,Berthing,,Confirmed
+Build project 14,Repair,33,31-07-2026,02-09-2026,Benoi - DK2,Drydock,,Confirmed
+# Repair project 22,Repair and Upgrade,34,31-07-2026,03-09-2026,Tuas Boulevard - YST 09,Berthing,,Confirmed
+# Repair project 173,Berthing-4,57,31-07-2026,26-09-2026,Pioneer - North Pier,Berthing,,Confirmed
+# Repair project 79,Repair,48,31-07-2026,17-09-2026,Tuas - Temasek Dock,Drydock,,Confirmed
+# Repair project 97,Repair,44,31-07-2026,13-09-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 129,Repair and Upgrade,50,31-07-2026,19-09-2026,Tuas Boulevard - YST D3,Drydock,,Confirmed
+# Repair project 9,UARU Fabrication,51,01-08-2026,21-09-2026,Benoi - DK2,Drydock,,Confirmed
+Build project 4,Berthing,125,01-08-2026,04-12-2026,Admiralty - B23,Berthing,,Confirmed
+Build project 38,M05 & M07,38,01-08-2026,08-09-2026,Tuas Boulevard - YST D7,Drydock,,Confirmed
+AH2,Asian Lift,37,02-08-2026,08-09-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 22,Repair and Upgrade,43,02-08-2026,14-09-2026,Tuas Boulevard - YST D1,Drydock,,Confirmed
+Build project 47,P83 - M15/M14/M07 (China),44,02-08-2026,15-09-2026,Tuas Boulevard - YST 01,Berthing,,Confirmed
+# Repair project 158,Repair and Upgrade,42,02-08-2026,13-09-2026,Tuas Boulevard - YST 09,Berthing,,Confirmed
+AHHIII,Asian Lift,33,03-08-2026,05-09-2026,Pioneer - South Pier 1,Berthing,,Confirmed
+AH3,P83 - M13 (TY) lifting at YST11,33,03-08-2026,05-09-2026,Tuas Boulevard - YST 15,Berthing,,Confirmed
+Build project 22,P83 - M13 (TY) lifting at YST11,33,03-08-2026,05-09-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+# Repair project 68,Repair,42,03-08-2026,14-09-2026,Benoi - Q4,Berthing,,Confirmed
+AHHIII,Asian Lift,146,04-08-2026,28-12-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+AH3,P80 - M10B lifting at YST15,33,04-08-2026,06-09-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+Build project 22,P83 - M12 (TY) lifting at YST11,33,04-08-2026,06-09-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+# Repair project 92,Repair and Upgrade,70,04-08-2026,13-10-2026,Tuas Boulevard - YST 12,Berthing,,Confirmed
+Build project 74,Berthing,203,05-08-2026,24-02-2027,Pioneer - South Pier 1,Berthing,,Confirmed
+Build project 39,Topside Module Integration,43,05-08-2026,17-09-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+# Repair project 215,Repair and Upgrade,47,05-08-2026,21-09-2026,Tuas Boulevard - YST D4,Drydock,,Confirmed
+AH2,Sea Challenger Tandem Lift - Crane,34,06-08-2026,09-09-2026,Pioneer - South Pier 1,Berthing,,Confirmed
+AH3,Sea Challenger Tandem Lift - Crane,34,06-08-2026,09-09-2026,Pioneer - South Pier 1,Berthing,,Confirmed
+Build project 22,Sparta - Lifting UNW,33,06-08-2026,08-09-2026,Tuas Boulevard - YST 03,Berthing,,Confirmed
+Build project 22,Sparta - Lifting UNW,33,06-08-2026,08-09-2026,Tuas Boulevard - YST 05,Berthing,,Confirmed
+Build project 73,Berthing,102,06-08-2026,16-11-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 38,hull,373,06-08-2026,14-08-2027,Tuas Boulevard - YST 06,Berthing,,Confirmed
+AH2,Asian Lift,36,07-08-2026,12-09-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+AH3,Asian Lift,35,07-08-2026,11-09-2026,Pioneer - South Pier 1,Berthing,,Confirmed
+# Repair project 175,Berthing 2 (Crane carrier),34,07-08-2026,10-09-2026,Pioneer - South Quay 2,Berthing,,Confirmed
+# Repair project 1,Repairs,39,07-08-2026,15-09-2026,Admiralty - B12 (Berthing),Berthing,,Confirmed
+Build project 47,P80 - M10B & M05 (Angra),34,08-08-2026,11-09-2026,Tuas Boulevard - YST D7,Drydock,,Confirmed
+Build project 23,2GW Beta Blk 301 panel lift,33,09-08-2026,11-09-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 36,M05,36,09-08-2026,14-09-2026,Tuas Boulevard - YST D7,Drydock,,Confirmed
+Build project 47,P80 - M10B & M05 (Angra),36,09-08-2026,14-09-2026,Tuas Boulevard - YST 03,Berthing,,Confirmed
+AH3,P83 - M14 Lifting at YST06,33,10-08-2026,12-09-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+Build project 22,Platinum Explorer - Derrick removal,34,10-08-2026,13-09-2026,Tuas Boulevard - YST 10,Berthing,,Confirmed
+AH3,P83 - M15 Lifting at YST06,33,11-08-2026,13-09-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,34,11-08-2026,14-09-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 97,Repair,37,11-08-2026,17-09-2026,Tuas - West Quay (WQ),Berthing,,Confirmed
+Build project 47,P83 - M15/M14/M07 (China),34,11-08-2026,14-09-2026,Tuas Boulevard - YST 01,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,12-08-2026,14-09-2026,Admiralty - King George 6 (KG6),Drydock,,Confirmed
+Build project 36,Topside Module Integration,350,12-08-2026,28-07-2027,Tuas Boulevard - YST 15,Berthing,,Confirmed
+# Repair project 195,Repair,46,12-08-2026,27-09-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 106,Repair and Upgrade,160,12-08-2026,19-01-2027,Tuas Boulevard - YST D5,Drydock,,Confirmed
+AH2,Asian Lift,42,13-08-2026,24-09-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+AH3,Asian Lift,39,13-08-2026,21-09-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 22,P82 - Fwd Crane Body,33,13-08-2026,15-09-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+Build project 22,P82 - Fwd Crane Body,33,13-08-2026,15-09-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 1,Repairs,115,13-08-2026,06-12-2026,Admiralty - King George 6 (KG6),Drydock,,Confirmed
+Build project 47,P83 - M15/M14/M07 (China),35,13-08-2026,17-09-2026,Tuas Boulevard - YST D7,Drydock,,Confirmed
+# Repair project 200,Upgrade,251,14-08-2026,22-04-2027,Admiralty - B12 (Berthing),Berthing,,Confirmed
+Build project 22,P82 - Aft Crane Body,33,15-08-2026,17-09-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+Build project 22,P82 - Aft Crane Body,33,15-08-2026,17-09-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 39,M07,35,15-08-2026,19-09-2026,Tuas Boulevard - YST D7,Drydock,,Confirmed
+Build project 47,P83 - M15/M14/M07 (China),36,15-08-2026,20-09-2026,Tuas Boulevard - YST 01,Berthing,,Confirmed
+Build project 22,Sparta - Lifting USE,33,17-08-2026,19-09-2026,Tuas Boulevard - YST 03,Berthing,,Confirmed
+Build project 22,Sparta - Lifting USE,33,17-08-2026,19-09-2026,Tuas Boulevard - YST 05,Berthing,,Confirmed
+Build project 39,Topside Module Integration,237,17-08-2026,11-04-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 134,Repair and Upgrade,44,17-08-2026,30-09-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+# Repair project 129,Repair and Upgrade,46,17-08-2026,02-10-2026,Tuas Boulevard - YST D1,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,33,18-08-2026,20-09-2026,Tuas Boulevard - YST D7,Drydock,,Confirmed
+# Repair project 153,Repair and Upgrade,45,18-08-2026,02-10-2026,Tuas Boulevard - YST D6,Drydock,,Confirmed
+Build project 2,Tennet Beta - 202 & 207,38,18-08-2026,25-09-2026,Tuas Boulevard - YST 01,Berthing,,Confirmed
+# Repair project 9,Repair,45,19-08-2026,03-10-2026,Benoi - Q4,Berthing,,Confirmed
+Build project 22,L3601 - Sparta - Pontoon East+Node NE/SE,33,19-08-2026,21-09-2026,Tuas Boulevard - YST 03,Berthing,,Confirmed
+Build project 59,Erection & Integration - Hull & Topside,235,19-08-2026,11-04-2027,Tuas Boulevard - YST D7,Drydock,,Confirmed
+Build project 21,Hull,37,20-08-2026,26-09-2026,Tuas Boulevard - YST 19,Berthing,,Confirmed
+Build project 65,Load Bank,219,21-08-2026,28-03-2027,Benoi - Q2E,Berthing,,Confirmed
+# Repair project 60,Repair and Upgrade,39,21-08-2026,29-09-2026,Tuas Boulevard - YST 09,Berthing,,Confirmed
+# Repair project 158,Repair and Upgrade,41,21-08-2026,01-10-2026,Tuas Boulevard - YST 08,Berthing,,Confirmed
+# Repair project 212,Repair and Upgrade,47,22-08-2026,08-10-2026,Tuas Boulevard - YST 10,Berthing,,Confirmed
+Build project 1,Lower Mega Block Load Out,36,23-08-2026,28-09-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 22,Sparta - Lifting North Pontoon,33,23-08-2026,25-09-2026,Tuas Boulevard - YST 03,Berthing,,Confirmed
+# Repair project 184,Repairs,48,23-08-2026,10-10-2026,Admiralty - Premier (SPD),Drydock,,Confirmed
+# Repair project 173,Berthing-5,75,24-08-2026,07-11-2026,Pioneer - South Quay 2,Berthing,,Confirmed
+Build project 20,Yard Asset,44,24-08-2026,07-10-2026,Tuas Boulevard - YST D2,Drydock,,Confirmed
+Build project 22,Sparta - Lifting South Pontoon,33,25-08-2026,27-09-2026,Tuas Boulevard - YST 03,Berthing,,Confirmed
+# Repair project 195,Repair,34,25-08-2026,28-09-2026,Tuas - West Quay (WQ),Berthing,,Confirmed
+Build project 21,Hull,45,25-08-2026,09-10-2026,Tuas Boulevard - YST 01,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,26-08-2026,28-09-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 202,Repairs,129,26-08-2026,02-01-2027,Admiralty - B22,Berthing,,Confirmed
+Build project 22,Sparta - Lifting USW,33,27-08-2026,29-09-2026,Tuas Boulevard - YST 03,Berthing,,Confirmed
+Build project 22,Sparta - Lifting USW,33,27-08-2026,29-09-2026,Tuas Boulevard - YST 05,Berthing,,Confirmed
+# Repair project 170,Repair,44,27-08-2026,10-10-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 134,Repair and Upgrade,91,28-08-2026,27-11-2026,Tuas Boulevard - YST D4,Drydock,,Confirmed
+Build project 22,Sparta - Pontoon West+Node NW/SW,33,29-08-2026,01-10-2026,Tuas Boulevard - YST 03,Berthing,,Confirmed
+Build project 47,P82 - M04/M11 (EJA),41,29-08-2026,09-10-2026,Tuas Boulevard - YST 08,Berthing,,Confirmed
+# Repair project 57,Passenger / Cruise,48,29-08-2026,16-10-2026,Tuas Boulevard - YST D3,Drydock,,Confirmed
+# Repair project 213,West Dorado - Derrick Removal,40,29-08-2026,08-10-2026,Tuas Boulevard - YST 09,Berthing,,Confirmed
+# Repair project 14,Repair,34,30-08-2026,03-10-2026,Benoi - Q1,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,30-08-2026,02-10-2026,Benoi - DK1,Drydock,,Confirmed
+# Repair project 153,Repair and Upgrade,41,30-08-2026,10-10-2026,Tuas Boulevard - YST 12,Berthing,,Confirmed
+# Repair project 129,Repair and Upgrade,35,30-08-2026,04-10-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+AH2,Asian Lift,36,31-08-2026,06-10-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+AH3,P82 - M04 lifting ,33,31-08-2026,03-10-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+# Repair project 14,Repair,49,31-08-2026,19-10-2026,Benoi - DK1,Drydock,,Confirmed
+Build project 22,West Dorado - Derrick Removal,35,31-08-2026,05-10-2026,Tuas Boulevard - YST 09,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,01-09-2026,04-10-2026,Benoi - DK2,Drydock,,Confirmed
+# Repair project 17,Repairs,55,01-09-2026,26-10-2026,Admiralty - B10 (Berthing),Berthing,,Confirmed
+AH3,P82 - M02 Lifting,33,02-09-2026,05-10-2026,Tuas Boulevard - YST 19,Berthing,,Confirmed
+# Repair project 216,jaguar TS051 Fabrication Grand Assembly,40,02-09-2026,12-10-2026,Benoi - Q4,Berthing,,Confirmed
+# Repair project 224,Repair,41,02-09-2026,13-10-2026,Benoi - DK2,Drydock,,Confirmed
+Build project 27,Barge-Yew Choon Jaguar Metering Unit,37,03-09-2026,10-10-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+AH3,P82 - M11 lifting at YST19,33,04-09-2026,07-10-2026,Tuas Boulevard - YST 19,Berthing,,Confirmed
+Build project 23,Lifting Jaguar Metering Unit,36,04-09-2026,10-10-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 20,Yard Asset,48,04-09-2026,22-10-2026,Tuas Boulevard - YST 16,Berthing,,Confirmed
+# Repair project 137,Transport Vessel,55,04-09-2026,29-10-2026,Tuas Boulevard - YST 10,Berthing,,Confirmed
+Build project 22,Sparta - Crane Boom,33,05-09-2026,08-10-2026,Tuas Boulevard - YST 03,Berthing,,Confirmed
+Build project 22,Sparta - Crane Boom,33,05-09-2026,08-10-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+AH3,Asian Lift,34,06-09-2026,10-10-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 22,Sparta - Seatrax Crane (East),33,06-09-2026,09-10-2026,Tuas Boulevard - YST 03,Berthing,,Confirmed
+Build project 22,Sparta - Seatrax Crane (East),33,06-09-2026,09-10-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+Build project 21,Hull,41,06-09-2026,17-10-2026,Tuas Boulevard - YST 07,Berthing,,Confirmed
+Build project 22,Sparta - Seatrax Crane (West),33,07-09-2026,10-10-2026,Tuas Boulevard - YST 03,Berthing,,Confirmed
+Build project 22,Sparta - Seatrax Crane (West),33,07-09-2026,10-10-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+# Repair project 170,Repair,38,07-09-2026,15-10-2026,Tuas - West Quay (WQ),Berthing,,Confirmed
+AH2,Asian Lift,34,08-09-2026,12-10-2026,Pioneer - South Pier 1,Berthing,,Confirmed
+# Repair project 114,Repairs,51,08-09-2026,29-10-2026,Admiralty - Premier (SPD),Drydock,,Confirmed
+# Repair project 203,Repairs,42,08-09-2026,20-10-2026,Admiralty - B16,Berthing,,Confirmed
+# Repair project 165,Repair and Upgrade,42,08-09-2026,20-10-2026,Tuas Boulevard - YST D6,Drydock,,Confirmed
+Build project 1,BS 27 Barge,37,09-09-2026,16-10-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 22,P80 - Fwd Crane Housing lifting at YST11,33,09-09-2026,12-10-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+Build project 22,P80 - Fwd Crane Housing lifting from YST17,33,09-09-2026,12-10-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+AH2,Asian Lift,36,10-09-2026,16-10-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+AH3,Shell Sparta - LQ + Helideck,33,10-09-2026,13-10-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+AH3,Shell Sparta - LQ + Helideck,33,10-09-2026,13-10-2026,Tuas Boulevard - YST 03,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,34,10-09-2026,14-10-2026,Benoi - DK2,Drydock,,Confirmed
+# Repair project 224,Repair,39,10-09-2026,19-10-2026,Benoi - Q4,Berthing,,Confirmed
+Build project 47,P80 - MV Zea Servant - Trans. Vess for Cargo delivery,36,10-09-2026,16-10-2026,Tuas Boulevard - YST 01,Berthing,,Confirmed
+AH3,P80 M02 Load Out AH3,38,11-09-2026,19-10-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 63,Offloading Hose Assembly,59,11-09-2026,09-11-2026,Benoi - DK2,Drydock,,Confirmed
+# Repair project 136,Transport Vessel,48,11-09-2026,29-10-2026,Tuas Boulevard - YST 10,Berthing,,Confirmed
+Build project 22,Sparta - Lifting NE Column,33,12-09-2026,15-10-2026,Tuas Boulevard - YST 05,Berthing,,Confirmed
+Build project 22,Northern Endeavour - Flare Tower,33,12-09-2026,15-10-2026,Tuas Boulevard - YST 10,Berthing,,Confirmed
+Build project 47,P83 - Trans. Vess for Cargo delivery - HLV - Bloemgracht,37,12-09-2026,19-10-2026,Tuas Boulevard - YST 09,Berthing,,Confirmed
+AH3,Asian Lift,34,13-09-2026,17-10-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 32,Repair and Upgrade,36,13-09-2026,19-10-2026,Tuas Boulevard - YST 05,Berthing,,Confirmed
+Build project 52,CNC BARGE-SOIL INVESTIGATION,41,14-09-2026,25-10-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 222,Repair and Upgrade,41,14-09-2026,25-10-2026,Tuas Boulevard - YST D1,Drydock,,Confirmed
+Build project 22,P82 - Fwd Crane Boom,33,15-09-2026,18-10-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+Build project 22,P82 - Fwd Crane Boom,33,15-09-2026,18-10-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 135,Transport Vessel,54,15-09-2026,08-11-2026,Tuas Boulevard - YST 10,Berthing,,Confirmed
+Build project 22,P82 - Aft Crane Boom,33,16-09-2026,19-10-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+Build project 22,P82 - Aft Crane Boom,33,16-09-2026,19-10-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 24,Berthing,39,16-09-2026,25-10-2026,Pioneer - North Pier,Berthing,,Confirmed
+# Repair project 128,Repair,61,16-09-2026,16-11-2026,Tuas - South Quay (SQ),Berthing,,Confirmed
+# Repair project 203,Repairs,142,17-09-2026,06-02-2027,Admiralty - President (PFD),Drydock,,Confirmed
+Build project 14,Repair,33,18-09-2026,21-10-2026,Benoi - DK1,Drydock,,Confirmed
+# Repair project 172,Repair,119,18-09-2026,15-01-2027,Benoi - Q1,Berthing,,Confirmed
+Build project 2,Tennet Beta - 206,37,18-09-2026,25-10-2026,Tuas Boulevard - YST D2,Drydock,,Confirmed
+# Repair project 6,Repair,50,19-09-2026,08-11-2026,Benoi - DK1,Drydock,,Confirmed
+Build project 20,Yard Asset,36,20-09-2026,26-10-2026,Tuas Boulevard - YST D2,Drydock,,Confirmed
+Build project 11,Berthing,34,21-09-2026,25-10-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 22,Sparta - Lifting NW Column,33,21-09-2026,24-10-2026,Tuas Boulevard - YST 05,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,22-09-2026,25-10-2026,Tuas - Temasek Dock,Drydock,,Confirmed
+Build project 2,Tennet Beta - Mega Panel 206,35,22-09-2026,27-10-2026,Tuas Boulevard - YST 08,Berthing,,Confirmed
+# Repair project 222,Repair and Upgrade,39,22-09-2026,31-10-2026,Tuas Boulevard - YST 09,Berthing,,Confirmed
+# Repair project 174,Crane Load Test barge,45,23-09-2026,07-11-2026,Pioneer - South Pier 1,Berthing,,Confirmed
+# Repair project 103,Repair,41,23-09-2026,03-11-2026,Tuas - Temasek Dock,Drydock,,Confirmed
+Build project 47,P80 - M09C/D/E & P83 - M10A/10C (Nantong),43,25-09-2026,07-11-2026,Tuas Boulevard - YST 03,Berthing,,Confirmed
+# Repair project 49,Passenger / Cruise,52,25-09-2026,16-11-2026,Tuas Boulevard - YST D3,Drydock,,Confirmed
+Build project 22,P80 - M09C lifting at YST15,33,27-09-2026,30-10-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+Build project 52,Scooping works for Jaguar Berthing,97,27-09-2026,02-01-2027,Pioneer - South Quay 2,Berthing,,Confirmed
+Build project 2,Tennet Beta - 302,35,27-09-2026,01-11-2026,Tuas Boulevard - YST D2,Drydock,,Confirmed
+Build project 22,P80 - M09D lifting at YST15,33,28-09-2026,31-10-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+Build project 78,Berthing,46,28-09-2026,13-11-2026,Pioneer - South Quay 2,Berthing,,Confirmed
+Build project 22,P83 - M10C lifting at YST17,33,29-09-2026,01-11-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 95,Repairs,94,29-09-2026,01-01-2027,Admiralty - Republic (RFD),Drydock,,Confirmed
+# Repair project 96,Repairs,94,29-09-2026,01-01-2027,Admiralty - Republic (RFD),Drydock,,Confirmed
+Build project 2,Tennet Beta - 302,36,29-09-2026,04-11-2026,Tuas Boulevard - YST 12,Berthing,,Confirmed
+Build project 61,FELS 21,35,29-09-2026,03-11-2026,Tuas Boulevard - YST D2,Drydock,,Confirmed
+Build project 22,Sparta - Lifting Flare Boom,33,30-09-2026,02-11-2026,Tuas Boulevard - YST 04,Berthing,,Confirmed
+Build project 22,Sparta - Lifting Flare Boom,33,30-09-2026,02-11-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+Build project 47,P80 - M09A, M09B, M04, M06 & M01 (Angra),45,30-09-2026,14-11-2026,Tuas Boulevard - YST 01,Berthing,,Confirmed
+Build project 61,FELS 21,69,01-10-2026,09-12-2026,Tuas Boulevard - YST D6,Drydock,,Confirmed
+AH3,P80 - M06 lifting at YST15,33,02-10-2026,04-11-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+Build project 22,Sparta - Lifting SE Column,33,02-10-2026,04-11-2026,Tuas Boulevard - YST 05,Berthing,,Confirmed
+# Repair project 133,Repair and Upgrade,41,02-10-2026,12-11-2026,Tuas Boulevard - YST D2,Drydock,,Confirmed
+Build project 22,P80 - M09E lifting at YST15,33,03-10-2026,05-11-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+AH3,P83 - M10A lifting at YST01,33,04-10-2026,06-11-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 22,P80 - M01 lifting at YST15,33,04-10-2026,06-11-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+Build project 22,P80 - M09B lifting at YST15,33,05-10-2026,07-11-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+AH3,Asian Lift,35,06-10-2026,10-11-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 6,Repair,40,06-10-2026,15-11-2026,Benoi - Q4,Berthing,,Confirmed
+Build project 22,P80 - M09A lifting at YST15,33,06-10-2026,08-11-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+Build project 47,P82 - M10A /M10B/M10AA/M11F (EJA),45,06-10-2026,20-11-2026,Tuas Boulevard - YST 08,Berthing,,Confirmed
+Build project 3,Tennet Gamma - Panel 204,38,08-10-2026,15-11-2026,Tuas Boulevard - YST 05,Berthing,,Confirmed
+Build project 22,P82 - M11F,33,08-10-2026,10-11-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+AH3,P80 - M04 lifting at YST15,33,09-10-2026,11-11-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+Build project 23,Tennet Gamma - Panel 204,34,09-10-2026,12-11-2026,Tuas Boulevard - YST 04,Berthing,,Confirmed
+# Repair project 148,Repair and Upgrade,37,09-10-2026,15-11-2026,Tuas Boulevard - YST D1,Drydock,,Confirmed
+AH3,Asian Lift,49,10-10-2026,28-11-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 22,P80 - Fwd Crane Boom lifting from YST17,33,10-10-2026,12-11-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 22,P80 - Fwd Crane Boom lifting at YST11,33,10-10-2026,12-11-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+# Repair project 173,Berthing-6,50,10-10-2026,29-11-2026,Pioneer - South Quay 2,Berthing,,Confirmed
+AH3,P80 - M02 from PY to YST15,33,11-10-2026,13-11-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+Build project 52,CNC BARGE-Scooping / dredging,80,11-10-2026,30-12-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+AH2,Asian Lift,43,12-10-2026,24-11-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 22,Sparta - Lifting SW Column,33,12-10-2026,14-11-2026,Tuas Boulevard - YST 05,Berthing,,Confirmed
+# Repair project 139,Barge,35,12-10-2026,16-11-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 78,Berthing,37,12-10-2026,18-11-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+AH3,P82 - M10A lifting at YST06,33,13-10-2026,15-11-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+Build project 22,P82 - M10AA lifting at YST06,33,14-10-2026,16-11-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+AH3,P82 - M10B lifting at YST06,33,15-10-2026,17-11-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+Build project 7,Floating Barge,121,15-10-2026,13-02-2027,Tuas Boulevard - YST D2,Drydock,,Confirmed
+Build project 78,Berthing,60,16-10-2026,15-12-2026,Pioneer - South Pier 2,Berthing,,Confirmed
+# Repair project 159,Vessel Berthing (Under Sanction),35,16-10-2026,20-11-2026,Tuas - West Quay (WQ),Berthing,,Confirmed
+# Repair project 159,Vessel Berthing (Under Sanction),407,18-10-2026,29-11-2027,Tuas - Raffles Pier East (RPE),Berthing,,Confirmed
+# Repair project 211,Repair and Upgrade,96,18-10-2026,22-01-2027,Tuas Boulevard - YST 09,Berthing,,Confirmed
+# Repair project 19,Repairs,52,21-10-2026,12-12-2026,Admiralty - Republic (RFD),Drydock,,Confirmed
+Build project 47,P80 -  Load Bank Barge,159,21-10-2026,29-03-2027,Tuas Boulevard - YST 14,Berthing,,Confirmed
+Build project 8,Berthing,64,22-10-2026,25-12-2026,Pioneer - South Pier 1,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,22-10-2026,24-11-2026,Tuas - Temasek Dock,Drydock,,Confirmed
+Build project 75,Berthing,125,22-10-2026,24-02-2027,Pioneer - North Pier,Berthing,,Confirmed
+Build project 77,Berthing,56,22-10-2026,17-12-2026,Pioneer - North Pier,Berthing,,Confirmed
+Build project 73,Berthing,69,23-10-2026,31-12-2026,Pioneer - North Pier,Berthing,,Confirmed
+# Repair project 80,Repair,40,23-10-2026,02-12-2026,Tuas - Temasek Dock,Drydock,,Confirmed
+Build project 47,P80 - MV Alanis - Trans. Vess for Cargo delivery,40,25-10-2026,04-12-2026,Tuas Boulevard - YST 01,Berthing,,Confirmed
+# Repair project 134,Repair and Upgrade,62,25-10-2026,26-12-2026,Tuas Boulevard - YST 11,Berthing,,Confirmed
+# Repair project 48,Repair and Upgrade,52,26-10-2026,17-12-2026,Tuas Boulevard - YST D1,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,33,28-10-2026,30-11-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+Build project 42,M09E-P951&M09-P941&M13-P133A&M13B-139,33,28-10-2026,30-11-2026,Nantong - Slipway - #1,2,Drydock,,Confirmed
+Build project 57,Transport Vessel,81,28-10-2026,17-01-2027,Admiralty - B10 (Berthing),Berthing,,Confirmed
+Build project 23,2GW Beta West Paltform lift,33,29-10-2026,01-12-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 44,Repair,42,29-10-2026,10-12-2026,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 71,Repairs,49,30-10-2026,18-12-2026,Admiralty - B11 (Berthing),Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,31-10-2026,03-12-2026,Tuas - Raffles Dock,Drydock,,Confirmed
+# Repair project 214,Repairs,46,31-10-2026,16-12-2026,Admiralty - Premier (SPD),Drydock,,Confirmed
+# Repair project 94,Repair and Upgrade,103,31-10-2026,11-02-2027,Tuas Boulevard - YST 03,Berthing,,Confirmed
+Build project 4,Berthing,62,01-11-2026,02-01-2027,Admiralty - Finger Pier,Berthing,,Confirmed
+# Repair project 22,Repair,38,01-11-2026,09-12-2026,Tuas - Raffles Dock,Drydock,,Confirmed
+Build project 55,Transport Barge,34,01-11-2026,05-12-2026,Benoi - DK1E,Berthing,,Confirmed
+# Repair project 204,Repairs,68,01-11-2026,08-01-2027,Admiralty - B23,Berthing,,Confirmed
+# Repair project 1,Repairs,44,03-11-2026,17-12-2026,Admiralty - B14 (Berthing),Berthing,,Confirmed
+# Repair project 76,Repair and Upgrade,47,03-11-2026,20-12-2026,Tuas Boulevard - YST D4,Drydock,,Confirmed
+Build project 23,Tennet Gamma - Panel 203 & 205,38,04-11-2026,12-12-2026,Tuas Boulevard - YST 04,Berthing,,Confirmed
+Build project 66,Transport Barge,34,05-11-2026,09-12-2026,Benoi - DK1E,Berthing,,Confirmed
+Build project 56,Transport Barge,48,06-11-2026,24-12-2026,Benoi - Q4,Berthing,,Confirmed
+Build project 61,FELS 21,78,06-11-2026,23-01-2027,Tuas Boulevard - YST 16,Berthing,,Confirmed
+Build project 61,FELS 21,97,06-11-2026,11-02-2027,Tuas Boulevard - YST 16,Berthing,,Confirmed
+Build project 51,Assets - Temasek Dock Repair,39,09-11-2026,18-12-2026,Tuas - Temasek Dock,Drydock,,Confirmed
+# Repair project 19,Repairs,36,09-11-2026,15-12-2026,Admiralty - Finger Pier,Berthing,,Confirmed
+Build project 47,P82 - M01/M06 (EJA),40,09-11-2026,19-12-2026,Tuas Boulevard - YST 01,Berthing,,Confirmed
+# Repair project 36,Repair and Upgrade,74,09-11-2026,22-01-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+AH3,Asian Lift,37,10-11-2026,17-12-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 64,Demi Water,37,11-11-2026,18-12-2026,Benoi - DK1E,Berthing,,Confirmed
+# Repair project 37,Repair and Upgrade,76,11-11-2026,26-01-2027,Tuas Boulevard - YST D3,Drydock,,Confirmed
+AH3,P82 - M06 lifting at YST06,33,12-11-2026,15-12-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+Build project 27,Infinity Barge (Jaguar DAVIT),50,12-11-2026,01-01-2027,Pioneer - North Pier,Berthing,,Confirmed
+# Repair project 3,Repair and Upgrade,49,12-11-2026,31-12-2026,Tuas Boulevard - YST D6,Drydock,,Confirmed
+Build project 3,Tennet Gamma - Block 1031,1032,1011,35,13-11-2026,18-12-2026,Tuas Boulevard - YST 05,Berthing,,Confirmed
+Build project 78,Berthing,37,13-11-2026,20-12-2026,Pioneer - South Quay 2,Berthing,,Confirmed
+Build project 22,Gamma - Block 1031,1032,1011,34,14-11-2026,18-12-2026,Tuas Boulevard - YST 19,Berthing,,Confirmed
+Build project 22,P82 - M01 lifting at YST06,33,14-11-2026,17-12-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+Build project 47,P83 - BBC Nagasaki,34,14-11-2026,18-12-2026,Tuas Boulevard - YST 12,Berthing,,Confirmed
+AH3,Berthing,33,15-11-2026,18-12-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 3,Tennet Gamma - Block 1031,1032,1011,39,15-11-2026,24-12-2026,Tuas Boulevard - YST 19,Berthing,,Confirmed
+# Repair project 71,Repairs,104,15-11-2026,27-02-2027,Admiralty - B14 (Berthing),Berthing,,Confirmed
+Build project 64,Demi Water,134,15-11-2026,29-03-2027,Benoi - Q2,Berthing,,Confirmed
+# Repair project 21,Repairs,51,15-11-2026,05-01-2027,Admiralty - B16,Berthing,,Confirmed
+Build project 22,Gamma - Block 1031,1032,1011 - Lifting,34,16-11-2026,20-12-2026,Tuas Boulevard - YST 19,Berthing,,Confirmed
+AH2,Asian Lift,38,17-11-2026,25-12-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 60,Sparta - BS28,36,17-11-2026,23-12-2026,Tuas Boulevard - YST 12,Berthing,,Confirmed
+Build project 60,Sparta - BS28,36,17-11-2026,23-12-2026,Tuas Boulevard - YST 12,Berthing,,Confirmed
+# Repair project 120,Repair and Upgrade,45,17-11-2026,01-01-2027,Tuas Boulevard - YST 05,Berthing,,Confirmed
+Build project 78,Berthing,47,18-11-2026,04-01-2027,Pioneer - South Pier 2,Berthing,,Confirmed
+Build project 22,Sparta - BVS,33,19-11-2026,22-12-2026,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 112,Repairs,47,19-11-2026,05-01-2027,Admiralty - King George 6 (KG6),Drydock,,Confirmed
+# Repair project 144,Upgrade,50,19-11-2026,08-01-2027,Admiralty - Premier (SPD),Drydock,,Confirmed
+Build project 1,BS 27 Barge,36,20-11-2026,26-12-2026,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 22,P82 - Tower Crane,34,20-11-2026,24-12-2026,Tuas Boulevard - YST 07,Berthing,,Confirmed
+# Repair project 127,Repair and Upgrade,42,20-11-2026,01-01-2027,Tuas Boulevard - YST D4,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,33,21-11-2026,24-12-2026,Tuas - Temasek Dock,Drydock,,Confirmed
+Build project 41,,35,21-11-2026,26-12-2026,Tuas - South Quay (SQ),Berthing,,Confirmed
+Build project 47,P82 - M09A/B/C/D/E (China),44,21-11-2026,04-01-2027,Tuas Boulevard - YST 01,Berthing,,Confirmed
+AH3,Berthing,40,22-11-2026,01-01-2027,Pioneer - South Quay 1,Berthing,,Confirmed
+AH2,Asian Lift,38,22-11-2026,30-12-2026,Benoi - Q4,Berthing,,Confirmed
+# Repair project 154,Repair,53,22-11-2026,14-01-2027,Tuas - Temasek Dock,Drydock,,Confirmed
+# Repair project 122,Repair and Upgrade,49,22-11-2026,10-01-2027,Tuas Boulevard - YST D1,Drydock,,Confirmed
+Build project 1,BS 27 Barge,35,23-11-2026,28-12-2026,Pioneer - South Quay 2,Berthing,,Confirmed
+Build project 8,Berthing,93,23-11-2026,24-02-2027,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 23,Lifting Jaguar FFLB-AFT Davit,36,24-11-2026,30-12-2026,Pioneer - North Pier,Berthing,,Confirmed
+Build project 22,P82 - M09A lifting at YST06,33,25-11-2026,28-12-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+AHHIII,Asian Lift (Spacer frame shifting),36,26-11-2026,01-01-2027,Pioneer - South Quay 2,Berthing,,Confirmed
+Build project 22,P82 - M09B lifting at YST06,33,26-11-2026,29-12-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+Build project 22,WTIV - Cargo Frame (Base) - YST01,33,26-11-2026,29-12-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+Build project 58,Topside,52,26-11-2026,17-01-2027,Admiralty - B10 (Berthing),Berthing,,Confirmed
+AH3,Asian Lift,39,27-11-2026,05-01-2027,Benoi - Q4,Berthing,,Confirmed
+AH2,Asian Lift,36,27-11-2026,02-01-2027,Benoi - Q1,Berthing,,Confirmed
+Build project 22,P82 - M09C lifting at YST06,33,27-11-2026,30-12-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+Build project 61,Cargo Frame Barge,36,27-11-2026,02-01-2027,Tuas Boulevard - YST 16,Berthing,,Confirmed
+Build project 22,P82 - M09D lifting at YST06,33,28-11-2026,31-12-2026,Tuas Boulevard - YST 02,Berthing,,Confirmed
+Build project 23,Lifting Jaguar FFLB-FWD Davit,33,28-11-2026,31-12-2026,Pioneer - North Pier,Berthing,,Confirmed
+Build project 62,Transport Barge,34,28-11-2026,01-01-2027,Benoi - DK1E,Berthing,,Confirmed
+Build project 22,P82 - M09E lifting at YST06,33,29-11-2026,01-01-2027,Tuas Boulevard - YST 02,Berthing,,Confirmed
+Build project 23,Lifting Jaguar FFLB-Middle Davit,33,29-11-2026,01-01-2027,Pioneer - North Pier,Berthing,,Confirmed
+Build project 73,Berthing,49,29-11-2026,17-01-2027,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 84,Repairs,37,29-11-2026,05-01-2027,Admiralty - B12 (Berthing),Berthing,,Confirmed
+AH2,Berthing,34,30-11-2026,03-01-2027,Pioneer - South Quay 1,Berthing,,Confirmed
+AHHIII,Asian Lift,70,30-11-2026,08-02-2027,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 27,Infinity Barge (Jaguar DAVIT),48,30-11-2026,17-01-2027,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 95,Upgrade,33,30-11-2026,02-01-2027,Admiralty - B11 (Berthing),Berthing,,Confirmed
+# Repair project 96,Upgrade,33,30-11-2026,02-01-2027,Admiralty - B11 (Berthing),Berthing,,Confirmed
+# Repair project 186,Repair and Upgrade,41,30-11-2026,10-01-2027,Tuas Boulevard - YST D6,Drydock,,Confirmed
+Build project 4,Berthing,820,01-12-2026,28-02-2029,Admiralty - B22,Berthing,,Confirmed
+Build project 28,Berthing-2,423,01-12-2026,28-01-2028,Pioneer - South Quay 2,Berthing,,Confirmed
+AH3,Berthing,35,02-12-2026,06-01-2027,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 27,Bunkering Barge (Jaguar),34,02-12-2026,05-01-2027,Pioneer - South Quay 2,Berthing,,Confirmed
+Build project 78,Berthing,34,02-12-2026,05-01-2027,Pioneer - South Quay 2,Berthing,,Confirmed
+Build project 22,Lifting and Installation for Power Generation Module (TS032),34,03-12-2026,06-01-2027,Pioneer - South Quay 2,Berthing,,Confirmed
+# Repair project 21,Repairs,39,03-12-2026,11-01-2027,Admiralty - Republic (RFD),Drydock,,Confirmed
+# Repair project 84,Repairs,86,03-12-2026,27-02-2027,Admiralty - B16,Berthing,,Confirmed
+Build project 3,Tennet Gamma - Yew Choon - Panel 203/204,39,04-12-2026,12-01-2027,Tuas Boulevard - YST 19,Berthing,,Confirmed
+AH2,Asian Lift,35,04-12-2026,08-01-2027,Benoi - Q1,Berthing,,Confirmed
+Build project 78,Berthing,82,04-12-2026,24-02-2027,Pioneer - South Pier 1,Berthing,,Confirmed
+# Repair project 52,Repair,65,04-12-2026,07-02-2027,Tuas - West Quay (WQ),Berthing,,Confirmed
+AH3,Berthing,33,05-12-2026,07-01-2027,Pioneer - South Quay 2,Berthing,,Confirmed
+Build project 23,Tennet Gamma - Panel 203/204,35,05-12-2026,09-01-2027,Tuas Boulevard - YST 19,Berthing,,Confirmed
+AH3,Berthing,35,06-12-2026,10-01-2027,Pioneer - South Quay 1,Berthing,,Confirmed
+AH2,Asian Lift,54,06-12-2026,29-01-2027,Benoi - Q4,Berthing,,Confirmed
+# Repair project 144,Upgrade,56,06-12-2026,31-01-2027,Admiralty - B9 (Berthing),Berthing,,Confirmed
+# Repair project 204,Repairs,118,06-12-2026,03-04-2027,Admiralty - King George 6 (KG6),Drydock,,Confirmed
+Build project 23,Lifting Jaguar TS154,33,08-12-2026,10-01-2027,Pioneer - South Quay 2,Berthing,,Confirmed
+# Repair project 186,Repair and Upgrade,35,08-12-2026,12-01-2027,Tuas Boulevard - YST 11,Berthing,,Confirmed
+Build project 47,P83 - BBC Aralia,35,08-12-2026,12-01-2027,Tuas Boulevard - YST 19,Berthing,,Confirmed
+Build project 3,Tennet Gamma - Bok Seng - Panel 203,36,09-12-2026,14-01-2027,Tuas Boulevard - YST 04,Berthing,,Confirmed
+Build project 22,P83 - Aft Crane Cabin,33,09-12-2026,11-01-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 21,Repairs,50,09-12-2026,28-01-2027,Admiralty - Finger Pier,Berthing,,Confirmed
+AH3,Lifting & Erection for TS031 on Jaguar,33,10-12-2026,12-01-2027,Pioneer - South Quay 2,Berthing,,Confirmed
+Build project 62,Transport Barge,34,10-12-2026,13-01-2027,Benoi - DK1E,Berthing,,Confirmed
+AH3,Berthing,34,11-12-2026,14-01-2027,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 28,Repairs,48,13-12-2026,30-01-2027,Admiralty - Premier (SPD),Drydock,,Confirmed
+# Repair project 74,Repair and Upgrade,45,13-12-2026,27-01-2027,Tuas Boulevard - YST D1,Drydock,,Confirmed
+AH2,2GW Beta Blk 301,33,16-12-2026,18-01-2027,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 27,Infinity Barge (Jaguar DAVIT),53,16-12-2026,07-02-2027,Pioneer - North Pier,Berthing,,Confirmed
+# Repair project 132,Repair and Upgrade,41,16-12-2026,26-01-2027,Tuas Boulevard - YST D2,Drydock,,Confirmed
+AH3,Lifting & Erection for TS061 on Jaguar,33,17-12-2026,19-01-2027,Pioneer - South Quay 2,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,17-12-2026,19-01-2027,Tuas - Temasek Dock,Drydock,,Confirmed
+Build project 22,P83 - Aft Crane Boom,33,17-12-2026,19-01-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 106,Repair and Upgrade,46,17-12-2026,01-02-2027,Tuas Boulevard - YST 12,Berthing,,Confirmed
+AH3,Berthing,37,18-12-2026,24-01-2027,Pioneer - South Quay 1,Berthing,,Confirmed
+Build project 3,Tennet Gamma - Panel 203,37,18-12-2026,24-01-2027,Tuas Boulevard - YST 04,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,18-12-2026,20-01-2027,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 104,Repair,46,18-12-2026,02-02-2027,Tuas - Temasek Dock,Drydock,,Confirmed
+# Repair project 126,Repair and Upgrade,80,18-12-2026,08-03-2027,Tuas Boulevard - YST 11,Berthing,,Confirmed
+# Repair project 89,Repair,47,19-12-2026,04-02-2027,Tuas - Tuas Dock,Drydock,,Confirmed
+Build project 29,Repair and Upgrade,52,20-12-2026,10-02-2027,Tuas Boulevard - YST D5,Drydock,,Confirmed
+Build project 32,,35,21-12-2026,25-01-2027,Tuas - West Quay (WQ),Berthing,,Confirmed
+Build project 61,FELS 21,56,21-12-2026,15-02-2027,Tuas Boulevard - YST 19,Berthing,,Confirmed
+Build project 31,,36,22-12-2026,27-01-2027,Tuas - West Quay (WQ),Berthing,,Confirmed
+# Repair project 217,Repairs,61,22-12-2026,21-02-2027,Admiralty - B11 (Berthing),Berthing,,Confirmed
+Build project 61,WTIV - Main cargo frame Delivery - Xin Si lu,41,22-12-2026,01-02-2027,Tuas Boulevard - YST 16,Berthing,,Confirmed
+Build project 32,,34,23-12-2026,26-01-2027,Tuas - South Quay (SQ),Berthing,,Confirmed
+Build project 3,Tennet Gamma - Panel 203/205,37,24-12-2026,30-01-2027,Tuas Boulevard - YST 04,Berthing,,Confirmed
+# Repair project 37,Repair and Upgrade,34,24-12-2026,27-01-2027,Tuas Boulevard - YST 08,Berthing,,Confirmed
+Build project 12,,35,25-12-2026,29-01-2027,Tuas - West Quay (WQ),Berthing,,Confirmed
+# Repair project 47,Repair and Upgrade,53,25-12-2026,16-02-2027,Tuas Boulevard - YST D6,Drydock,,Confirmed
+# Repair project 74,Repair and Upgrade,37,25-12-2026,31-01-2027,Tuas Boulevard - YST 08,Berthing,,Confirmed
+Build project 45,POC,398,26-12-2026,28-01-2028,Nantong - Jetty 2,Berthing,,Confirmed
+Build project 45,POC,398,26-12-2026,28-01-2028,Nantong - Slipway - #1,2,Drydock,,Confirmed
+Build project 45,POC,398,26-12-2026,28-01-2028,Nantong - Slipway - #4,5,Drydock,,Confirmed
+Build project 48,Quay Bollard Upgrading,185,26-12-2026,29-06-2027,Tuas Boulevard - YST 16,Berthing,,Confirmed
+# Repair project 169,,48,28-12-2026,14-02-2027,Tuas Boulevard - YST 09,Berthing,,RU Forecast
+# Repair project 42,Repair and Upgrade,47,28-12-2026,13-02-2027,Tuas Boulevard - YST D4,Drydock,,Confirmed
+# Repair project 15,Repair and Upgrade,44,28-12-2026,10-02-2027,Tuas Boulevard - YST D2,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,33,31-12-2026,02-02-2027,Tuas - Raffles Dock,Drydock,,Confirmed
+Build project 45,Blk Integration, Installation of Machineries, Touch-up PA, Hydrotest, Towing Prep.,408,31-12-2026,12-02-2028,Subic -  Drydock,Drydock,,Confirmed
+# Repair project 104,Repair,41,31-12-2026,10-02-2027,Tuas - South Quay (SQ),Berthing,,Confirmed
+# Repair project 152,Repair,42,01-01-2027,12-02-2027,Tuas - Raffles Dock,Drydock,,Confirmed
+Build project 22,P82 - Flare Tower lifting at YST06,37,02-01-2027,08-02-2027,Tuas Boulevard - YST 02,Berthing,,Confirmed
+Build project 22,P82 - Flare Tower,37,02-01-2027,08-02-2027,Tuas Boulevard - YST 09,Berthing,,Confirmed
+# Repair project 89,Repair,37,02-01-2027,08-02-2027,Tuas - West Quay (WQ),Berthing,,Confirmed
+# Repair project 81,Repair and Upgrade,43,04-01-2027,16-02-2027,Tuas Boulevard - YST 08,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,05-01-2027,07-02-2027,Tuas - Temasek Dock,Drydock,,Confirmed
+# Repair project 52,Repair,39,05-01-2027,13-02-2027,Tuas - Temasek Dock,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,33,06-01-2027,08-02-2027,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 169,,49,06-01-2027,24-02-2027,Tuas Boulevard - YST 08,Berthing,,RU Forecast
+# Repair project 91,Repair,47,07-01-2027,23-02-2027,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 104,Repair,35,08-01-2027,12-02-2027,Tuas - West Quay (WQ),Berthing,,Confirmed
+# Repair project 146,Repair and Upgrade,41,08-01-2027,18-02-2027,Tuas Boulevard - YST 09,Berthing,,Confirmed
+# Repair project 15,Repair and Upgrade,38,08-01-2027,15-02-2027,Tuas Boulevard - YST 02,Berthing,,Confirmed
+# Repair project 94,Repair and Upgrade,68,09-01-2027,18-03-2027,Tuas Boulevard - YST D1,Drydock,,Confirmed
+# Repair project 169,,66,10-01-2027,17-03-2027,Tuas Boulevard - YST 03,Berthing,,RU Forecast
+# Repair project 152,Repair,54,10-01-2027,05-03-2027,Tuas - West Quay (WQ),Berthing,,Confirmed
+# Repair project 149,Repair and Upgrade,61,10-01-2027,12-03-2027,Tuas Boulevard - YST D3,Drydock,,Confirmed
+Build project 7,Floating Barge,62,11-01-2027,14-03-2027,Tuas Boulevard - YST 03,Berthing,,Confirmed
+# Repair project 42,Repair and Upgrade,36,11-01-2027,16-02-2027,Tuas Boulevard - YST 09,Berthing,,Confirmed
+Build project 61,FELS 21,40,13-01-2027,22-02-2027,Tuas Boulevard - YST D2,Drydock,,Confirmed
+AH3,P83 M02 Load Out AH3,41,14-01-2027,24-02-2027,Pioneer - South Quay 1,Berthing,,Confirmed
+# Repair project 81,Repair and Upgrade,43,14-01-2027,26-02-2027,Tuas Boulevard - YST D4,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,33,16-01-2027,18-02-2027,Tuas - Raffles Dock,Drydock,,Confirmed
+# Repair project 169,,84,17-01-2027,11-04-2027,Tuas Boulevard - YST 09,Berthing,,RU Forecast
+# Repair project 147,Repair,51,17-01-2027,09-03-2027,Tuas - Raffles Dock,Drydock,,Confirmed
+# Repair project 209,Repair and Upgrade,45,18-01-2027,04-03-2027,Tuas Boulevard - YST D5,Drydock,,Confirmed
+# Repair project 91,Repair,35,21-01-2027,25-02-2027,Tuas - South Quay (SQ),Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,22-01-2027,24-02-2027,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 123,Repair,42,23-01-2027,06-03-2027,Tuas - Tuas Dock,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,33,24-01-2027,26-02-2027,Tuas - Temasek Dock,Drydock,,Confirmed
+# Repair project 81,Repair and Upgrade,43,24-01-2027,08-03-2027,Tuas Boulevard - YST 09,Berthing,,Confirmed
+# Repair project 58,Repair,83,25-01-2027,18-04-2027,Tuas - Temasek Dock,Drydock,,Confirmed
+# Repair project 169,Repair,54,26-01-2027,21-03-2027,Tuas - South Quay (SQ),Berthing,,RU Forecast
+# Repair project 169,Repairs,338,26-01-2027,30-12-2027,Admiralty - Republic (RFD),Drydock,,RU Forecast
+# Repair project 169,Repairs,185,26-01-2027,30-07-2027,Admiralty - B14 (Berthing),Berthing,,RU Forecast
+# Repair project 169,Repairs,306,27-01-2027,29-11-2027,Admiralty - President (PFD),Drydock,,RU Forecast
+Build project 47,P83 - M05B/M011 (Brazil),43,27-01-2027,11-03-2027,Tuas Boulevard - YST 08,Berthing,,Confirmed
+Build project 47,P83 - M09A/B/C/D/E (China),40,27-01-2027,08-03-2027,Tuas Boulevard - YST 01,Berthing,,Confirmed
+# Repair project 138,Repair and Upgrade,44,27-01-2027,12-03-2027,Tuas Boulevard - YST D2,Drydock,,Confirmed
+AH3,P83 - M011 lifting at YST17,33,29-01-2027,03-03-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 22,P83 - M09-1 (A) lifting at YST17,33,30-01-2027,04-03-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 22,P83 - M09-1 (B) lifting at YST17,33,31-01-2027,05-03-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 145,Repair and Upgrade,63,31-01-2027,04-04-2027,Tuas Boulevard - YST D4,Drydock,,Confirmed
+Build project 22,P83 - M09-1 (C) lifting at YST17,33,01-02-2027,06-03-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 123,Repair,40,01-02-2027,13-03-2027,Tuas - West Quay (WQ),Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,02-02-2027,07-03-2027,Tuas - Tuas Dock,Drydock,,Confirmed
+Build project 22,P83 - M09-1 (D) lifting at YST17,33,02-02-2027,07-03-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 18,Repairs,40,02-02-2027,14-03-2027,Admiralty - Premier (SPD),Drydock,,RU Forecast
+Build project 14,Keel Block Arrangement,33,03-02-2027,08-03-2027,Tuas - Raffles Dock,Drydock,,Confirmed
+Build project 22,P83 - M09-1 (E) lifting at YST17,33,03-02-2027,08-03-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 169,Repair,38,03-02-2027,13-03-2027,Tuas - West Quay (WQ),Berthing,,RU Forecast
+# Repair project 169,,75,03-02-2027,19-04-2027,Tuas Boulevard - YST 01,Berthing,,RU Forecast
+# Repair project 69,Repair,49,03-02-2027,24-03-2027,Tuas - Tuas Dock,Drydock,,Confirmed
+AH3,P83 - M05B lifting at YST17,33,04-02-2027,09-03-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 178,Repair,40,04-02-2027,16-03-2027,Tuas - Raffles Dock,Drydock,,Confirmed
+# Repair project 149,Repair and Upgrade,36,07-02-2027,15-03-2027,Tuas Boulevard - YST 09,Berthing,,Confirmed
+# Repair project 35,Repair and Upgrade,73,07-02-2027,21-04-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 7,Sparta - Topside,71,09-02-2027,21-04-2027,Tuas Boulevard - YST 19,Berthing,,Confirmed
+# Repair project 169,Repair,40,09-02-2027,21-03-2027,Tuas - West Quay (WQ),Berthing,,RU Forecast
+# Repair project 53,Repair,36,09-02-2027,17-03-2027,Tuas - West Quay (WQ),Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,11-02-2027,16-03-2027,Tuas - Raffles Dock,Drydock,,Confirmed
+# Repair project 178,Repair,40,11-02-2027,23-03-2027,Tuas - South Quay (SQ),Berthing,,Confirmed
+# Repair project 53,Repair,60,12-02-2027,13-04-2027,Tuas - Raffles Dock,Drydock,,Confirmed
+# Repair project 94,Repair and Upgrade,229,13-02-2027,30-09-2027,Tuas Boulevard - YST 03,Berthing,,Confirmed
+# Repair project 205,Repairs,51,18-02-2027,10-04-2027,Admiralty - B16,Berthing,,RU Forecast
+# Repair project 69,Repair,53,19-02-2027,13-04-2027,Tuas - West Quay (WQ),Berthing,,Confirmed
+# Repair project 183,Repair and Upgrade,45,20-02-2027,06-04-2027,Tuas Boulevard - YST D5,Drydock,,Confirmed
+# Repair project 169,Repair,41,22-02-2027,04-04-2027,Tuas - Tuas Dock,Drydock,,RU Forecast
+Build project 47,P83 - M05-1/05-2/M04/M01 (Brazil),50,23-02-2027,14-04-2027,Tuas Boulevard - YST 01,Berthing,,Confirmed
+Build project 72,FPSO,45,24-02-2027,10-04-2027,Tuas Boulevard - YST 11,Berthing,,Confirmed
+AH3,P83 - M05 (Blk1) lifting at YST17,33,25-02-2027,30-03-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 169,Repair,46,25-02-2027,12-04-2027,Tuas - Raffles Dock,Drydock,,RU Forecast
+# Repair project 117,Repair and Upgrade,46,25-02-2027,12-04-2027,Tuas Boulevard - YST D1,Drydock,,Confirmed
+AH3,P83 - M04 lifting at YST17,33,27-02-2027,01-04-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,28-02-2027,02-04-2027,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 26,Repair and Upgrade,54,28-02-2027,23-04-2027,Tuas Boulevard - YST 12,Berthing,,Confirmed
+AH3,P83 - M02 (PY) lifting at YST17,33,01-03-2027,03-04-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 109,Upgrade - Phase 1,44,01-03-2027,14-04-2027,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 169,Repair,49,02-03-2027,20-04-2027,Tuas - Temasek Dock,Drydock,,RU Forecast
+# Repair project 169,,89,02-03-2027,30-05-2027,Tuas Boulevard - YST D4,Drydock,,RU Forecast
+# Repair project 105,Repair and Upgrade,46,02-03-2027,17-04-2027,Tuas Boulevard - YST 12,Berthing,,Confirmed
+# Repair project 145,Repair and Upgrade,36,02-03-2027,07-04-2027,Tuas Boulevard - YST 08,Berthing,,Confirmed
+Build project 22,P83 - M05 (Blk2) lifting at YST17,33,04-03-2027,06-04-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 169,,60,04-03-2027,03-05-2027,Tuas Boulevard - YST D6,Drydock,,RU Forecast
+# Repair project 169,Repair,41,06-03-2027,16-04-2027,Tuas - Tuas Dock,Drydock,,RU Forecast
+Build project 22,P83 - M01 Lifting at YST17,33,07-03-2027,09-04-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 22,P83 - Flare (TY) lifting at YST17,33,09-03-2027,11-04-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 39,Topside Module Integration,66,09-03-2027,14-05-2027,Tuas Boulevard - YST 11,Berthing,,Confirmed
+Build project 59,Temporary Parking - Hull,50,09-03-2027,28-04-2027,Tuas Boulevard - YST 02,Berthing,,Confirmed
+# Repair project 117,Repair and Upgrade,38,10-03-2027,17-04-2027,Tuas Boulevard - YST 09,Berthing,,Confirmed
+# Repair project 169,Repair,36,11-03-2027,16-04-2027,Tuas - Raffles Dock,Drydock,,RU Forecast
+# Repair project 61,Repair,39,11-03-2027,19-04-2027,Tuas - South Quay (SQ),Berthing,,Confirmed
+Build project 59,Loadout of Sparta Block/ Skidding,47,11-03-2027,27-04-2027,Floating Dock - Can Do Barge,Drydock,,Confirmed
+# Repair project 169,Repair,38,12-03-2027,19-04-2027,Tuas - West Quay (WQ),Berthing,,RU Forecast
+# Repair project 109,Upgrade - Phase 1,170,12-03-2027,29-08-2027,Tuas - Temasek Pier East (TPE),Berthing,,Confirmed
+# Repair project 169,Repair,45,14-03-2027,28-04-2027,Tuas - South Quay (SQ),Berthing,,RU Forecast
+# Repair project 169,,20,14-03-2027,03-04-2027,Tuas Boulevard - YST 02,Berthing,,RU Forecast
+Build project 14,Keel Block Arrangement,33,15-03-2027,17-04-2027,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 169,,54,15-03-2027,08-05-2027,Tuas Boulevard - YST D3,Drydock,,RU Forecast
+# Repair project 105,Repair and Upgrade,103,15-03-2027,26-06-2027,Tuas Boulevard - YST D5,Drydock,,Confirmed
+Build project 14,Keel Block Arrangement,33,16-03-2027,18-04-2027,Tuas - Temasek Dock,Drydock,,Confirmed
+Build project 22,P83 - Fwd Crane Cabin,33,16-03-2027,18-04-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 67,Repair,49,16-03-2027,04-05-2027,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 61,Repair,40,17-03-2027,26-04-2027,Tuas - Temasek Dock,Drydock,,Confirmed
+# Repair project 169,Repair,42,18-03-2027,29-04-2027,Tuas - West Quay (WQ),Berthing,,RU Forecast
+Build project 7,Floating Barge,38,19-03-2027,26-04-2027,Tuas Boulevard - YST D7,Drydock,,Confirmed
+Build project 22,P83 - Fwd Crane Boom,33,19-03-2027,21-04-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 169,Repair,37,20-03-2027,26-04-2027,Tuas - Temasek Dock,Drydock,,RU Forecast
+# Repair project 26,Repair and Upgrade,75,21-03-2027,04-06-2027,Tuas Boulevard - YST D6,Drydock,,Confirmed
+AH3,P83 - M10B lifting at YST17,33,22-03-2027,24-04-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 7,Floating Barge,38,24-03-2027,01-05-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 22,P83 - M09-2 (D) lifting at YST17,33,24-03-2027,26-04-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 59,Erection & Integration - Hull & Topside,156,26-03-2027,29-08-2027,Tuas Boulevard - YST D7,Drydock,,Confirmed
+AH3,P83 - M06 (TY) lifting at YST17,33,28-03-2027,30-04-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 169,Repair,40,28-03-2027,07-05-2027,Tuas - Temasek Dock,Drydock,,RU Forecast
+# Repair project 169,Repair,36,28-03-2027,03-05-2027,Tuas - West Quay (WQ),Berthing,,RU Forecast
+Build project 7,Floating Barge,37,29-03-2027,05-05-2027,Tuas Boulevard - YST 01,Berthing,,Confirmed
+Build project 22,P83 - M09-2 (E) lifting at YST17,33,30-03-2027,02-05-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 169,Repair,48,30-03-2027,17-05-2027,Tuas - South Quay (SQ),Berthing,,RU Forecast
+# Repair project 67,Repair,66,01-04-2027,06-06-2027,Tuas - West Quay (WQ),Berthing,,Confirmed
+# Repair project 169,Repair,50,02-04-2027,22-05-2027,Tuas - Tuas Dock,Drydock,,RU Forecast
+# Repair project 40,Repair and Upgrade,51,02-04-2027,23-05-2027,Tuas Boulevard - YST 12,Berthing,,Confirmed
+# Repair project 169,Repair,47,03-04-2027,20-05-2027,Tuas - Raffles Dock,Drydock,,RU Forecast
+# Repair project 169,Repair,45,06-04-2027,21-05-2027,Tuas - Temasek Dock,Drydock,,RU Forecast
+# Repair project 40,Lifting tank,33,06-04-2027,09-05-2027,Tuas Boulevard - YST 12,Berthing,,Confirmed
+Build project 39,Topside Module Integration,126,11-04-2027,15-08-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 41,Repair and Upgrade,51,16-04-2027,06-06-2027,Tuas Boulevard - YST 11,Berthing,,Confirmed
+Build project 22,Solvang LPG H3462: Tank Lifting,33,17-04-2027,20-05-2027,Tuas Boulevard - YST 09,Berthing,,Confirmed
+# Repair project 169,Repair,45,17-04-2027,01-06-2027,Tuas - South Quay (SQ),Berthing,,RU Forecast
+# Repair project 116,Repair,36,19-04-2027,25-05-2027,Tuas - South Quay (SQ),Berthing,,Confirmed
+# Repair project 169,Repair,39,20-04-2027,29-05-2027,Tuas - Temasek Dock,Drydock,,RU Forecast
+# Repair project 169,Repair,37,20-04-2027,27-05-2027,Tuas - Tuas Dock,Drydock,,RU Forecast
+# Repair project 41,Lifting tank,33,20-04-2027,23-05-2027,Tuas Boulevard - YST 11,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,21-04-2027,24-05-2027,Tuas - Raffles Dock,Drydock,,Confirmed
+# Repair project 116,Repair,50,22-04-2027,11-06-2027,Tuas - Raffles Dock,Drydock,,Confirmed
+# Repair project 118,FSRU Conversion,246,26-04-2027,28-12-2027,Tuas Boulevard - YST 10,Berthing,,RU Forecast
+# Repair project 169,Repair,40,27-04-2027,06-06-2027,Tuas - Temasek Dock,Drydock,,RU Forecast
+Build project 22,Floating Crane - Clipper Vessel 2,33,02-05-2027,04-06-2027,Tuas Boulevard - YST 16,Berthing,,Confirmed
+# Repair project 26,Repair and Upgrade,97,02-05-2027,07-08-2027,Tuas Boulevard - YST 12,Berthing,,Confirmed
+# Repair project 169,Repair,45,06-05-2027,20-06-2027,Tuas - Temasek Dock,Drydock,,RU Forecast
+# Repair project 116,Repair,42,09-05-2027,20-06-2027,Tuas - West Quay (WQ),Berthing,,Confirmed
+# Repair project 33,Repair and Upgrade,72,09-05-2027,20-07-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,10-05-2027,12-06-2027,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 169,Repair,41,10-05-2027,20-06-2027,Tuas - Raffles Dock,Drydock,,RU Forecast
+# Repair project 55,Repair,45,11-05-2027,25-06-2027,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 169,,48,12-05-2027,29-06-2027,Tuas Boulevard - YST D2,Drydock,,RU Forecast
+# Repair project 169,,164,18-05-2027,29-10-2027,Tuas Boulevard - YST 16,Berthing,,RU Forecast
+# Repair project 169,Repair,50,19-05-2027,08-07-2027,Tuas - Raffles Dock,Drydock,,RU Forecast
+# Repair project 169,Repair,37,20-05-2027,26-06-2027,Tuas - Temasek Dock,Drydock,,RU Forecast
+# Repair project 169,Repair,44,21-05-2027,04-07-2027,Tuas - Tuas Dock,Drydock,,RU Forecast
+# Repair project 55,Repair,51,23-05-2027,13-07-2027,Tuas - West Quay (WQ),Berthing,,Confirmed
+# Repair project 105,Repair and Upgrade,40,24-05-2027,03-07-2027,Tuas Boulevard - YST 12,Berthing,,Confirmed
+# Repair project 169,Repair,40,28-05-2027,07-07-2027,Tuas - Temasek Dock,Drydock,,RU Forecast
+# Repair project 169,,150,01-06-2027,29-10-2027,Tuas Boulevard - YST 05,Berthing,,RU Forecast
+# Repair project 169,,68,05-06-2027,12-08-2027,Tuas Boulevard - YST D1,Drydock,,RU Forecast
+# Repair project 169,Repair,42,06-06-2027,18-07-2027,Tuas - Raffles Dock,Drydock,,RU Forecast
+# Repair project 169,Repair,41,06-06-2027,17-07-2027,Tuas - South Quay (SQ),Berthing,,RU Forecast
+# Repair project 169,Repair,45,06-06-2027,21-07-2027,Tuas - Temasek Dock,Drydock,,RU Forecast
+# Repair project 169,Repair,50,06-06-2027,26-07-2027,Tuas - Tuas Dock,Drydock,,RU Forecast
+# Repair project 169,Repair,41,06-06-2027,17-07-2027,Tuas - West Quay (WQ),Berthing,,RU Forecast
+# Repair project 169,,689,11-06-2027,30-04-2029,Tuas Boulevard - YST 14,Berthing,,RU Forecast
+# Repair project 169,Repair,44,16-06-2027,30-07-2027,Tuas - Raffles Dock,Drydock,,RU Forecast
+# Repair project 169,,155,16-06-2027,18-11-2027,Tuas Boulevard - YST 12,Berthing,,RU Forecast
+# Repair project 169,Repair,42,17-06-2027,29-07-2027,Tuas - South Quay (SQ),Berthing,,RU Forecast
+# Repair project 169,Repair,42,18-06-2027,30-07-2027,Tuas - West Quay (WQ),Berthing,,RU Forecast
+# Repair project 169,,94,19-06-2027,21-09-2027,Tuas Boulevard - YST D4,Drydock,,RU Forecast
+# Repair project 169,Repair,40,20-06-2027,30-07-2027,Tuas - Temasek Dock,Drydock,,RU Forecast
+Build project 14,Keel Block Arrangement,33,24-06-2027,27-07-2027,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 169,,67,24-06-2027,30-08-2027,Tuas Boulevard - YST D5,Drydock,,RU Forecast
+# Repair project 115,Repair,48,25-06-2027,12-08-2027,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 169,Repair,46,28-06-2027,13-08-2027,Tuas - Raffles Dock,Drydock,,RU Forecast
+# Repair project 169,Repair,40,28-06-2027,07-08-2027,Tuas - Temasek Dock,Drydock,,RU Forecast
+# Repair project 169,Repair,48,30-06-2027,17-08-2027,Tuas - South Quay (SQ),Berthing,,RU Forecast
+# Repair project 169,,74,30-06-2027,12-09-2027,Tuas Boulevard - YST D6,Drydock,,RU Forecast
+# Repair project 169,Repair,40,02-07-2027,11-08-2027,Tuas - West Quay (WQ),Berthing,,RU Forecast
+# Repair project 77,Passenger / Cruise,52,03-07-2027,24-08-2027,Tuas Boulevard - YST D3,Drydock,,Confirmed
+# Repair project 169,Repair,45,07-07-2027,21-08-2027,Tuas - Temasek Dock,Drydock,,RU Forecast
+# Repair project 115,Repair,43,10-07-2027,22-08-2027,Tuas - West Quay (WQ),Berthing,,Confirmed
+Build project 26,FLNG,47,12-07-2027,28-08-2027,Tuas Boulevard - YST 02,Berthing,,Confirmed
+Build project 14,Keel Block Arrangement,33,13-07-2027,15-08-2027,Tuas - Tuas Dock,Drydock,,Confirmed
+Build project 39,Topside Module Integration,48,13-07-2027,30-08-2027,Tuas Boulevard - YST 15,Berthing,,Confirmed
+# Repair project 66,Repair,43,14-07-2027,26-08-2027,Tuas - Tuas Dock,Drydock,,Confirmed
+# Repair project 169,Repair,42,18-07-2027,29-08-2027,Tuas - South Quay (SQ),Berthing,,RU Forecast
+# Repair project 169,Repair,37,21-07-2027,27-08-2027,Tuas - Temasek Dock,Drydock,,RU Forecast
+# Repair project 169,,52,23-07-2027,13-09-2027,Tuas Boulevard - YST D3,Drydock,,RU Forecast
+# Repair project 66,Repair,41,24-07-2027,03-09-2027,Tuas - West Quay (WQ),Berthing,,Confirmed
+Build project 26,FLNG,155,26-07-2027,28-12-2027,Tuas Boulevard - YST D2,Drydock,,Confirmed
+# Repair project 169,Repair,42,27-07-2027,07-09-2027,Tuas - Raffles Dock,Drydock,,RU Forecast
+# Repair project 169,Repair,40,28-07-2027,06-09-2027,Tuas - Temasek Dock,Drydock,,RU Forecast
+Build project 39,Topside Module Integration,173,28-07-2027,17-01-2028,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 49,,305,28-07-2027,28-05-2028,Tuas Boulevard - YST 06,Berthing,,Confirmed
+# Repair project 169,Repair,37,29-07-2027,04-09-2027,Tuas - Tuas Dock,Drydock,,RU Forecast
+# Repair project 169,,123,29-07-2027,29-11-2027,Tuas Boulevard - YST 15,Berthing,,RU Forecast
+# Repair project 107,Repair and Upgrade,113,29-07-2027,19-11-2027,Tuas Boulevard - YST D5,Drydock,,Confirmed
+# Repair project 169,Repair,42,06-08-2027,17-09-2027,Tuas - Raffles Dock,Drydock,,RU Forecast
+# Repair project 169,Repair,45,06-08-2027,20-09-2027,Tuas - Temasek Dock,Drydock,,RU Forecast
+# Repair project 169,Repair,46,06-08-2027,21-09-2027,Tuas - Tuas Dock,Drydock,,RU Forecast
+# Repair project 169,Repair,42,07-08-2027,18-09-2027,Tuas - West Quay (WQ),Berthing,,RU Forecast
+# Repair project 169,Repair,38,09-08-2027,16-09-2027,Tuas - South Quay (SQ),Berthing,,RU Forecast
+# Repair project 31,Repair and Upgrade,72,09-08-2027,20-10-2027,Tuas Boulevard - YST 17,Berthing,,Confirmed
+# Repair project 168,Repair and Upgrade,46,12-08-2027,27-09-2027,Tuas Boulevard - YST D3,Drydock,,Confirmed
+Build project 22,Kaskida - UNW lifting,33,16-08-2027,18-09-2027,Tuas Boulevard - YST 03,Berthing,,Confirmed
+Build project 22,Kaskida - UNW lifting,33,16-08-2027,18-09-2027,Tuas Boulevard - YST 05,Berthing,,Confirmed
+# Repair project 169,Repair,44,16-08-2027,29-09-2027,Tuas - Raffles Dock,Drydock,,RU Forecast
+# Repair project 169,Repair,42,17-08-2027,28-09-2027,Tuas - South Quay (SQ),Berthing,,RU Forecast
+# Repair project 169,Repair,43,18-08-2027,30-09-2027,Tuas - West Quay (WQ),Berthing,,RU Forecast
+# Repair project 169,,162,18-08-2027,27-01-2028,Tuas Boulevard - YST D1,Drydock,,RU Forecast
+# Repair project 169,Repair,37,20-08-2027,26-09-2027,Tuas - Temasek Dock,Drydock,,RU Forecast
+# Repair project 29,Passenger/Cruise,67,20-08-2027,26-10-2027,Tuas Boulevard - YST D4,Drydock,,Confirmed
+# Repair project 169,Repair,44,21-08-2027,04-10-2027,Tuas - Tuas Dock,Drydock,,RU Forecast
+# Repair project 169,,99,22-08-2027,29-11-2027,Tuas Boulevard - YST 07,Berthing,,RU Forecast
+Build project 22,Kaskida - USW lifting,33,26-08-2027,28-09-2027,Tuas Boulevard - YST 03,Berthing,,Confirmed
+Build project 22,Kaskida - USW lifting,33,26-08-2027,28-09-2027,Tuas Boulevard - YST 05,Berthing,,Confirmed
+# Repair project 169,Repair,46,28-08-2027,13-10-2027,Tuas - Raffles Dock,Drydock,,RU Forecast
+# Repair project 169,Repair,40,28-08-2027,07-10-2027,Tuas - Temasek Dock,Drydock,,RU Forecast
+# Repair project 24,Repair and Upgrade,153,28-08-2027,28-01-2028,Tuas Boulevard - YST 12,Berthing,,Confirmed
+# Repair project 169,,455,29-08-2027,26-11-2028,Tuas Boulevard - YST 03,Berthing,,RU Forecast
+# Repair project 169,Repair,48,30-08-2027,17-10-2027,Tuas - South Quay (SQ),Berthing,,RU Forecast
+# Repair project 169,Repair,40,01-09-2027,11-10-2027,Tuas - West Quay (WQ),Berthing,,RU Forecast
+# Repair project 169,Repair,45,06-09-2027,21-10-2027,Tuas - Temasek Dock,Drydock,,RU Forecast
+# Repair project 169,Repair,46,06-09-2027,22-10-2027,Tuas - Tuas Dock,Drydock,,RU Forecast
+Build project 22,Kaskida - UNE lifting,33,09-09-2027,12-10-2027,Tuas Boulevard - YST 03,Berthing,,Confirmed
+Build project 22,Kaskida - UNE lifting,33,09-09-2027,12-10-2027,Tuas Boulevard - YST 05,Berthing,,Confirmed
+# Repair project 169,Repair,40,11-09-2027,21-10-2027,Tuas - Raffles Dock,Drydock,,RU Forecast
+# Repair project 169,Repair,38,11-09-2027,19-10-2027,Tuas - West Quay (WQ),Berthing,,RU Forecast
+# Repair project 169,Repair,42,17-09-2027,29-10-2027,Tuas - South Quay (SQ),Berthing,,RU Forecast
+# Repair project 169,Repair,41,18-09-2027,29-10-2027,Tuas - West Quay (WQ),Berthing,,RU Forecast
+Build project 22,Kaskida - USE lifting,33,19-09-2027,22-10-2027,Tuas Boulevard - YST 03,Berthing,,Confirmed
+Build project 22,Kaskida - USE lifting,33,19-09-2027,22-10-2027,Tuas Boulevard - YST 05,Berthing,,Confirmed
+# Repair project 169,Repair,49,19-09-2027,07-11-2027,Tuas - Raffles Dock,Drydock,,RU Forecast
+# Repair project 169,Repair,37,20-09-2027,27-10-2027,Tuas - Temasek Dock,Drydock,,RU Forecast
+# Repair project 169,Repair,44,21-09-2027,04-11-2027,Tuas - Tuas Dock,Drydock,,RU Forecast
+# Repair project 169,Repair,40,27-09-2027,06-11-2027,Tuas - Temasek Dock,Drydock,,RU Forecast
+Build project 42,Topside Module Integration,276,27-09-2027,29-06-2028,Tuas Boulevard - YST 16,Berthing,,Confirmed
+# Repair project 169,Repair,48,29-09-2027,16-11-2027,Tuas - South Quay (SQ),Berthing,,RU Forecast
+# Repair project 169,Repair,42,06-10-2027,17-11-2027,Tuas - Raffles Dock,Drydock,,RU Forecast
+# Repair project 169,Repair,45,06-10-2027,20-11-2027,Tuas - Temasek Dock,Drydock,,RU Forecast
+# Repair project 169,Repair,46,06-10-2027,21-11-2027,Tuas - Tuas Dock,Drydock,,RU Forecast
+# Repair project 169,Repairs,566,11-10-2027,29-04-2029,Admiralty - Premier (SPD),Drydock,,RU Forecast
+# Repair project 169,,90,11-10-2027,09-01-2028,Tuas Boulevard - YST D3,Drydock,,RU Forecast
+# Repair project 169,Repair,42,17-10-2027,28-11-2027,Tuas - South Quay (SQ),Berthing,,RU Forecast
+# Repair project 107,Repair and Upgrade,83,17-10-2027,08-01-2028,Tuas Boulevard - YST 12,Berthing,,Confirmed
+# Repair project 169,Repair,42,18-10-2027,29-11-2027,Tuas - West Quay (WQ),Berthing,,RU Forecast
+# Repair project 169,Repair,37,20-10-2027,26-11-2027,Tuas - Temasek Dock,Drydock,,RU Forecast
+# Repair project 169,Repair,39,21-10-2027,29-11-2027,Tuas - Tuas Dock,Drydock,,RU Forecast
+# Repair project 169,,181,30-10-2027,28-04-2028,Tuas Boulevard - YST D6,Drydock,,RU Forecast
+Build project 22,BP Kaskida - Pontoon West+Node SW,33,01-11-2027,04-12-2027,Tuas Boulevard - YST 19,Berthing,,Confirmed
+Build project 5,Hull Erection & Topside Integration,295,01-11-2027,22-08-2028,Tuas Boulevard - YST D7,Drydock,,Confirmed
+Build project 22,BP Kaskida - Pontoon North+Node NW,33,15-11-2027,18-12-2027,Tuas Boulevard - YST 19,Berthing,,Confirmed
+# Repair project 56,Repair and Upgrade,46,22-11-2027,07-01-2028,Tuas Boulevard - YST D3,Drydock,,Confirmed
+Build project 26,FLNG,95,25-11-2027,28-02-2028,Tuas Boulevard - YST 02,Berthing,,Confirmed
+# Repair project 118,FSRU Conversion,67,25-11-2027,31-01-2028,Tuas Boulevard - YST D1,Drydock,,RU Forecast
+Build project 22,BP Kaskida - Pontoon South+Node SE,33,27-11-2027,30-12-2027,Tuas Boulevard - YST 19,Berthing,,Confirmed
+# Repair project 56,Repair and Upgrade,36,05-12-2027,10-01-2028,Tuas Boulevard - YST 10,Berthing,,Confirmed
+# Repair project 169,,173,07-12-2027,28-05-2028,Tuas Boulevard - YST 12,Berthing,,RU Forecast
+# Repair project 27,Repair and Upgrade,47,08-12-2027,24-01-2028,Tuas Boulevard - YST D3,Drydock,,Confirmed
+# Repair project 27,Repair and Upgrade,47,08-12-2027,24-01-2028,Tuas Boulevard - YST D3,Drydock,,Confirmed
+Build project 22,BP Kaskida - Pontoon East+Node NE,33,09-12-2027,11-01-2028,Tuas Boulevard - YST 19,Berthing,,Confirmed
+# Repair project 169,,67,27-12-2027,03-03-2028,Tuas Boulevard - YST 08,Berthing,,RU Forecast
+# Repair project 118,FSRU Conversion,176,29-12-2027,22-06-2028,Tuas Boulevard - YST 10,Berthing,,RU Forecast
+# Repair project 169,,109,10-01-2028,28-04-2028,Tuas Boulevard - YST D4,Drydock,,RU Forecast
+# Repair project 169,,87,01-02-2028,28-04-2028,Tuas Boulevard - YST D1,Drydock,,RU Forecast
+# Repair project 169,,67,28-03-2028,03-06-2028,Tuas Boulevard - YST 05,Berthing,,RU Forecast
+# Repair project 169,,59,31-03-2028,29-05-2028,Tuas Boulevard - YST 10,Berthing,,RU Forecast
+Build project 43,Topside Module Integration,557,18-05-2028,26-11-2029,Tuas Boulevard - YST 06,Berthing,,Confirmed
+Build project 42,Topside Module Integration,63,27-05-2028,29-07-2028,Tuas Boulevard - YST D7,Drydock,,Confirmed
+Build project 42,Topside Module Integration,230,26-06-2028,11-02-2029,Tuas Boulevard - YST 16,Berthing,,Confirmed
+Build project 5,Kaskida Lower & Upper Top side CDB,62,27-06-2028,28-08-2028,Floating Dock - Can Do Barge,Drydock,,Confirmed
+Build project 5,FPU Integration,41,20-07-2028,30-08-2028,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 5,FPU Integration,44,28-07-2028,10-09-2028,Tuas Boulevard - YST D7,Drydock,,Confirmed
+# Repair project 169,,89,29-07-2028,26-10-2028,Tuas Boulevard - YST D1,Drydock,,RU Forecast
+Build project 5,FPU Integration,112,08-08-2028,28-11-2028,Tuas Boulevard - YST 15,Berthing,,Confirmed
+# Repair project 169,,95,26-09-2028,30-12-2028,Tuas Boulevard - YST 05,Berthing,,RU Forecast
+# Repair project 169,,101,17-10-2028,26-01-2029,Tuas Boulevard - YST D5,Drydock,,RU Forecast
+Build project 6,Hull Erection & Topside Integration,286,31-10-2028,13-08-2029,Tuas Boulevard - YST D7,Drydock,,Confirmed
+Build project 13,Upgrade,92,27-01-2029,29-04-2029,Admiralty - B23,Berthing,,Confirmed
+Build project 13,Upgrade,91,27-01-2029,28-04-2029,Admiralty - B20,Berthing,,Confirmed
+Build project 13,Upgrade,91,27-01-2029,28-04-2029,Admiralty - B19,Berthing,,Confirmed
+Build project 13,Upgrade,91,27-01-2029,28-04-2029,Admiralty - B17,Berthing,,Confirmed
+Build project 6,Berthing,34,11-07-2029,14-08-2029,Tuas Boulevard - YST 17,Berthing,,Confirmed
+Build project 6,Hull Erection & Topside Integration,82,12-07-2029,02-10-2029,Tuas Boulevard - YST D7,Drydock,,Confirmed
+Build project 6,Berthing,91,30-08-2029,29-11-2029,Tuas Boulevard - YST 15,Berthing,,Confirmed

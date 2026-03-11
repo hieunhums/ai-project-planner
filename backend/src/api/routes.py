@@ -277,7 +277,9 @@ async def parse_nl_edit(
 ) -> NLEditAction:
     """Parse a natural-language plan-edit command into a structured action.
 
-    Supported format: ``change PRJ-XXX from RESOURCE-A to RESOURCE-B``
+    Supported format: ``change <PROJECT_ID> from <RESOURCE-A> to <RESOURCE-B>``
+    Optionally quote resources with spaces:
+    ``change <PROJECT_ID> from "Tuas Boulevard - YST D2" to "Tuas Boulevard - YST D1"``
 
     Returns ``NLEditAction`` on success or HTTP 422 on unrecognised pattern.
     """
@@ -291,7 +293,8 @@ async def parse_nl_edit(
             status_code=422,
             detail=(
                 "Unsupported command. "
-                "Supported format: change PRJ-XXX from RESOURCE-A to RESOURCE-B"
+                "Supported format: change <PROJECT_ID> from <RESOURCE-A> to <RESOURCE-B> "
+                "(quotes optional for values with spaces)"
             ),
         )
     return NLEditAction(**action)

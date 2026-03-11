@@ -173,7 +173,7 @@ export const ProjectLandingPage: React.FC = () => {
       >
         <div className="proposal-phase-header">
           <span className="proposal-phase-number">Phase 2</span>
-          <h2 className="proposal-phase-title">Available Yard Options</h2>
+          <h2 className="proposal-phase-title">Available Options</h2>
         </div>
 
         {availabilityHook.yards.length > 0 ? (

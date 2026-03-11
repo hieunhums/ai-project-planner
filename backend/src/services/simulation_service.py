@@ -16,10 +16,6 @@ from pathlib import Path
 # ---------------------------------------------------------------------------
 
 YARDS = [
-    {"yard_name": "JY-QA", "location": "Jurong Island, Singapore", "availability": "Available"},
-    {"yard_name": "JY-QB", "location": "Jurong Island, Singapore", "availability": "Available"},
-    {"yard_name": "JY-QC", "location": "Jurong Island, Singapore", "availability": "Occupied"},
-    {"yard_name": "JY-QD", "location": "Jurong Island, Singapore", "availability": "Available"},
     {
         "yard_name": "Singapore - Tuas Boulevard",
         "location": "Tuas, Singapore",
@@ -28,6 +24,21 @@ YARDS = [
     {
         "yard_name": "Singapore - Pioneer",
         "location": "Pioneer, Singapore",
+        "availability": "Occupied",
+    },
+    {
+        "yard_name": "Singapore - Admiralty",
+        "location": "Admiralty, Singapore",
+        "availability": "Occupied",
+    },
+    {
+        "yard_name": "Singapore - Benoi",
+        "location": "Benoi, Singapore",
+        "availability": "Available",
+    },
+    {
+        "yard_name": "Singapore - Tuas",
+        "location": "Tuas, Singapore",
         "availability": "Occupied",
     },
 ]

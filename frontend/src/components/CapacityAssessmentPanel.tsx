@@ -67,7 +67,7 @@ export const CapacityAssessmentPanel: React.FC<CapacityAssessmentPanelProps> = (
           </label>
           <p className="capacity-help">
             Describe any constraints or preferences for the capacity plan (e.g. "prioritise
-            hull assembly" or "avoid Q3 for resource JY-QA").
+            hull assembly" or "avoid Q3 for resource Tuas Boulevard - YST D1").
           </p>
           <textarea
             id="capacity-prompt"

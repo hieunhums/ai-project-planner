@@ -9,13 +9,15 @@ export interface GanttNLEditProps {
   placeholder?: string;
 }
 
-const EXAMPLE = 'change PRJ-F01 from JY-QA to JY-QB';
+const EXAMPLE = `change PRJ-FPU-1 drydock from Tuas Boulevard - YST D2 to Tuas Boulevard - YST D1
+change PRJ-FPU-1 drydock from Tuas Boulevard - YST D2 to Tuas Boulevard - YST D3
+change PRJ-FPU-1 drydock from Tuas Boulevard - YST D2 to Tuas Boulevard - YST D4`;
 
 export const GanttNLEdit: React.FC<GanttNLEditProps> = ({
   onSubmit,
   isLoading = false,
   error,
-  placeholder = EXAMPLE,
+  placeholder = 'change PRJ-FPU-1 drydock from Tuas Boulevard - YST D2 to Tuas Boulevard - YST D1',
 }) => {
   const [command, setCommand] = useState('');
   const [lastApplied, setLastApplied] = useState<string | null>(null);
@@ -69,7 +71,7 @@ export const GanttNLEdit: React.FC<GanttNLEditProps> = ({
         </div>
 
         <p className="nl-edit-hint">
-          e.g. <em>{EXAMPLE}</em>
+          <strong>Top-3 Options.</strong> <em>{EXAMPLE}</em>
         </p>
       </form>
 

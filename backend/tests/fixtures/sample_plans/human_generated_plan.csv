@@ -1,17 +1,129 @@
 project_id,project_name,duration_days,start_date,end_date,resource,dependencies,cost,priority
-PRJ-F01,Main,211,01-02-2026,31-08-2026,JY-QA,,,High
-PRJ-F01,Extension,121,01-09-2026,31-12-2026,JY-QA,,,High
-PRJ-F03,Main,180,01-01-2027,30-06-2027,JY-QB,,,High
-PRJ-F04,Main,242,01-01-2027,31-08-2027,JY-QA,,,Med
-PRJ-F05,Main,150,01-10-2026,28-02-2027,JY-QC,,,Med
-PRJ-F07,S1,91,01-06-2027,31-08-2027,JY-QD,,,High
-PRJ-F07,S2,60,01-09-2027,31-10-2027,JY-QD,,,Med
-PRJ-F08,Main,150,01-10-2026,28-02-2027,JY-QE,,,High
-PRJ-F10,Main,365,01-05-2027,30-04-2028,JY-QE,,,High
-PRJ-F12,S1,91,01-05-2027,31-07-2027,JY-QF,,,Med
-PRJ-F13,Main,119,01-01-2027,30-04-2027,JY-QG,,,Med
-PRJ-F15,Main,274,01-04-2028,31-12-2028,JY-QE,,,Med
-PRJ-F19,Main,91,01-03-2026,31-05-2026,JY-QE,,,Med
-PRJ-F21,Main,334,01-01-2028,30-11-2028,JY-QA,,,High
-PRJ-F21,Extension,120,01-12-2028,31-03-2029,JY-QA,,,High
-PRJ-F22,Main,91,01-10-2028,31-12-2028,JY-QC,,,High
+Build project 60,Hull,656,02-06-2024,20-03-2026,Tuas Boulevard - YST D2,,Confirmed
+# Repair project 105,Repair and Upgrade,131,10-11-2025,21-03-2026,Tuas Boulevard - YST D5,,Confirmed
+# Repair project 24,Repair and Upgrade,48,13-01-2026,02-03-2026,Tuas Boulevard - YST D1,,Confirmed
+# Repair project 4,Repair and Upgrade,54,16-01-2026,11-03-2026,Tuas Boulevard - YST D3,,Confirmed
+# Repair project 140,Repair and Upgrade,48,18-01-2026,07-03-2026,Tuas Boulevard - YST D6,,Confirmed
+Build project 14,Keel Block Arrangement,34,28-01-2026,03-03-2026,Tuas Boulevard - YST D1,,Confirmed
+Build project 16,Yard Asset,60,28-01-2026,29-03-2026,Tuas Boulevard - YST D7,,Confirmed
+Build project 16,Yard Asset,60,28-01-2026,29-03-2026,Tuas Boulevard - YST D7,,Confirmed
+Build project 70,6 Triloader Load Testing,60,28-01-2026,29-03-2026,Tuas Boulevard - YST D7,,Confirmed
+Build project 14,Keel Block Arrangement,35,03-02-2026,10-03-2026,Tuas Boulevard - YST D4,,Confirmed
+Build project 14,Keel Block Arrangement,37,07-02-2026,16-03-2026,Tuas Boulevard - YST D3,,Confirmed
+# Repair project 70,Repair and Upgrade,54,07-02-2026,02-04-2026,Tuas Boulevard - YST D4,,Confirmed
+# Repair project 87,Repair and Upgrade,53,10-02-2026,04-04-2026,Tuas Boulevard - YST D6,,Confirmed
+# Repair project 185,Repair and Upgrade,142,12-02-2026,04-07-2026,Tuas Boulevard - YST D3,,Confirmed
+Build project 14,Keel Block Arrangement,34,17-02-2026,23-03-2026,Tuas Boulevard - YST D1,,Confirmed
+# Repair project 124,Repair and Upgrade,52,19-02-2026,12-04-2026,Tuas Boulevard - YST D1,,Confirmed
+Build project 48,Quay Bollard Upgrading,60,25-02-2026,26-04-2026,Tuas Boulevard - YST D7,,Confirmed
+Build project 14,Keel Block Arrangement,34,01-03-2026,04-04-2026,Tuas Boulevard - YST D4,,Confirmed
+# Repair project 90,Repair and Upgrade,47,03-03-2026,19-04-2026,Tuas Boulevard - YST D4,,Confirmed
+Build project 14,Keel Block Arrangement,40,06-03-2026,15-04-2026,Tuas Boulevard - YST D2,,Confirmed
+Build project 14,Keel Block Arrangement,35,11-03-2026,15-04-2026,Tuas Boulevard - YST D1,,Confirmed
+# Repair project 125,Repair and Upgrade,52,14-03-2026,05-05-2026,Tuas Boulevard - YST D1,,Confirmed
+# Repair project 130,Repair and Upgrade,55,16-03-2026,10-05-2026,Tuas Boulevard - YST D2,,Confirmed
+Build project 14,Keel Block Arrangement,34,18-03-2026,21-04-2026,Tuas Boulevard - YST D4,,Confirmed
+# Repair project 140,Repair and Upgrade,84,20-03-2026,12-06-2026,Tuas Boulevard - YST D4,,Confirmed
+Build project 14,Keel Block Arrangement,35,08-04-2026,13-05-2026,Tuas Boulevard - YST D2,,Confirmed
+Build project 14,Keel Block Arrangement,34,10-04-2026,14-05-2026,Tuas Boulevard - YST D6,,Confirmed
+Build project 14,Keel Block Arrangement,34,12-04-2026,16-05-2026,Tuas Boulevard - YST D1,,Confirmed
+# Repair project 166,Repair and Upgrade,91,12-04-2026,12-07-2026,Tuas Boulevard - YST D6,,Confirmed
+# Repair project 167,Repair and Upgrade,84,12-04-2026,05-07-2026,Tuas Boulevard - YST D5,,Confirmed
+# Repair project 75,Repair and Upgrade,47,14-04-2026,31-05-2026,Tuas Boulevard - YST D1,,Confirmed
+# Repair project 176,Repair and Upgrade,40,20-04-2026,30-05-2026,Tuas Boulevard - YST D2,,Confirmed
+Build project 71,Ya Qing Hui Zong,37,25-04-2026,01-06-2026,Tuas Boulevard - YST D7,,Confirmed
+Build project 14,Keel Block Arrangement,33,29-04-2026,01-06-2026,Tuas Boulevard - YST D1,,Confirmed
+Build project 72,Module Lifting,36,30-04-2026,05-06-2026,Tuas Boulevard - YST D7,,Confirmed
+# Repair project 85,Repair and Upgrade,45,02-05-2026,16-06-2026,Tuas Boulevard - YST D1,,Confirmed
+# Repair project 128,Repair and Upgrade,47,10-05-2026,26-06-2026,Tuas Boulevard - YST D4,,Confirmed
+Build project 16,Yard Asset,51,16-05-2026,06-07-2026,Tuas Boulevard - YST D1,,Confirmed
+Build project 18,Yard Asset,51,16-05-2026,06-07-2026,Tuas Boulevard - YST D1,,Confirmed
+Build project 19,Yard Asset,51,16-05-2026,06-07-2026,Tuas Boulevard - YST D1,,Confirmed
+Build project 22,WTIV - Port Fwd Leg Section 8~10,33,25-05-2026,27-06-2026,Tuas Boulevard - YST D2,,Confirmed
+# Repair project 16,Repair and Upgrade,43,28-05-2026,10-07-2026,Tuas Boulevard - YST D4,,Confirmed
+Build project 22,WTIV - Stbd Aft Leg Section 8~10,33,02-06-2026,05-07-2026,Tuas Boulevard - YST D2,,Confirmed
+# Repair project 92,Repair and Upgrade,95,03-06-2026,06-09-2026,Tuas Boulevard - YST D5,,Confirmed
+Build project 14,Keel Block Arrangement,34,08-06-2026,12-07-2026,Tuas Boulevard - YST D4,,Confirmed
+Build project 14,Keel Block Arrangement,35,09-06-2026,14-07-2026,Tuas Boulevard - YST D3,,Confirmed
+# Repair project 8,Repair and Upgrade,48,10-06-2026,28-07-2026,Tuas Boulevard - YST D4,,Confirmed
+# Repair project 72,Repair and Upgrade,47,13-06-2026,30-07-2026,Tuas Boulevard - YST D3,,Confirmed
+Build project 36,M07,36,19-06-2026,25-07-2026,Tuas Boulevard - YST D7,,Confirmed
+Build project 14,Keel Block Arrangement,34,24-06-2026,28-07-2026,Tuas Boulevard - YST D1,,Confirmed
+# Repair project 166,Repair and Upgrade,41,26-06-2026,06-08-2026,Tuas Boulevard - YST D6,,Confirmed
+# Repair project 73,Repair and Upgrade,48,27-06-2026,14-08-2026,Tuas Boulevard - YST D1,,Confirmed
+Build project 61,WTIV - STPC,38,27-06-2026,04-08-2026,Tuas Boulevard - YST D2,,Confirmed
+Build project 14,Keel Block Arrangement,35,28-06-2026,02-08-2026,Tuas Boulevard - YST D3,,Confirmed
+# Repair project 124,Repair and Upgrade,47,01-07-2026,17-08-2026,Tuas Boulevard - YST D3,,Confirmed
+Build project 14,Keel Block Arrangement,35,02-07-2026,06-08-2026,Tuas Boulevard - YST D4,,Confirmed
+# Repair project 59,Repair and Upgrade,47,05-07-2026,21-08-2026,Tuas Boulevard - YST D4,,Confirmed
+Build project 14,Keel Block Arrangement,35,06-07-2026,10-08-2026,Tuas Boulevard - YST D6,,Confirmed
+# Repair project 99,Repair and Upgrade,52,09-07-2026,30-08-2026,Tuas Boulevard - YST D6,,Confirmed
+Build project 47,P83 - Dismantle Off-Loading Hose,42,21-07-2026,01-09-2026,Tuas Boulevard - YST D1,,Confirmed
+Build project 22,Beta - 105,33,22-07-2026,24-08-2026,Tuas Boulevard - YST D2,,Confirmed
+Build project 7,P82 - M07/M05,35,29-07-2026,02-09-2026,Tuas Boulevard - YST D7,,Confirmed
+# Repair project 129,Repair and Upgrade,50,31-07-2026,19-09-2026,Tuas Boulevard - YST D3,,Confirmed
+Build project 38,M05 & M07,38,01-08-2026,08-09-2026,Tuas Boulevard - YST D7,,Confirmed
+# Repair project 22,Repair and Upgrade,43,02-08-2026,14-09-2026,Tuas Boulevard - YST D1,,Confirmed
+# Repair project 215,Repair and Upgrade,47,05-08-2026,21-09-2026,Tuas Boulevard - YST D4,,Confirmed
+Build project 47,P80 - M10B & M05 (Angra),34,08-08-2026,11-09-2026,Tuas Boulevard - YST D7,,Confirmed
+Build project 36,M05,36,09-08-2026,14-09-2026,Tuas Boulevard - YST D7,,Confirmed
+# Repair project 106,Repair and Upgrade,160,12-08-2026,19-01-2027,Tuas Boulevard - YST D5,,Confirmed
+Build project 47,P83 - M15/M14/M07 (China),35,13-08-2026,17-09-2026,Tuas Boulevard - YST D7,,Confirmed
+Build project 39,M07,35,15-08-2026,19-09-2026,Tuas Boulevard - YST D7,,Confirmed
+# Repair project 129,Repair and Upgrade,46,17-08-2026,02-10-2026,Tuas Boulevard - YST D1,,Confirmed
+Build project 14,Keel Block Arrangement,33,18-08-2026,20-09-2026,Tuas Boulevard - YST D7,,Confirmed
+# Repair project 153,Repair and Upgrade,45,18-08-2026,02-10-2026,Tuas Boulevard - YST D6,,Confirmed
+Build project 59,Erection & Integration - Hull & Topside,235,19-08-2026,11-04-2027,Tuas Boulevard - YST D7,,Confirmed
+Build project 20,Yard Asset,44,24-08-2026,07-10-2026,Tuas Boulevard - YST D2,,Confirmed
+# Repair project 134,Repair and Upgrade,91,28-08-2026,27-11-2026,Tuas Boulevard - YST D4,,Confirmed
+# Repair project 57,Passenger / Cruise,48,29-08-2026,16-10-2026,Tuas Boulevard - YST D3,,Confirmed
+# Repair project 165,Repair and Upgrade,42,08-09-2026,20-10-2026,Tuas Boulevard - YST D6,,Confirmed
+# Repair project 222,Repair and Upgrade,41,14-09-2026,25-10-2026,Tuas Boulevard - YST D1,,Confirmed
+Build project 2,Tennet Beta - 206,37,18-09-2026,25-10-2026,Tuas Boulevard - YST D2,,Confirmed
+Build project 20,Yard Asset,36,20-09-2026,26-10-2026,Tuas Boulevard - YST D2,,Confirmed
+# Repair project 49,Passenger / Cruise,52,25-09-2026,16-11-2026,Tuas Boulevard - YST D3,,Confirmed
+Build project 2,Tennet Beta - 302,35,27-09-2026,01-11-2026,Tuas Boulevard - YST D2,,Confirmed
+Build project 61,FELS 21,35,29-09-2026,03-11-2026,Tuas Boulevard - YST D2,,Confirmed
+Build project 61,FELS 21,69,01-10-2026,09-12-2026,Tuas Boulevard - YST D6,,Confirmed
+# Repair project 133,Repair and Upgrade,41,02-10-2026,12-11-2026,Tuas Boulevard - YST D2,,Confirmed
+# Repair project 148,Repair and Upgrade,37,09-10-2026,15-11-2026,Tuas Boulevard - YST D1,,Confirmed
+Build project 7,Floating Barge,121,15-10-2026,13-02-2027,Tuas Boulevard - YST D2,,Confirmed
+# Repair project 48,Repair and Upgrade,52,26-10-2026,17-12-2026,Tuas Boulevard - YST D1,,Confirmed
+# Repair project 76,Repair and Upgrade,47,03-11-2026,20-12-2026,Tuas Boulevard - YST D4,,Confirmed
+# Repair project 37,Repair and Upgrade,76,11-11-2026,26-01-2027,Tuas Boulevard - YST D3,,Confirmed
+# Repair project 3,Repair and Upgrade,49,12-11-2026,31-12-2026,Tuas Boulevard - YST D6,,Confirmed
+# Repair project 127,Repair and Upgrade,42,20-11-2026,01-01-2027,Tuas Boulevard - YST D4,,Confirmed
+# Repair project 122,Repair and Upgrade,49,22-11-2026,10-01-2027,Tuas Boulevard - YST D1,,Confirmed
+# Repair project 186,Repair and Upgrade,41,30-11-2026,10-01-2027,Tuas Boulevard - YST D6,,Confirmed
+# Repair project 74,Repair and Upgrade,45,13-12-2026,27-01-2027,Tuas Boulevard - YST D1,,Confirmed
+# Repair project 132,Repair and Upgrade,41,16-12-2026,26-01-2027,Tuas Boulevard - YST D2,,Confirmed
+Build project 29,Repair and Upgrade,52,20-12-2026,10-02-2027,Tuas Boulevard - YST D5,,Confirmed
+# Repair project 47,Repair and Upgrade,53,25-12-2026,16-02-2027,Tuas Boulevard - YST D6,,Confirmed
+# Repair project 42,Repair and Upgrade,47,28-12-2026,13-02-2027,Tuas Boulevard - YST D4,,Confirmed
+# Repair project 15,Repair and Upgrade,44,28-12-2026,10-02-2027,Tuas Boulevard - YST D2,,Confirmed
+# Repair project 94,Repair and Upgrade,68,09-01-2027,18-03-2027,Tuas Boulevard - YST D1,,Confirmed
+# Repair project 149,Repair and Upgrade,61,10-01-2027,12-03-2027,Tuas Boulevard - YST D3,,Confirmed
+Build project 61,FELS 21,40,13-01-2027,22-02-2027,Tuas Boulevard - YST D2,,Confirmed
+# Repair project 81,Repair and Upgrade,43,14-01-2027,26-02-2027,Tuas Boulevard - YST D4,,Confirmed
+# Repair project 209,Repair and Upgrade,45,18-01-2027,04-03-2027,Tuas Boulevard - YST D5,,Confirmed
+# Repair project 138,Repair and Upgrade,44,27-01-2027,12-03-2027,Tuas Boulevard - YST D2,,Confirmed
+# Repair project 145,Repair and Upgrade,63,31-01-2027,04-04-2027,Tuas Boulevard - YST D4,,Confirmed
+# Repair project 183,Repair and Upgrade,45,20-02-2027,06-04-2027,Tuas Boulevard - YST D5,,Confirmed
+# Repair project 117,Repair and Upgrade,46,25-02-2027,12-04-2027,Tuas Boulevard - YST D1,,Confirmed
+# Repair project 105,Repair and Upgrade,103,15-03-2027,26-06-2027,Tuas Boulevard - YST D5,,Confirmed
+Build project 7,Floating Barge,38,19-03-2027,26-04-2027,Tuas Boulevard - YST D7,,Confirmed
+# Repair project 26,Repair and Upgrade,75,21-03-2027,04-06-2027,Tuas Boulevard - YST D6,,Confirmed
+Build project 59,Erection & Integration - Hull & Topside,156,26-03-2027,29-08-2027,Tuas Boulevard - YST D7,,Confirmed
+# Repair project 77,Passenger / Cruise,52,03-07-2027,24-08-2027,Tuas Boulevard - YST D3,,Confirmed
+Build project 26,FLNG,155,26-07-2027,28-12-2027,Tuas Boulevard - YST D2,,Confirmed
+# Repair project 107,Repair and Upgrade,113,29-07-2027,19-11-2027,Tuas Boulevard - YST D5,,Confirmed
+# Repair project 168,Repair and Upgrade,46,12-08-2027,27-09-2027,Tuas Boulevard - YST D3,,Confirmed
+# Repair project 29,Passenger/Cruise,67,20-08-2027,26-10-2027,Tuas Boulevard - YST D4,,Confirmed
+Build project 5,Hull Erection & Topside Integration,295,01-11-2027,22-08-2028,Tuas Boulevard - YST D7,,Confirmed
+# Repair project 56,Repair and Upgrade,46,22-11-2027,07-01-2028,Tuas Boulevard - YST D3,,Confirmed
+# Repair project 27,Repair and Upgrade,47,08-12-2027,24-01-2028,Tuas Boulevard - YST D3,,Confirmed
+# Repair project 27,Repair and Upgrade,47,08-12-2027,24-01-2028,Tuas Boulevard - YST D3,,Confirmed
+Build project 42,Topside Module Integration,63,27-05-2028,29-07-2028,Tuas Boulevard - YST D7,,Confirmed
+Build project 5,FPU Integration,44,28-07-2028,10-09-2028,Tuas Boulevard - YST D7,,Confirmed
+Build project 6,Hull Erection & Topside Integration,286,31-10-2028,13-08-2029,Tuas Boulevard - YST D7,,Confirmed
+Build project 6,Hull Erection & Topside Integration,82,12-07-2029,02-10-2029,Tuas Boulevard - YST D7,,Confirmed

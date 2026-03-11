@@ -1,3 +1,3 @@
 project_id,project_name,duration_days,start_date,end_date,resource,dependencies,cost,priority
-PRJ-F23,S1,60,01-03-2026,30-04-2026,JY-QE,,,High
-PRJ-F23,S2,153,01-05-2026,01-10-2026,JY-QC,,,High
+PRJ-FPU-1,Drydock,480,01-01-2028,30-04-2029,Tuas Boulevard - YST D2,,,High
+PRJ-FPU-1,Berthing,210,01-05-2029,01-01-2030,Tuas Boulevard - YST D2,PRJ-FPU-1,,High
