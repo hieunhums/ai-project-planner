@@ -5,6 +5,7 @@ import { IteratePage } from './pages/IteratePage';
 import { LoginPage } from './pages/LoginPage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { ProjectLandingPage } from './pages/ProjectLandingPage';
+import { GanttPage } from './pages/GanttPage';
 import { getPersona } from './services/session';
 import { ROUTES } from './routes';
 import './App.css';
@@ -41,6 +42,14 @@ function App() {
             }
           />
           <Route
+            path={ROUTES.gantt}
+            element={
+              <ProtectedRoute>
+                <GanttPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
             path={ROUTES.compare}
             element={
               <ProtectedRoute>
@@ -53,6 +62,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <IteratePage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path={ROUTES.projectProposal}
+            element={
+              <ProtectedRoute>
+                <ProjectLandingPage />
               </ProtectedRoute>
             }
           />

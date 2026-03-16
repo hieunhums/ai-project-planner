@@ -3,7 +3,7 @@ Database models using SQLAlchemy ORM
 """
 
 from datetime import datetime
-from typing import Optional
+from typing import Optional, Any
 from sqlalchemy import String, Integer, Float, DateTime, Text, JSON, Enum as SQLEnum, ForeignKey
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 import enum
@@ -40,6 +40,22 @@ class Project(Base):
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     name: Mapped[str] = mapped_column(String(255), nullable=False)
+
+    # Sprint 002: enquiry-to-proposal metadata
+    # project_type is non-nullable with server_default so existing rows are not broken
+    project_type: Mapped[str] = mapped_column(
+        String(50), nullable=False, server_default="confirmed"
+    )  # "confirmed" | "enquiry"
+    hull_length: Mapped[Optional[float]] = mapped_column(Float, nullable=True)
+    hull_width: Mapped[Optional[float]] = mapped_column(Float, nullable=True)
+    hull_height: Mapped[Optional[float]] = mapped_column(Float, nullable=True)
+    topside_weight: Mapped[Optional[float]] = mapped_column(Float, nullable=True)
+    preferred_location: Mapped[Optional[str]] = mapped_column(String(100), nullable=True)
+    # "Singapore - Tuas Boulevard" | "Singapore - Pioneer" | "JY-QA" | ... | "No preferences"
+    preferred_yard: Mapped[Optional[str]] = mapped_column(String(100), nullable=True)
+    # JSON list of selected process strings: ["drydock", "loadout", ...]
+    processes: Mapped[Optional[Any]] = mapped_column(JSON, nullable=True)
+    block_breakdown: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
 
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
     updated_at: Mapped[datetime] = mapped_column(

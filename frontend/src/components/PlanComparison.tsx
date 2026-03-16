@@ -1,9 +1,9 @@
 import React, { useMemo, useState } from 'react';
-import type { PlanComparison, TaskDifference } from '../services/types';
+import type { PlanComparison as PlanComparisonData, TaskDifference } from '../services/types';
 import './PlanComparison.css';
 
 interface PlanComparisonProps {
-  comparison: PlanComparison;
+  comparison: PlanComparisonData;
 }
 
 const statusLabels: Record<TaskDifference['status'], string> = {

@@ -1,0 +1,98 @@
+/* GanttNLEdit.css */
+
+.nl-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nl-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nl-edit-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary, #374151);
+}
+
+.nl-edit-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nl-edit-input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9375rem;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  color: #1f2937;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  font-family: var(--font-mono, monospace);
+}
+
+.nl-edit-input::placeholder {
+  color: #9ca3af;
+}
+
+.nl-edit-input:focus {
+  outline: none;
+  border-color: var(--color-primary, #3b82f6);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+.nl-edit-input:disabled {
+  opacity: 0.5;
+}
+
+.nl-edit-btn {
+  white-space: nowrap;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+}
+
+.nl-edit-spinner {
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+.nl-edit-hint {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: #6b7280;
+}
+
+.nl-edit-hint em {
+  font-style: normal;
+  font-family: var(--font-mono, monospace);
+  color: #4b5563;
+  white-space: pre-line;
+  display: block;
+}
+
+.nl-edit-error {
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.nl-edit-success {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #047857;
+}
+
+.nl-edit-success em {
+  font-style: normal;
+  font-family: var(--font-mono, monospace);
+}

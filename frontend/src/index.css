@@ -37,3 +37,60 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* ── Utility button classes ──────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1.125rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  font-family: inherit;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+  border: none;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--accent, #c94e34);
+  color: #ffffff;
+}
+
+.btn-primary:not(:disabled):hover {
+  background: #b0422a;
+  box-shadow: 0 4px 14px rgba(201, 78, 52, 0.35);
+}
+
+.btn-secondary {
+  background: var(--surface-strong, #f6f3ed);
+  color: var(--text-primary, #1f1f1f);
+  border: 1px solid var(--border-subtle, rgba(31, 31, 31, 0.12));
+}
+
+.btn-secondary:not(:disabled):hover {
+  background: var(--border-subtle, rgba(31, 31, 31, 0.08));
+}
+
+.btn-proceed {
+  background: #16a34a;
+  color: #ffffff;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-proceed:not(:disabled):hover {
+  background: #15803d;
+  box-shadow: 0 4px 14px rgba(22, 163, 74, 0.3);
+}
+

@@ -6,7 +6,6 @@
 import axios, { AxiosInstance, AxiosError } from 'axios';
 import type {
   Plan,
-  PlanCreateRequest,
   PlanUploadResponse,
   HealthCheckResponse,
   ErrorResponse,
@@ -15,6 +14,10 @@ import type {
   ProjectSummary,
   ProjectDetail,
   ProjectCreateRequest,
+  YardAvailabilityRow,
+  CapacityPlanResponse,
+  NLEditAction,
+  CapacityPlanRow,
 } from './types';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api';
@@ -167,3 +170,119 @@ export const api = {
   exportPlan: (planId: number, format: 'csv' | 'gantt' | 'json') =>
     apiClient.exportPlan(planId, format),
 };
+
+// ---------------------------------------------------------------------------
+// Sprint 002: Enquiry-to-Proposal — standalone fetch functions
+// Using native fetch + AbortController so we can apply per-call timeouts
+// independently of the global axios client (30 s for stub endpoints).
+// ---------------------------------------------------------------------------
+
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api';
+
+/** Save project details form data (multipart/form-data with two CSV uploads) */
+export interface SaveProjectDetailsResponse {
+  id: number;
+  name: string;
+  project_type: string;
+  warnings: string[];
+}
+
+export async function saveProjectDetails(
+  projectId: number,
+  formData: FormData
+): Promise<SaveProjectDetailsResponse> {
+  const response = await fetch(`${API_BASE}/projects/${projectId}/details`, {
+    method: 'POST',
+    body: formData,
+    // Do NOT set Content-Type — browser sets multipart boundary automatically
+  });
+  if (!response.ok) {
+    const body = await response.json().catch(() => ({}));
+    throw new Error(body?.detail || `Failed to save project details (${response.status})`);
+  }
+  return response.json() as Promise<SaveProjectDetailsResponse>;
+}
+
+/** Fetch yard availability with a 30 s timeout (stub introduces 10–20 s delay) */
+export async function fetchYardAvailability(projectId: number): Promise<YardAvailabilityRow[]> {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 30_000);
+  try {
+    const response = await fetch(`${API_BASE}/projects/${projectId}/yard-availability`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      signal: controller.signal,
+    });
+    if (!response.ok) {
+      const body = await response.json().catch(() => ({}));
+      throw new Error(body?.detail || `Yard availability failed (${response.status})`);
+    }
+    const data = await response.json();
+    return data.yards as YardAvailabilityRow[];
+  } catch (err) {
+    if ((err as Error).name === 'AbortError') {
+      throw new Error('Request timed out after 30s');
+    }
+    throw err;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+/** Fetch capacity plan with a 30 s timeout (stub introduces 10–20 s delay) */
+export async function fetchCapacityPlan(
+  projectId: number,
+  selectedYards: string[],
+  prompt: string
+): Promise<CapacityPlanResponse> {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 30_000);
+  try {
+    const response = await fetch(`${API_BASE}/projects/${projectId}/capacity-plan`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ selected_yards: selectedYards, prompt }),
+      signal: controller.signal,
+    });
+    if (!response.ok) {
+      const body = await response.json().catch(() => ({}));
+      throw new Error(body?.detail || `Capacity plan failed (${response.status})`);
+    }
+    return (await response.json()) as CapacityPlanResponse;
+  } catch (err) {
+    if ((err as Error).name === 'AbortError') {
+      throw new Error('Request timed out after 30s');
+    }
+    throw err;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+/** Parse a natural-language edit command (rule-based, no simulated delay) */
+export async function parseNLCommand(projectId: number, command: string): Promise<NLEditAction> {
+  const response = await fetch(`${API_BASE}/projects/${projectId}/plan-edit/parse`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ command }),
+  });
+  if (!response.ok) {
+    const body = await response.json().catch(() => ({}));
+    throw new Error(body?.detail || `NL parse failed (${response.status})`);
+  }
+  return (await response.json()) as NLEditAction;
+}
+
+/** Persist updated plan rows to the backend after NL or drag-drop edit */
+export async function updatePlan(projectId: number, rows: CapacityPlanRow[]): Promise<void> {
+  const response = await fetch(`${API_BASE}/projects/${projectId}/plan`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ rows }),
+  });
+  if (!response.ok) {
+    const body = await response.json().catch(() => ({}));
+    throw new Error(body?.detail || `Plan update failed (${response.status})`);
+  }
+}
+

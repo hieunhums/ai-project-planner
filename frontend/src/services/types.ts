@@ -76,6 +76,8 @@ export interface ProjectSummary {
   id: number;
   name: string;
   created_at?: string;
+  /** Sprint 002: project type from the details form */
+  project_type?: 'confirmed' | 'enquiry';
 }
 
 export interface UploadSummary {
@@ -173,4 +175,56 @@ export interface RecommendationDecisionResponse {
   recommendation_id: number;
   status: RecommendationStatus;
   updated_task_ids: string[];
+}
+
+// ---------------------------------------------------------------------------
+// Sprint 002: Enquiry-to-Proposal types
+// Date strings use DD-MM-YYYY format to match the CSV fixture convention.
+// ---------------------------------------------------------------------------
+
+export type ProjectType = 'confirmed' | 'enquiry';
+
+export interface ProjectDetails {
+  project_type: ProjectType;
+  project_name: string;
+  start_date: string; // DD-MM-YYYY
+  end_date: string; // DD-MM-YYYY
+  hull_length: number;
+  hull_width: number;
+  hull_height: number;
+  topside_weight: number;
+  preferred_location: string;
+  preferred_yard: string;
+  processes: string[];
+  block_breakdown: string;
+}
+
+export interface YardAvailabilityRow {
+  yard_name: string;
+  location: string;
+  availability: 'Available' | 'Occupied';
+}
+
+export interface CapacityPlanRow {
+  project_id: string;
+  project_name: string;
+  duration_days: number;
+  start_date: string; // DD-MM-YYYY
+  end_date: string; // DD-MM-YYYY
+  resource: string;
+  dependencies: string;
+  cost: string;
+  priority: string;
+}
+
+export interface CapacityPlanResponse {
+  plan: CapacityPlanRow[];
+  rationale: string;
+}
+
+export interface NLEditAction {
+  project_id: string;
+  field: string; // "resource" for MVP
+  from_value: string;
+  to_value: string;
 }
