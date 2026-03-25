@@ -57,6 +57,11 @@ class Project(Base):
     processes: Mapped[Optional[Any]] = mapped_column(JSON, nullable=True)
     block_breakdown: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
 
+    # Plan state persistence (replaces sessionStorage)
+    plan_state_json: Mapped[Optional[Any]] = mapped_column(JSON, nullable=True)
+    human_plan_json: Mapped[Optional[Any]] = mapped_column(JSON, nullable=True)
+    plan_rationale: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
     updated_at: Mapped[datetime] = mapped_column(
         DateTime, default=datetime.utcnow, onupdate=datetime.utcnow

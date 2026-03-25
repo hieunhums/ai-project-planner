@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { buildProjectPath } from '../routes';
+import { buildProjectPath, buildGanttPath } from '../routes';
 import { useProjects } from '../hooks/useProjects';
 import { ProjectCard } from '../components/ProjectCard';
 import { ProjectCreateModal } from '../components/ProjectCreateModal';
+import { YardSummaryDashboard } from '../components/YardSummaryDashboard';
+import { useAllPlanData } from '../hooks/useAllPlanData';
 import './ProjectsPage.css';
 
 export const ProjectsPage: React.FC = () => {
   const navigate = useNavigate();
   const { projects, isLoading, error, createProject, refresh } = useProjects();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { data: yardData } = useAllPlanData();
 
   const handleCreate = async (name: string) => {
     const project = await createProject(name);
@@ -58,11 +61,36 @@ export const ProjectsPage: React.FC = () => {
               name={project.name}
               createdAt={project.created_at}
               project_type={project.project_type}
-              onOpen={() => navigate(buildProjectPath(project.id))}
+              has_plan={(project as any).has_plan}
+              onOpen={() => {
+                if ((project as any).has_plan) {
+                  navigate(buildGanttPath(project.id));
+                } else {
+                  navigate(buildProjectPath(project.id));
+                }
+              }}
               onDelete={handleDelete}
             />
           ))}
         </div>
+      )}
+
+      {/* Yard Overview section */}
+      {yardData.length > 0 && (
+        <section className="home-yard-section">
+          <h2>Yard Capacity Overview</h2>
+          <p className="home-yard-subtitle">
+            {new Set(yardData.map(r => (r.resource || '').split(' - ')[0]).filter(Boolean)).size} yard groups · {yardData.length} tasks across all projects
+          </p>
+          <div className="home-yard-card">
+            <YardSummaryDashboard
+              planData={yardData}
+              onDrillDown={() => { navigate('/yard-overview'); }}
+              onSelectYard={() => { navigate('/yard-overview'); }}
+              selectedYard={null}
+            />
+          </div>
+        </section>
       )}
 
       <ProjectCreateModal

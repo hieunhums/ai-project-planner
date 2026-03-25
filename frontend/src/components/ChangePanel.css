@@ -1,0 +1,193 @@
+.change-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  height: 100%;
+  overflow-y: auto;
+  padding: 1.25rem;
+  background: #1a1d24;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.cp-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cp-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.cp-count {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.06);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+.cp-hint {
+  margin: 0;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.5;
+}
+
+.cp-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.cp-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.5);
+}
+
+.cp-row-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.4rem;
+}
+
+.change-panel input,
+.change-panel select,
+.change-panel textarea {
+  padding: 0.45rem 0.6rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  background: rgba(255,255,255,0.05);
+  color: #e0e0e0;
+  font-size: 0.82rem;
+  font-family: inherit;
+  transition: border-color 0.15s;
+}
+
+.change-panel input:focus,
+.change-panel select:focus,
+.change-panel textarea:focus {
+  border-color: #00a3a3;
+  outline: none;
+}
+
+.change-panel input::placeholder,
+.change-panel textarea::placeholder {
+  color: rgba(255,255,255,0.25);
+}
+
+.change-panel textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.cp-replan-btn {
+  padding: 0.65rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #00a3a3;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s;
+  margin-top: 0.25rem;
+}
+
+.cp-replan-btn:hover:not(:disabled) {
+  background: #008585;
+}
+
+.cp-replan-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ── Changed field highlight ──────────────────────────────────────────── */
+.change-panel input.cp-changed,
+.change-panel select.cp-changed {
+  border-color: #f59e0b !important;
+  background: rgba(245,158,11,0.08) !important;
+}
+
+/* ── Changes summary ─────────────────────────────────────────────────── */
+.cp-changes-summary {
+  background: rgba(245,158,11,0.08);
+  border: 1px solid rgba(245,158,11,0.25);
+  border-radius: 8px;
+  padding: 0.6rem 0.75rem;
+}
+
+.cp-changes-list {
+  margin: 0.3rem 0 0;
+  padding: 0 0 0 1.1rem;
+  font-size: 0.75rem;
+  color: #fbbf24;
+  line-height: 1.6;
+}
+
+.cp-footer {
+  margin: 0;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.3);
+  text-align: center;
+}
+
+/* ── NL Edit section (relocated from workspace center) ─────────────── */
+.cp-nl-section {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.cp-nl-form { display: flex; flex-direction: column; gap: 0.3rem; }
+
+.cp-nl-input {
+  width: 100%;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  background: rgba(255,255,255,0.05);
+  color: #e0e0e0;
+  font-size: 0.78rem;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 50px;
+  box-sizing: border-box;
+}
+
+.cp-nl-input:focus { border-color: #00a3a3; outline: none; }
+.cp-nl-input::placeholder { color: rgba(255,255,255,0.25); }
+
+.cp-nl-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.3rem;
+}
+
+.cp-nl-btn {
+  padding: 0.4rem 0.7rem;
+  border: none;
+  border-radius: 6px;
+  background: rgba(0,163,163,0.25);
+  color: #00d4d4;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.cp-nl-btn:hover:not(:disabled) { background: rgba(0,163,163,0.4); }
+.cp-nl-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.cp-nl-spinner { display: flex; align-items: center; padding: 0 0.5rem; }
+
+.cp-nl-error { margin: 0.2rem 0 0; font-size: 0.72rem; color: #f87171; }
+.cp-nl-success { margin: 0.2rem 0 0; font-size: 0.72rem; color: #4ade80; }

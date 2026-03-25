@@ -1,0 +1,177 @@
+.yard-dashboard { display: flex; flex-direction: column; gap: 0.75rem; }
+
+/* ── Header ───────────────────────────────────────────────────────────── */
+.yd-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; }
+.yd-header h3 { margin: 0; font-size: 1.1rem; font-weight: 700; color: #fff; }
+.yd-subtitle { margin: 0.2rem 0 0; font-size: 0.75rem; color: rgba(255,255,255,0.4); }
+.yd-sort { display: flex; align-items: center; gap: 0.3rem; }
+.yd-sort-label { font-size: 0.68rem; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.05em; margin-right: 0.2rem; }
+.yd-sort-btn { padding: 0.2rem 0.55rem; border-radius: 5px; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.03); color: rgba(255,255,255,0.45); font-size: 0.7rem; font-weight: 600; cursor: pointer; transition: all 0.12s; }
+.yd-sort-btn:hover { background: rgba(255,255,255,0.08); color: #fff; }
+.yd-sort-btn--active { background: #00a3a3; border-color: #00a3a3; color: #fff; }
+
+/* ── Heatmap container ────────────────────────────────────────────────── */
+.hm-container {
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.hm-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+  min-width: 700px;
+}
+
+/* ── Header row ───────────────────────────────────────────────────────── */
+.hm-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #1a1d24;
+  padding: 0.45rem 0.35rem;
+  text-align: center;
+  font-weight: 600;
+  color: rgba(255,255,255,0.45);
+  font-size: 0.68rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  white-space: nowrap;
+}
+
+.hm-yard-header {
+  text-align: left !important;
+  padding-left: 0.75rem !important;
+  min-width: 160px;
+  position: sticky;
+  left: 0;
+  z-index: 3 !important;
+}
+
+.hm-avg-header {
+  min-width: 48px;
+}
+
+.hm-q-header { min-width: 44px; }
+.hm-q-header--year { border-left: 1px solid rgba(255,255,255,0.12); }
+
+/* ── Data rows ────────────────────────────────────────────────────────── */
+.hm-row {
+  transition: background 0.1s;
+}
+
+.hm-row:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+.hm-row--selected {
+  background: rgba(0,163,163,0.08) !important;
+}
+
+.hm-row td {
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+/* ── Yard name cell (frozen left) ─────────────────────────────────────── */
+.hm-yard-cell {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: #1a1d24;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: background 0.12s;
+  min-width: 160px;
+}
+
+.hm-row:hover .hm-yard-cell { background: #1e2128; }
+
+.hm-yard-name {
+  display: block;
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 180px;
+}
+
+.hm-yard-meta {
+  display: block;
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.3);
+  margin-top: 0.1rem;
+}
+
+/* ── Avg cell ─────────────────────────────────────────────────────────── */
+.hm-avg-cell {
+  text-align: center;
+  padding: 0.35rem;
+}
+
+.hm-avg-badge {
+  font-weight: 700;
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Heatmap cells ────────────────────────────────────────────────────── */
+.hm-cell {
+  text-align: center;
+  padding: 0.3rem 0.15rem;
+  cursor: pointer;
+  transition: all 0.1s;
+  border-left: 1px solid rgba(255,255,255,0.02);
+  min-width: 44px;
+  height: 36px;
+  vertical-align: middle;
+}
+
+.hm-cell:hover {
+  outline: 2px solid #00a3a3;
+  outline-offset: -2px;
+  z-index: 1;
+  position: relative;
+}
+
+.hm-cell-text {
+  font-size: 0.68rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Year boundary in data */
+.hm-row td:nth-child(n) { /* handled by Q1 border via JS class */ }
+
+/* ── Legend ────────────────────────────────────────────────────────────── */
+.hm-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.hm-legend-label {
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.35);
+  font-weight: 600;
+}
+
+.hm-legend-swatch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.6);
+  min-width: 36px;
+}
+
+/* ── Scrollbar ────────────────────────────────────────────────────────── */
+.hm-container::-webkit-scrollbar { height: 6px; }
+.hm-container::-webkit-scrollbar-track { background: rgba(255,255,255,0.02); }
+.hm-container::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+.hm-container::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }

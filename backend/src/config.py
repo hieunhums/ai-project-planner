@@ -25,7 +25,7 @@ class Settings(BaseSettings):
 
     # Database
     database_url: str = Field(
-        default="sqlite:///./planning_assistant.db", alias="DATABASE_URL"
+        default="postgresql://seatrium:seatrium@localhost:5432/seatrium", alias="DATABASE_URL"
     )
 
     # Azure OpenAI (via Azure AI Foundry)

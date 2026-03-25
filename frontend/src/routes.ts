@@ -4,6 +4,7 @@ export const ROUTES = {
   projectDetail: '/projects/:projectId',
   gantt: '/projects/:projectId/gantt',
   projectProposal: '/projects/:projectId/proposal',
+  yardOverview: '/yard-overview',
   compare: '/compare',
   iterate: '/iterate',
 } as const;

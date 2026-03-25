@@ -36,11 +36,11 @@ export const LoginPage: React.FC = () => {
     <div className="login-page">
       <div className="login-shell">
         <div className="login-hero">
-          <div className="login-badge">AI Planning Demo</div>
-          <h1>Welcome to the Planning Hub</h1>
+          <div className="login-badge">Seatrium AI Planner</div>
+          <h1>Shipyard Planning Hub</h1>
           <p>
-            Choose a persona to enter the workspace. Both routes lead to the same demo
-            experience, so pick the view that fits your story.
+            Upload your scheduling data, change parameters, and let AI replan
+            with advanced reasoning. Select your role to get started.
           </p>
         </div>
         <div className="login-card">

@@ -131,6 +131,7 @@ class ProjectSummary(BaseModel):
     name: str
     created_at: Optional[datetime] = None
     project_type: str = "confirmed"  # "confirmed" | "enquiry"
+    has_plan: bool = False
 
 
 class UploadSummary(BaseModel):
@@ -158,6 +159,13 @@ class ProjectDetail(BaseModel):
     name: str
     uploads: List[UploadSummary]
     generated_plans: List[GeneratedPlanSummary]
+    hull_length: Optional[float] = None
+    hull_width: Optional[float] = None
+    hull_height: Optional[float] = None
+    topside_weight: Optional[float] = None
+    preferred_location: Optional[str] = None
+    preferred_yard: Optional[str] = None
+    project_type: Optional[str] = None
 
 
 class ConstraintUpdateRequest(BaseModel):

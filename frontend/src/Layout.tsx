@@ -14,7 +14,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
   const persona = getPersona();
   const isLogin = location.pathname === ROUTES.login;
   const showNav = !isLogin;
-  const activePath = location.pathname;
+
 
   const handleLogout = () => {
     clearPersona();
@@ -26,36 +26,36 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
       {showNav && (
         <header className="layout-header">
           <div className="header-content">
-            <div>
-              <h1>AI Planning Assistant</h1>
-              <p className="subtitle">Shipyard & Port Logistics Planning for Contoso</p>
+            <Link to={ROUTES.projects} className="header-logo">
+              <svg className="header-logo-icon" viewBox="0 0 40 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 0C12 0 5.5 4 2 8c4 2 10 4 18 4s14-2 18-4c-3.5-4-10-8-18-8z" fill="#003EFF" opacity="0.3"/>
+                <path d="M20 6C12 6 5.5 10 2 14c4 2 10 4 18 4s14-2 18-4c-3.5-4-10-8-18-8z" fill="#003EFF" opacity="0.6"/>
+                <path d="M20 12C12 12 5.5 16 2 20c4 2 10 4 18 4s14-2 18-4c-3.5-4-10-8-18-8z" fill="#003EFF"/>
+              </svg>
+              <span className="header-logo-text">Seatrium</span>
+              <span className="header-logo-sub">AI Planner</span>
+            </Link>
+
+            <nav className="header-nav">
+            </nav>
+
+            <div className="header-right">
+              {persona && (
+                <>
+                  <span className="header-persona">{persona}</span>
+                  <button type="button" className="header-logout" onClick={handleLogout}>
+                    Log out
+                  </button>
+                </>
+              )}
             </div>
-            {persona && (
-              <div className="persona-actions">
-                <div className="persona-pill">{persona}</div>
-                <button type="button" className="logout-btn" onClick={handleLogout}>
-                  Log out
-                </button>
-              </div>
-            )}
           </div>
-          <nav className="header-nav">
-            <Link className={activePath.startsWith(ROUTES.projects) ? 'active' : ''} to={ROUTES.projects}>
-              Projects
-            </Link>
-            <Link className={activePath === ROUTES.compare ? 'active' : ''} to={ROUTES.compare}>
-              Compare Plans
-            </Link>
-            <Link className={activePath === ROUTES.iterate ? 'active' : ''} to={ROUTES.iterate}>
-              Iterate Constraints
-            </Link>
-          </nav>
         </header>
       )}
       <main className="layout-main">{children}</main>
       {showNav && (
         <footer className="layout-footer">
-          <p>&copy; 2026 Contoso - AI-Augmented Planning Demo</p>
+          <p>&copy; 2026 Seatrium Limited. All rights reserved.</p>
         </footer>
       )}
     </div>

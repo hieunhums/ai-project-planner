@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+name: seatrium-ai-planner
+metadata:
+  template: seatrium-ai-planner
+services:
+  backend:
+    project: ./backend
+    host: containerapp
+    language: python
+    docker:
+      path: ../docker/Dockerfile.backend
+      context: ../backend
+  frontend:
+    project: ./frontend
+    host: containerapp
+    language: js
+    docker:
+      path: ../docker/Dockerfile.frontend
+      context: ../frontend

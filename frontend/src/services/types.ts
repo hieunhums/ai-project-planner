@@ -99,6 +99,13 @@ export interface ProjectDetail {
   name: string;
   uploads: UploadSummary[];
   generated_plans: GeneratedPlanSummary[];
+  hull_length?: number | null;
+  hull_width?: number | null;
+  hull_height?: number | null;
+  topside_weight?: number | null;
+  preferred_location?: string | null;
+  preferred_yard?: string | null;
+  project_type?: string | null;
 }
 
 export interface ProjectCreateRequest {

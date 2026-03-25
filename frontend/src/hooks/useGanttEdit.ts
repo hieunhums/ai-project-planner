@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import type { CapacityPlanRow, NLEditAction } from '../services/types';
 import { parseNLCommand, updatePlan } from '../services/api';
 import { saveUndoState, loadUndoState, clearUndoState, savePlanState, loadPlanState } from '../services/session';
@@ -13,6 +13,7 @@ export interface UseGanttEditReturn {
   applyDateShift: (planProjectId: string, deltaDays: number) => Promise<void>;
   undo: () => Promise<void>;
   clearError: () => void;
+  resetPlan: (newPlan: CapacityPlanRow[]) => void;
 }
 
 // ── Date helpers ──────────────────────────────────────────────────────────────
@@ -47,6 +48,13 @@ export function useGanttEdit(
   initialPlan: CapacityPlanRow[],
 ): UseGanttEditReturn {
   const [plan, setPlan] = useState<CapacityPlanRow[]>(initialPlan);
+
+  // Sync with initialPlan when it changes (server load, or after replan approval)
+  useEffect(() => {
+    if (initialPlan.length > 0) {
+      setPlan(initialPlan);
+    }
+  }, [initialPlan]); // eslint-disable-line react-hooks/exhaustive-deps
   const [undoPlan, setUndoPlan] = useState<CapacityPlanRow[] | null>(() =>
     loadUndoState(projectId),
   );
@@ -175,5 +183,7 @@ export function useGanttEdit(
 
   const clearError = useCallback(() => setError(null), []);
 
-  return { plan, canUndo, isLoading, error, applyNLEdit, applyRowEdit, applyDateShift, undo, clearError };
+  const resetPlan = useCallback((newPlan: CapacityPlanRow[]) => { setPlan(newPlan); }, []);
+
+  return { plan, canUndo, isLoading, error, applyNLEdit, applyRowEdit, applyDateShift, undo, clearError, resetPlan };
 }

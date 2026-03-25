@@ -8,6 +8,7 @@ interface ProjectCardProps {
   name: string;
   createdAt?: string;
   project_type?: string;
+  has_plan?: boolean;
   onOpen: () => void;
   onDelete: () => void;
 }
@@ -28,6 +29,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   name,
   createdAt,
   project_type,
+  has_plan,
   onOpen,
   onDelete,
 }) => {
@@ -69,7 +71,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               <span className="badge badge-enquiry">Enquiry</span>
             )}
           </div>
-          <span className="project-card-open">Open</span>
+          <span className="project-card-open">{has_plan ? 'View Plan' : 'Setup'}</span>
         </div>
         <p className="project-card-meta">{formatDate(createdAt)}</p>
       </button>

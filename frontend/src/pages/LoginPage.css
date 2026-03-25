@@ -2,9 +2,9 @@
   min-height: 100vh;
   display: grid;
   place-items: center;
-  background: radial-gradient(circle at 20% 20%, rgba(255, 230, 210, 0.9), transparent 55%),
-    radial-gradient(circle at 80% 10%, rgba(201, 78, 52, 0.25), transparent 45%),
-    linear-gradient(135deg, #f7efe6 0%, #f4e9de 100%);
+  background: radial-gradient(circle at 20% 20%, rgba(210, 240, 250, 0.9), transparent 55%),
+    radial-gradient(circle at 80% 10%, rgba(0, 163, 163, 0.25), transparent 45%),
+    linear-gradient(135deg, #e8f4f8 0%, #dceef5 100%);
   padding: 4rem 2rem;
 }
 
@@ -30,8 +30,8 @@
   font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  background: rgba(201, 78, 52, 0.18);
-  color: #7a2f1f;
+  background: rgba(0, 163, 163, 0.18);
+  color: #005f5f;
   width: fit-content;
 }
 
@@ -49,11 +49,11 @@
 }
 
 .login-card {
-  background: #fffaf5;
+  background: #f5fbfb;
   border-radius: 28px;
   padding: 2.5rem;
   box-shadow: var(--shadow-elevated);
-  border: 1px solid rgba(201, 78, 52, 0.2);
+  border: 1px solid rgba(0, 163, 163, 0.2);
   display: grid;
   gap: 1.5rem;
 }
@@ -86,7 +86,7 @@
 .persona-option:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 28px rgba(31, 31, 31, 0.12);
-  border-color: rgba(201, 78, 52, 0.4);
+  border-color: rgba(0, 163, 163, 0.4);
 }
 
 .persona-title {
@@ -105,7 +105,7 @@
 
 .persona-action {
   font-weight: 600;
-  color: #c94e34;
+  color: #00a3a3;
 }
 
 .login-note {

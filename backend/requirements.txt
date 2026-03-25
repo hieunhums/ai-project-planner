@@ -8,9 +8,9 @@ pandas>=2.1.4
 openpyxl>=3.1.2
 python-multipart>=0.0.6
 
-# Azure AI & Agent Framework (to be added after SDK compatibility check)
-# azure-ai-inference>=1.0.0b1
-# agent-framework>=0.1.0
+# Azure OpenAI + Identity
+azure-identity>=1.25.0
+openai>=2.0.0
 
 # Development dependencies
 pytest>=7.4.4

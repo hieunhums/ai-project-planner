@@ -5,7 +5,8 @@ import { IteratePage } from './pages/IteratePage';
 import { LoginPage } from './pages/LoginPage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { ProjectLandingPage } from './pages/ProjectLandingPage';
-import { GanttPage } from './pages/GanttPage';
+import { PlanWorkspacePage } from './pages/PlanWorkspacePage';
+import { YardOverviewPage } from './pages/YardOverviewPage';
 import { getPersona } from './services/session';
 import { ROUTES } from './routes';
 import './App.css';
@@ -45,7 +46,15 @@ function App() {
             path={ROUTES.gantt}
             element={
               <ProtectedRoute>
-                <GanttPage />
+                <PlanWorkspacePage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path={ROUTES.yardOverview}
+            element={
+              <ProtectedRoute>
+                <YardOverviewPage />
               </ProtectedRoute>
             }
           />

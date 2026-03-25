@@ -26,6 +26,7 @@ def list_projects(db: Session) -> List[ProjectSummary]:
             name=project.name,
             created_at=project.created_at,
             project_type=project.project_type or "confirmed",
+            has_plan=project.plan_state_json is not None and len(project.plan_state_json) > 0,
         )
         for project in projects
     ]
@@ -35,6 +36,10 @@ def create_project(db: Session, name: str) -> ProjectSummary:
     trimmed = name.strip()
     if not trimmed:
         raise ValueError("Project name is required")
+
+    existing = db.query(Project).filter(Project.name == trimmed).first()
+    if existing:
+        raise ValueError(f"A project named '{trimmed}' already exists")
 
     project = Project(name=trimmed)
     db.add(project)
@@ -83,6 +88,13 @@ def get_project_detail(db: Session, project_id: int) -> ProjectDetail:
         name=project.name,
         uploads=uploads,
         generated_plans=generated_plans,
+        hull_length=project.hull_length,
+        hull_width=project.hull_width,
+        hull_height=project.hull_height,
+        topside_weight=project.topside_weight,
+        preferred_location=project.preferred_location,
+        preferred_yard=project.preferred_yard,
+        project_type=project.project_type,
     )
 
 

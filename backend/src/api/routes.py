@@ -33,6 +33,7 @@ from ..services.planning_service import (
 from ..services.comparison_service import PlanComparisonService
 from ..services.simulation_service import simulate_yard_availability, simulate_capacity_plan
 from ..services.nl_parse_service import parse_nl_command
+from ..services.replan_service import replan as replan_with_ai, replan_stream
 from ..services.ai_service import MockAIService, AzureOpenAIService
 from ..agents.planning_agent import create_planning_agent
 from ..models.database import Plan, PlanStatus, PlanLineageType, Project
@@ -132,6 +133,23 @@ async def delete_project_endpoint(project_id: int, db: Session = Depends(get_db)
         delete_project(db, project_id)
     except ValueError as exc:
         raise HTTPException(status_code=404, detail=str(exc))
+
+
+@project_router.patch("/{project_id}")
+async def update_project_fields(project_id: int, request: dict, db: Session = Depends(get_db)):
+    """Update project context fields (hull dimensions, yard preference, etc.)."""
+    project = db.query(Project).filter(Project.id == project_id).first()
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+
+    allowed = ['hull_length', 'hull_width', 'hull_height', 'topside_weight',
+               'preferred_location', 'preferred_yard', 'processes', 'project_type']
+    for key in allowed:
+        if key in request:
+            setattr(project, key, request[key])
+
+    db.commit()
+    return {"id": project.id, "name": project.name, "updated": list(request.keys())}
 
 
 # ---------------------------------------------------------------------------
@@ -298,6 +316,82 @@ async def parse_nl_edit(
             ),
         )
     return NLEditAction(**action)
+
+
+# ── Plan state persistence ───────────────────────────────────────────────────
+
+@project_router.put("/{project_id}/plan-state")
+async def save_plan_state(project_id: int, request: dict, db: Session = Depends(get_db)):
+    """Save plan state (plan rows + human plan rows + rationale) server-side."""
+    project = db.query(Project).filter(Project.id == project_id).first()
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+
+    if "plan" in request:
+        project.plan_state_json = request["plan"]
+    if "human_plan" in request:
+        project.human_plan_json = request["human_plan"]
+    if "rationale" in request:
+        project.plan_rationale = request["rationale"]
+
+    db.commit()
+    return {"status": "saved"}
+
+
+@project_router.get("/{project_id}/plan-state")
+async def load_plan_state(project_id: int, db: Session = Depends(get_db)):
+    """Load plan state from server."""
+    project = db.query(Project).filter(Project.id == project_id).first()
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+
+    return {
+        "plan": project.plan_state_json,
+        "human_plan": project.human_plan_json,
+        "rationale": project.plan_rationale,
+    }
+
+
+# ── AI Replan endpoint ──────────────────────────────────────────────────────
+
+@project_router.post("/{project_id}/replan")
+async def replan_endpoint(project_id: int, request: dict):
+    """Replan a project schedule using Azure OpenAI o3 with advanced reasoning.
+
+    Accepts the current plan rows + a set of changes (hull dimensions, yard preference,
+    constraints, optimization goal). Returns changed rows + per-task reasoning.
+    """
+    plan_rows = request.get("plan_rows", [])
+    changes = request.get("changes", {})
+
+    if not plan_rows:
+        raise HTTPException(status_code=400, detail="plan_rows is required")
+    if not changes:
+        raise HTTPException(status_code=400, detail="changes is required")
+
+    try:
+        result = replan_with_ai(plan_rows, changes)
+        return result
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Replan failed: {str(e)}")
+
+
+@project_router.post("/{project_id}/replan/stream")
+async def replan_stream_endpoint(project_id: int, request: dict):
+    """Stream replan response as Server-Sent Events."""
+    plan_rows = request.get("plan_rows", [])
+    changes = request.get("changes", {})
+
+    if not plan_rows:
+        raise HTTPException(status_code=400, detail="plan_rows is required")
+    if not changes:
+        raise HTTPException(status_code=400, detail="changes is required")
+
+    return StreamingResponse(
+        replan_stream(plan_rows, changes),
+        media_type="text/event-stream",
+        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
+    )
 
 
 @project_router.put("/{project_id}/plan")

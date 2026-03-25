@@ -20,7 +20,7 @@ import type {
   CapacityPlanRow,
 } from './types';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8001/api';
 
 class APIClient {
   private client: AxiosInstance;
@@ -177,7 +177,7 @@ export const api = {
 // independently of the global axios client (30 s for stub endpoints).
 // ---------------------------------------------------------------------------
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8001/api';
 
 /** Save project details form data (multipart/form-data with two CSV uploads) */
 export interface SaveProjectDetailsResponse {
@@ -271,6 +271,154 @@ export async function parseNLCommand(projectId: number, command: string): Promis
     throw new Error(body?.detail || `NL parse failed (${response.status})`);
   }
   return (await response.json()) as NLEditAction;
+}
+
+/** Server-side plan state persistence */
+export async function savePlanStateToServer(
+  projectId: number,
+  plan: CapacityPlanRow[] | null,
+  humanPlan: CapacityPlanRow[] | null,
+  rationale: string
+): Promise<void> {
+  // Only include non-null fields so we don't overwrite existing server data
+  const body: Record<string, any> = {};
+  if (plan !== null) body.plan = plan;
+  if (humanPlan !== null) body.human_plan = humanPlan;
+  if (rationale) body.rationale = rationale;
+
+  await fetch(`${API_BASE}/projects/${projectId}/plan-state`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+}
+
+export interface ServerPlanState {
+  plan: CapacityPlanRow[] | null;
+  human_plan: CapacityPlanRow[] | null;
+  rationale: string | null;
+}
+
+export async function loadPlanStateFromServer(projectId: number): Promise<ServerPlanState> {
+  const response = await fetch(`${API_BASE}/projects/${projectId}/plan-state`);
+  if (!response.ok) return { plan: null, human_plan: null, rationale: null };
+  return (await response.json()) as ServerPlanState;
+}
+
+/** AI Replan — send current plan + changes to o3 for optimized replanning */
+export interface ReplanRequest {
+  plan_rows: CapacityPlanRow[];
+  changes: Record<string, any>;
+}
+
+export interface ReplanReasoning {
+  summary: string;
+  per_task: Record<string, string>;
+  tradeoffs: string[];
+}
+
+export interface ReplanResponse {
+  changed_rows: CapacityPlanRow[];
+  reasoning: ReplanReasoning;
+  model: string;
+  tokens_used: Record<string, number>;
+}
+
+export async function replanWithAI(
+  projectId: number,
+  planRows: CapacityPlanRow[],
+  changes: Record<string, any>
+): Promise<ReplanResponse> {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 120_000); // 2 min for o3
+  try {
+    const response = await fetch(`${API_BASE}/projects/${projectId}/replan`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ plan_rows: planRows, changes }),
+      signal: controller.signal,
+    });
+    if (!response.ok) {
+      const body = await response.json().catch(() => ({}));
+      throw new Error(body?.detail || `Replan failed (${response.status})`);
+    }
+    return (await response.json()) as ReplanResponse;
+  } catch (err) {
+    if ((err as Error).name === 'AbortError') {
+      throw new Error('Replan timed out after 2 minutes');
+    }
+    throw err;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+/**
+ * Stream replan response via SSE.
+ * onToken(text) called for each token, onDone(result) when complete.
+ */
+export async function updateProjectFields(
+  projectId: number,
+  fields: Record<string, any>
+): Promise<void> {
+  await fetch(`${API_BASE}/projects/${projectId}`, {
+    method: 'PATCH',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(fields),
+  });
+}
+
+export async function replanWithAIStream(
+  projectId: number,
+  planRows: CapacityPlanRow[],
+  changes: Record<string, any>,
+  callbacks: {
+    onToken: (text: string) => void;
+    onDone: (data: { model: string; result: any }) => void;
+    onError: (message: string) => void;
+  }
+): Promise<void> {
+  const response = await fetch(`${API_BASE}/projects/${projectId}/replan/stream`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ plan_rows: planRows, changes }),
+  });
+
+  if (!response.ok) {
+    const body = await response.json().catch(() => ({}));
+    throw new Error(body?.detail || `Replan failed (${response.status})`);
+  }
+
+  const reader = response.body?.getReader();
+  if (!reader) throw new Error('No response body');
+
+  const decoder = new TextDecoder();
+  let buffer = '';
+
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+
+    buffer += decoder.decode(value, { stream: true });
+    const lines = buffer.split('\n');
+    buffer = lines.pop() || '';
+
+    let eventType = '';
+    for (const line of lines) {
+      if (line.startsWith('event: ')) {
+        eventType = line.slice(7).trim();
+      } else if (line.startsWith('data: ')) {
+        const data = line.slice(6);
+        try {
+          const parsed = JSON.parse(data);
+          if (eventType === 'token') callbacks.onToken(parsed.text);
+          else if (eventType === 'done') callbacks.onDone(parsed);
+          else if (eventType === 'error') callbacks.onError(parsed.message);
+        } catch { /* skip malformed */ }
+        eventType = '';
+      }
+    }
+  }
 }
 
 /** Persist updated plan rows to the backend after NL or drag-drop edit */

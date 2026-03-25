@@ -1,146 +1,133 @@
-# AI-Augmented Planning Assistant for Shipyard & Port Logistics
+# Seatrium AI Planner — Shipyard Scheduling & Replanning
 
-Demo web application designed for Shipyard planners to explore how AI can augment human planning decisions for construction and port logistics.
+AI-powered shipyard scheduling tool for Seatrium planners to visualize, manage, and replan vessel projects across Singapore yards.
+
+## What it does
+
+Planners already have schedules. They don't need AI to build from scratch — they need AI to **replan when things change**.
+
+**Core flow**: Upload schedule → View project plan → Change parameters → AI replans with reasoning → Review & approve → Plan updates.
 
 ## Features
 
-- 📊 **Upload Planning Data**: Import existing planning spreadsheets (CSV/Excel)
-- 🤖 **AI Plan Generation**: Generate optimized plans using Azure OpenAI reasoning models
-- 🔍 **Side-by-Side Comparison**: Compare AI plans with human-generated plans
-- 💡 **Explainable AI**: Transparent reasoning and assumptions behind AI decisions
-- ⚙️ **Constraint Iteration**: Modify constraints and regenerate plans (what-if analysis)
-- ✅ **Human-in-the-Loop**: Accept, reject, or modify AI recommendations
-- 📤 **Export Plans**: Export finalized plans for execution teams
+### Project Workspace
+- **Project Details** — vessel info, status, timeline, cost at a glance
+- **Phase Stepper** — visual timeline with numbered phases, dates, current phase highlighted
+- **Project-specific Gantt** — color-coded bars per vessel with zoom controls (Fit/Year/Quarter/Month/Week)
+- **Yard Capacity Heatmap** — collapsible overview of all yards with drill-down to Gantt view
+
+### AI Replan (gpt-5.4-mini / o3)
+- **Pre-filled config** — ChangePanel loads current project values from database
+- **Change detection** — modify any field → amber highlight → "Changes Detected" summary
+- **Streaming AI response** — real-time SSE streaming of AI reasoning
+- **AI Proposal** — summary, per-task explanations, tradeoffs
+- **Delta table** — before/after comparison for every changed row (red strikethrough → green)
+- **Approval flow** — user reviews and explicitly approves before changes are applied
+- **Persistence** — project config + plan rows saved to PostgreSQL on approve
+
+### Data & Visualization
+- **Realistic sample data** — 8 vessel projects (FPSO, LNG Carrier, Jack-Up Rig, Semi-Sub, Drillship, Pipe Layer, OSV, Repair) with 40 phases across 6 Singapore yard groups
+- **Color-coded Gantt** — each vessel gets a distinct color with visible legend
+- **Bar labels** — truncated with "…" to fit, full name on hover
+- **Seatrium branding** — corporate header (#003EFF blue, Arial), white/clean design
 
 ## Tech Stack
 
-### Backend
-- **Framework**: FastAPI (Python 3.11+)
-- **AI**: Azure OpenAI via Azure AI Foundry SDK
-- **Orchestration**: Microsoft Agent Framework
-- **Database**: SQLite (local)
-- **Data Processing**: pandas, openpyxl
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React 18 + TypeScript + Vite |
+| Backend | FastAPI + SQLAlchemy + Pydantic |
+| Database | PostgreSQL (Docker locally, Azure Flexible Server in cloud) |
+| AI | Azure OpenAI gpt-5.4-mini (streaming via SSE) |
+| Auth | Azure Managed Identity (DefaultAzureCredential) |
+| Infra | Azure Container Apps + Azure Database for PostgreSQL |
+| IaC | Bicep via Azure Developer CLI (azd) |
+| Design | Seatrium corporate branding |
 
-### Frontend
-- **Framework**: React 18 + TypeScript
-- **Build Tool**: Vite
-- **State Management**: TanStack Query
-- **Visualization**: Recharts
+## Quick Start
 
-## Quick Start (Local Development)
-
-### Prerequisites
-- Python 3.11+
-- Node.js 20+
-- Azure OpenAI API access
-
-### 1. Backend Setup
+### Local Development
 
 ```bash
+# Backend
 cd backend
-
-# Create virtualenvironment
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-
-# Install dependencies
+python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
+cp .env.example .env  # Configure DATABASE_URL and AZURE_OPENAI_ENDPOINT
 
-# Configure environment
-cp .env.example .env
-# Edit .env with your Azure OpenAI credentials
+# Start PostgreSQL
+docker run -d --name seatrium-db -p 5432:5432 \
+  -e POSTGRES_PASSWORD=seatrium -e POSTGRES_DB=seatrium -e POSTGRES_USER=seatrium \
+  postgres:16
 
-# Run backend
-python src/main.py
-# Server runs at http://localhost:8000
-```
+# Start backend
+uvicorn src.main:app --host 0.0.0.0 --port 8001 --reload
 
-### 2. Frontend Setup
-
-```bash
+# Frontend (new terminal)
 cd frontend
-
-# Install dependencies
 npm install
-
-# Configure environment
-cp .env.example .env
-
-# Run frontend
 npm run dev
-# App runs at http://localhost:5173
 ```
 
-### 3. Test with Sample Data
-
-Sample planning CSV files are available in `backend/tests/fixtures/sample_plans/`:
-- `shipyard_construction_plan.csv` - 20-task shipyard project
-- `resource_availability.csv` - Resource catalog
-- `constraints.csv` - Project constraints
-- `port_operations_human_plan.csv` - Port operations baseline
-
-## Local-First Data Handling
-
-- Uploads are stored locally in `backend/uploads/` and never sent to external storage.
-- The SQLite database file is created locally (see `backend/src/config.py` for the path).
-- To reset demo data, stop the backend, delete the SQLite file, and clear `backend/uploads/`.
-
-## Docker (Optional)
+### Docker Compose
 
 ```bash
-# Build and run all services
-docker-compose -f docker/docker-compose.yml up
+cd docker
+docker compose up --build
+```
 
-# Access:
-# Frontend: http://localhost:5173
-# Backend: http://localhost:8000
+### Azure Deployment (azd)
+
+```bash
+azd init
+azd env set AZURE_OPENAI_ENDPOINT "https://your-resource.cognitiveservices.azure.com/"
+azd env set AZURE_OPENAI_RESOURCE_GROUP "your-rg"
+azd env set AZURE_OPENAI_ACCOUNT_NAME "your-account"
+azd up
+```
+
+## Testing
+
+```bash
+# API + data consistency + replan validation (32 tests)
+python test_validate.py              # local
+python test_validate.py --azure      # Azure deployment
+
+# Demo recording (Playwright)
+python demo_record.py
 ```
 
 ## Project Structure
 
 ```
-ai-project-planner/
-├── backend/                 # FastAPI backend
+├── azure.yaml              # azd service definitions
+├── infra/                   # Bicep IaC (ACA + PostgreSQL + ACR)
+├── docker/                  # Dockerfiles + nginx + compose
+├── backend/
 │   ├── src/
-│   │   ├── api/            # API routes
-│   │   ├── services/       # Business logic
-│   │   ├── agents/         # Agent Framework integration
-│   │   ├── models/         # Database models
-│   │   └── main.py         # Entry point
-│   └── tests/              # Backend tests
-├── frontend/                # React frontend
+│   │   ├── main.py          # FastAPI app
+│   │   ├── api/routes.py    # REST endpoints
+│   │   ├── services/
+│   │   │   ├── replan_service.py  # AI replan (streaming + non-streaming)
+│   │   │   └── ...
+│   │   └── models/          # SQLAlchemy + Pydantic schemas
+│   └── tests/fixtures/      # Sample CSV data
+├── frontend/
 │   ├── src/
-│   │   ├── components/     # React components
-│   │   ├── pages/          # Page components
-│   │   ├── services/       # API client
-│   │   └── hooks/          # Custom hooks
-│   └── tests/              # Frontend tests
-├── docker/                  # Docker configuration
-├── infra/                   # Azure deployment (Bicep)
-└── specs/                   # Feature specifications
+│   │   ├── pages/
+│   │   │   ├── PlanWorkspacePage.tsx   # Main workspace (view + replan modes)
+│   │   │   ├── ProjectLandingPage.tsx  # Project setup form
+│   │   │   ├── ProjectsPage.tsx        # Home (projects + yard overview)
+│   │   │   └── YardOverviewPage.tsx    # Global yard capacity
+│   │   ├── components/
+│   │   │   ├── GanttChart.tsx          # SVG Gantt with color-coding
+│   │   │   ├── ChangePanel.tsx         # Replan sidebar with change detection
+│   │   │   ├── AIReasoningPanel.tsx    # AI proposal display
+│   │   │   └── YardSummaryDashboard.tsx # Heatmap
+│   │   └── hooks/
+│   │       ├── useGanttEdit.ts         # Plan edit state management
+│   │       └── useAllPlanData.ts       # Cross-project data loading
+│   └── nginx.conf
+└── scripts/
+    └── generate_sample_data.py
 ```
-
-## Development Workflow
-
-Phase implementation is tracked in `specs/001-ai-planning-assistant/tasks.md`:
-
-- ✅ **Phase 0**: Research & Technical Decisions
-- ✅ **Phase 1**: Setup (Shared Infrastructure)
-- ✅ **Phase 2**: Foundational (Blocking Prerequisites)
-- ✅ **Phase 3**: User Story 1 - Upload & Generate Plan
-- ✅ **Phase 4**: User Story 2 - Side-by-Side Comparison
-- ✅ **Phase 5**: User Story 3 - AI Reasoning & Assumptions
-- ✅ **Phase 6**: User Story 4 - Constraint Iteration
-- ✅ **Phase 7**: User Story 5 - Recommendation Control & Export
-
-## API Documentation
-
-Once the backend is running, visit:
-- Swagger UI: http://localhost:8000/docs
-- ReDoc: http://localhost:8000/redoc
-
-## Performance Expectations
-
-- **Plan generation**: 3-5 minutes for 10-50 task plans (Azure OpenAI reasoning models)
-- **UI responsiveness**: < 200ms for plan comparison rendering
-- **Data upload**: < 30 seconds for typical spreadsheets (< 1MB)

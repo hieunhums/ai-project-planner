@@ -25,6 +25,7 @@ export const clearPersona = () => {
 // ---------------------------------------------------------------------------
 
 import type { CapacityPlanRow, YardAvailabilityRow } from './types';
+import { savePlanStateToServer } from './api';
 
 // ---- Key builders -----------------------------------------------------------
 const planKey = (projectId: number) => `plan_state_${projectId}`;
@@ -42,6 +43,10 @@ export function savePlanState(
 ): void {
   sessionStorage.setItem(planKey(projectId), JSON.stringify(plan));
   sessionStorage.setItem(rationaleKey(projectId), rationale);
+  // Also persist to server (fire-and-forget)
+  const humanRaw = sessionStorage.getItem(humanPlanKey(projectId));
+  const humanPlan = humanRaw ? JSON.parse(humanRaw) : null;
+  savePlanStateToServer(projectId, plan, humanPlan, rationale).catch(() => {});
 }
 
 export function loadPlanState(
@@ -112,6 +117,8 @@ export function clearAvailabilityState(projectId: number): void {
 
 export function saveHumanPlanState(projectId: number, rows: CapacityPlanRow[]): void {
   sessionStorage.setItem(humanPlanKey(projectId), JSON.stringify(rows));
+  // Also persist to server (fire-and-forget)
+  savePlanStateToServer(projectId, null, rows, '').catch(() => {});
 }
 
 export function loadHumanPlanState(projectId: number): CapacityPlanRow[] | null {

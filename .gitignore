@@ -80,3 +80,18 @@ Thumbs.db
 *.tmp
 *.temp
 .cache/
+
+# Screenshots & test/demo outputs
+demo_output/
+demo_recording/
+test_demo/
+test_screenshots/
+test_replan_screenshots/
+test_qa_screenshots/
+
+# MCP & tool state
+.playwright-mcp/
+.serena/
+
+# Azure Developer CLI
+.azure/
