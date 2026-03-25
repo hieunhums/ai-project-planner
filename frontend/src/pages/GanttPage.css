@@ -1,0 +1,143 @@
+.gantt-page {
+  display: grid;
+  gap: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+/* ── Nav bar ──────────────────────────────────────────────────────────────── */
+.gantt-page-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.gantt-page-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* For dark Gantt page context, override btn-secondary */
+.gantt-page .btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.gantt-page .btn-secondary:not(:disabled):hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* ── NL edit bar ──────────────────────────────────────────────────────────── */
+.gantt-nl-wrapper {
+  background: var(--surface, #1e1e2e);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--surface, #1e1e2e);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary, #ccc);
+  padding: 0.55rem 1.1rem;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-primary, #fff);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ── Plan badges ──────────────────────────────────────────────────────────── */
+.gantt-page-badges {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.badge {
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.badge-human {
+  background: rgba(58, 134, 255, 0.15);
+  color: #6fa8ff;
+  border: 1px solid rgba(58, 134, 255, 0.3);
+}
+
+.badge-ai {
+  background: rgba(255, 159, 28, 0.15);
+  color: #ffbf60;
+  border: 1px solid rgba(255, 159, 28, 0.3);
+}
+
+.badge-divider {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* ── Main card ────────────────────────────────────────────────────────────── */
+.gantt-page-card {
+  background: var(--surface, #1e1e2e);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: var(--shadow-elevated, 0 4px 28px rgba(0, 0, 0, 0.35));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ── No-plan empty state ──────────────────────────────────────────────────── */
+.gantt-no-plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 3rem 1rem;
+  text-align: center;
+  color: var(--text-secondary, #718096);
+  font-size: 1rem;
+}
+
+/* ── Drag error banner ────────────────────────────────────────────────────── */
+.gantt-drag-error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  background: rgba(220, 60, 60, 0.18);
+  border: 1px solid rgba(220, 60, 60, 0.45);
+  border-radius: 6px;
+  color: #f87171;
+  font-size: 0.875rem;
+}
+
+.gantt-drag-error-close {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1;
+  padding: 0 0.2rem;
+  opacity: 0.7;
+}
+
+.gantt-drag-error-close:hover {
+  opacity: 1;
+}

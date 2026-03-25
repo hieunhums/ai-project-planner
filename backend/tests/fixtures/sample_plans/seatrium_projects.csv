@@ -1,0 +1,41 @@
+project_id,project_name,duration_days,start_date,end_date,resource,dependencies,cost,priority
+Neptune FPSO,Hull Fabrication,180,01-03-2025,28-08-2025,Tuas Boulevard - YST D1,,12500000,Confirmed
+Neptune FPSO,Drydock Integration,150,29-08-2025,26-01-2026,Tuas Boulevard - YST D1,Hull Fabrication,9800000,Confirmed
+Neptune FPSO,Berthing & Outfitting,210,27-01-2026,25-08-2026,Tuas Boulevard - YST 01,Drydock Integration,15200000,Confirmed
+Neptune FPSO,Topside Module Integration,120,26-08-2026,24-12-2026,Benoi - Q2E,Berthing & Outfitting,18500000,Confirmed
+Neptune FPSO,Commissioning & Sea Trial,60,25-12-2026,23-02-2027,Tuas Boulevard - YST 01,Topside Module Integration,4200000,Confirmed
+Coral LNG Carrier,Hull Fabrication,160,15-06-2025,22-11-2025,Tuas Boulevard - YST D2,,11000000,Confirmed
+Coral LNG Carrier,Tank Installation,120,23-11-2025,23-03-2026,Tuas Boulevard - YST D2,Hull Fabrication,22000000,Confirmed
+Coral LNG Carrier,Berthing & Outfitting,180,24-03-2026,20-09-2026,Tuas Boulevard - YST 09,Tank Installation,13500000,Confirmed
+Coral LNG Carrier,Cargo System Testing,45,21-09-2026,05-11-2026,Tuas Boulevard - YST 09,Berthing & Outfitting,3800000,Confirmed
+Coral LNG Carrier,Commissioning & Sea Trial,50,06-11-2026,26-12-2026,Tuas Boulevard - YST 09,Cargo System Testing,3500000,Confirmed
+Emerald Jack-Up Rig,Hull Fabrication,200,01-04-2025,18-10-2025,Pioneer - Admiral Dock,,14000000,Confirmed
+Emerald Jack-Up Rig,Leg Fabrication & Assembly,150,19-10-2025,18-03-2026,Benoi - Q3E,Hull Fabrication,19000000,Confirmed
+Emerald Jack-Up Rig,Berthing & Outfitting,160,19-03-2026,26-08-2026,Pioneer - South Quay 1,Leg Fabrication & Assembly,11500000,Confirmed
+Emerald Jack-Up Rig,Jacking System Testing,40,27-08-2026,06-10-2026,Pioneer - South Quay 1,Berthing & Outfitting,2800000,Confirmed
+Emerald Jack-Up Rig,Loadout & Delivery,30,07-10-2026,06-11-2026,Pioneer - South Pier 1,Jacking System Testing,1900000,Confirmed
+Horizon Semi-Sub,Pontoon Fabrication,170,01-09-2025,18-02-2026,Tuas Boulevard - YST D3,,13200000,Confirmed
+Horizon Semi-Sub,Column & Deck Fabrication,140,19-02-2026,09-07-2026,Tuas Boulevard - YST D4,Pontoon Fabrication,10800000,Confirmed
+Horizon Semi-Sub,Drydock Integration,130,10-07-2026,17-11-2026,Tuas Boulevard - YST D3,Column & Deck Fabrication,8500000,Confirmed
+Horizon Semi-Sub,Berthing & Outfitting,200,18-11-2026,06-06-2027,Tuas Boulevard - YST 11,Drydock Integration,16000000,Confirmed
+Horizon Semi-Sub,Commissioning & Sea Trial,55,07-06-2027,01-08-2027,Tuas Boulevard - YST 11,Berthing & Outfitting,4000000,Confirmed
+Atlas Drillship,Hull Fabrication,190,10-01-2026,19-07-2026,Tuas Boulevard - YST D5,,15000000,Enquiry
+Atlas Drillship,Drydock Integration,140,20-07-2026,07-12-2026,Tuas Boulevard - YST D5,Hull Fabrication,11200000,Enquiry
+Atlas Drillship,Berthing & Outfitting,220,08-12-2026,16-07-2027,Tuas Boulevard - YST 19,Drydock Integration,17500000,Enquiry
+Atlas Drillship,Derrick & Drilling Equipment,90,17-07-2027,15-10-2027,Tuas Boulevard - YST 19,Berthing & Outfitting,24000000,Enquiry
+Atlas Drillship,Commissioning & Sea Trial,65,16-10-2027,20-12-2027,Tuas Boulevard - YST 19,Derrick & Drilling Equipment,5100000,Enquiry
+Vanguard Pipe Layer,Hull Fabrication,175,01-04-2026,23-09-2026,Tuas - Raffles Dock,,12000000,Enquiry
+Vanguard Pipe Layer,Drydock Integration,110,24-09-2026,12-01-2027,Tuas - Raffles Dock,Hull Fabrication,7800000,Enquiry
+Vanguard Pipe Layer,Berthing & Pipe-lay System,190,13-01-2027,22-07-2027,Tuas - South Quay (SQ),Drydock Integration,21000000,Enquiry
+Vanguard Pipe Layer,Tensioner & Stinger Install,70,23-07-2027,01-10-2027,Tuas - South Quay (SQ),Berthing & Pipe-lay System,8500000,Enquiry
+Vanguard Pipe Layer,Commissioning & Sea Trial,50,02-10-2027,21-11-2027,Tuas - West Quay (WQ),Tensioner & Stinger Install,3600000,Enquiry
+Pacific Voyager,Docking & Survey,30,01-07-2025,31-07-2025,Admiralty - Republic (RFD),,1200000,Confirmed
+Pacific Voyager,Hull Repair & Blasting,60,01-08-2025,30-09-2025,Admiralty - Republic (RFD),Docking & Survey,3500000,Confirmed
+Pacific Voyager,Machinery Overhaul,45,01-10-2025,15-11-2025,Admiralty - B14,Hull Repair & Blasting,4200000,Confirmed
+Pacific Voyager,Undocking & Berthing,90,16-11-2025,14-02-2026,Admiralty - Finger Pier,Machinery Overhaul,6000000,Confirmed
+Pacific Voyager,Sea Trial & Delivery,20,15-02-2026,07-03-2026,Admiralty - Finger Pier,Undocking & Berthing,1500000,Confirmed
+Stellar OSV,Hull Fabrication,130,01-11-2025,11-03-2026,Nantong - Yard 1,,6500000,Enquiry
+Stellar OSV,Superstructure Assembly,80,12-03-2026,31-05-2026,Nantong - Yard 2,Hull Fabrication,4800000,Enquiry
+Stellar OSV,Outfitting,100,01-06-2026,09-09-2026,Pioneer - South Quay 2,Superstructure Assembly,5200000,Enquiry
+Stellar OSV,DP System Integration,35,10-09-2026,15-10-2026,Pioneer - South Quay 2,Outfitting,3100000,Enquiry
+Stellar OSV,Commissioning & Sea Trial,30,16-10-2026,15-11-2026,Pioneer - North Quay,DP System Integration,2000000,Enquiry

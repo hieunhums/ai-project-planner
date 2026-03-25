@@ -1,0 +1,21 @@
+task_id,task_name,duration_days,start_date,end_date,resource,dependencies,cost,priority
+T001,Hull Assembly - Section A,14,2026-03-01,2026-03-15,Crane A,None,50000,High
+T002,Hull Assembly - Section B,14,2026-03-01,2026-03-15,Crane B,None,50000,High
+T003,Hull Welding & Integration,7,2026-03-16,2026-03-23,Welding Team A,T001;T002,35000,High
+T004,Engine Room Preparation,5,2026-03-16,2026-03-21,Crew A,T001,15000,Medium
+T005,Main Engine Installation,7,2026-03-22,2026-03-29,Crane A + Crew B,T004,45000,High
+T006,Auxiliary Systems Installation,10,2026-03-22,2026-04-01,Crew C,T004,25000,Medium
+T007,Electrical Wiring - Main Deck,10,2026-03-24,2026-04-03,Electrical Team A,T003,20000,High
+T008,Electrical Wiring - Engine Room,8,2026-03-30,2026-04-07,Electrical Team B,T005;T006,18000,High
+T009,HVAC System Installation,6,2026-03-28,2026-04-03,HVAC Crew,T003,22000,Medium
+T010,Piping Installation,12,2026-04-02,2026-04-14,Piping Team,T006;T007,30000,Medium
+T011,Navigation Systems Setup,5,2026-04-04,2026-04-09,Electronics Team,T007,28000,High
+T012,Communication Systems,4,2026-04-04,2026-04-08,Electronics Team,T007,15000,Medium
+T013,Safety Systems Installation,7,2026-04-08,2026-04-15,Safety Crew,T008;T009,25000,High
+T014,Interior Fitting - Cabins,10,2026-04-10,2026-04-20,Interior Team A,T007,35000,Medium
+T015,Interior Fitting - Common Areas,8,2026-04-10,2026-04-18,Interior Team B,T007,28000,Medium
+T016,Deck Equipment Installation,6,2026-04-15,2026-04-21,Deck Crew,T003,32000,Medium
+T017,Painting - Exterior,8,2026-04-16,2026-04-24,Paint Team A,T013,18000,Low
+T018,Painting - Interior,6,2026-04-19,2026-04-25,Paint Team B,T014;T015,12000,Low
+T019,Pre-Sea Trials Inspection,3,2026-04-22,2026-04-25,QA Team,T010;T011;T013,8000,High
+T020,Sea Trials,5,2026-04-26,2026-05-01,Full Crew + QA,T019,55000,High

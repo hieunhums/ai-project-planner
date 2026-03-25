@@ -1,0 +1,51 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: seatrium
+      POSTGRES_PASSWORD: seatrium
+      POSTGRES_DB: seatrium
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - seatrium
+
+  backend:
+    build:
+      context: ../backend
+      dockerfile: ../docker/Dockerfile.backend
+    ports:
+      - "8001:8001"
+    environment:
+      - DATABASE_URL=postgresql://seatrium:seatrium@db:5432/seatrium
+      - APP_ENV=development
+      - CORS_ORIGINS=["http://localhost:5173","http://localhost:80"]
+      - AZURE_OPENAI_ENDPOINT=https://ai-hieunhueastus2067077874761.cognitiveservices.azure.com/
+    depends_on:
+      - db
+    networks:
+      - seatrium
+
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: ../docker/Dockerfile.frontend
+      args:
+        VITE_API_BASE_URL: /api
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - seatrium
+
+volumes:
+  pgdata:
+
+networks:
+  seatrium:
+    driver: bridge

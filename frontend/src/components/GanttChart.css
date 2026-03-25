@@ -1,0 +1,376 @@
+/* ── Wrapper ─────────────────────────────────────────────────────────────── */
+.gantt-wrapper {
+  display: grid;
+  gap: 1.25rem;
+  padding: 0;
+}
+
+/* ── Header ──────────────────────────────────────────────────────────────── */
+.gantt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.gantt-title {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #3a86ff 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gantt-subtitle {
+  margin: 0;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.45);
+}
+
+/* ── Toggle control ───────────────────────────────────────────────────────── */
+.gantt-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.75);
+  user-select: none;
+}
+
+.toggle-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-track {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+  background: var(--surface-strong, #2a2a3a);
+  border-radius: 11px;
+  transition: background 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.toggle-checkbox:checked + .toggle-track {
+  background: linear-gradient(135deg, #3a86ff, #a78bfa);
+  border-color: transparent;
+}
+
+.toggle-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+
+.toggle-checkbox:checked + .toggle-track .toggle-thumb {
+  transform: translateX(18px);
+}
+
+/* ── Toolbar (zoom + filter) ──────────────────────────────────────────── */
+.gantt-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 0.5rem 0;
+}
+
+.gantt-zoom,
+.gantt-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.toolbar-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 0.25rem;
+}
+
+.zoom-btn {
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.6);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.12s;
+}
+
+.zoom-btn:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.zoom-btn--active {
+  background: #00a3a3;
+  border-color: #00a3a3;
+  color: #fff;
+}
+
+.filter-input {
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  color: #e0e0e0;
+  font-size: 0.78rem;
+  font-family: inherit;
+  width: 180px;
+  transition: border-color 0.15s;
+}
+
+.filter-input:focus {
+  border-color: #00a3a3;
+  outline: none;
+}
+
+.filter-input::placeholder {
+  color: rgba(255,255,255,0.25);
+}
+
+.filter-clear {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.4);
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 0 0.3rem;
+}
+
+.filter-clear:hover { color: #fff; }
+
+.filter-count {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.3);
+  margin-left: 0.25rem;
+}
+
+/* ── Legend ───────────────────────────────────────────────────────────────── */
+.gantt-legend {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.75);
+}
+
+.legend-swatch {
+  display: inline-block;
+  width: 28px;
+  height: 12px;
+  border-radius: 4px;
+  opacity: 1;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* ── Chart container with frozen axis ─────────────────────────────────── */
+.gantt-chart-container {
+  display: flex;
+  border-radius: 16px;
+  background: #0f1117;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* ── Frozen Y-axis sidebar ─────────────────────────────────────────────── */
+.gantt-axis-sidebar {
+  flex-shrink: 0;
+  width: 220px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  background: #0f1117;
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.gantt-axis-header {
+  flex-shrink: 0;
+  height: 54px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.gantt-axis-label {
+  flex-shrink: 0;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: rgba(255, 255, 255, 0.85);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 220px;
+  max-width: 280px;
+  cursor: default;
+  user-select: none;
+}
+
+.gantt-axis-label:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.gantt-axis-label:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.gantt-axis-label:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ── Scroll container ─────────────────────────────────────────────────── */
+.gantt-scroll {
+  flex: 1;
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 600px;
+}
+
+.gantt-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.gantt-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 4px;
+}
+
+.gantt-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+.gantt-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+/* ── SVG bars ─────────────────────────────────────────────────────────────── */
+.gantt-bar {
+  cursor: pointer;
+  transition: opacity 0.12s ease, filter 0.12s ease;
+}
+
+.gantt-bar-group:hover .gantt-bar {
+  opacity: 1 !important;
+  filter: brightness(1.18) drop-shadow(0 0 6px rgba(255, 255, 255, 0.22));
+}
+
+/* ── Tooltip ─────────────────────────────────────────────────────────────── */
+.gantt-tooltip {
+  position: fixed;
+  z-index: 1000;
+  background: #1a1d2e;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  min-width: 200px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.55);
+  pointer-events: none;
+}
+
+.tt-project {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tt-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.tt-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.45);
+  font-weight: 600;
+}
+
+.tt-value {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+}
+
+.tt-priority {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+
+.tt-priority.tt-high {
+  background: rgba(255, 80, 80, 0.2);
+  color: #ff8080;
+}
+
+.tt-priority.tt-med {
+  background: rgba(255, 180, 50, 0.2);
+  color: #ffd166;
+}
+
+.tt-ai-badge {
+  margin-top: 0.55rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #ff9f1c;
+  background: rgba(255, 159, 28, 0.12);
+  border: 1px solid rgba(255, 159, 28, 0.25);
+  border-radius: 6px;
+  padding: 0.2rem 0.5rem;
+  text-align: center;
+}

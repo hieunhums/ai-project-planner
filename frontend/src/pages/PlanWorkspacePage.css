@@ -1,0 +1,720 @@
+/* PlanWorkspacePage.css — Gantt-centric workspace layout */
+
+.workspace {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: calc(100vh - 200px);
+  padding-bottom: 2rem;
+}
+
+/* ── Top bar ──────────────────────────────────────────────────────────── */
+.workspace-topbar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  min-height: 40px;
+  max-width: 1100px;
+}
+
+.ws-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: #2a2d35;
+  border: 1px solid rgba(0,0,0,0.15);
+  color: #e0e0e0;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  height: 34px;
+  box-sizing: border-box;
+}
+
+.ws-back-btn:hover { background: #3a3d45; color: #fff; }
+
+.ws-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 34px;
+}
+
+.ws-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-left: auto;
+}
+
+.ws-btn {
+  font-size: 0.78rem !important;
+  padding: 0 0.75rem !important;
+  height: 34px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.ws-badges {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.badge { padding: 0 0.7rem; border-radius: 20px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.03em; height: 26px; display: inline-flex; align-items: center; }
+.badge-human { background: rgba(58,134,255,0.15); color: #6fa8ff; border: 1px solid rgba(58,134,255,0.3); }
+.badge-ai { background: rgba(255,159,28,0.15); color: #ffbf60; border: 1px solid rgba(255,159,28,0.3); }
+.badge-divider { font-size: 0.7rem; color: var(--text-muted); font-weight: 600; }
+
+/* ── Main body ────────────────────────────────────────────────────────── */
+.workspace-body {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 0.75rem;
+  flex: 1;
+  min-height: 0;
+}
+
+.workspace-body--collapsed {
+  grid-template-columns: 40px 1fr;
+}
+
+.workspace-body--viewmode {
+  display: block;
+  max-width: 1100px;
+}
+
+/* ── Mode toggle button ──────────────────────────────────────────────── */
+.ws-mode-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0 1.1rem;
+  height: 34px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s;
+  border: none;
+  box-sizing: border-box;
+}
+
+.ws-mode-btn--enter {
+  background: #00a3a3;
+  color: #fff;
+}
+
+.ws-mode-btn--enter:hover {
+  background: #00b8b8;
+}
+
+.ws-mode-btn--exit {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.7);
+}
+
+.ws-mode-btn--exit:hover {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+}
+
+/* ── Sidebar ──────────────────────────────────────────────────────────── */
+.workspace-sidebar {
+  position: relative;
+  min-height: 0;
+}
+
+.sidebar-toggle {
+  position: absolute;
+  top: 0.5rem;
+  right: -12px;
+  z-index: 10;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #2a2d35;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.5);
+  font-size: 0.65rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.sidebar-toggle:hover { background: #00a3a3; color: #fff; }
+
+/* ── Center ───────────────────────────────────────────────────────────── */
+.workspace-center {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 0;
+  min-width: 0;
+}
+
+.workspace-gantt {
+  background: #1e1e2e;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 4px 28px rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.06);
+  flex: 1;
+  min-height: 400px;
+  overflow: auto;
+}
+
+.workspace-nl {
+  background: #1a1d24;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* ── Drag error ───────────────────────────────────────────────────────── */
+.ws-drag-error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(220,60,60,0.18);
+  border: 1px solid rgba(220,60,60,0.45);
+  border-radius: 6px;
+  color: #f87171;
+  font-size: 0.8rem;
+}
+
+.ws-drag-error button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 0;
+  opacity: 0.7;
+}
+
+.ws-drag-error button:hover { opacity: 1; }
+
+/* ── Empty state ──────────────────────────────────────────────────────── */
+.workspace-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 4rem 1rem;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+/* ── Gantt breadcrumb ─────────────────────────────────────────────────── */
+.gantt-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.gantt-breadcrumb-back {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.7);
+  padding: 0.35rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.12s;
+}
+
+.gantt-breadcrumb-back:hover { background: rgba(255,255,255,0.1); color: #fff; }
+
+.gantt-breadcrumb-current {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #00a3a3;
+}
+
+.gantt-breadcrumb-count {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.05);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+/* ── Project Summary Card ────────────────────────────────────────────── */
+.psc-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  border: 1px solid #e2e8f0;
+  display: grid;
+  gap: 1rem;
+}
+
+.psc-card h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.psc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.75rem;
+}
+
+@media (max-width: 900px) {
+  .psc-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.psc-field {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.psc-field label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.psc-value {
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: #f8f9fa;
+  color: #1a1a2e;
+}
+
+.psc-status {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.psc-status--confirmed {
+  background: rgba(16,185,129,0.12);
+  color: #059669;
+}
+
+.psc-status--enquiry {
+  background: rgba(245,158,11,0.12);
+  color: #d97706;
+}
+
+.psc-section-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ── Phase timeline (horizontal stepper) ────────────────────────────── */
+.psc-phase-timeline {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.psc-phase-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  position: relative;
+}
+
+.psc-phase-step--past .psc-phase-dot { background: #9ca3af; }
+.psc-phase-step--past .psc-phase-line { background: #9ca3af; }
+.psc-phase-step--past .psc-phase-name { color: #9ca3af; }
+
+.psc-phase-step--current .psc-phase-dot {
+  background: #00a3a3;
+  box-shadow: 0 0 0 4px rgba(0,163,163,0.2);
+}
+.psc-phase-step--current .psc-phase-content {
+  background: rgba(0,163,163,0.06);
+  border-radius: 8px;
+  padding: 0.4rem 0.5rem;
+}
+
+.psc-phase-indicator {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.psc-phase-dot {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.psc-phase-line {
+  flex: 1;
+  height: 2px;
+  background: #e5e7eb;
+  margin: 0 -1px;
+}
+
+.psc-phase-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.1rem;
+  padding: 0 0.25rem;
+}
+
+.psc-phase-name {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  white-space: nowrap;
+}
+
+.psc-phase-dates {
+  font-size: 0.68rem;
+  color: #4b5563;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.psc-phase-meta {
+  font-size: 0.65rem;
+  color: #9ca3af;
+  white-space: nowrap;
+}
+
+.psc-phase-badge {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #00a3a3;
+  background: rgba(0,163,163,0.1);
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  margin-top: 0.15rem;
+}
+
+.psc-context {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.badge-confirmed {
+  background: rgba(16,185,129,0.15);
+  color: #059669;
+  border: 1px solid rgba(16,185,129,0.3);
+}
+
+.badge-enquiry {
+  background: rgba(245,158,11,0.15);
+  color: #d97706;
+  border: 1px solid rgba(245,158,11,0.3);
+}
+
+/* ── Yard Capacity collapsible section ────────────────────────────────── */
+.ws-yard-section {
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.ws-yard-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.85rem 1.25rem;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.ws-yard-toggle:hover { background: #f9fafb; }
+
+.ws-yard-chevron {
+  font-size: 0.65rem;
+  color: #9ca3af;
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.ws-yard-chevron--open { transform: rotate(90deg); }
+
+.ws-yard-toggle-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.ws-yard-toggle-meta {
+  font-size: 0.78rem;
+  color: #9ca3af;
+  margin-left: auto;
+}
+
+.ws-yard-content {
+  background: #1e1e2e;
+  padding: 1rem;
+}
+
+/* ── Streaming indicator ──────────────────────────────────────────────── */
+.ws-streaming-card {
+  background: #1e1e2e;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(0,163,163,0.3);
+}
+
+.ws-streaming-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #00d4d4;
+}
+
+.ws-streaming-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #00d4d4;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.ws-streaming-text {
+  margin: 0.75rem 0 0;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.6);
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 200px;
+  overflow-y: auto;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+/* ── AI Proposal card ────────────────────────────────────────────────── */
+.ws-proposal-card {
+  background: #1e1e2e;
+  border-radius: 14px;
+  padding: 1.25rem;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.ws-proposal-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.ws-proposal-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.ws-model-badge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.06);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ── Approval bar ────────────────────────────────────────────────────── */
+.ws-approval-card {
+  background: #1a1d24;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  overflow: hidden;
+}
+
+.ws-approval-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.ws-approval-info {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.7);
+  margin-right: auto;
+}
+
+.ws-approval-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* ── Approval table ──────────────────────────────────────────────────── */
+.ws-approval-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.ws-approval-table thead {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.ws-approval-table th {
+  text-align: left;
+  padding: 0.5rem 1rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.35);
+}
+
+.ws-approval-table td {
+  padding: 0.6rem 1rem;
+  color: rgba(255,255,255,0.7);
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+.ws-approval-context {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.ws-ac-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 0.5rem;
+}
+
+.ws-at-project {
+  font-weight: 600;
+  color: #00d4d4;
+  vertical-align: top;
+}
+
+.ws-at-phase {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.45);
+}
+
+.ws-at-field {
+  font-weight: 600;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.ws-at-before {
+  color: #f87171;
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.ws-at-after {
+  color: #4ade80;
+  font-weight: 600;
+}
+
+.ws-at-new {
+  color: #fbbf24;
+  font-style: italic;
+}
+
+.ws-approve-btn {
+  padding: 0.55rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: #00a3a3;
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.ws-approve-btn:hover { background: #00b8b8; }
+
+.ws-discard-btn {
+  padding: 0.5rem 1.1rem;
+  border: 1px solid #4b5563;
+  border-radius: 8px;
+  background: transparent;
+  color: #9ca3af;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.ws-discard-btn:hover { background: #374151; color: #fff; border-color: #6b7280; }
+
+.ws-applied-note {
+  margin: 0.75rem 0 0;
+  font-size: 0.78rem;
+  color: #4ade80;
+  font-style: italic;
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .workspace-body { grid-template-columns: 1fr; }
+  .workspace-sidebar { display: none; }
+}

@@ -1,0 +1,165 @@
+/* Layout — Seatrium corporate style */
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f5f6f8;
+}
+
+/* ── Header ──────────────────────────────────────────────────────────── */
+.layout-header {
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* ── Logo ────────────────────────────────────────────────────────────── */
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.header-logo-icon {
+  width: 32px;
+  height: 22px;
+}
+
+.header-logo-text {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #003EFF;
+  letter-spacing: -0.02em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-logo-sub {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #6b7280;
+  margin-left: 0.15rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid #d1d5db;
+}
+
+/* ── Nav ─────────────────────────────────────────────────────────────── */
+.header-nav {
+  display: flex;
+  gap: 0.25rem;
+  margin-left: 1rem;
+}
+
+.header-nav-link {
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  color: #374151;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.15s;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-nav-link:hover {
+  background: #f3f4f6;
+  color: #003EFF;
+}
+
+.header-nav-link--active {
+  color: #003EFF;
+  background: rgba(0, 62, 255, 0.06);
+}
+
+/* ── Right section ───────────────────────────────────────────────────── */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: auto;
+}
+
+.header-persona {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6b7280;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  background: #f3f4f6;
+}
+
+.header-logout {
+  border: 1px solid #d1d5db;
+  background: #fff;
+  color: #374151;
+  padding: 0.35rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-logout:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+/* ── Main ────────────────────────────────────────────────────────────── */
+.layout-main {
+  flex: 1;
+  max-width: 1280px;
+  width: 100%;
+  margin: 1.5rem auto;
+  padding: 0 2rem;
+}
+
+.login-layout .layout-main {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Footer ──────────────────────────────────────────────────────────── */
+.layout-footer {
+  background: #fff;
+  padding: 1rem 2rem;
+  text-align: center;
+  color: #9ca3af;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.82rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.layout-footer p {
+  margin: 0;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .header-content {
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+  .header-logo-sub { display: none; }
+  .header-nav { margin-left: 0; }
+  .layout-main { padding: 0 1rem; }
+}
