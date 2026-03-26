@@ -22,12 +22,17 @@ _client: Optional[AzureOpenAI] = None
 def _get_client() -> AzureOpenAI:
     global _client
     if _client is None:
+        from ..config import get_settings
+        settings = get_settings()
+        endpoint = settings.azure_openai_endpoint or os.environ.get("AZURE_OPENAI_ENDPOINT", "")
+        if not endpoint:
+            raise RuntimeError("AZURE_OPENAI_ENDPOINT not configured")
         credential = DefaultAzureCredential()
         token_provider = get_bearer_token_provider(
             credential, "https://cognitiveservices.azure.com/.default"
         )
         _client = AzureOpenAI(
-            azure_endpoint=os.environ.get("AZURE_OPENAI_ENDPOINT", "https://your-openai-resource.cognitiveservices.azure.com/"),
+            azure_endpoint=endpoint,
             azure_ad_token_provider=token_provider,
             api_version="2025-04-01-preview",
         )
