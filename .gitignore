@@ -95,3 +95,4 @@ test_qa_screenshots/
 
 # Azure Developer CLI
 .azure/
+*.png

@@ -148,8 +148,9 @@ async def update_project_fields(project_id: int, request: dict, db: Session = De
         if key in request:
             setattr(project, key, request[key])
 
+    updated_keys = [key for key in allowed if key in request]
     db.commit()
-    return {"id": project.id, "name": project.name, "updated": list(request.keys())}
+    return {"id": project.id, "name": project.name, "updated": updated_keys}
 
 
 # ---------------------------------------------------------------------------

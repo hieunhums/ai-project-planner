@@ -6,8 +6,9 @@ param location string = 'southeastasia'
 @description('Environment name (dev, staging, prod)')
 param environmentName string
 
-@description('Principal ID for role assignments')
-param principalId string = ''
+@secure()
+@description('PostgreSQL administrator password')
+param pgAdminPassword string
 
 @description('Azure OpenAI endpoint URL')
 param openAIEndpoint string
@@ -39,6 +40,7 @@ module resources 'resources.bicep' = {
     openAIEndpoint: openAIEndpoint
     openAIResourceGroupName: openAIResourceGroupName
     openAIAccountName: openAIAccountName
+    pgAdminPassword: pgAdminPassword
   }
 }
 

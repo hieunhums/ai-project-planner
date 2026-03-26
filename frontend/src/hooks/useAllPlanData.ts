@@ -13,12 +13,14 @@ export function useAllPlanData() {
       try {
         const res = await fetch(`${API_BASE}/projects`);
         const projects = await res.json();
+        const results = await Promise.all(
+          projects.map((p: { id: number }) =>
+            loadPlanStateFromServer(p.id).catch(() => null)
+          )
+        );
         const allRows: CapacityPlanRow[] = [];
-        for (const p of projects) {
-          try {
-            const state = await loadPlanStateFromServer(p.id);
-            if (state.plan) allRows.push(...state.plan);
-          } catch { /* skip */ }
+        for (const state of results) {
+          if (state?.plan) allRows.push(...state.plan);
         }
         setData(allRows);
       } catch { /* skip */ }

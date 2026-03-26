@@ -6,6 +6,10 @@ param openAIEndpoint string
 param openAIResourceGroupName string
 param openAIAccountName string
 
+@secure()
+@description('PostgreSQL administrator password')
+param pgAdminPassword string
+
 // ── Log Analytics ────────────────────────────────────────────────────────────
 resource logAnalytics 'Microsoft.OperationalInsights/workspaces@2022-10-01' = {
   name: 'log-${resourceToken}'
@@ -23,7 +27,31 @@ resource containerRegistry 'Microsoft.ContainerRegistry/registries@2023-07-01' =
   location: location
   tags: tags
   sku: { name: 'Basic' }
-  properties: { adminUserEnabled: true }
+  properties: { adminUserEnabled: false }
+}
+
+// ── ACR Pull role assignment for backend Container App ────────────────────────
+@description('AcrPull role definition ID')
+var acrPullRoleId = subscriptionResourceId('Microsoft.Authorization/roleDefinitions', '7f951dda-4ed3-4680-a7ca-43fe172d538d')
+
+resource backendAcrPull 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
+  name: guid(containerRegistry.id, backendApp.id, acrPullRoleId)
+  scope: containerRegistry
+  properties: {
+    principalId: backendApp.identity.principalId
+    principalType: 'ServicePrincipal'
+    roleDefinitionId: acrPullRoleId
+  }
+}
+
+resource frontendAcrPull 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
+  name: guid(containerRegistry.id, frontendApp.id, acrPullRoleId)
+  scope: containerRegistry
+  properties: {
+    principalId: frontendApp.identity.principalId
+    principalType: 'ServicePrincipal'
+    roleDefinitionId: acrPullRoleId
+  }
 }
 
 // ── Container Apps Environment ──────────────────────────────────────────────
@@ -45,7 +73,6 @@ resource containerEnvironment 'Microsoft.App/managedEnvironments@2023-05-01' = {
 // ── PostgreSQL Flexible Server ──────────────────────────────────────────────
 var pgServerName = 'pg-${resourceToken}'
 var pgAdminUser = 'seatriumadmin'
-var pgAdminPassword = 'S3atrium!${resourceToken}'
 var pgDbName = 'seatrium'
 
 resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2023-03-01-preview' = {
@@ -99,7 +126,7 @@ resource backendApp 'Microsoft.App/containerApps@2023-05-01' = {
         external: true
         targetPort: 8001
         corsPolicy: {
-          allowedOrigins: ['*']
+          allowedOrigins: ['https://${frontendApp.properties.configuration.ingress.fqdn}']
           allowedMethods: ['*']
           allowedHeaders: ['*']
         }
@@ -107,12 +134,10 @@ resource backendApp 'Microsoft.App/containerApps@2023-05-01' = {
       registries: [
         {
           server: containerRegistry.properties.loginServer
-          username: containerRegistry.listCredentials().username
-          passwordSecretRef: 'registry-password'
+          identity: 'system'
         }
       ]
       secrets: [
-        { name: 'registry-password', value: containerRegistry.listCredentials().passwords[0].value }
         { name: 'database-url', value: databaseUrl }
       ]
     }
@@ -125,7 +150,7 @@ resource backendApp 'Microsoft.App/containerApps@2023-05-01' = {
           env: [
             { name: 'DATABASE_URL', secretRef: 'database-url' }
             { name: 'APP_ENV', value: 'production' }
-            { name: 'CORS_ORIGINS', value: '["*"]' }
+            { name: 'CORS_ORIGINS', value: '["https://${frontendApp.properties.configuration.ingress.fqdn}"]' }
             { name: 'AZURE_OPENAI_ENDPOINT', value: openAIEndpoint }
           ]
         }
@@ -140,6 +165,9 @@ resource frontendApp 'Microsoft.App/containerApps@2023-05-01' = {
   name: 'ca-frontend-${resourceToken}'
   location: location
   tags: union(tags, { 'azd-service-name': 'frontend' })
+  identity: {
+    type: 'SystemAssigned'
+  }
   properties: {
     managedEnvironmentId: containerEnvironment.id
     configuration: {
@@ -150,12 +178,8 @@ resource frontendApp 'Microsoft.App/containerApps@2023-05-01' = {
       registries: [
         {
           server: containerRegistry.properties.loginServer
-          username: containerRegistry.listCredentials().username
-          passwordSecretRef: 'registry-password'
+          identity: 'system'
         }
-      ]
-      secrets: [
-        { name: 'registry-password', value: containerRegistry.listCredentials().passwords[0].value }
       ]
     }
     template: {

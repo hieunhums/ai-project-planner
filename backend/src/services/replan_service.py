@@ -1,5 +1,5 @@
 """
-AI Replan Service — Uses Azure OpenAI o3 with Entra ID (AzureCliCredential)
+AI Replan Service — Uses Azure OpenAI o3 with Entra ID (DefaultAzureCredential)
 to reason over scheduling changes and produce an optimized plan.
 """
 

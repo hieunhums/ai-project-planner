@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { buildProjectPath, buildGanttPath } from '../routes';
+import { buildProjectPath, buildGanttPath, ROUTES } from '../routes';
 import { useProjects } from '../hooks/useProjects';
 import { ProjectCard } from '../components/ProjectCard';
 import { ProjectCreateModal } from '../components/ProjectCreateModal';
@@ -85,8 +85,8 @@ export const ProjectsPage: React.FC = () => {
           <div className="home-yard-card">
             <YardSummaryDashboard
               planData={yardData}
-              onDrillDown={() => { navigate('/yard-overview'); }}
-              onSelectYard={() => { navigate('/yard-overview'); }}
+              onDrillDown={() => { navigate(ROUTES.yardOverview); }}
+              onSelectYard={() => { navigate(ROUTES.yardOverview); }}
               selectedYard={null}
             />
           </div>
